@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virāma — 12 Ultra-Luxury Private Villas in Jubilee Hills | SSquare</title>
+  <meta name="description" content="Virāma offers twelve exclusive private villas in Jubilee Hills, priced from Rs 13 Crore. Designed for complete privacy and quiet luxury. RERA registered. By SSquare." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Virāma — 12 Ultra-Luxury Private Villas in Jubilee Hills | SSquare" />
+  <meta property="og:description" content="Virāma offers twelve exclusive private villas in Jubilee Hills, priced from Rs 13 Crore. Designed for complete privacy and quiet luxury. RERA registered. By SSquare." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       RESET & BASE
+    ============================================= */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --deep-basalt: #1A1A18;
+      --virama-stone: #2C2825;
+      --pavilion-white: #F5F1EC;
+      --arcadian-gold: #C9A96E;
+      --sandstone-pale: #E8DDD0;
+      --green-circuit: #3D4A3A;
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+
+      --section-pad: clamp(80px, 10vw, 140px);
+      --content-max: 1200px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--deep-basalt);
+      color: var(--pavilion-white);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* =============================================
+       ACCESSIBILITY — VISUALLY HIDDEN
+    ============================================= */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* =============================================
+       NAV
+    ============================================= */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px clamp(24px, 5vw, 72px);
+      transition: background 0.4s ease, padding 0.4s ease;
+    }
+
+    .site-nav.scrolled {
+      background: rgba(26, 26, 24, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: var(--pavilion-white);
+      text-decoration: none;
+    }
+
+    .nav-logo span {
+      color: var(--arcadian-gold);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 3vw, 40px);
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(245, 241, 236, 0.65);
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--arcadian-gold);
+    }
+
+    .nav-enquire {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--arcadian-gold) !important;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      padding: 8px 18px;
+      text-decoration: none;
+      transition: all 0.25s ease !important;
+    }
+
+    .nav-enquire:hover {
+      background: rgba(201, 169, 110, 0.1) !important;
+      border-color: var(--arcadian-gold) !important;
+    }
+
+    .nav-mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-mobile-toggle span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--pavilion-white);
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(26, 26, 24, 0.97);
+        flex-direction: column;
+        padding: 32px 24px;
+        gap: 24px;
+        align-items: flex-start;
+        border-top: 1px solid rgba(201, 169, 110, 0.2);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-mobile-toggle {
+        display: flex;
+      }
+
+      .nav-enquire {
+        display: none;
+      }
+    }
+
+    /* =============================================
+       SECTION 1 — HERO
+    ============================================= */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(61, 74, 58, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 80% at 20% 70%, rgba(44, 40, 37, 0.6) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 30%, rgba(26, 26, 24, 0.5) 0%, transparent 60%),
+        linear-gradient(160deg, #1A1A18 0%, #2C2825 35%, #1A1A18 65%, #0e0e0c 100%);
+      animation: heroShimmer 18s ease-in-out infinite;
+    }
+
+    @keyframes heroShimmer {
+      0%, 100% {
+        opacity: 1;
+        filter: brightness(1);
+      }
+      33% {
+        opacity: 0.92;
+        filter: brightness(1.04);
+      }
+      66% {
+        opacity: 0.96;
+        filter: brightness(0.97);
+      }
+    }
+
+    .hero-grain {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0;
+    }
+
+    .hero-overline {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(201, 169, 110, 0.7);
+      margin-bottom: 28px;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(56px, 8vw, 96px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--pavilion-white);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-serif);
+      font-size: clamp(16px, 2.5vw, 22px);
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: rgba(245, 241, 236, 0.7);
+      text-transform: none;
+      margin-bottom: 56px;
+    }
+
+    .hero-divider {
+      width: 1px;
+      height: 40px;
+      background: var(--arcadian-gold);
+      opacity: 0;
+      animation: heroPulse 1.8s ease-out 0.6s forwards;
+    }
+
+    @keyframes heroPulse {
+      0% {
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+      }
+      60% {
+        opacity: 0.8;
+        transform: scaleY(1);
+      }
+      80% {
+        opacity: 0.4;
+      }
+      100% {
+        opacity: 0.6;
+        transform: scaleY(1);
+      }
+    }
+
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      animation: fadeInUp 1s ease 1.8s forwards;
+    }
+
+    .hero-scroll-hint span {
+      font-family: var(--font-sans);
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(245, 241, 236, 0.35);
+    }
+
+    .scroll-arrow {
+      width: 1px;
+      height: 28px;
+      background: linear-gradient(to bottom, rgba(201, 169, 110, 0.6), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(0.7) translateY(4px); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateX(-50%) translateY(12px); }
+      to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+
+    .hero-fade-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 180px;
+      background: linear-gradient(to bottom, transparent, var(--deep-basalt));
+      z-index: 1;
+    }
+
+    /* Hero scroll fade */
+    .hero.fade-out .hero-content,
+    .hero.fade-out .hero-bg {
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    /* =============================================
+       SECTION 2 — PHILOSOPHY
+    ============================================= */
+    .philosophy {
+      background: var(--pavilion-white);
+      padding: var(--section-pad) clamp(24px, 6vw, 80px);
+    }
+
+    .philosophy-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--arcadian-gold);
+      margin-bottom: 48px;
+    }
+
+    .philosophy h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 3vw, 26px);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--deep-basalt);
+      line-height: 1.5;
+      margin-bottom: 28px;
+      letter-spacing: 0.01em;
+    }
+
+    .philosophy p {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.85;
+      letter-spacing: 0.02em;
+      color: var(--virama-stone);
+      margin-bottom: 24px;
+    }
+
+    .philosophy .refrain {
+      font-size: clamp(20px, 3vw, 26px);
+      font-style: italic;
+      color: var(--deep-basalt);
+      line-height: 1.5;
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+
+    /* Fade-in animation for scroll */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-up.delay-1 { transition-delay: 0.1s; }
+    .fade-in-up.delay-2 { transition-delay: 0.2s; }
+    .fade-in-up.delay-3 { transition-delay: 0.3s; }
+    .fade-in-up.delay-4 { transition-delay: 0.4s; }
+    .fade-in-up.delay-5 { transition-delay: 0.5s; }
+
+    /* =============================================
+       SECTION 3 — KEY FACTS
+    ============================================= */
+    .facts {
+      background: var(--sandstone-pale);
+      padding: clamp(60px, 8vw, 100px) clamp(24px, 5vw, 72px);
+    }
+
+    .facts-inner {
+      max-width: var(--content-max);
+      margin: 0 auto;
+    }
+
+    .facts h2 {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(26, 26, 24, 0.45);
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .facts-grid {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .fact-card {
+      background: var(--deep-basalt);
+      flex: 1;
+      min-width: 150px;
+      max-width: 200px;
+      padding: 40px 24px 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fact-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fact-card:nth-child(1) { transition-delay: 0s; }
+    .fact-card:nth-child(2) { transition-delay: 0.1s; }
+    .fact-card:nth-child(3) { transition-delay: 0.2s; }
+    .fact-card:nth-child(4) { transition-delay: 0.3s; }
+    .fact-card:nth-child(5) { transition-delay: 0.4s; }
+
+    .fact-number {
+      font-family: var(--font-serif);
+      font-size: clamp(44px, 5vw, 64px);
+      font-weight: 300;
+      color: var(--pavilion-white);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .fact-label {
+      font-family: var(--font-sans);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--arcadian-gold);
+      font-variant: small-caps;
+    }
+
+    .fact-card .gold-rule {
+      width: 24px;
+      height: 1px;
+      background: rgba(201, 169, 110, 0.4);
+      margin: 4px auto 0;
+    }
+
+    /* =============================================
+       SECTION 4 — AMENITIES
+    ============================================= */
+    .amenities {
+      background: var(--deep-basalt);
+      padding: var(--section-pad) clamp(24px, 5vw, 72px);
+    }
+
+    .amenities-inner {
+      max-width: var(--content-max);
+      margin: 0 auto;
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 72px;
+      gap: 16px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--pavilion-white);
+      letter-spacing: 0.02em;
+    }
+
+    .section-subtitle {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: rgba(245, 241, 236, 0.45);
+      max-width: 480px;
+    }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .amenities-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .amenity-card {
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .amenity-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+
+    .amenity-image div {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s ease;
+    }
+
+    .amenity-card:hover .amenity-image div {
+      transform: scale(1.03);
+    }
+
+    .amenity-img-1 {
+      background: linear-gradient(135deg, #1A2A28 0%, #2C3830 30%, #1A2825 60%, #0f1e1c 100%);
+    }
+
+    .amenity-img-2 {
+      background: linear-gradient(135deg, #2C2020 0%, #3A2A20 30%, #2C2518 60%, #1e1a12 100%);
+    }
+
+    .amenity-img-3 {
+      background: linear-gradient(135deg, #1a1818 0%, #252018 30%, #1e1c14 60%, #14120e 100%);
+    }
+
+    .amenity-img-4 {
+      background: linear-gradient(135deg, #1a1825 0%, #20182c 30%, #1a1820 60%, #0e0e18 100%);
+    }
+
+    .amenity-img-5 {
+      background: linear-gradient(135deg, #1e2218 0%, #2a2c1c 30%, #1e2215 60%, #141810 100%);
+    }
+
+    .amenity-img-6 {
+      background: linear-gradient(135deg, #1a2018 0%, #243020 30%, #1c2818 60%, #101a0e 100%);
+    }
+
+    .amenity-content {
+      padding: 28px 32px 32px;
+      background: var(--virama-stone);
+    }
+
+    .amenity-name {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--arcadian-gold);
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .amenity-type {
+      font-family: var(--font-sans);
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(245, 241, 236, 0.35);
+      margin-bottom: 14px;
+    }
+
+    .amenity-desc {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(245, 241, 236, 0.7);
+      letter-spacing: 0.01em;
+    }
+
+    /* =============================================
+       SECTION 5 — COMMUNITY ZONES
+    ============================================= */
+    .community {
+      background: var(--deep-basalt);
+      padding: var(--section-pad) 0;
+      overflow: hidden;
+    }
+
+    .community-header {
+      text-align: center;
+      padding: 0 clamp(24px, 5vw, 72px);
+      margin-bottom: 64px;
+    }
+
+    .community-panels {
+      display: flex;
+      gap: 2px;
+      overflow-x: auto;
+      padding: 0 clamp(24px, 5vw, 72px) 2px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .community-panels::-webkit-scrollbar {
+      display: none;
+    }
+
+    .zone-panel {
+      flex: 0 0 clamp(200px, 18vw, 240px);
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .zone-bg {
+      width: 100%;
+      height: 340px;
+      position: relative;
+    }
+
+    .zone-bg-1 { background: linear-gradient(170deg, #1e2a20 0%, #2c3828 60%, #1a2418 100%); }
+    .zone-bg-2 { background: linear-gradient(170deg, #2a2420 0%, #362e28 60%, #241e1c 100%); }
+    .zone-bg-3 { background: linear-gradient(170deg, #201c18 0%, #2c2820 60%, #1c1814 100%); }
+    .zone-bg-4 { background: linear-gradient(170deg, #1c1c1a 0%, #282624 60%, #181614 100%); }
+    .zone-bg-5 { background: linear-gradient(170deg, #1e2218 0%, #2a2e20 60%, #181c14 100%); }
+    .zone-bg-6 { background: linear-gradient(170deg, #1c1a20 0%, #28242c 60%, #161418 100%); }
+
+    .zone-number {
+      position: absolute;
+      top: 28px;
+      left: 24px;
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 300;
+      color: rgba(201, 169, 110, 0.15);
+      line-height: 1;
+    }
+
+    .zone-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px;
+      background: linear-gradient(to top, rgba(26, 26, 24, 0.95), transparent);
+    }
+
+    .zone-name {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--pavilion-white);
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .zone-type {
+      font-family: var(--font-sans);
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--arcadian-gold);
+      margin-bottom: 12px;
+    }
+
+    .zone-desc {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: rgba(245, 241, 236, 0.6);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .zone-panel:hover .zone-desc {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .community-note {
+      text-align: center;
+      padding: 48px clamp(24px, 5vw, 72px) 0;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: rgba(245, 241, 236, 0.3);
+    }
+
+    /* =============================================
+       SECTION 6 — GALLERY
+    ============================================= */
+    .gallery {
+      background: var(--virama-stone);
+      padding: var(--section-pad) clamp(24px, 5vw, 72px);
+    }
+
+    .gallery-inner {
+      max-width: var(--content-max);
+      margin: 0 auto;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 300px 300px;
+      gap: 3px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 640px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .gallery-item:first-child {
+        grid-column: auto;
+        aspect-ratio: 4/3;
+        height: auto;
+      }
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-item:first-child {
+      grid-row: span 2;
+    }
+
+    @media (max-width: 640px) {
+      .gallery-item:first-child {
+        grid-row: auto;
+      }
+    }
+
+    .gallery-item div {
+      width: 100%;
+      height: 100%;
+      min-height: 200px;
+      transition: transform 0.7s ease;
+    }
+
+    .gallery-item:hover div {
+      transform: scale(1.04);
+    }
+
+    .gallery-img-1 {
+      background: linear-gradient(155deg, #2C3020 0%, #3A3C28 35%, #282c1e 65%, #1e2214 100%);
+    }
+
+    .gallery-img-2 {
+      background: linear-gradient(155deg, #2C2820 0%, #3A3028 35%, #2C2820 65%, #1e1e16 100%);
+    }
+
+    .gallery-img-3 {
+      background: linear-gradient(155deg, #20241e 0%, #2C2E24 35%, #202418 65%, #161a12 100%);
+    }
+
+    .gallery-img-4 {
+      background: linear-gradient(155deg, #242028 0%, #302C38 35%, #242028 65%, #18141e 100%);
+    }
+
+    .gallery-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+
+    .gallery-placeholder-text {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 3vw, 28px);
+      font-style: italic;
+      font-weight: 300;
+      color: rgba(245, 241, 236, 0.55);
+    }
+
+    .gallery-appointment {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--arcadian-gold);
+    }
+
+    /* =============================================
+       SECTION 7 — FLOOR PLANS
+    ============================================= */
+    .floor-plans {
+      background: var(--pavilion-white);
+      padding: var(--section-pad) clamp(24px, 5vw, 72px);
+    }
+
+    .floor-plans-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .floor-plans .section-header {
+      align-items: flex-start;
+      text-align: left;
+      margin-bottom: 48px;
+    }
+
+    .floor-plans .section-title {
+      color: var(--deep-basalt);
+    }
+
+    .floor-plans .section-subtitle {
+      color: rgba(26, 26, 24, 0.5);
+    }
+
+    .plan-toggles {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .plan-btn {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(26, 26, 24, 0.55);
+      background: transparent;
+      border: 1px solid rgba(26, 26, 24, 0.2);
+      padding: 10px 24px;
+      cursor: pointer;
+      border-radius: 100px;
+      transition: all 0.25s ease;
+    }
+
+    .plan-btn:hover {
+      border-color: var(--arcadian-gold);
+      color: var(--arcadian-gold);
+    }
+
+    .plan-btn.active {
+      background: var(--deep-basalt);
+      border-color: var(--deep-basalt);
+      color: var(--pavilion-white);
+    }
+
+    .plan-display {
+      display: none;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .plan-display.active {
+      display: flex;
+    }
+
+    .plan-svg-wrap {
+      background: #f0ece7;
+      border: 1px solid rgba(26, 26, 24, 0.08);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .plan-svg-wrap svg {
+      width: 100%;
+      max-width: 540px;
+      height: auto;
+    }
+
+    .plan-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(26, 26, 24, 0.1);
+    }
+
+    @media (max-width: 480px) {
+      .plan-details {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .plan-detail-item {
+      background: var(--pavilion-white);
+      padding: 24px 20px;
+    }
+
+    .plan-detail-label {
+      font-family: var(--font-sans);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--arcadian-gold);
+      margin-bottom: 8px;
+    }
+
+    .plan-detail-value {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--deep-basalt);
+    }
+
+    .plan-link {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(26, 26, 24, 0.4);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(26, 26, 24, 0.15);
+      padding-bottom: 2px;
+      transition: color 0.25s ease, border-color 0.25s ease;
+      align-self: flex-start;
+    }
+
+    .plan-link:hover {
+      color: var(--arcadian-gold);
+      border-color: rgba(201, 169, 110, 0.4);
+    }
+
+    /* =============================================
+       SECTION 8 — LOCATION
+    ============================================= */
+    .location {
+      background: var(--sandstone-pale);
+      padding: var(--section-pad) clamp(24px, 5vw, 72px);
+    }
+
+    .location-inner {
+      max-width: var(--content-max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(48px, 6vw, 96px);
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .location-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    .location-text .section-title {
+      color: var(--deep-basalt);
+      text-align: left;
+    }
+
+    .location-text p {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.8;
+      color: rgba(44, 40, 37, 0.75);
+      letter-spacing: 0.02em;
+      margin-top: 20px;
+    }
+
+    .location-map-placeholder {
+      background: linear-gradient(145deg, #d8cfc4 0%, #c8bfb2 40%, #d0c8bc 100%);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(44, 40, 37, 0.4);
+    }
+
+    .proximity-table {
+      margin-top: 40px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .proximity-table tr {
+      border-bottom: 1px solid rgba(201, 169, 110, 0.25);
+    }
+
+    .proximity-table tr:first-child {
+      border-top: 1px solid rgba(201, 169, 110, 0.25);
+    }
+
+    .proximity-table td {
+      padding: 16px 0;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--virama-stone);
+    }
+
+    .proximity-table td:last-child {
+      text-align: right;
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--arcadian-gold);
+      letter-spacing: 0.04em;
+    }
+
+    .proximity-table td .dest-name {
+      display: block;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: var(--deep-basalt);
+    }
+
+    .proximity-table td .dest-note {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: rgba(44, 40, 37, 0.45);
+      margin-top: 2px;
+    }
+
+    /* =============================================
+       SECTION 9 — ENQUIRY
+    ============================================= */
+    .enquiry {
+      background: var(--deep-basalt);
+      padding: var(--section-pad) clamp(24px, 5vw, 72px);
+    }
+
+    .enquiry-inner {
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .enquiry-eyebrow {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--arcadian-gold);
+      margin-bottom: 32px;
+    }
+
+    .enquiry-headline {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 3.5vw, 30px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--pavilion-white);
+      line-height: 1.45;
+      margin-bottom: 48px;
+      letter-spacing: 0.02em;
+    }
+
+    .enquiry-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-align: left;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 480px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-field label {
+      font-family: var(--font-sans);
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(245, 241, 236, 0.4);
+    }
+
+    .form-field input,
+    .form-field textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(245, 241, 236, 0.15);
+      padding: 12px 0;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--pavilion-white);
+      outline: none;
+      transition: border-color 0.25s ease;
+      width: 100%;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: rgba(245, 241, 236, 0.2);
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus {
+      border-bottom-color: var(--arcadian-gold);
+    }
+
+    .form-field textarea {
+      resize: none;
+      height: 80px;
+      line-height: 1.6;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: transparent;
+      border: 1px solid rgba(245, 241, 236, 0.3);
+      padding: 18px 32px;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--pavilion-white);
+      cursor: pointer;
+      margin-top: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: rgba(245, 241, 236, 0.06);
+      border-color: rgba(245, 241, 236, 0.5);
+    }
+
+    .submit-btn:active {
+      transform: translateY(1px);
+    }
+
+    .form-success {
+      display: none;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .form-success.visible {
+      display: block;
+    }
+
+    .form-success-icon {
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba(201, 169, 110, 0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .form-success-icon::after {
+      content: '';
+      width: 10px;
+      height: 6px;
+      border-left: 1px solid var(--arcadian-gold);
+      border-bottom: 1px solid var(--arcadian-gold);
+      transform: rotate(-45deg) translateY(-2px);
+      display: block;
+    }
+
+    .form-success p {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 300;
+      color: rgba(245, 241, 236, 0.7);
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    .site-footer {
+      background: var(--virama-stone);
+      padding: 0 clamp(24px, 5vw, 72px);
+    }
+
+    .footer-gold-rule {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201, 169, 110, 0.35), transparent);
+      margin: 0;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 36px 0 28px;
+      gap: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .footer-main {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    .footer-brand {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      font-weight: 400;
+      color: rgba(245, 241, 236, 0.6);
+      letter-spacing: 0.08em;
+    }
+
+    .footer-brand span {
+      color: var(--arcadian-gold);
+      font-style: italic;
+    }
+
+    .footer-developer {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(245, 241, 236, 0.35);
+      text-align: right;
+    }
+
+    @media (max-width: 640px) {
+      .footer-developer {
+        text-align: center;
+      }
+    }
+
+    .footer-rera {
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid rgba(245, 241, 236, 0.06);
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      color: rgba(245, 241, 236, 0.25);
+      line-height: 1.8;
+    }
+
+    .footer-rera a {
+      color: rgba(201, 169, 110, 0.5);
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0 28px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: rgba(245, 241, 236, 0.2);
+    }
+
+    .footer-confidential {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: rgba(245, 241, 236, 0.15);
+      font-style: italic;
+    }
+
+    /* =============================================
+       PRINT STYLES
+    ============================================= */
+    @media print {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .fade-in-up {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      .fact-card {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      .site-nav {
+        position: static;
+      }
+
+      .hero {
+        height: auto;
+        min-height: 200px;
+        page-break-after: always;
+      }
+
+      .hero-bg {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    /* =============================================
+       GLOBAL UTILITIES
+    ============================================= */
+    .gold-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--arcadian-gold);
+      opacity: 0.4;
+      margin: 0 auto;
+    }
+
+    .content-max {
+      max-width: var(--content-max);
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SEO H1 (visually hidden) -->
+  <h1 class="sr-only">Virāma — Twelve Ultra-Luxury Private Villas in Jubilee Hills</h1>
+
+  <!-- =============================================
+       NAV
+  ============================================= -->
+  <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+    <a href="#" class="nav-logo">S<span>²</span> Virāma</a>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#amenities">Residences</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#enquiry" class="nav-enquire">Enquire</a></li>
+    </ul>
+  </nav>
+
+  <!-- =============================================
+       SECTION 1 — HERO
+  ============================================= -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-overline">Jubilee Hills · Twelve Private Villas</p>
+      <h2 class="hero-title">Virāma</h2>
+      <p class="hero-tagline">Come Home to Quiet.</p>
+      <div class="hero-divider" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+
+    <div class="hero-fade-overlay" aria-hidden="true"></div>
+  </section>
+
+  <!-- =============================================
+       SECTION 2 — THE PHILOSOPHY
+  ============================================= -->
+  <section class="philosophy" id="philosophy" aria-labelledby="philosophy-heading">
+    <div class="philosophy-inner">
+      <span class="section-eyebrow fade-in-up">The Philosophy</span>
+
+      <h2 class="fade-in-up delay-1">
+        There is a kind of silence that has nothing to do with the absence of sound.
+      </h2>
+
+      <p class="fade-in-up delay-2">
+        It is the silence of a room that was designed for you — not for a market, not for a segment, not for a buyer profile assembled from preference surveys. For you. The specific weight of you, arriving home on a Thursday evening, shedding the city at the threshold, walking into a space that remembers what you need before you do.
+      </p>
+
+      <p class="fade-in-up delay-2">
+        Virāma is twelve private villas. That is not a phase one. There is no phase two. There will never be another Virāma, because a thing that is truly complete cannot be added to.
+      </p>
+
+      <p class="fade-in-up delay-3">
+        Each villa occupies ground that was selected before a single architectural line was drawn — positioned for light, for stillness, for the particular quality of morning that belongs only to this address. The Still Water reflects your sky. The Restoration Pavilion exists because recovery is as serious a pursuit as achievement. The Long Table is for the evenings when the people who matter most to you are finally in the same room. These are not amenities. They are arguments for a different way of living.
+      </p>
+
+      <p class="fade-in-up delay-3">
+        SSquare began this project with a single constraint: no material, no finish, and no commitment made to the first buyer will be compromised for the twelfth. That constraint is the building's spine.
+      </p>
+
+      <p class="fade-in-up delay-4">
+        The twelve families who live here will know each other by name. Their children will share a world that was built to last. The team that maintains this address will stay for a decade, minimum — because a home is not a product, and its care cannot be outsourced to whoever wins the next contract.
+      </p>
+
+      <p class="refrain fade-in-up delay-5">
+        Come home to quiet.<br>
+        <span style="font-size: 0.85em; opacity: 0.7;">Not the quiet of emptiness. The quiet of everything being, finally, in its right place.</span>
+      </p>
+
+      <p id="philosophy-heading" class="sr-only">The Virāma Philosophy</p>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECTION 3 — KEY FACTS
+  ============================================= -->
+  <section class="facts" id="facts" aria-labelledby="facts-heading">
+    <div class="facts-inner">
+      <h2 id="facts-heading">The Essentials</h2>
+      <div class="facts-grid" role="list">
+        <div class="fact-card" role="listitem">
+          <div class="fact-number">12</div>
+          <div class="gold-rule"></div>
+          <div class="fact-label">Private Villas</div>
+        </div>
+        <div class="fact-card" role="listitem">
+          <div class="fact-number" style="font-size: clamp(28px, 3.5vw, 42px); line-height: 1.1;">Rs 13–20 Cr</div>
+          <div class="gold-rule"></div>
+          <div class="fact-label">Price Range</div>
+        </div>
+        <div class="fact-card" role="listitem">
+          <div class="fact-number" style="font-size: clamp(22px, 2.8vw, 34px); line-height: 1.2; letter-spacing: 0;">Jubilee Hills</div>
+          <div class="gold-rule"></div>
+          <div class="fact-label">Hyderabad, India</div>
+        </div>
+        <div class="fact-card" role="listitem">
+          <div class="fact-number" style="font-size: clamp(20px, 2.5vw, 30px); line-height: 1.2;">Ultra-Luxury</div>
+          <div class="gold-rule"></div>
+          <div class="fact-label">Category</div>
+        </div>
+        <div class="fact-card" role="listitem">
+          <div class="fact-number" style="font-size: clamp(16px, 2vw, 24px); line-height: 1.3; letter-spacing: 0;">S² 1991</div>
+          <div class="gold-rule"></div>
+          <div class="fact-label">RERA Registered · SSquare</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECTION 4 — AMENITIES
+  ============================================= -->
+  <section class="amenities" id="amenities" aria-labelledby="amenities-heading">
+    <div class="amenities-inner">
+      <div class="section-header fade-in-up">
+        <span class="section-eyebrow" style="margin-bottom: 0;">Private Amenities</span>
+        <h2 id="amenities-heading" class="section-title">The Six Private Arguments</h2>
+        <p class="section-subtitle">These are not facilities. Each is a reason in itself.</p>
+      </div>
+
+      <div class="amenities-grid" role="list">
+
+        <article class="amenity-card fade-in-up" role="listitem">
+          <div class="amenity-image">
+            <div class="amenity-img-1" role="img" aria-label="The Still Water — Private Pool"></div>
+          </div>
+          <div class="amenity-content">
+            <h3 class="amenity-name">The Still Water</h3>
+            <p class="amenity-type">Private Pool</p>
+            <p class="amenity-desc">Some mornings call for stillness before words. A pool temperature-controlled to body temperature at dusk. The villa's most intimate room — one without walls.</p>
+          </div>
+        </article>
+
+        <article class="amenity-card fade-in-up delay-1" role="listitem">
+          <div class="amenity-image">
+            <div class="amenity-img-2" role="img" aria-label="The Restoration Pavilion — Private Spa"></div>
+          </div>
+          <div class="amenity-content">
+            <h3 class="amenity-name">The Restoration Pavilion</h3>
+            <p class="amenity-type">Private Spa</p>
+            <p class="amenity-desc">A free-standing micro-sanctuary. Heated basalt floor, copper soaking tub. A resident therapist who learns your body over years, not sessions.</p>
+          </div>
+        </article>
+
+        <article class="amenity-card fade-in-up" role="listitem">
+          <div class="amenity-image">
+            <div class="amenity-img-3" role="img" aria-label="The Cellar Room — Wine Lounge"></div>
+          </div>
+          <div class="amenity-content">
+            <h3 class="amenity-name">The Cellar Room</h3>
+            <p class="amenity-type">Wine Lounge</p>
+            <p class="amenity-desc">Below grade. 14°C. 600-bottle private lock-box per family. A retained Master of Wine. Seven steps of marble. The city ceases to exist.</p>
+          </div>
+        </article>
+
+        <article class="amenity-card fade-in-up delay-1" role="listitem">
+          <div class="amenity-image">
+            <div class="amenity-img-4" role="img" aria-label="The Screening Room — Private Cinema"></div>
+          </div>
+          <div class="amenity-content">
+            <h3 class="amenity-name">The Screening Room</h3>
+            <p class="amenity-type">Private Cinema</p>
+            <p class="amenity-desc">A private cinema that seats twelve. No shared booking. No other family's film choice. The room is yours, whenever you want it.</p>
+          </div>
+        </article>
+
+        <article class="amenity-card fade-in-up" role="listitem">
+          <div class="amenity-image">
+            <div class="amenity-img-5" role="img" aria-label="The Horizon Deck — Sunset Terrace"></div>
+          </div>
+          <div class="amenity-content">
+            <h3 class="amenity-name">The Horizon Deck</h3>
+            <p class="amenity-type">Sunset Terrace</p>
+            <p class="amenity-desc">Where the estate ends and the sky begins. Designed for the hour just before dinner, when the city lights and the evening air achieve their brief equilibrium.</p>
+          </div>
+        </article>
+
+        <article class="amenity-card fade-in-up delay-1" role="listitem">
+          <div class="amenity-image">
+            <div class="amenity-img-6" role="img" aria-label="The Green Circuit — Garden Trail"></div>
+          </div>
+          <div class="amenity-content">
+            <h3 class="amenity-name">The Green Circuit</h3>
+            <p class="amenity-type">Garden Trail</p>
+            <p class="amenity-desc">A half-kilometre garden trail running the estate's perimeter. Designed for the hour between darkness and full light, when walking becomes thinking.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECTION 5 — COMMUNITY ZONES
+  ============================================= -->
+  <section class="community" id="community" aria-labelledby="community-heading">
+    <div class="community-header fade-in-up">
+      <span class="section-eyebrow" style="display:block; text-align:center;">Twelve Families Only</span>
+      <h2 id="community-heading" class="section-title" style="color: var(--pavilion-white);">Six Shared Worlds</h2>
+      <p class="section-subtitle">Common ground, held privately.</p>
+    </div>
+
+    <div class="community-panels" role="list" aria-label="Community zones">
+      <div class="zone-panel fade-in-up" role="listitem">
+        <div class="zone-bg zone-bg-1">
+          <span class="zone-number" aria-hidden="true">01</span>
+          <div class="zone-content">
+            <h3 class="zone-name">The Wellspring</h3>
+            <p class="zone-type">Wellness Pavilion</p>
+            <p class="zone-desc">A shared wellness space that belongs, entirely, to twelve families. Curated programming. No memberships. No strangers.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-panel fade-in-up delay-1" role="listitem">
+        <div class="zone-bg zone-bg-2">
+          <span class="zone-number" aria-hidden="true">02</span>
+          <div class="zone-content">
+            <h3 class="zone-name">The Long Table</h3>
+            <p class="zone-type">Social Dining Terrace</p>
+            <p class="zone-desc">For the evenings when the people who matter most to you are finally in the same room. An outdoor dining terrace for gathering.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-panel fade-in-up delay-2" role="listitem">
+        <div class="zone-bg zone-bg-3">
+          <span class="zone-number" aria-hidden="true">03</span>
+          <div class="zone-content">
+            <h3 class="zone-name">The Archive</h3>
+            <p class="zone-type">Curated Library</p>
+            <p class="zone-desc">A private library built over time by the twelve families who inhabit it. Curated, not catalogued. A room that thinks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-panel fade-in-up delay-3" role="listitem">
+        <div class="zone-bg zone-bg-4">
+          <span class="zone-number" aria-hidden="true">04</span>
+          <div class="zone-content">
+            <h3 class="zone-name">The Threshold</h3>
+            <p class="zone-type">Arrival Plaza</p>
+            <p class="zone-desc">The moment the city gives way. An arrival sequence designed to shed everything that need not follow you home.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-panel fade-in-up delay-4" role="listitem">
+        <div class="zone-bg zone-bg-5">
+          <span class="zone-number" aria-hidden="true">05</span>
+          <div class="zone-content">
+            <h3 class="zone-name">The Gallery Walk</h3>
+            <p class="zone-type">Garden Art Path</p>
+            <p class="zone-desc">Commissioned works installed among the landscape. Art that weathers and deepens, like everything worth living with.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-panel fade-in-up delay-5" role="listitem">
+        <div class="zone-bg zone-bg-6">
+          <span class="zone-number" aria-hidden="true">06</span>
+          <div class="zone-content">
+            <h3 class="zone-name">The Bureau</h3>
+            <p class="zone-type">Concierge Lounge</p>
+            <p class="zone-desc">Not a desk with a uniformed attendant. A room with people who know your name, your preferences, and your schedule.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="community-note">Access restricted to twelve resident families · No external memberships · No exceptions</p>
+  </section>
+
+  <!-- =============================================
+       SECTION 6 — GALLERY
+  ============================================= -->
+  <section class="gallery" id="gallery" aria-labelledby="gallery-heading">
+    <div class="gallery-inner">
+      <div class="section-header fade-in-up" style="margin-bottom: 48px;">
+        <span class="section-eyebrow" style="margin-bottom: 0;">Visual Record</span>
+        <h2 id="gallery-heading" class="section-title" style="color: var(--pavilion-white);">The Address</h2>
+      </div>
+
+      <div class="gallery-grid" aria-label="Gallery placeholder images">
+        <div class="gallery-item">
+          <div class="gallery-img-1" role="img" aria-label="Villa exterior view placeholder"></div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-img-2" role="img" aria-label="Interior living space placeholder"></div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-img-3" role="img" aria-label="Pool and gardens placeholder"></div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-img-4" role="img" aria-label="Common areas placeholder"></div>
+        </div>
+      </div>
+
+      <div class="gallery-placeholder fade-in-up">
+        <p class="gallery-placeholder-text">Gallery available upon appointment</p>
+        <p class="gallery-appointment">Private viewings · Jubilee Hills · By invitation</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECTION 7 — FLOOR PLANS
+  ============================================= -->
+  <section class="floor-plans" id="floor-plans" aria-labelledby="plans-heading">
+    <div class="floor-plans-inner">
+      <div class="section-header fade-in-up" style="align-items: flex-start; text-align: left; margin-bottom: 40px;">
+        <span class="section-eyebrow" style="margin-bottom:0;">Residence Layouts</span>
+        <h2 id="plans-heading" class="section-title" style="color: var(--deep-basalt);">Floor Plans</h2>
+        <p class="section-subtitle" style="color: rgba(26,26,24,0.5);">Three villa configurations. Each sized to a different version of the same life.</p>
+      </div>
+
+      <div class="plan-toggles" role="tablist" aria-label="Floor plan types">
+        <button class="plan-btn active" data-plan="a" role="tab" aria-selected="true" aria-controls="plan-a">Type A</button>
+        <button class="plan-btn" data-plan="b" role="tab" aria-selected="false" aria-controls="plan-b">Type B</button>
+        <button class="plan-btn" data-plan="c" role="tab" aria-selected="false" aria-controls="plan-c">Type C</button>
+      </div>
+
+      <!-- Type A -->
+      <div class="plan-display active" id="plan-a" role="tabpanel" aria-labelledby="tab-a">
+        <div class="plan-svg-wrap">
+          <svg viewBox="0 0 540 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Type A floor plan schematic">
+            <!-- Outer boundary -->
+            <rect x="20" y="20" width="500" height="320" stroke="#1A1A18" stroke-width="2" fill="none"/>
+            <!-- Entry foyer -->
+            <rect x="20" y="20" width="80" height="80" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="60" y="65" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">FOYER</text>
+            <!-- Living room -->
+            <rect x="100" y="20" width="200" height="140" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="200" y="95" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">LIVING</text>
+            <!-- Dining -->
+            <rect x="300" y="20" width="120" height="100" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="360" y="75" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">DINING</text>
+            <!-- Kitchen -->
+            <rect x="420" y="20" width="100" height="100" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="470" y="75" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">KITCHEN</text>
+            <!-- Master bedroom -->
+            <rect x="20" y="160" width="180" height="120" stroke="#C9A96E" stroke-width="1.5" fill="rgba(201,169,110,0.04)"/>
+            <text x="110" y="225" font-family="Inter,sans-serif" font-size="7" fill="#C9A96E" opacity="0.7" text-anchor="middle" letter-spacing="0.08em">MASTER SUITE</text>
+            <!-- Study -->
+            <rect x="200" y="160" width="100" height="80" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="250" y="205" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">STUDY</text>
+            <!-- Bedroom 2 -->
+            <rect x="300" y="120" width="120" height="120" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="360" y="185" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">BEDROOM 2</text>
+            <!-- Bedroom 3 -->
+            <rect x="420" y="120" width="100" height="120" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="470" y="185" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">BEDROOM 3</text>
+            <!-- Pool terrace -->
+            <rect x="20" y="280" width="500" height="60" stroke="#1A1A18" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+            <text x="270" y="315" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.3" text-anchor="middle" letter-spacing="0.1em">POOL TERRACE · THE STILL WATER</text>
+            <!-- North indicator -->
+            <text x="510" y="18" font-family="Inter,sans-serif" font-size="8" fill="#1A1A18" opacity="0.25" text-anchor="end">N ↑</text>
+          </svg>
+        </div>
+        <div class="plan-details">
+          <div class="plan-detail-item">
+            <div class="plan-detail-label">Built Area</div>
+            <div class="plan-detail-value">6,200 sq ft</div>
+          </div>
+          <div class="plan-detail-item">
+            <div class="plan-detail-label">Configuration</div>
+            <div class="plan-detail-value">4 BHK + Study</div>
+          </div>
+          <div class="plan-detail-item">
+            <div class="plan-detail-label">Starting From</div>
+            <div class="plan-detail-value">Rs 13 Crore</div>
+          </div>
+        </div>
+        <a href="#enquiry" class="plan-link">Request detailed drawings →</a>
+      </div>
+
+      <!-- Type B -->
+      <div class="plan-display" id="plan-b" role="tabpanel" aria-labelledby="tab-b">
+        <div class="plan-svg-wrap">
+          <svg viewBox="0 0 540 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Type B floor plan schematic">
+            <rect x="20" y="20" width="500" height="320" stroke="#1A1A18" stroke-width="2" fill="none"/>
+            <rect x="20" y="20" width="100" height="100" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="70" y="75" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">FOYER</text>
+            <rect x="120" y="20" width="240" height="160" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="240" y="105" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">LIVING + DINING</text>
+            <rect x="360" y="20" width="160" height="80" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="440" y="65" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">KITCHEN</text>
+            <rect x="360" y="100" width="80" height="80" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="400" y="145" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">UTILITY</text>
+            <rect x="20" y="180" width="220" height="140" stroke="#C9A96E" stroke-width="1.5" fill="rgba(201,169,110,0.04)"/>
+            <text x="130" y="255" font-family="Inter,sans-serif" font-size="7" fill="#C9A96E" opacity="0.7" text-anchor="middle" letter-spacing="0.08em">MASTER SUITE</text>
+            <rect x="240" y="180" width="120" height="100" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="300" y="235" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">BEDROOM 2</text>
+            <rect x="360" y="180" width="160" height="100" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="440" y="235" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">BEDROOM 3</text>
+            <rect x="20" y="280" width="500" height="60" stroke="#1A1A18" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+            <text x="270" y="315" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.3" text-anchor="middle" letter-spacing="0.1em">POOL TERRACE · THE STILL WATER</text>
+            <text x="510" y="18" font-family="Inter,sans-serif" font-size="8" fill="#1A1A18" opacity="0.25" text-anchor="end">N ↑</text>
+          </svg>
+        </div>
+        <div class="plan-details">
+          <div class="plan-detail-item">
+            <div class="plan-detail-label">Built Area</div>
+            <div class="plan-detail-value">7,400 sq ft</div>
+          </div>
+          <div class="plan-detail-item">
+            <div class="plan-detail-label">Configuration</div>
+            <div class="plan-detail-value">4 BHK + Media</div>
+          </div>
+          <div class="plan-detail-item">
+            <div class="plan-detail-label">Starting From</div>
+            <div class="plan-detail-value">Rs 16 Crore</div>
+          </div>
+        </div>
+        <a href="#enquiry" class="plan-link">Request detailed drawings →</a>
+      </div>
+
+      <!-- Type C -->
+      <div class="plan-display" id="plan-c" role="tabpanel" aria-labelledby="tab-c">
+        <div class="plan-svg-wrap">
+          <svg viewBox="0 0 540 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Type C floor plan schematic">
+            <rect x="20" y="20" width="500" height="320" stroke="#1A1A18" stroke-width="2" fill="none"/>
+            <rect x="20" y="20" width="120" height="120" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="80" y="85" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">FOYER + STUDY</text>
+            <rect x="140" y="20" width="200" height="180" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="240" y="115" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">LIVING + DINING</text>
+            <rect x="340" y="20" width="180" height="80" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="430" y="65" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">KITCHEN</text>
+            <rect x="340" y="100" width="180" height="100" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="430" y="155" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">FAMILY ROOM</text>
+            <rect x="20" y="200" width="240" height="120" stroke="#C9A96E" stroke-width="1.5" fill="rgba(201,169,110,0.04)"/>
+            <text x="140" y="265" font-family="Inter,sans-serif" font-size="7" fill="#C9A96E" opacity="0.7" text-anchor="middle" letter-spacing="0.08em">MASTER SUITE</text>
+            <rect x="260" y="200" width="140" height="120" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="330" y="265" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">BEDROOM 2</text>
+            <rect x="400" y="200" width="120" height="120" stroke="#1A1A18" stroke-width="1" fill="none"/>
+            <text x="460" y="265" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.4" text-anchor="middle" letter-spacing="0.08em">BEDROOM 3</text>
+            <rect x="20" y="300" width="500" height="40" stroke="#1A1A18" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+            <text x="270" y="324" font-family="Inter,sans-serif" font-size="7" fill="#1A1A18" opacity="0.3" text-anchor="middle" letter-spacing="0.1em">POOL TERRACE · THE STILL WATER</text>
+            <text x="510" y="18" font-family="Inter,sans-serif" font-size="8" fill="#1A1A18" opacity="0.25" text-anchor="end">N ↑</text>
+          </svg>
+        </div>
+        <div class="plan-details">
+          <div class="plan-detail-item">
+            <div class="plan-detail-label">Built Area</div>
+            <div class="plan-detail-value">8,800 sq ft</div>
+          </div>
+          <div class="plan-detail-item">
+            <div class="plan-detail-label">Configuration</div>
+            <div class="plan-detail-value">5 BHK + Study</div>
+          </div>
+          <div class="plan-detail-item">
+            <div class="plan-detail-label">Starting From</div>
+            <div class="plan-detail-value">Rs 18 Crore</div>
+          </div>
+        </div>
+        <a href="#enquiry" class="plan-link">Request detailed drawings →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECTION 8 — LOCATION
+  ============================================= -->
+  <section class="location" id="location" aria-labelledby="location-heading">
+    <div class="location-inner">
+      <div class="location-text fade-in-up">
+        <span class="section-eyebrow" style="color: var(--arcadian-gold);">The Address</span>
+        <h2 id="location-heading" class="section-title" style="color: var(--deep-basalt); text-align: left;">Jubilee Hills,<br>Hyderabad</h2>
+        <p>
+          There are addresses that mean something before you arrive. Jubilee Hills is one of them. Privately held land, low density, mature canopy, proximity to everything significant without proximity to everything loud. The right place was selected first. The architecture followed.
+        </p>
+
+        <table class="proximity-table" aria-label="Proximity to key destinations">
+          <caption class="sr-only">Distance from Virāma to key destinations in Hyderabad</caption>
+          <tbody>
+            <tr>
+              <td>
+                <span class="dest-name">Jubilee Hills Check Post</span>
+                <span class="dest-note">Main arterial · 1.2 km</span>
+              </td>
+              <td>4 minutes</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="dest-name">Film Nagar</span>
+                <span class="dest-note">Cultural district</span>
+              </td>
+              <td>6 minutes</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="dest-name">Banjara Hills</span>
+                <span class="dest-note">Dining, retail, lifestyle</span>
+              </td>
+              <td>8 minutes</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="dest-name">Financial District</span>
+                <span class="dest-note">HITEC City / Gachibowli</span>
+              </td>
+              <td>18 minutes</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="dest-name">RGIA Airport</span>
+                <span class="dest-note">Rajiv Gandhi Intl.</span>
+              </td>
+              <td>35 minutes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="fade-in-up delay-2">
+        <div class="location-map-placeholder" aria-label="Map placeholder — contact for location details">
+          Map · By Appointment
+        </div>
+        <p style="font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.12em; color: rgba(44,40,37,0.4); text-align: center; margin-top: 16px; text-transform: uppercase;">Precise address shared with confirmed enquiries</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECTION 9 — ENQUIRY
+  ============================================= -->
+  <section class="enquiry" id="enquiry" aria-labelledby="enquiry-heading">
+    <div class="enquiry-inner">
+      <span class="enquiry-eyebrow fade-in-up">Private Enquiry</span>
+      <h2 id="enquiry-heading" class="enquiry-headline fade-in-up delay-1">
+        Twelve villas. We would like to tell you which one is yours.
+      </h2>
+
+      <form class="enquiry-form fade-in-up delay-2" id="enquiryForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="enq-name">Your Name</label>
+            <input type="text" id="enq-name" name="name" placeholder="Full name" autocomplete="name" required />
+          </div>
+          <div class="form-field">
+            <label for="enq-mobile">Mobile</label>
+            <input type="tel" id="enq-mobile" name="mobile" placeholder="+91 00000 00000" autocomplete="tel" required />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="enq-email">Email Address</label>
+          <input type="email" id="enq-email" name="email" placeholder="your@email.com" autocomplete="email" required />
+        </div>
+        <div class="form-field">
+          <label for="enq-message">Message <span style="opacity:0.4; font-size:8px; letter-spacing:0.1em;">(optional)</span></label>
+          <textarea id="enq-message" name="message" placeholder="Tell us what you are looking for, or simply say hello."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit Enquiry</button>
+      </form>
+
+      <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+        <div class="form-success-icon" aria-hidden="true"></div>
+        <p>Your interest has been noted.<br>We will reach you within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-gold-rule" aria-hidden="true"></div>
+    <div class="footer-main">
+      <p class="footer-brand"><span>Virāma</span> by SSquare</p>
+      <p class="footer-developer">The Standard, Privately Held.</p>
+    </div>
+    <div class="footer-rera">
+      RERA Reg. No. [XXXX] &nbsp;|&nbsp; Telangana RERA &nbsp;|&nbsp;
+      <a href="https://virama.in" rel="noopener">virama.in</a>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 SSquare Developers Pvt. Ltd. All rights reserved.</p>
+      <p class="footer-confidential">This document is for information purposes only. Details subject to change.</p>
+    </div>
+  </footer>
+
+  <!-- =============================================
+       JAVASCRIPT
+  ============================================= -->
+  <script>
+    (function () {
+      'use strict';
+
+      // ── Nav scroll behaviour ──────────────────────────
+      var nav = document.getElementById('siteNav');
+      var lastScrollY = 0;
+
+      function onScroll() {
+        var scrollY = window.pageYOffset;
+
+        // Scrolled state for nav background
+        if (scrollY > 60) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+
+        lastScrollY = scrollY;
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // ── Mobile nav toggle ─────────────────────────────
+      var mobileToggle = document.getElementById('mobileToggle');
+      var navLinks = document.getElementById('navLinks');
+
+      if (mobileToggle && navLinks) {
+        mobileToggle.addEventListener('click', function () {
+          var isOpen = navLinks.classList.toggle('open');
+          mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close nav on link click
+        navLinks.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            navLinks.classList.remove('open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // ── IntersectionObserver — fade-in-up ────────────
+      var fadeEls = document.querySelectorAll('.fade-in-up');
+
+      if ('IntersectionObserver' in window) {
+        var fadeObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              fadeObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        fadeEls.forEach(function (el) {
+          fadeObserver.observe(el);
+        });
+      } else {
+        // Fallback: show all immediately
+        fadeEls.forEach(function (el) {
+          el.classList.add('visible');
+        });
+      }
+
+      // ── IntersectionObserver — fact cards ────────────
+      var factCards = document.querySelectorAll('.fact-card');
+
+      if ('IntersectionObserver' in window) {
+        var factObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              factObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -20px 0px'
+        });
+
+        factCards.forEach(function (card) {
+          factObserver.observe(card);
+        });
+      } else {
+        factCards.forEach(function (card) {
+          card.classList.add('visible');
+        });
+      }
+
+      // ── Floor plan toggles ────────────────────────────
+      var planBtns = document.querySelectorAll('.plan-btn');
+      var planDisplays = document.querySelectorAll('.plan-display');
+
+      planBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var target = btn.getAttribute('data-plan');
+
+          // Update buttons
+          planBtns.forEach(function (b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+
+          // Update displays
+          planDisplays.forEach(function (display) {
+            if (display.id === 'plan-' + target) {
+              display.classList.add('active');
+            } else {
+              display.classList.remove('active');
+            }
+          });
+        });
+      });
+
+      // ── Enquiry form submission ───────────────────────
+      var enquiryForm = document.getElementById('enquiryForm');
+      var formSuccess = document.getElementById('formSuccess');
+
+      if (enquiryForm && formSuccess) {
+        enquiryForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          // Basic validation
+          var name = document.getElementById('enq-name');
+          var mobile = document.getElementById('enq-mobile');
+          var email = document.getElementById('enq-email');
+          var allValid = true;
+
+          [name, mobile, email].forEach(function (field) {
+            if (!field.value.trim()) {
+              field.style.borderBottomColor = 'rgba(180, 80, 80, 0.6)';
+              allValid = false;
+            } else {
+              field.style.borderBottomColor = '';
+            }
+          });
+
+          if (!allValid) return;
+
+          // Show success state
+          enquiryForm.style.opacity = '0';
+          enquiryForm.style.transform = 'translateY(-12px)';
+          enquiryForm.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+
+          setTimeout(function () {
+            enquiryForm.style.display = 'none';
+            formSuccess.classList.add('visible');
+            formSuccess.style.opacity = '0';
+            formSuccess.style.transition = 'opacity 0.5s ease';
+
+            requestAnimationFrame(function () {
+              formSuccess.style.opacity = '1';
+            });
+          }, 380);
+        });
+      }
+
+      // ── Hero scroll parallax / fade ───────────────────
+      var hero = document.getElementById('hero');
+
+      function onHeroScroll() {
+        var scrollY = window.pageYOffset;
+        var heroH = hero ? hero.offsetHeight : window.innerHeight;
+
+        if (hero && scrollY > heroH * 0.15) {
+          var progress = Math.min((scrollY - heroH * 0.15) / (heroH * 0.5), 1);
+          var heroContent = hero.querySelector('.hero-content');
+          var heroBg = hero.querySelector('.hero-bg');
+
+          if (heroContent) {
+            heroContent.style.opacity = 1 - progress;
+            heroContent.style.transform = 'translateY(' + (-progress * 20) + 'px)';
+          }
+          if (heroBg) {
+            heroBg.style.opacity = 1 - progress * 0.5;
+          }
+        } else if (hero) {
+          var heroContent = hero.querySelector('.hero-content');
+          var heroBg = hero.querySelector('.hero-bg');
+          if (heroContent) {
+            heroContent.style.opacity = '';
+            heroContent.style.transform = '';
+          }
+          if (heroBg) {
+            heroBg.style.opacity = '';
+          }
+        }
+      }
+
+      window.addEventListener('scroll', onHeroScroll, { passive: true });
+
+      // ── Smooth scroll for anchor links ───────────────
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          var targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+
+          var target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            var navHeight = nav ? nav.offsetHeight : 0;
+            var targetY = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 8;
+
+            window.scrollTo({
+              top: targetY,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+    })();
+  </script>
+
+</body>
+</html>
