@@ -1,5 +1,5 @@
 # MASTER CREATIVE BRIEF
-## Virāma | My Scape Builders
+## Virāma | SSquare
 ### Prepared by: TAD Global Branding Pvt. Ltd. | March 2026
 ### Brand Inspiration: Aman · Four Seasons · St. Regis · Binghatti · Sobha Realty · Bvlgari Lighthouse Dubai
 
@@ -127,7 +127,7 @@ Sanskrit: विराम — a complete pause; the diacritical mark that signal
 
 Of the five candidates evaluated — Virāma, Pietra (Italian: stone), Seren (Welsh: star), Valanor (coined Sanskrit-Persian), Alvar (Latin/Nordic: limestone plain) — Virāma is the only name that *performs* the brand promise within the act of hearing it. It does not describe a quality; it is the quality.
 
-**Brand extension:** "Virāma by My Scape Builders" — the developer becomes a provenance mark, not the headline.
+**Brand extension:** "Virāma by SSquare" — the developer becomes a provenance mark, not the headline.
 
 ---
 
@@ -205,7 +205,7 @@ Virāma is twelve private villas. That is not a phase one. There is no phase two
 
 Each villa occupies ground that was selected before a single architectural line was drawn — positioned for light, for stillness, for the particular quality of morning that belongs only to this address. The Still Water reflects your sky. The Restoration Pavilion exists because recovery is as serious a pursuit as achievement. The Long Table is for the evenings when the people who matter most to you are finally in the same room. These are not amenities. They are arguments for a different way of living.
 
-My Scape Builders began this project with a single constraint: no material, no finish, and no commitment made to the first buyer will be compromised for the twelfth. That constraint is the building's spine.
+SSquare began this project with a single constraint: no material, no finish, and no commitment made to the first buyer will be compromised for the twelfth. That constraint is the building's spine.
 
 The twelve families who live here will know each other by name. Their children will share a world that was built to last. The team that maintains this address will stay for a decade, minimum — because a home is not a product, and its care cannot be outsourced to whoever wins the next contract.
 
@@ -217,7 +217,7 @@ Not the quiet of emptiness. The quiet of everything being, finally, in its right
 
 ## Site Office Experience — Key Principles
 
-**Exterior:** Pale plaster and dark basalt. One engraved stone panel at eye level: "Virāma. By My Scape Builders." No hoarding, no flags. Mature tree row creates threshold before building is reached. Gravel forecourt — the sound of arrival is intentional.
+**Exterior:** Pale plaster and dark basalt. One engraved stone panel at eye level: "Virāma. By SSquare." No hoarding, no flags. Mature tree row creates threshold before building is reached. Gravel forecourt — the sound of arrival is intentional.
 
 **Arrival sequence:** 20-metre walk, path designed for two. Solid timber door opened by a person. Always. First sound: the door.
 
@@ -246,9 +246,9 @@ Clamshell box, Dark Basalt board, Arcadian Gold foil wordmark. Contents: 48-page
 
 # SECTION 4: MARKETING COLLATERALS
 
-# Marketing Collaterals Brief — Virāma by My Scape Builders
+# Marketing Collaterals Brief — Virāma by SSquare
 
-**Prepared for:** My Scape Builders
+**Prepared for:** SSquare
 **Project:** Virāma — 12 Ultra-Luxury Private Villas
 **Price Segment:** Rs 13–20 Crore
 **Tagline:** "Come Home to Quiet."
@@ -344,7 +344,7 @@ Pages 13–14: The 12-villa fact, treated as design. "12 Villas. Not a phase. No
 **Key Copy Elements:**
 Philosophy text (pages 11–12): Original commissioned copy explaining the etymology of Virāma — the Sanskrit pause mark, the sign that completes a word, the idea of wholeness not as abundance but as sufficiency. Approx. 200 words. Set across left page only, right page remains white with a botanical line-engraving illustration (bespoke commissioned piece, fine-line, monochrome, faintly overprinted in Sandstone Pale — a single plant, a single branch, nothing more).
 
-Developer attribution: My Scape Builders — first appearance, subdued, as a single line at the footer of page 14.
+Developer attribution: SSquare — first appearance, subdued, as a single line at the footer of page 14.
 
 **Design / Layout Notes:**
 The Devanagari character on the opener must be typeset in an appropriate Unicode-supporting serif or sourced as a custom illustration — not a system default render. It must carry the same weight class as the logo. This page is an act of cultural respect and must be treated with corresponding precision.
@@ -462,7 +462,7 @@ The reader is reassured about the practical world without feeling that they were
 
 ---
 
-### CHAPTER 7 — MY SCAPE BUILDERS / "THE HAND BEHIND THE WORK"
+### CHAPTER 7 — SSQUARE / "THE HAND BEHIND THE WORK"
 **Pages:** 6 (pages 45–50)
 **Chapter Title:** The Builders
 
@@ -472,7 +472,7 @@ Pages 47–48: A portfolio of two previous completed projects — one image each
 Pages 49–50: Developer credential spread.
 
 **Key Copy Elements:**
-Developer statement (pp. 45–46, right-side column — the image is on the left): approximately 150 words. Not a history. Not a list of awards. A statement of values — why My Scape Builders builds the way it builds, what they will not compromise on, the specific decision they made about Virāma that cost more but was right.
+Developer statement (pp. 45–46, right-side column — the image is on the left): approximately 150 words. Not a history. Not a list of awards. A statement of values — why SSquare builds the way it builds, what they will not compromise on, the specific decision they made about Virāma that cost more but was right.
 
 Developer credentials block (pp. 49–50): Years active, total project value delivered, landmark completions (names + cities), RERA registration number, ISO or quality certifications. Set in the same minimal table format as the location chapter.
 
@@ -522,7 +522,7 @@ A repeat pattern — fine-line engravings of the virāma mark (्) tessellated 
 
 **Copy:**
 Colophon, right endpaper only, foot of page, 7pt:
-"This book was produced in a limited edition to accompany the private launch of Virāma by My Scape Builders. Book [XXX] of [500]. Printed on Fedrigoni Arcoset Extra White 150gsm. Bound in natural Wibalin cloth."
+"This book was produced in a limited edition to accompany the private launch of Virāma by SSquare. Book [XXX] of [500]. Printed on Fedrigoni Arcoset Extra White 150gsm. Bound in natural Wibalin cloth."
 
 **Emotional Objective:**
 The book becomes an object. The reader keeps it. The brand lives in their home before they do.
@@ -555,7 +555,7 @@ A booking form for an ultra-luxury property must never feel like a form. It must
 **Page 1 (Cover):**
 Top third: Virāma wordmark (Freight Display, Arcadian Gold) and logomark (threshold geometry)
 Centre: The single line — "Expression of Intent" — in small caps, tracked +60, Deep Basalt
-Bottom third: My Scape Builders wordmark and RERA number
+Bottom third: SSquare wordmark and RERA number
 No other content. This cover signals: what follows is a serious document.
 
 **Page 2 (Personal Details):**
@@ -590,7 +590,7 @@ Section header: "Your Co-Applicant / Joint Holder" (if applicable)
 - PAN Card Number — Optional
 
 **Page 4 (Declaration, RERA & Signature Block):**
-A 5-line declaration paragraph in 9pt — language drafted by legal counsel, confirming that the applicant has read the RERA-registered documents, understands the expression of intent is not a binding agreement, and consents to contact by My Scape Builders.
+A 5-line declaration paragraph in 9pt — language drafted by legal counsel, confirming that the applicant has read the RERA-registered documents, understands the expression of intent is not a binding agreement, and consents to contact by SSquare.
 
 RERA block: Full RERA registration number, RERA project website URL, statement "This project is registered under RERA. Buyers are advised to visit [URL] for all registered project documents."
 
@@ -598,7 +598,7 @@ Signature block:
 - Date and Place
 - Primary Applicant Signature (box — 60mm wide, 20mm tall, hairline border)
 - Co-Applicant Signature (box — same size, same border)
-- My Scape Builders Representative Signature and Stamp
+- SSquare Representative Signature and Stamp
 
 **Brand Integration Notes:**
 All field labels are set in Freight Display small caps, not a generic sans. Field boxes use a 0.25pt hairline rule in Deep Basalt — not grey, not blue, not a default browser/Word style. The form communicates premium through restraint: no colour fills in form fields, no screened backgrounds, nothing that looks like a template.
@@ -681,14 +681,14 @@ No button to return to homepage. The screen sits. It allows the moment to be a m
 
 ## Governance Principle
 
-Every member of the Virāma / My Scape Builders team should have an identical signature except for the name and title fields. Signatures that differ in font, layout, or colour break the brand in every email sent. This must be enforced centrally — a single HTML file distributed and locked.
+Every member of the Virāma / SSquare team should have an identical signature except for the name and title fields. Signatures that differ in font, layout, or colour break the brand in every email sent. This must be enforced centrally — a single HTML file distributed and locked.
 
 ## Information Hierarchy (Top to Bottom)
 
 **Line 1:** Full name — Freight Display or web-safe equivalent (see font stack), 15px, Virāma Stone (#2C2825)
 **Line 2:** Title / Role — same typeface, 11px, 40% opacity of Virāma Stone
 **Separator:** A horizontal rule, 120px wide, 0.5px, Arcadian Gold (#C9A96E) — left-aligned. Not full-width.
-**Line 3:** "Virāma by My Scape Builders" — 10px, tracking +60, Virāma Stone, small caps treatment via letter-spacing
+**Line 3:** "Virāma by SSquare" — 10px, tracking +60, Virāma Stone, small caps treatment via letter-spacing
 **Line 4:** Mobile number — 10px, Virāma Stone
 **Line 5:** Email address — 10px, linked, underline on hover only, Virāma Stone (not blue hyperlink default — this must be overridden in the HTML)
 **Separator 2:** The same Arcadian Gold hairline rule, 120px
@@ -751,7 +751,7 @@ Set on the board, typeset — not as part of the image:
 
 Set in Freight Display (or equivalent large-format output equivalent), white on near-black. Below it, in the finest possible tracking, at 30% the size of the headline:
 
-> "Virāma. By My Scape Builders."
+> "Virāma. By SSquare."
 
 Nothing else.
 
@@ -831,7 +831,7 @@ Beneath, at one-quarter the size:
 > "12 Private Villas. Rs 13–20 Cr. Expressions of interest now closed for the waiting list."
 
 Beneath, at the smallest size (but still legible from 20 metres):
-> "Contact: [Name], [Mobile], [Email] | My Scape Builders | RERA No. [XXXX]"
+> "Contact: [Name], [Mobile], [Email] | SSquare | RERA No. [XXXX]"
 
 ### Visual Concept
 This is the only hoarding with no photograph. The entire board is typographic. Background: Deep Basalt (#1A1A18) — the darkest brand colour. All type in Pavilion White (#F5F1EC), except "Virāma." which is set in Arcadian Gold.
@@ -909,7 +909,7 @@ In the white block:
 Below the wordmark, bottom-right:
 - Contact: name and mobile number
 - Below contact: RERA number, in 7pt
-- My Scape Builders name, 8pt
+- SSquare name, 8pt
 
 ### Body Copy Approach — Full Page
 Body copy is optional and should be used only in ET Wealth and Forbes India placements — publications where readers are slower, more text-engaged. When used: maximum 40 words. Single short paragraph. It completes the headline thought but does not explain it. Example, following Option C: "Virāma is twelve private villas, designed for twelve specific lives. If yours is among them, you will know. Expressions of interest: [contact]."
@@ -949,7 +949,7 @@ Two formats acceptable for half page:
 
 ### Legal Footer Requirements (All Print Ads)
 A single line at the very bottom of every ad, in 6–7pt, in the lightest possible weight of the brand serif:
-"[Project Name]. RERA Registration No.: [XXXX]. [State] Real Estate Regulatory Authority. [RERA Website]. All specifications subject to change. This advertisement is not an offer or an invitation to offer. Buyers are advised to refer to the RERA-registered documents before making any investment decision. My Scape Builders Private Limited. Registered Office: [Address]."
+"[Project Name]. RERA Registration No.: [XXXX]. [State] Real Estate Regulatory Authority. [RERA Website]. All specifications subject to change. This advertisement is not an offer or an invitation to offer. Buyers are advised to refer to the RERA-registered documents before making any investment decision. SSquare Private Limited. Registered Office: [Address]."
 
 This line must appear on every ad. It must not be hidden, white on white, or rendered illegible. It must be typeset in the brand typeface — not a different, generic compliance font. The brand does not relax even in the disclaimer.
 
@@ -1011,7 +1011,7 @@ The webpage is not a digital brochure. It is not a property listing. It is a bra
 2. "Rs 13–20 Cr" + "Price Range"
 3. "[City]" + "Location"
 4. "Ultra-Luxury" + "Category"
-5. "RERA Registered" + "My Scape Builders"
+5. "RERA Registered" + "SSquare"
 
 **Visual treatment:** Each card: Deep Basalt (#1A1A18) background, Pavillion White primary number/word at 48px, fine label at 12px tracked small caps in Arcadian Gold below. Cards arranged in a horizontal row with equal gaps, centre-aligned. The band background is Sandstone Pale (#E8DDD0).
 
@@ -1078,7 +1078,7 @@ The webpage is not a digital brochure. It is not a property listing. It is a bra
 Above the form:
 - Virāma wordmark in Pavilion White, 24px
 - The line: "Twelve villas. We would like to tell you which one is yours."
-- RERA number and My Scape Builders name, 10px, 50% opacity
+- RERA number and SSquare name, 10px, 50% opacity
 
 After submission: The same success state as the digital booking form — in-page transition to the success message, no page reload. "Your interest has been noted. We will reach you within 24 hours."
 
@@ -1097,11 +1097,11 @@ After submission: The same success state as the digital booking form — in-page
 5. **"New luxury villa project [City] 2026"** — time-sensitive, launch-phase visibility
 
 ### Meta Title Format
-`Virāma — 12 Ultra-Luxury Private Villas in [City] | My Scape Builders`
+`Virāma — 12 Ultra-Luxury Private Villas in [City] | SSquare`
 (Under 60 characters for clean SERP display — adjust city name accordingly)
 
 ### Meta Description
-`Virāma offers twelve exclusive private villas in [City], priced from Rs 13 Crore. Designed for complete privacy and quiet luxury. RERA registered. By My Scape Builders. Expressions of interest now open.`
+`Virāma offers twelve exclusive private villas in [City], priced from Rs 13 Crore. Designed for complete privacy and quiet luxury. RERA registered. By SSquare. Expressions of interest now open.`
 (Under 160 characters — contains primary keyword, price signal, RERA trust marker, CTA)
 
 ### H1 / H2 Structure
@@ -1110,7 +1110,7 @@ After submission: The same success state as the digital booking form — in-page
 - **H2 — Amenities section:** "Private Amenities — The Spaces Within Virāma"
 - **H2 — Community section:** "The Virāma Community — Six Shared Spaces"
 - **H2 — Location section:** "Virāma Location — [City/Neighbourhood]"
-- **H2 — Enquiry section:** "Express Your Interest — Virāma by My Scape Builders"
+- **H2 — Enquiry section:** "Express Your Interest — Virāma by SSquare"
 
 ### Image Alt Tag Philosophy
 All alt tags follow a consistent format: `[Descriptive content] — Virāma luxury villa [City]`. Examples:
@@ -1134,7 +1134,7 @@ Never use generic alt tags ("image1.jpg", "photo", "villa"). Never keyword-stuff
 
 Dear [First Name],
 
-My Scape Builders is privately presenting *Virāma* — twelve ultra-luxury villas in [City].
+SSquare is privately presenting *Virāma* — twelve ultra-luxury villas in [City].
 
 The name comes from Sanskrit: the mark that makes a word complete. We chose it because that is what we believe a home should be. Not a stage in a journey. A conclusion.
 
@@ -1151,7 +1151,7 @@ If you would like to attend, or to speak with someone from our team before then,
 *Come Home to Quiet.*
 
 —
-Virāma by My Scape Builders
+Virāma by SSquare
 RERA No. [XXXX]
 
 [Link to project webpage — short, clean URL: virama.in or virama.myscape.com]
@@ -1191,7 +1191,7 @@ Before anyone reads a word, before they open the box, before they see the name �
 **Box construction:** Rigid grey board, 2mm, fully wrapped in natural linen bookcloth in Sandstone Pale tone
 **Lid construction:** Separate lid (European box / rigid lift-off lid style). The lid lifts to reveal the contents — there is no flap, no magnetic clasp, no ribbon. The lid simply lifts, with a subtle resistance that communicates quality.
 **Lid exterior:** Blind debossed on the centre of the lid top: the Virāma logomark (threshold geometry). No foil. No colour. Only the impression in the cloth. The touch communicates before the eye does.
-**Box base exterior:** On the underside of the base: the developer name "My Scape Builders" and RERA number in fine black letterpress. Small. Definitive. Like a hallmark on silver.
+**Box base exterior:** On the underside of the base: the developer name "SSquare" and RERA number in fine black letterpress. Small. Definitive. Like a hallmark on silver.
 
 ### Interior Treatment
 
@@ -1231,7 +1231,7 @@ On the back of the invite card, bottom-right, in 9pt:
 A small QR code (Arcadian Gold, not black — there are QR generators that support custom colour output) linking to the private RSVP landing page. The QR code is the size of a postage stamp and is the only digital element in the box.
 
 ### Delivery Method
-Hand-delivered — not couriered. A member of the My Scape Builders team, in appropriate business attire, delivers the box in person to the recipient's residence or office, hands it to the recipient (not the security desk, not a receptionist), and says: "This is from Virāma. The team looks forward to welcoming you."
+Hand-delivered — not couriered. A member of the SSquare team, in appropriate business attire, delivers the box in person to the recipient's residence or office, hands it to the recipient (not the security desk, not a receptionist), and says: "This is from Virāma. The team looks forward to welcoming you."
 
 If personal delivery is not feasible for outstation recipients: Delhivery or Bluedart premium service, with clear instructions not to leave the package unattended. The outer shipping box (plain brown corrugated, no branding) should be sealed with a sticker: "For personal delivery to addressee only."
 
@@ -1265,7 +1265,7 @@ Produce everything at the level of the project. Not the market. The project.
 ---
 
 *End of Brief.*
-*Document: Marketing Collaterals Brief — Virāma by My Scape Builders*
+*Document: Marketing Collaterals Brief — Virāma by SSquare*
 *Version 1.0 — March 2026*
 *All copy subject to legal review for RERA compliance prior to publication.*
 *All material specifications subject to printer/vendor availability in project city.*
@@ -1274,11 +1274,11 @@ Produce everything at the level of the project. Not the market. The project.
 
 # SECTION 5: PRE-LAUNCH & LAUNCH EXECUTION
 
-# Pre-Launch & Launch Execution Brief — Virāma by My Scape Builders
+# Pre-Launch & Launch Execution Brief — Virāma by SSquare
 
 **Prepared by:** Pre-Launch & Launch Execution Agent
 **Project:** Virāma | 12 Private Villas | Rs 13–20 Cr
-**Developer:** My Scape Builders
+**Developer:** SSquare
 **Tagline:** "Come Home to Quiet."
 **Date:** March 2026
 
@@ -1568,7 +1568,7 @@ Frame rate: 24fps (cinematic, not 30fps which reads as commercial).
 **Description:** Black screen. White text only. Nothing else. The tagline holds for 6 seconds. No animation. It simply appears, as if it was always there, and then — it holds.
 **Camera:** N/A — title card.
 **Audio:** Near-silence. Faintest wind trace.
-**Overlay:** "Come Home to Quiet." — Freight Display, Pavilion White, perfectly centred. Small "Virāma by My Scape Builders" in Canela, much smaller, below, at 50% opacity.
+**Overlay:** "Come Home to Quiet." — Freight Display, Pavilion White, perfectly centred. Small "Virāma by SSquare" in Canela, much smaller, below, at 50% opacity.
 
 ---
 
@@ -1577,7 +1577,7 @@ Frame rate: 24fps (cinematic, not 30fps which reads as commercial).
 **Description:** Fade to black. Developer details appear quietly. Not a sales slate — a signature.
 **Camera:** N/A.
 **Audio:** Silence.
-**Overlay:** "My Scape Builders | Virāma | 12 Private Villas | myscape.in" — small, centred, Sandstone Pale on black.
+**Overlay:** "SSquare | Virāma | 12 Private Villas | myscape.in" — small, centred, Sandstone Pale on black.
 
 ---
 
@@ -1601,7 +1601,7 @@ The Still Water asks nothing of you. The Green Circuit asks only that you walk. 
 
 This is not a project in phases. There will be no phase two. What is built here is built whole.
 
-My Scape Builders has committed to something rare in this world: to finish a thing completely, and then to stand behind it. Permanently. Without substitution.
+SSquare has committed to something rare in this world: to finish a thing completely, and then to stand behind it. Permanently. Without substitution.
 
 The materials will not change. The team will not leave. The twelve families who choose this place will not be joined by a thirteenth.
 
@@ -1621,7 +1621,7 @@ Come home to quiet."
 
 **Tempo:** No fixed BPM. Rubato — the musician controls the timing. The music must breathe, not pulse.
 
-**Bespoke composition required:** This music must be original and owned by My Scape Builders entirely. Commission a single Indian composer with classical + contemporary crossover experience.
+**Bespoke composition required:** This music must be original and owned by SSquare entirely. Commission a single Indian composer with classical + contemporary crossover experience.
 
 **One prohibition:** The music must never feel like a real estate advertisement. If it could play over an ad for any other product, it is wrong.
 
@@ -1698,7 +1698,7 @@ Come home to quiet."
 
 **Section 4:** Developer Quote (attributed)
 
-**Section 5:** Boilerplate — About My Scape Builders
+**Section 5:** Boilerplate — About SSquare
 
 **Section 6:** Media Contact + Image Download Link + Embargo Notice
 
@@ -1713,18 +1713,18 @@ Come home to quiet."
 
 ---
 
-### My Scape Builders Unveils Virāma: Twelve Private Villas Conceived as an Act of Permanence
+### SSquare Unveils Virāma: Twelve Private Villas Conceived as an Act of Permanence
 
 **A Rs 13–20 Crore ultra-luxury residential community for twelve founding families — where the waiting list ends when the twelfth villa is chosen.**
 
 ---
 
 *"We did not build Virāma to sell twelve homes. We built it to complete twelve homes — and then to stand behind what we built, without substitution, without revision, and without phase two."*
-— My Scape Builders
+— SSquare
 
 ---
 
-**[City], [Date]** — In a residential market defined by scale, phased launches, and the language of investment returns, My Scape Builders introduces something categorically different. Virāma — a Sanskrit word for the complete pause, the mark that says a word is whole — is a private community of twelve villas positioned at the absolute upper register of Indian residential luxury: Rs 13 to 20 crore, with no two villas identical, no phase two planned, and no management team rotation in the first decade. When the twelfth family chooses their home, Virāma closes. Permanently.
+**[City], [Date]** — In a residential market defined by scale, phased launches, and the language of investment returns, SSquare introduces something categorically different. Virāma — a Sanskrit word for the complete pause, the mark that says a word is whole — is a private community of twelve villas positioned at the absolute upper register of Indian residential luxury: Rs 13 to 20 crore, with no two villas identical, no phase two planned, and no management team rotation in the first decade. When the twelfth family chooses their home, Virāma closes. Permanently.
 
 The development marks a philosophical departure from the conventions of luxury real estate in India. Virāma does not compete on amenity count, on tower height, or on the proximity of a commercial corridor. Its offering is predicated on the opposite: on limitation, on quiet, on the irreducibility of a home that was finished — completely — before the first family arrived. Amenities are named, not numbered. Community spaces are designed for twelve, not for a lobby impression. The founding team — architects, landscape architects, the retained service staff — are bound to the project for ten years post-handover. What is built here does not get revised.
 
@@ -1736,7 +1736,7 @@ The seven resident amenities — The Still Water, The Restoration Pavilion, The 
 
 - **Absolute limitation by design:** Twelve villas only. No phase two. When the twelfth villa is sold, the community is complete. This is a founding principle, not a marketing position.
 
-- **Ten-year retained service commitment:** The full My Scape Builders service and management team is contractually retained for a minimum of ten years post-handover. No outsourcing. No transition. The people who built Virāma maintain it.
+- **Ten-year retained service commitment:** The full SSquare service and management team is contractually retained for a minimum of ten years post-handover. No outsourcing. No transition. The people who built Virāma maintain it.
 
 - **No material substitution, guaranteed:** The material specification — finishes, stone, fixtures — is locked at pre-launch and is contractually guaranteed not to be substituted for cost reasons at any stage. What is shown is what is delivered.
 
@@ -1776,7 +1776,7 @@ Then: the sound of a stylus on stone — one deliberate stroke. Then another. Th
 
 **0:44–0:48:** Tagline appears: "Come Home to Quiet." — Freight Display, Pavilion White. No fade-in animation. It is simply present, below the mark, as if it too was always carved.
 
-**0:48–0:52:** Fade to black. Hold. "My Scape Builders" appears in Canela, small, lower centre. End.
+**0:48–0:52:** Fade to black. Hold. "SSquare" appears in Canela, small, lower centre. End.
 
 ---
 
@@ -1847,7 +1847,7 @@ The Virāma marketing office is not a show home. It is not a site office. It is 
 **Material:** Virāma Stone (exact match — sourced from same quarry as project). Internally lit wordmark carved into the face — the same carved treatment as the brand mark.
 **Mounting:** In-ground foundation, no visible mount hardware. The plinth appears to emerge from the ground.
 **Illumination:** Internal LED warm white (2700K) within the carved letterforms only. Not a backlit panel. The light comes from within the carving. Illuminated from dusk to 10:00 PM only. No daytime illumination.
-**Brand elements:** Wordmark "Virāma" carved in Freight Display proportion. Below it, in much smaller Canela: "by My Scape Builders." No project descriptor text. No price. No tagline on this element.
+**Brand elements:** Wordmark "Virāma" carved in Freight Display proportion. Below it, in much smaller Canela: "by SSquare." No project descriptor text. No price. No tagline on this element.
 **Legibility distance:** Wordmark readable at 15 metres in daylight.
 
 ---
@@ -1859,7 +1859,7 @@ The Virāma marketing office is not a show home. It is not a site office. It is 
 **Material:** Hand-cast stone panel in Virāma Stone palette. Letters individually carved, filled with Arcadian Gold pigment (not paint — pigment embedded in fill material). No backing plate visible.
 **Mounting:** Recessed anchor bolts in stone panel. Gap of 8mm between panel base and wall — shadow gap only, no visible hardware.
 **Illumination:** None. Relies on building-mounted external wash lighting (specified separately in architectural package). The name board is never internally illuminated.
-**Brand elements:** "Virāma" in full. Below in Canela light weight: "12 Private Villas by My Scape Builders."
+**Brand elements:** "Virāma" in full. Below in Canela light weight: "12 Private Villas by SSquare."
 **Legibility distance:** Readable at 25 metres in daylight, 30 metres at night under wash lighting.
 
 ---
@@ -1992,7 +1992,7 @@ The theme is arrival. The guests arrive at what Virāma feels like. The sell is 
 
 ### 6:30 PM — Arrival and The Approach
 
-Guests are met at the gate by a member of the Virāma team — not a hired events hostess, but someone from the My Scape Builders core team, trained and briefed. They are greeted by name. Each guest receives a small wrapped stone object (a smooth piece of Virāma Stone, polished, the size of a palm) as they enter. No words of explanation are offered for this object. It will make sense later.
+Guests are met at the gate by a member of the Virāma team — not a hired events hostess, but someone from the SSquare core team, trained and briefed. They are greeted by name. Each guest receives a small wrapped stone object (a smooth piece of Virāma Stone, polished, the size of a palm) as they enter. No words of explanation are offered for this object. It will make sense later.
 
 The arrival zone is outdoors or in a generous entrance court. Candles, not fairy lights. Drinks: one signature cocktail (named "The Still Water" — see Hospitality Brief), still water, and fresh coconut water. No canapes immediately — guests are encouraged to move through the space and look.
 
@@ -2039,7 +2039,7 @@ As dinner continues, the developer team circulates and individually invites fami
 
 ### 9:30 PM — Departure
 
-As guests leave, each is given the Virāma launch collateral set (see Collateral section). The same team member who greeted them at arrival accompanies them to their vehicle. No event staff visible at departure — only My Scape Builders people. A handwritten note from the developer (pre-signed, personalised with the guest's first name) is inside the collateral box.
+As guests leave, each is given the Virāma launch collateral set (see Collateral section). The same team member who greeted them at arrival accompanies them to their vehicle. No event staff visible at departure — only SSquare people. A handwritten note from the developer (pre-signed, personalised with the guest's first name) is inside the collateral box.
 
 ---
 
@@ -2263,7 +2263,7 @@ The logo unveiling video — 30-second edit. The carved mark revealed in stone. 
 *Twelve villas. Each one unrepeated.*
 *Each one finished completely before you arrive.*
 
-*My Scape Builders. Virāma.*
+*SSquare. Virāma.*
 *Rs 13–20 Cr. By introduction only.*
 
 *DM for private briefing.*
@@ -2404,7 +2404,7 @@ The Restoration Pavilion render — full square crop. The treatment table, the s
 *Looking at nothing and everything.*
 
 *"Come Home to Quiet."*
-*Virāma by My Scape Builders.*
+*Virāma by SSquare.*
 
 *Launch event: [Date]. By invitation only.*
 *DM to register interest.*
@@ -2447,7 +2447,7 @@ The Horizon Deck at Night render — animated. The camera begins at the deck sur
 
 *"Come Home to Quiet."*
 
-*My Scape Builders invites you — by introduction — to consider whether Virāma is yours.*
+*SSquare invites you — by introduction — to consider whether Virāma is yours.*
 *DM to begin.*
 *Or visit: [website URL]*
 *Or call: [phone — developer direct line]*
@@ -2543,9 +2543,9 @@ Quiet confidence. Permanent materials. Twelve families only.
 
 ---
 
-*End of Pre-Launch & Launch Execution Brief — Virāma by My Scape Builders.*
+*End of Pre-Launch & Launch Execution Brief — Virāma by SSquare.*
 *For internal use and approved agency/studio distribution only.*
-*All content, copy, names, and strategies herein are confidential and proprietary to My Scape Builders.*
+*All content, copy, names, and strategies herein are confidential and proprietary to SSquare.*
 
 ---
 
@@ -2560,7 +2560,7 @@ Quiet confidence. Permanent materials. Twelve families only.
 | Variable | Value |
 |---|---|
 | PROJECT_NAME | Virāma |
-| DEVELOPER_NAME | My Scape Builders |
+| DEVELOPER_NAME | SSquare |
 | PRICE_SEGMENT | Ultra-luxury (Rs 13–20 Cr) |
 | TARGET_AUDIENCE | UHNI Indian families, NRI investors, aged 38–65 |
 | BRAND_TONE | Serene opulence — minimal in expression, maximal in experience |
