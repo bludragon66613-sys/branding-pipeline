@@ -1,0 +1,481 @@
+[
+  {
+    "name": "Āvāsa",
+    "file": "avasa-stratum.html",
+    "heading": "Stratum",
+    "tagline": "Come Home to Nothing Else.",
+    "subtitle": "The Standard, Permanently Set.",
+    "pullQuote": "Āvāsa is twelve private villas.\nNot a beginning. Not a phase.\nA complete statement — made once,\nbuilt without compromise,\nheld without revision.\nThe dwelling that defines the word.",
+    "bodyCopy": "Stratum has spent three decades engineering environments that hold value — physically, financially, culturally. Every project is a singular act of intention. Not a development. A decision. Āvāsa is the first residential expression of that discipline: twelve villas in Jubilee Hills, designed to an absolute standard and built to exactly that.",
+    "tone1": "Void",
+    "tone2": "Permanence",
+    "tone3": "Copper warmth",
+    "colorwayNote": "Void black ground, raw ivory breath, burnished copper as the single warmth. The palette of things built to be inherited.",
+    "logoRules": [
+      "Never set the mark smaller than 16pt on any surface — it certifies, not decorates.",
+      "Clear space equals the full cap-height on all four sides. No exceptions.",
+      "Use primary palette only — never on a gradient, pattern, or photographic ground."
+    ],
+    "footerCity": "Hyderabad",
+    "footerYear": 2026,
+    "amenities": [
+      {
+        "name": "The Void Pool",
+        "desc": "A zero-edge pool of flamed granite, flush with the garden plane. Water temperature held at skin-warmth by dusk. The horizon is the only visible edge. One lounger. No others. Belonging entirely to one family."
+      },
+      {
+        "name": "The Still Garden",
+        "desc": "A walled private garden of 4,000 sq ft. Dry-stone paths, copper water feature, mature rain trees. A resident horticulturalist tends it. Nothing here was planted for colour — only for presence and permanence."
+      },
+      {
+        "name": "The Contemplation Hall",
+        "desc": "Below grade, below sound. Basalt walls, underfloor warmth, a single skylight ten feet overhead. Designed for silence first — meditation, reading, or the specific luxury of doing nothing at all."
+      }
+    ],
+    "images": { "cover": "none", "photoLeft": "none", "photoRight": "none", "amenitiesBg": "none", "hoardingBg": "none", "backBg": "none" },
+    "css": {
+      "primary":   "#1C1A16",
+      "surface":   "#0D0C0A",
+      "accent":    "#8C4B2A",
+      "light":     "#EDE7DC",
+      "reserve":   "#2A3828",
+      "textDark":  "#0D0C0A",
+      "textLight": "#EDE7DC",
+      "serif":     "'Bodoni Moda', 'Didot', serif",
+      "sans":      "'Inter', sans-serif",
+      "mono":      "'Courier New', monospace"
+    }
+  },
+
+  {
+    "name": "Nidra",
+    "file": "nidra-kala.html",
+    "heading": "Kāla",
+    "tagline": "Where Rest Has Its Own Address.",
+    "subtitle": "Time Is the Only Luxury.",
+    "pullQuote": "Nidra is not sleep.\nIt is the state before thought returns —\nthe interval that belongs entirely to you.\nTwelve addresses where that interval\nbecomes a permanent condition\nof being home.",
+    "bodyCopy": "Kāla builds on the understanding that time reveals quality. Every material is chosen for decade five, not year one. We do not build for the market. We build for those who outlast it. Nidra is our proof — twelve villas in Jubilee Hills, made for families whose relationship with time is entirely their own.",
+    "tone1": "Dream",
+    "tone2": "Hush",
+    "tone3": "Moonstone blue",
+    "colorwayNote": "Deep charcoal ground, bone white surface, moonlit blue-grey as the single cool accent. The palette of rooms that hold night inside them.",
+    "logoRules": [
+      "The mark is never heavier than the lightest text on the page — it appears, it does not announce.",
+      "Minimum clear space: the full x-height of the logotype on all sides.",
+      "Never reversed onto a warm or saturated ground — the mark belongs to cool, neutral surfaces only."
+    ],
+    "footerCity": "Hyderabad",
+    "footerYear": 2026,
+    "amenities": [
+      {
+        "name": "The Dream Garden",
+        "desc": "A walled private garden conceived entirely around the experience of dusk and dawn. Night-blooming jasmine, silver-leaf olive, low-voltage copper path lights. The garden is at its finest when the city is asleep."
+      },
+      {
+        "name": "The Moonlit Pool",
+        "desc": "A matte-black tiled pool lit from beneath with cool-white submersibles. At full moon, the water holds a single complete reflection of the sky. Temperature controlled to 28°C at all hours. One lounger. No others."
+      },
+      {
+        "name": "The Sleep Library",
+        "desc": "Acoustically isolated. Pale oak shelves, linen reading chairs, blackout glass. A curated collection of literature designed for slow reading. A white-noise system calibrated to the specific acoustic frequency of deep forest rain."
+      }
+    ],
+    "images": { "cover": "none", "photoLeft": "none", "photoRight": "none", "amenitiesBg": "none", "hoardingBg": "none", "backBg": "none" },
+    "css": {
+      "primary":   "#1E1E22",
+      "surface":   "#121214",
+      "accent":    "#7A9AAA",
+      "light":     "#F2EDE4",
+      "reserve":   "#2D3D35",
+      "textDark":  "#121214",
+      "textLight": "#F2EDE4",
+      "serif":     "'Playfair Display', 'Georgia', serif",
+      "sans":      "'Inter', sans-serif",
+      "mono":      "'Courier New', monospace"
+    }
+  },
+
+  {
+    "name": "Śānti",
+    "file": "shanti-vela.html",
+    "heading": "Vela",
+    "tagline": "The End of All Noise.",
+    "subtitle": "The Standard, Without Announcement.",
+    "pullQuote": "Śānti does not mean the absence of the world.\nIt means the world at the correct distance —\nclose enough to reach,\nfar enough to forget.\nTwelve homes where that distance\nis measured in stone.",
+    "bodyCopy": "Vela has no portfolio of average. We have built a record of restraint — a discipline of doing less, but doing it without compromise. When we finish a project, it is finished. Permanently. Śānti is the residential expression of that discipline: twelve villas in Jubilee Hills, defined by what they are not, and exquisite because of it.",
+    "tone1": "Stillness",
+    "tone2": "Verdure",
+    "tone3": "Sage teal",
+    "colorwayNote": "Deep sage ground, warm sand light, sage teal accent. The palette of early morning, garden dew, and the specific quality of light through mature canopy.",
+    "logoRules": [
+      "The mark sits in silence — minimum 20mm clear space from any other element on collateral.",
+      "Never set in gold on a light ground — the accent is reserved for dark and mid-tone applications only.",
+      "The mark is achromatic in all digital contexts — reserve the accent exclusively for physical print and embossing."
+    ],
+    "footerCity": "Hyderabad",
+    "footerYear": 2026,
+    "amenities": [
+      {
+        "name": "The Meditation Grove",
+        "desc": "A private grove of 24 mature bamboo, encircling a polished stone platform. Sound absorbed by the canopy above. A resident wellness practitioner available on residency terms. The only rule: no devices, no conversation."
+      },
+      {
+        "name": "The Reflection Pavilion",
+        "desc": "A glass and teak pavilion set over a still-water rill. Open on three sides to garden air. The fourth wall is a single sheet of raw travertine. Designed for the moment between arriving home and becoming yourself again."
+      },
+      {
+        "name": "The Silent Courtyard",
+        "desc": "A walled inner courtyard of handmade terracotta tile and a single stone fountain — volume calibrated to mask all external sound. Twelve families share it; twelve families rarely meet there. That is the point."
+      }
+    ],
+    "images": { "cover": "none", "photoLeft": "none", "photoRight": "none", "amenitiesBg": "none", "hoardingBg": "none", "backBg": "none" },
+    "css": {
+      "primary":   "#2A3A28",
+      "surface":   "#1A2418",
+      "accent":    "#5A8870",
+      "light":     "#EAE0CC",
+      "reserve":   "#4A6A48",
+      "textDark":  "#1A2418",
+      "textLight": "#EAE0CC",
+      "serif":     "'EB Garamond', 'Georgia', serif",
+      "sans":      "'Inter', sans-serif",
+      "mono":      "'Courier New', monospace"
+    }
+  },
+
+  {
+    "name": "Prāna",
+    "file": "prana-grove.html",
+    "heading": "Grove",
+    "tagline": "Breathe. Own. Belong.",
+    "subtitle": "Nature Engineered to Perfection.",
+    "pullQuote": "Prāna is not a house.\nIt is a living system —\nwhere architecture steps back\nand the oldest materials take precedence:\nstone, water, light, and the specific weight\nof roots that have been here for forty years.",
+    "bodyCopy": "Grove emerged from a belief that the finest living is the most natural. We engineer environments where architecture disappears into landscape. Our materials are alive — our buildings hold that life. Prāna is our most complete work: twelve villas in Jubilee Hills, where the boundary between inside and outside has been deliberately erased.",
+    "tone1": "Breath",
+    "tone2": "Growth",
+    "tone3": "Lichen moss",
+    "colorwayNote": "Dark forest ground, warm cream light, lichen moss accent. The palette of filtered canopy light, river stone, and the muted gold of late afternoon in a mature garden.",
+    "logoRules": [
+      "Always set the mark in a natural material context — embossed on uncoated stock, laser-etched on wood, never on synthetic or coated surfaces.",
+      "Never smaller than 18pt in any printed application — the mark must be legible to the eye without effort.",
+      "The mark is always static — no animated, digital-only, or motion versions are permitted."
+    ],
+    "footerCity": "Hyderabad",
+    "footerYear": 2026,
+    "amenities": [
+      {
+        "name": "The Forest Walk",
+        "desc": "A private 600-metre botanical path through heritage-species plantings, medicinal gardens, and mature canopy. A resident botanist tends the walk. Stone benches at three points. The path changes with each season — intentionally."
+      },
+      {
+        "name": "The Breathing Pool",
+        "desc": "A natural-chemistry pool surrounded by living plant walls — no chlorine, no chemicals. Water purified through a planted biofilter and ultraviolet system. Temperature at body warmth by dusk. The pool is as alive as the garden that feeds it."
+      },
+      {
+        "name": "The Rooftop Observatory",
+        "desc": "A third-floor open terrace with observatory-grade dark-sky lighting. Fire table, twelve-seat long table, cooling mist. A resident astronomer hosts monthly sky sessions for the community. The city is below. The sky is here."
+      }
+    ],
+    "images": { "cover": "none", "photoLeft": "none", "photoRight": "none", "amenitiesBg": "none", "hoardingBg": "none", "backBg": "none" },
+    "css": {
+      "primary":   "#1E3020",
+      "surface":   "#131E14",
+      "accent":    "#8A7A3A",
+      "light":     "#F6F0E2",
+      "reserve":   "#4A6A48",
+      "textDark":  "#131E14",
+      "textLight": "#F6F0E2",
+      "serif":     "'Cormorant Garamond', 'Georgia', serif",
+      "sans":      "'Inter', sans-serif",
+      "mono":      "'Courier New', monospace"
+    }
+  },
+
+  {
+    "name": "Ākāśa",
+    "file": "akasha-zenith.html",
+    "heading": "Zenith",
+    "tagline": "Above. Always.",
+    "subtitle": "We Build at the Top.",
+    "pullQuote": "Ākāśa is not height.\nIt is altitude of position —\nthe distance from everything ordinary,\nmaintained permanently,\nbuilt into the structure of the address\nand the discipline of the community.",
+    "bodyCopy": "Zenith occupies a single position: the top. Not the top of the market — the top of what is possible, period. We build for clients who have exhausted everywhere else and require something with no precedent to compare it to. Ākāśa is that project — twelve villas in Jubilee Hills, defined by an absolute and held by the twelve families who understand what that means.",
+    "tone1": "Altitude",
+    "tone2": "Clarity",
+    "tone3": "Cerulean",
+    "colorwayNote": "Night navy ground, moonlight silver surface, cerulean accent. The palette of clear skies, polished stone, and the precise quality of open sky above the city.",
+    "logoRules": [
+      "The mark appears once per surface — never repeated, never patterned, never used decoratively.",
+      "On digital surfaces, the mark is always silver or ivory — never the cerulean accent, which belongs exclusively to physical applications.",
+      "Clear space equals twice the cap-height of the accompanying logotype on all four sides."
+    ],
+    "footerCity": "Hyderabad",
+    "footerYear": 2026,
+    "amenities": [
+      {
+        "name": "The Sky Deck",
+        "desc": "A private rooftop terrace at 42 feet, 270-degree views of the Jubilee Hills skyline. Fire table. Cooling mist. A single wire rail — invisible in the view. The city is below. That is precisely the point."
+      },
+      {
+        "name": "The Celestial Pool",
+        "desc": "A roof-level infinity pool of polished pale granite, oriented to the east for dawn light. Submerged LED system calibrated to match the current phase of the moon. Temperature held at 28°C through all seasons."
+      },
+      {
+        "name": "The Starlight Terrace",
+        "desc": "A private observatory-grade dark-sky terrace. Observatory telescope, resident astronomer available on residency terms. Monthly sky events for the community. The city lights are below the parapet. The sky is entirely yours."
+      }
+    ],
+    "images": { "cover": "none", "photoLeft": "none", "photoRight": "none", "amenitiesBg": "none", "hoardingBg": "none", "backBg": "none" },
+    "css": {
+      "primary":   "#16203A",
+      "surface":   "#0E1424",
+      "accent":    "#2A6AAA",
+      "light":     "#E8EAF0",
+      "reserve":   "#1E2840",
+      "textDark":  "#0E1424",
+      "textLight": "#E8EAF0",
+      "serif":     "'Montserrat', sans-serif",
+      "sans":      "'Inter', sans-serif",
+      "mono":      "'Courier New', monospace"
+    }
+  },
+
+  {
+    "name": "Ambara",
+    "file": "ambara-sol.html",
+    "heading": "Sōl",
+    "tagline": "The Day Ends Here.",
+    "subtitle": "The Sun Never Sets on Our Standards.",
+    "pullQuote": "Ambara is the hour when the city\nsurrenderers its noise.\nWhen the sky turns amber\nand the day concedes its urgency.\nTwelve homes designed for that hour,\nextended across every hour of every day.",
+    "bodyCopy": "Sōl was founded on a single question: what is the last home a person ever needs? The answer has guided every project we have undertaken. We build endings, not starts. Ambara is that answer in its most complete form — twelve villas in Jubilee Hills designed for the family that has stopped looking and started living.",
+    "tone1": "Dusk",
+    "tone2": "Warmth",
+    "tone3": "Terracotta",
+    "colorwayNote": "Deep umber ground, warm ivory light, terracotta accent. The palette of stone at the end of a long day — warm, certain, completely at rest.",
+    "logoRules": [
+      "The mark is always used in warm tones — never in cool silver or grey, which contradict the brand's thermal register.",
+      "Minimum size 14pt for print; never set the mark below this threshold in any format.",
+      "The mark is never outlined — it is always solid, always warm, always decisive."
+    ],
+    "footerCity": "Hyderabad",
+    "footerYear": 2026,
+    "amenities": [
+      {
+        "name": "The Sunset Terrace",
+        "desc": "A west-facing private terrace designed around the specific geometry of the Jubilee Hills sunset. A fire table, a long stone bench, and a cooling mist system calibrated to sunset temperature. Reserved for one family — permanently."
+      },
+      {
+        "name": "The Amber Pool",
+        "desc": "A warm-stone tiled private pool illuminated by submerged amber LEDs at dusk. Temperature held at body warmth through the evening. Surrounded by warm-light planted walls. The pool is at its finest after 6pm — by design."
+      },
+      {
+        "name": "The Dusk Pavilion",
+        "desc": "A free-standing entertaining pavilion of teak and handmade terracotta tile — open on three sides to garden and sky. A resident chef, a wine programme, and a copper bar. The evening's venue. The city's noise is not permitted here."
+      }
+    ],
+    "images": { "cover": "none", "photoLeft": "none", "photoRight": "none", "amenitiesBg": "none", "hoardingBg": "none", "backBg": "none" },
+    "css": {
+      "primary":   "#2C1E12",
+      "surface":   "#1A120A",
+      "accent":    "#C85A28",
+      "light":     "#F0E6D4",
+      "reserve":   "#3C2818",
+      "textDark":  "#1A120A",
+      "textLight": "#F0E6D4",
+      "serif":     "'Abril Fatface', 'Georgia', serif",
+      "sans":      "'Inter', sans-serif",
+      "mono":      "'Courier New', monospace"
+    }
+  },
+
+  {
+    "name": "Sthāna",
+    "file": "sthana-mark.html",
+    "heading": "Mark",
+    "tagline": "Position Is Everything.",
+    "subtitle": "Precision. Position. Permanence.",
+    "pullQuote": "Sthāna means position —\nnot location.\nThe standing of a person,\nthe rank of an address,\nthe absolute refusal to be\nanything other than\nthe first name in any room.",
+    "bodyCopy": "Mark is a company of precision. Every dimension, every material, every decision is documented, deliberated, and defended. We do not build impressively. We build correctly. Sthāna is the residential expression of that discipline — twelve villas in Jubilee Hills, designed with an engineer's exactitude and finished with an architect's restraint.",
+    "tone1": "Status",
+    "tone2": "Precision",
+    "tone3": "Platinum cold",
+    "colorwayNote": "True black ground, pure white surface, platinum cold accent. The palette of things that need no warmth to be understood as superlative.",
+    "logoRules": [
+      "The mark is always set in platinum or white — the brand does not use warm tones in its mark under any circumstances.",
+      "Never set the mark at an angle — it is always horizontal, always geometric, always exact.",
+      "The mark requires a minimum 24pt clear space on all sides — it is not a component, it is a statement."
+    ],
+    "footerCity": "Hyderabad",
+    "footerYear": 2026,
+    "amenities": [
+      {
+        "name": "The Precision Gym",
+        "desc": "A private performance training facility with Olympic-grade equipment, a resident trainer available on annual retainer, a 25-metre lap pool, and a recovery suite of Himalayan salt sauna and ice bath. Calibrated to the individual. Not shared."
+      },
+      {
+        "name": "The Executive Pool",
+        "desc": "A white terrazzo infinity pool of 16 metres, flanked by black stone walls and a single row of platinum poolside sun loungers. Temperature at 27°C. The pool's geometry is designed for a single lap's length without turning — precision in every dimension."
+      },
+      {
+        "name": "The Statement Entrance",
+        "desc": "A 90-metre private driveway of hand-dressed black granite, flanked by single-species mature hedging. The gate opens on approach without pause. A uniformed attendant. One. Never more. The entrance performs exactly one function — it signals arrival."
+      }
+    ],
+    "images": { "cover": "none", "photoLeft": "none", "photoRight": "none", "amenitiesBg": "none", "hoardingBg": "none", "backBg": "none" },
+    "css": {
+      "primary":   "#111111",
+      "surface":   "#080808",
+      "accent":    "#C0C0BE",
+      "light":     "#F8F8F6",
+      "reserve":   "#1C1C1C",
+      "textDark":  "#080808",
+      "textLight": "#F8F8F6",
+      "serif":     "'DM Serif Display', 'Georgia', serif",
+      "sans":      "'Inter', sans-serif",
+      "mono":      "'Courier New', monospace"
+    }
+  },
+
+  {
+    "name": "Vihāra",
+    "file": "vihara-terra.html",
+    "heading": "Terra",
+    "tagline": "Retreat Into Permanence.",
+    "subtitle": "Built From the Earth Up.",
+    "pullQuote": "Vihāra is the place of withdrawal —\nnot from life, but from the version of life\nthat does not belong to you.\nTwelve homes in Jubilee Hills\nwhere every material was chosen\nbecause it was already here,\nin the earth beneath the address.",
+    "bodyCopy": "Terra is rooted. We build with the material culture of this land — the stone, the clay, the timber — elevated to an international standard. Heritage is not nostalgia. It is architecture. Vihāra is Terra's most resolved project: twelve villas in Jubilee Hills where the Deccan plateau is both the inspiration and the material palette.",
+    "tone1": "Heritage",
+    "tone2": "Earth",
+    "tone3": "Burnt Deccan red",
+    "colorwayNote": "Deep terracotta ground, sun-bleached ivory light, burnt Deccan red accent. The palette of Deccan stone walls, handmade clay tile, and the warmth of afternoon light through old timber screens.",
+    "logoRules": [
+      "The mark is always applied to natural materials — embossed in clay, stamped in wax, pressed into handmade paper. Digital use is secondary.",
+      "Never smaller than 16pt in any application — the mark has the weight of a seal, not a signature.",
+      "The mark is always warm-toned — never in cool black or silver, which are foreign to the brand's material register."
+    ],
+    "footerCity": "Hyderabad",
+    "footerYear": 2026,
+    "amenities": [
+      {
+        "name": "The Courtyard Garden",
+        "desc": "A traditional Deccan-style walled courtyard of handmade Athangudi tile, a central water feature of polished Kota stone, and mature neem canopy. Designed after the interior gardens of the great havelis — private, shaded, and entirely still."
+      },
+      {
+        "name": "The Heritage Pool",
+        "desc": "A stepped-edge pool of local Shahabad stone, recalling the architecture of the region's ancient tank tradition. Water at ambient garden temperature. Surrounded by handmade terracotta planters and mature fig. Nothing here was shipped from outside a 200-kilometre radius."
+      },
+      {
+        "name": "The Retreat Library",
+        "desc": "A library of hand-hewn timber shelves, raw lime-plaster walls, and cotton dhurrie flooring. A collection of Indian literature, architectural history, and world philosophy — 400 volumes chosen by a literary curator. A reading room that smells of beeswax and old paper. No screens."
+      }
+    ],
+    "images": { "cover": "none", "photoLeft": "none", "photoRight": "none", "amenitiesBg": "none", "hoardingBg": "none", "backBg": "none" },
+    "css": {
+      "primary":   "#3D2218",
+      "surface":   "#261510",
+      "accent":    "#9A3A28",
+      "light":     "#F2E8D8",
+      "reserve":   "#4A3828",
+      "textDark":  "#261510",
+      "textLight": "#F2E8D8",
+      "serif":     "'Lora', 'Georgia', serif",
+      "sans":      "'Inter', sans-serif",
+      "mono":      "'Courier New', monospace"
+    }
+  },
+
+  {
+    "name": "Mandapa",
+    "file": "mandapa-arch.html",
+    "heading": "Arch",
+    "tagline": "Architecture Made Intimate.",
+    "subtitle": "Architecture Is a Statement, Not a Service.",
+    "pullQuote": "Mandapa is the pillared hall —\nthe space between shelter and sky,\nthe threshold where the built world\nbecomes a place of gathering.\nTwelve homes in Jubilee Hills\nwhere structure is the luxury,\nand every column earns its position.",
+    "bodyCopy": "Arch was founded by architects who refused to become developers. Every project begins with a structural idea, not a market analysis. The numbers follow the vision — never the reverse. Mandapa is Arch's residential statement: twelve villas in Jubilee Hills where the architecture is the product, and the product is defined by craft that will be visible in fifty years.",
+    "tone1": "Structure",
+    "tone2": "Craft",
+    "tone3": "Steel teal",
+    "colorwayNote": "Dark slate ground, stone white light, steel teal accent. The palette of raw concrete, weathered brass, and the specific grey of Hyderabad granite at first light.",
+    "logoRules": [
+      "The mark is structural — it is always presented on a material that has physical presence: stone, metal, concrete. Never on synthetic or coated stock.",
+      "The mark must breathe — minimum 20mm clear space on all sides in all physical applications.",
+      "Never animate or digitally distort the mark — it is a structural form, not a graphic element."
+    ],
+    "footerCity": "Hyderabad",
+    "footerYear": 2026,
+    "amenities": [
+      {
+        "name": "The Pillared Garden",
+        "desc": "A private garden defined by a colonnade of eight hand-dressed granite columns supporting a wisteria canopy. The architecture of the garden is as deliberate as the architecture of the house. A place where structure and nature reach an agreement."
+      },
+      {
+        "name": "The Architectural Pool",
+        "desc": "A pool of raw Kota stone set within a precise concrete frame — no organic curves, no decorative tile. The geometry is absolute. The water is held by the structure, not contained by it. Copper ladder, single fixed light source, depth at 2 metres throughout."
+      },
+      {
+        "name": "The Craft Studio",
+        "desc": "A private workshop and studio of 600 sq ft — concrete floor, high north-facing glazing, copper worksurfaces. A space for making, drawing, or simply thinking with the hands. A resident architect available to discuss the house, its details, or anything else that requires precision."
+      }
+    ],
+    "images": { "cover": "none", "photoLeft": "none", "photoRight": "none", "amenitiesBg": "none", "hoardingBg": "none", "backBg": "none" },
+    "css": {
+      "primary":   "#282E33",
+      "surface":   "#181C20",
+      "accent":    "#3A7A9A",
+      "light":     "#E8E2D8",
+      "reserve":   "#3A4830",
+      "textDark":  "#181C20",
+      "textLight": "#E8E2D8",
+      "serif":     "'Raleway', sans-serif",
+      "sans":      "'Inter', sans-serif",
+      "mono":      "'Courier New', monospace"
+    }
+  },
+
+  {
+    "name": "Svara",
+    "file": "svara-resonance.html",
+    "heading": "Resonance",
+    "tagline": "Life, Tuned to Perfection.",
+    "subtitle": "Every Structure Has a Frequency.",
+    "pullQuote": "Svara is a note held long enough\nto become a room —\nlong enough to become a life.\nTwelve homes in Jubilee Hills\nwhere every proportion was tuned,\nevery material chosen for its resonance,\nand nothing was added that did not belong.",
+    "bodyCopy": "Resonance builds to last a century. Not because we predict the future, but because we have studied the past with an obsessive attention to what endures. Every structure we have created has increased in value in every year since completion. Svara is our most considered work — twelve villas in Jubilee Hills, tuned to the specific frequency of permanence.",
+    "tone1": "Resonance",
+    "tone2": "Cosmos",
+    "tone3": "Violet",
+    "colorwayNote": "Deep indigo ground, pale celestial light, luminous violet accent. The palette of clear night skies, polished lapis, and the frequency of instrument strings in a quiet room.",
+    "logoRules": [
+      "The mark resonates — it is never reduced to less than 18pt, where the proportions of the letterform can still be read as deliberate.",
+      "The mark is always indigo or ivory — never on a ground that competes with its frequency.",
+      "Never use the mark as a repeated pattern — resonance is a singular event, not a texture."
+    ],
+    "footerCity": "Hyderabad",
+    "footerYear": 2026,
+    "amenities": [
+      {
+        "name": "The Resonance Garden",
+        "desc": "A private garden designed around acoustic principles — specifically, the absorption and deflection of urban noise. Planted earthwork berms, water sound masking, and a central space where the ambient frequency of the garden is silence. Measured and maintained at less than 30dB."
+      },
+      {
+        "name": "The Harmonic Pool",
+        "desc": "A pool of deep indigo-tiled stone — near-black when still, celestial blue in motion. Submerged lighting tuned to the warm spectrum. A water feature that produces a single continuous tone, set at 432Hz — the specific frequency of physical and acoustic resonance."
+      },
+      {
+        "name": "The Cosmic Observatory",
+        "desc": "A third-floor rooftop terrace with observatory-grade dark-sky access and a resident astronomer available on community retainer. A 12-inch Dobsonian telescope. Monthly sky events. The city lights are below the parapet — designed to be invisible from the observation platform."
+      }
+    ],
+    "images": { "cover": "none", "photoLeft": "none", "photoRight": "none", "amenitiesBg": "none", "hoardingBg": "none", "backBg": "none" },
+    "css": {
+      "primary":   "#1C1A30",
+      "surface":   "#10101E",
+      "accent":    "#7848B8",
+      "light":     "#E8E4F0",
+      "reserve":   "#2A3050",
+      "textDark":  "#10101E",
+      "textLight": "#E8E4F0",
+      "serif":     "'Josefin Sans', sans-serif",
+      "sans":      "'Inter', sans-serif",
+      "mono":      "'Courier New', monospace"
+    }
+  }
+]

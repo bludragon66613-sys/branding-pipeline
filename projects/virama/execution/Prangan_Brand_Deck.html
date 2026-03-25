@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRANGAN_Brand_Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root {
+    --primary: #3B3B34; /* Monsoon Basalt */
+    --surface: #DCCEB8; /* Earth Plaster */
+    --accent:  #A6743C; /* Jali Ochre */
+    --light:   #C7B89F; /* Lime Courtyard */
+    --reserve: #7D816C; /* Neem Shadow */
+
+    --text-dark: #1A1A18;
+    --text-light: #F1EEE8;
+
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans:  'Inter', system-ui, sans-serif;
+    --mono:  'DM Mono', monospace;
+
+    --W: 420mm;
+    --H: 297mm;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: #e0e0e0;
+    font-family: var(--sans);
+    color: var(--primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.page {
+    position: relative;
+    width: var(--W);
+    height: var(--H);
+    overflow: hidden;
+    display: block;
+    margin: 0 auto 10mm;
+    background: var(--surface);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.noise {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.overlay-dark {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(59,59,52,0.85) 0%, rgba(59,59,52,0.4) 100%);
+}
+
+.overlay-left {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(220,206,184,0.95) 0%, rgba(220,206,184,0.7) 45%, transparent 100%);
+}
+
+.rule {
+    display: block;
+    width: 60mm;
+    height: 0.3pt;
+    background: var(--accent);
+    margin: 6mm 0;
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 30mm 40mm;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5 { font-weight: normal; }
+
+.title-serif {
+    font-family: var(--serif);
+    font-size: 72pt;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18pt;
+    opacity: 0.6;
+    margin-top: 4mm;
+}
+
+.meta-sans {
+    font-family: var(--sans);
+    font-size: 10pt;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.body-serif { font-family: var(--serif); font-size: 16pt; line-height: 1.6; }
+
+.body-sans {
+    font-family: var(--sans);
+    font-size: 11pt;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.pull-quote {
+    font-family: var(--serif);
+    font-size: 36pt;
+    font-style: italic;
+    line-height: 1.3;
+    text-align: center;
+    max-width: 260mm;
+    margin: 0 auto;
+    color: var(--primary);
+}
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 100%; gap: 20mm; }
+
+.flex-col { display: flex; flex-direction: column; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-space { display: flex; justify-content: space-between; align-items: center; }
+
+@media print {
+    body { background: none; }
+    .page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    @page { size: A3 landscape; margin: 0; }
+}
+
+/* Slide Specifics */
+.s1-cover { justify-content: flex-end; padding-bottom: 40mm; color: var(--text-light); }
+
+.s2-manifesto { justify-content: center; align-items: center; }
+.s2-manifesto .text-block {
+    max-width: 180mm;
+    margin-top: 25mm;
+    font-size: 13pt;
+    line-height: 1.7;
+    text-align: center;
+    position: relative;
+}
+.s2-manifesto .vertical-rule {
+    position: absolute;
+    left: 20mm;
+    top: 40mm;
+    bottom: 40mm;
+    width: 2mm;
+    background: var(--accent);
+}
+
+.s3-palette { display: flex; height: 100%; padding: 0; }
+.s3-palette .col { height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 20mm; }
+.s3-palette .col-1 { width: 35%; background: var(--surface); color: var(--primary); }
+.s3-palette .col-2 { width: 25%; background: var(--primary); color: var(--surface); }
+.s3-palette .col-3 { width: 15%; background: var(--accent); color: var(--surface); }
+.s3-palette .col-4 { width: 15%; background: var(--light); color: var(--primary); }
+.s3-palette .col-5 { width: 10%; background: var(--reserve); color: var(--surface); }
+.color-name { font-family: var(--serif); font-size: 14pt; margin-bottom: 4mm; }
+.color-hex { font-family: var(--mono); font-size: 10pt; opacity: 0.5; }
+.watermark { position: absolute; top: 20mm; left: 40mm; font-size: 8pt; letter-spacing: 0.3em; opacity: 0.15; font-family: var(--sans); z-index: 20; }
+
+.s4-typo { padding: 40mm; display: flex; gap: 40mm; background: #F8F5F0; }
+.s4-left { width: 40%; display: flex; flex-direction: column; gap: 15mm; }
+.s4-right { width: 60%; padding-top: 10mm; }
+.typo-sample-hero { font-family: var(--serif); font-size: 72pt; line-height: 1; color: var(--primary); }
+.typo-sample-h1 { font-family: var(--serif); font-size: 48pt; line-height: 1.1; color: var(--primary); }
+.typo-sample-h2 { font-family: var(--serif); font-size: 24pt; line-height: 1.2; color: var(--primary); }
+.typo-sample-p { font-family: var(--sans); font-size: 16pt; line-height: 1.5; color: var(--primary); font-weight: 300; }
+.typo-sample-cap { font-family: var(--sans); font-size: 10pt; letter-spacing: 0.1em; color: var(--primary); opacity: 0.6; text-transform: uppercase; }
+.typo-spec { position: absolute; bottom: 30mm; left: 40mm; font-family: var(--sans); font-size: 8pt; letter-spacing: 0.2em; text-transform: uppercase; color: var(--primary); opacity: 0.5; }
+.typo-actual { font-family: var(--sans); font-size: 11pt; line-height: 1.8; color: var(--primary); font-weight: 300; max-width: 140mm; }
+
+.s5-photo { display: flex; height: 100%; padding: 0; position: relative; }
+.s5-left { width: 60%; height: 100%; background: url('https://images.unsplash.com/photo-1600607688969-a5bfcd64bd0b?w=1800&q=85') center/cover; }
+.s5-right { width: 40%; height: 100%; background: url('https://images.unsplash.com/photo-1618220179428-22790b46a0eb?w=1800&q=85') center/cover; }
+.photo-rule { position: absolute; bottom: 0; left: 0; right: 0; height: 8mm; background: var(--primary); color: var(--surface); display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 8pt; letter-spacing: 0.25em; text-transform: uppercase; }
+
+.s6-amenities { background: var(--primary); color: var(--surface); }
+.s6-amenities .bg { opacity: 0.08; background-image: url('https://images.unsplash.com/photo-1604014237800-1c9102c219ed?w=1800&q=85'); mix-blend-mode: luminosity; }
+.amenity-col { padding-top: 100mm; }
+.amenity-name { font-family: var(--serif); font-size: 20pt; margin-bottom: 5mm; color: var(--surface); }
+.amenity-desc { font-family: var(--sans); font-size: 11pt; line-height: 1.7; color: rgba(220,206,184,0.7); font-weight: 300; }
+
+.s7-logo { background: #F8F5F0; align-items: center; justify-content: center; position: relative; }
+.logo-mark { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 30mm; }
+.logo-css-shape { width: 60mm; height: 60mm; border: 2pt solid var(--primary); display: flex; align-items: center; justify-content: center; position: relative; }
+.logo-letter { font-family: var(--serif); font-size: 140pt; color: var(--primary); line-height: 1; transform: translateY(-5mm); }
+.ssquare-issuer { position: absolute; bottom: -8mm; font-family: var(--sans); font-size: 9pt; letter-spacing: 0.3em; font-weight: 500; }
+.ssquare-issuer sup { font-size: 6pt; }
+.logo-footer { position: absolute; bottom: 30mm; left: 40mm; right: 40mm; display: flex; justify-content: space-between; align-items: flex-end; }
+.logo-rules { width: 45%; font-family: var(--sans); font-size: 9pt; line-height: 1.6; color: var(--primary); opacity: 0.8; column-count: 2; column-gap: 10mm; }
+.logo-sizes { display: flex; align-items: flex-end; gap: 10mm; }
+.size-box { border: 1pt solid rgba(59,59,52,0.2); display: flex; align-items: center; justify-content: center; font-family: var(--serif); color: var(--primary); }
+.sz-l { width: 40mm; height: 40mm; font-size: 36pt; }
+.sz-m { width: 20mm; height: 20mm; font-size: 18pt; }
+.sz-s { width: 10mm; height: 10mm; font-size: 9pt; }
+.colorways { display: flex; gap: 2mm; }
+.cw-box { width: 25mm; height: 25mm; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 14pt; }
+.cw-1 { background: var(--primary); color: var(--surface); }
+.cw-2 { background: var(--surface); color: var(--primary); }
+.cw-3 { background: var(--accent); color: var(--surface); }
+
+.s8-tone { display: flex; padding: 0; height: 100%; }
+.tone-header { position: absolute; top: 20mm; left: 40mm; z-index: 20; color: var(--primary); font-family: var(--sans); font-size: 10pt; letter-spacing: 0.3em; text-transform: uppercase; }
+.s8-left { width: 50%; background: var(--primary); padding: 40mm; display: flex; flex-direction: column; justify-content: center; color: var(--surface); }
+.s8-right { width: 50%; background: var(--surface); padding: 40mm; display: flex; flex-direction: column; justify-content: center; color: var(--primary); }
+.tone-label { font-family: var(--mono); font-size: 10pt; opacity: 0.5; margin-bottom: 20mm; letter-spacing: 0.1em; text-transform: uppercase; }
+.tone-item { margin-bottom: 15mm; }
+.tone-bad { font-family: var(--serif); font-size: 24pt; text-decoration: line-through; color: var(--accent); opacity: 0.8; }
+.tone-good { font-family: var(--serif); font-size: 24pt; color: var(--primary); line-height: 1.3; }
+.tone-arrow { font-family: var(--mono); font-size: 14pt; opacity: 0.3; margin-bottom: 2mm; display: block; }
+
+.s9-mockups { background: #1A1A18; color: var(--surface); }
+.mockups-container { display: flex; flex-direction: column; gap: 20mm; height: 100%; justify-content: center; }
+.mockup-wrap { display: flex; flex-direction: column; gap: 4mm; align-items: flex-start; }
+.mockup-label { font-family: var(--sans); font-size: 8pt; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.5; }
+
+.bc-mockup { width: 85mm; height: 55mm; background: var(--surface); display: flex; flex-direction: column; justify-content: space-between; padding: 6mm; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+.bc-logo { font-family: var(--serif); font-size: 24pt; color: var(--primary); text-align: center; margin-top: 5mm; }
+.bc-text { font-family: var(--sans); font-size: 6pt; color: var(--primary); letter-spacing: 0.1em; text-transform: uppercase; text-align: center; }
+
+.email-mockup { width: 120mm; height: 35mm; background: #ffffff; padding: 6mm; display: flex; gap: 6mm; align-items: center; border-left: 2px solid var(--accent); box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+.email-p { width: 14mm; height: 14mm; border: 1px solid var(--primary); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 16pt; color: var(--primary); }
+.email-text div:nth-child(1) { font-family: var(--serif); font-size: 12pt; color: var(--primary); margin-bottom: 1mm; }
+.email-text div:nth-child(2) { font-family: var(--sans); font-size: 7pt; color: #888; letter-spacing: 0.1em; text-transform: uppercase; }
+
+.hoard-mockup { width: 100%; height: 60mm; background: url('https://images.unsplash.com/photo-1523633589114-88eaf4b4f1a8?w=1800&q=85') center/cover; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; }
+.hoard-mockup::before { content: ''; position: absolute; inset: 0; background: rgba(59,59,52,0.6); }
+.hoard-text { position: relative; z-index: 2; font-family: var(--serif); font-size: 42pt; color: var(--surface); letter-spacing: 0.05em; text-transform: uppercase; }
+.hoard-brand { position: absolute; bottom: 4mm; right: 6mm; font-family: var(--sans); font-size: 6pt; letter-spacing: 0.3em; color: var(--surface); opacity: 0.6; z-index: 2; }
+
+.s10-back { background: var(--primary); color: var(--surface); justify-content: center; align-items: center; text-align: center; }
+.s10-back .bg { opacity: 0.4; background-image: url('https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=1800&q=85'); mix-blend-mode: multiply; }
+.back-dev { font-family: var(--sans); font-size: 10pt; letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 4mm; position: relative; z-index: 2; }
+.back-tag { font-family: var(--serif); font-size: 16pt; font-style: italic; opacity: 0.7; position: relative; z-index: 2; }
+.back-legal { position: absolute; bottom: 20mm; width: 100%; text-align: center; font-family: var(--sans); font-size: 7pt; letter-spacing: 0.1em; opacity: 0.3; z-index: 2; left: 0; }
+.back-date { position: absolute; bottom: 20mm; right: 40mm; font-family: var(--sans); font-size: 8pt; letter-spacing: 0.1em; opacity: 0.5; z-index: 2; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: COVER -->
+<div class="page">
+    <div class="bg" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=85');"></div>
+    <div class="overlay-dark"></div>
+    <div class="noise"></div>
+    <div class="content s1-cover">
+        <div class="title-serif">PRANGAN</div>
+        <div class="rule"></div>
+        <div class="tagline">the court remembers</div>
+        <div class="meta-sans" style="position: absolute; bottom: 30mm; left: 40mm;">SSQUARE</div>
+    </div>
+</div>
+
+<!-- SLIDE 2: MANIFESTO -->
+<div class="page">
+    <div class="noise"></div>
+    <div class="s2-manifesto content">
+        <div class="vertical-rule"></div>
+        <div class="pull-quote">
+            "PRANGAN begins with a courtyard, because certain forms still know more about living in India than imported typologies do."
+        </div>
+        <div class="text-block body-sans">
+            Shade, breeze, stone, earth, and filtered rain shape a daily rhythm that feels familiar without feeling backward. The architecture is contemporary, but the intelligence is inherited. Here, domestic life expands naturally toward the court, the verandah, the threshold, and back again.
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 3: COLOUR PALETTE -->
+<div class="page">
+    <div class="watermark">PRANGAN PALETTE</div>
+    <div class="s3-palette">
+        <div class="col col-1">
+            <div class="color-name">Earth Plaster</div>
+            <div class="color-hex">#DCCEB8 / PRIMARY BACKGROUND</div>
+        </div>
+        <div class="col col-2">
+            <div class="color-name">Monsoon Basalt</div>
+            <div class="color-hex">#3B3B34 / TYPOGRAPHY</div>
+        </div>
+        <div class="col col-3">
+            <div class="color-name">Jali Ochre</div>
+            <div class="color-hex">#A6743C / ACCENT</div>
+        </div>
+        <div class="col col-4">
+            <div class="color-name">Lime Courtyard</div>
+            <div class="color-hex">#C7B89F / SECONDARY SURFACE</div>
+        </div>
+        <div class="col col-5">
+            <div class="color-name">Neem Shadow</div>
+            <div class="color-hex">#7D816C / RESERVE</div>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 4: TYPOGRAPHY -->
+<div class="page">
+    <div class="noise"></div>
+    <div class="content s4-typo">
+        <div class="s4-left">
+            <div class="typo-sample-hero">Aa</div>
+            <div class="typo-sample-h1">The Rain Court</div>
+            <div class="typo-sample-h2">A contemporary response.</div>
+            <div class="typo-sample-p">Domestic life expands naturally toward the threshold.</div>
+            <div class="typo-sample-cap">01 — Ground Floor Plan</div>
+        </div>
+        <div class="s4-right flex-col">
+            <div class="typo-sample-h1" style="font-size: 36pt; margin-bottom: 6mm;">The Architecture</div>
+            <div class="rule" style="width: 40mm; margin: 0 0 10mm 0; background: var(--primary);"></div>
+            <div class="typo-actual">
+                PRANGAN begins with a courtyard, because certain forms still know more about living in India than imported typologies do. Shade, breeze, stone, earth, and filtered rain shape a daily rhythm that feels familiar without feeling backward.
+                <br><br>
+                The architecture is contemporary, but the intelligence is inherited. Here, domestic life expands naturally toward the court, the verandah, the threshold, and back again.
+            </div>
+        </div>
+        <div class="typo-spec">
+            Primary: Cormorant Garamond / Secondary: Inter / Accent: DM Mono
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 5: PHOTOGRAPHY -->
+<div class="page">
+    <div class="s5-photo">
+        <div class="s5-left"></div>
+        <div class="s5-right"></div>
+        <div class="photo-rule">
+            Photography Rule: No faces. Hands, thresholds, surfaces, shadows only.
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 6: AMENITIES -->
+<div class="page s6-amenities">
+    <div class="bg"></div>
+    <div class="overlay-dark" style="opacity: 0.5;"></div>
+    <div class="noise"></div>
+    <div class="content grid-3">
+        <div class="amenity-col flex-col">
+            <div class="amenity-name">The Rain Court</div>
+            <div class="rule" style="background: var(--surface); opacity: 0.3; margin: 0 0 6mm 0;"></div>
+            <div class="amenity-desc">A central void designed to catch the monsoon. Stone underfoot, filtered light, and a dedicated space where the environment dictates the internal rhythm of the house.</div>
+        </div>
+        <div class="amenity-col flex-col">
+            <div class="amenity-name">The Jali Walk</div>
+            <div class="rule" style="background: var(--surface); opacity: 0.3; margin: 0 0 6mm 0;"></div>
+            <div class="amenity-desc">A transitional corridor defined by intricate ochre jali screens. It regulates breeze and casts shifting, geometric shadows across the earth plaster throughout the day.</div>
+        </div>
+        <div class="amenity-col flex-col">
+            <div class="amenity-name">The Neem Commons</div>
+            <div class="rule" style="background: var(--surface); opacity: 0.3; margin: 0 0 6mm 0;"></div>
+            <div class="amenity-desc">A shared estate gathering space shaded by mature canopy. Designed for the multigenerational household, offering a rooted, communal scale of luxury.</div>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 7: LOGO -->
+<div class="page">
+    <div class="noise"></div>
+    <div class="content s7-logo">
+        <div class="logo-mark">
+            <div class="logo-css-shape">
+                <div class="logo-letter">P</div>
+            </div>
+            <div class="ssquare-issuer">SSQUARE S<sup>2</sup></div>
+        </div>
+        <div class="logo-footer">
+            <div class="logo-rules">
+                <strong>1. Minimum clear space:</strong> Maintain clear space equal to the width of the inner square. No typography or borders may enter this field.<br><br>
+                <strong>2. Approved colourways:</strong> Use Monsoon Basalt on Earth Plaster for primary applications. Jali Ochre is reserved for accent usage.<br><br>
+                <strong>3. Forbidden uses:</strong> Do not apply bevels, shadows, gradients, or metallic simulation in digital artwork.
+            </div>
+            <div class="logo-sizes">
+                <div class="flex-col" style="align-items: center; gap: 4mm;">
+                    <span style="font-family: var(--sans); font-size: 6pt; opacity: 0.5; letter-spacing: 0.1em;">LARGE</span>
+                    <div class="size-box sz-l">P</div>
+                </div>
+                <div class="flex-col" style="align-items: center; gap: 4mm;">
+                    <span style="font-family: var(--sans); font-size: 6pt; opacity: 0.5; letter-spacing: 0.1em;">MED</span>
+                    <div class="size-box sz-m">P</div>
+                </div>
+                <div class="flex-col" style="align-items: center; gap: 4mm;">
+                    <span style="font-family: var(--sans); font-size: 6pt; opacity: 0.5; letter-spacing: 0.1em;">MIN</span>
+                    <div class="size-box sz-s">P</div>
+                </div>
+            </div>
+            <div class="colorways">
+                <div class="cw-box cw-1">P</div>
+                <div class="cw-box cw-2">P</div>
+                <div class="cw-box cw-3">P</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 8: TONE OF VOICE -->
+<div class="page">
+    <div class="tone-header">PRANGAN / Voice &amp; Tone</div>
+    <div class="s8-tone">
+        <div class="s8-left">
+            <div class="tone-label">Banned Language</div>
+            <div class="tone-item tone-bad">Experience world-class luxury</div>
+            <div class="tone-item tone-bad">Premium opulent finishes</div>
+            <div class="tone-item tone-bad">Exclusive lifestyle amenities</div>
+        </div>
+        <div class="s8-right">
+            <div class="tone-label">Approved Expression</div>
+            <div class="tone-item">
+                <span class="tone-arrow">→</span>
+                <div class="tone-good">Domestic life edited by discipline, softened by landscape.</div>
+            </div>
+            <div class="tone-item">
+                <span class="tone-arrow">→</span>
+                <div class="tone-good">Materials chosen for their quietude and ability to age with dignity.</div>
+            </div>
+            <div class="tone-item">
+                <span class="tone-arrow">→</span>
+                <div class="tone-good">A daily rhythm that feels familiar without feeling backward.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 9: COLLATERAL MOCKUPS -->
+<div class="page s9-mockups">
+    <div class="noise"></div>
+    <div class="content mockups-container">
+        <div class="mockup-wrap">
+            <div class="mockup-label">01 / Business Card (85×55mm)</div>
+            <div class="bc-mockup">
+                <div class="bc-logo">P</div>
+                <div class="bc-text">SSQUARE S<sup>2</sup></div>
+            </div>
+        </div>
+        <div class="mockup-wrap">
+            <div class="mockup-label">02 / Digital Signature (400×80px)</div>
+            <div class="email-mockup">
+                <div class="email-p">P</div>
+                <div class="email-text">
+                    <div>PRANGAN</div>
+                    <div>A Project by SSquare</div>
+                </div>
+            </div>
+        </div>
+        <div class="mockup-wrap" style="width: 100%;">
+            <div class="mockup-label">03 / Site Hoarding Concept</div>
+            <div class="hoard-mockup">
+                <div class="hoard-text">The court remembers</div>
+                <div class="hoard-brand">SSQUARE</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 10: BACK COVER -->
+<div class="page s10-back">
+    <div class="bg"></div>
+    <div class="noise"></div>
+    <div class="content flex-center flex-col">
+        <div class="back-dev">SSQUARE</div>
+        <div class="rule" style="width: 20mm; background: var(--surface); opacity: 0.5;"></div>
+        <div class="back-tag">The Standard, Privately Held.</div>
+        <div class="back-legal">CONFIDENTIAL. FOR APPROVED RECIPIENTS ONLY.</div>
+        <div class="back-date">HYDERABAD, 2026</div>
+    </div>
+</div>
+
+</body>
+</html>

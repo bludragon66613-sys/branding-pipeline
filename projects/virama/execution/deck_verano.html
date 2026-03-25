@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verano — The Unhurried Life of the Estate</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --terracotta:  #C2614A;
+    --adriatic:    #2E4A6B;
+    --linen:       #F2EDE4;
+    --sienna:      #8B4535;
+    --sky:         #7A98B8;
+    --salt:        #FAFAF6;
+    --dusk:        #4A3028;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A3 landscape; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; }
+  }
+
+  body { font-family: 'Nunito', sans-serif; background: #d4c9bc; }
+
+  .page {
+    width: 420mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    page-break-after: always;
+  }
+
+  /* ─────────────────────────────────────────────
+     S1 — COVER
+     Wide, low, horizon composition. Warm sun.
+  ───────────────────────────────────────────── */
+  .s1 {
+    background: var(--adriatic);
+    flex-direction: column;
+  }
+  .s1-horizon-band {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 38%;
+    background: var(--terracotta);
+    opacity: 0.13;
+  }
+  .s1-sun-line {
+    position: absolute;
+    top: 55%;
+    left: 0; right: 0;
+    height: 0.4pt;
+    background: linear-gradient(90deg, transparent 8%, var(--terracotta) 30%, var(--sky) 70%, transparent 92%);
+    opacity: 0.45;
+  }
+  .s1-grid {
+    display: grid;
+    grid-template-columns: 22mm 1fr 1fr 1fr 22mm;
+    grid-template-rows: 22mm 1fr 1fr 18mm;
+    width: 100%;
+    height: 100%;
+  }
+  .s1-col-left {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    border-right: 0.3pt solid rgba(122, 152, 184, 0.15);
+  }
+  .s1-data {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 8mm 10mm 10mm;
+    border-right: 0.3pt solid rgba(122, 152, 184, 0.12);
+  }
+  .s1-data-item {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(122, 152, 184, 0.65);
+    letter-spacing: 0.12em;
+    line-height: 2;
+  }
+  .s1-data-value {
+    font-size: 6.5pt;
+    color: var(--sky);
+    font-weight: 400;
+  }
+  .s1-main {
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 22mm 14mm 12mm;
+    position: relative;
+  }
+  .s1-eyebrow {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+    opacity: 0.85;
+  }
+  .s1-brand {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 100pt;
+    font-weight: 400;
+    color: var(--linen);
+    line-height: 0.87;
+    letter-spacing: -0.02em;
+    margin-bottom: 9mm;
+  }
+  .s1-tagline {
+    font-family: 'Nunito', sans-serif;
+    font-size: 10.5pt;
+    font-weight: 200;
+    color: var(--sky);
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+  }
+  .s1-footer {
+    grid-column: 2 / 5;
+    grid-row: 4;
+    display: flex;
+    align-items: center;
+    padding: 0 22mm 0 10mm;
+    border-top: 0.3pt solid rgba(122, 152, 184, 0.1);
+  }
+  .s1-footer-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(122, 152, 184, 0.5);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* ─────────────────────────────────────────────
+     S2 — THE REFERENCE
+     Leça Swimming Pools, 1966
+  ───────────────────────────────────────────── */
+  .s2 {
+    background: var(--linen);
+    flex-direction: row;
+  }
+  .s2-left {
+    width: 44%;
+    background: var(--adriatic);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 16mm 22mm 22mm;
+    position: relative;
+  }
+  .s2-left::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 1mm;
+    background: linear-gradient(180deg, transparent, var(--terracotta) 40%, var(--terracotta) 60%, transparent);
+    opacity: 0.35;
+  }
+  .s2-year {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 64pt;
+    font-weight: 400;
+    color: rgba(122, 152, 184, 0.10);
+    line-height: 1;
+    position: absolute;
+    bottom: 18mm;
+    right: 14mm;
+    letter-spacing: -0.04em;
+  }
+  .s2-location-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s2-headline {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 27pt;
+    font-weight: 400;
+    color: var(--salt);
+    line-height: 1.15;
+    margin-bottom: 8mm;
+  }
+  .s2-body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: rgba(122, 152, 184, 0.85);
+    line-height: 1.85;
+  }
+  .s2-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 24mm 22mm 20mm;
+  }
+  .s2-principle-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--dusk);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+    opacity: 0.7;
+  }
+  .s2-principle {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 18pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--adriatic);
+    line-height: 1.4;
+    margin-bottom: 8mm;
+  }
+  .s2-principle-body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: var(--dusk);
+    line-height: 1.85;
+    border-left: 0.3pt solid var(--terracotta);
+    padding-left: 6mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S3 — THE MATERIAL
+     Four rooms of a coastal villa
+  ───────────────────────────────────────────── */
+  .s3 {
+    background: var(--salt);
+    flex-direction: column;
+    padding: 0;
+  }
+  .s3-top {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 0.3pt solid rgba(194, 97, 74, 0.2);
+  }
+  .s3-material-cell {
+    padding: 16mm 10mm 10mm 13mm;
+    border-right: 0.3pt solid rgba(194, 97, 74, 0.15);
+    position: relative;
+  }
+  .s3-material-cell:nth-child(1) { background: rgba(194, 97, 74, 0.04); }
+  .s3-material-cell:nth-child(2) { background: rgba(46,  74,107, 0.03); }
+  .s3-material-cell:nth-child(3) { background: rgba(194, 97, 74, 0.02); }
+  .s3-material-cell:nth-child(4) { background: rgba(46,  74,107, 0.02); }
+  .s3-material-cell:last-child { border-right: none; }
+  .s3-mat-number {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 10.5pt;
+    color: var(--terracotta);
+    margin-bottom: 5mm;
+    font-style: italic;
+  }
+  .s3-mat-name {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 15.5pt;
+    color: var(--adriatic);
+    line-height: 1.15;
+    margin-bottom: 4mm;
+  }
+  .s3-mat-desc {
+    font-family: 'Nunito', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: var(--dusk);
+    line-height: 1.75;
+  }
+  .s3-bottom {
+    padding: 8mm 22mm;
+    display: flex;
+    align-items: center;
+    gap: 14mm;
+    background: var(--linen);
+  }
+  .s3-principle-line {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 12.5pt;
+    font-style: italic;
+    color: var(--adriatic);
+    flex: 1;
+    line-height: 1.45;
+  }
+  .s3-footnote {
+    font-family: 'Nunito', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(74, 48, 40, 0.65);
+    width: 80mm;
+    line-height: 1.65;
+  }
+
+  /* ─────────────────────────────────────────────
+     S4 — THE VILLAS
+  ───────────────────────────────────────────── */
+  .s4 {
+    background: var(--adriatic);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20mm 24mm;
+    position: relative;
+  }
+  .s4::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0.4pt;
+    background: var(--terracotta);
+    opacity: 0.6;
+  }
+  .s4-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .s4-headline {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 38pt;
+    font-weight: 400;
+    color: var(--linen);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    max-width: 160mm;
+  }
+  .s4-count {
+    font-family: 'Nunito', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .s4-count strong {
+    display: block;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 38pt;
+    font-weight: 400;
+    color: var(--linen);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-top: 2mm;
+  }
+  .s4-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 0.3pt solid rgba(122, 152, 184, 0.2);
+    border-left: 0.3pt solid rgba(122, 152, 184, 0.2);
+  }
+  .s4-cell {
+    padding: 6mm 8mm;
+    border-right: 0.3pt solid rgba(122, 152, 184, 0.2);
+    border-bottom: 0.3pt solid rgba(122, 152, 184, 0.2);
+  }
+  .s4-cell-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+  }
+  .s4-cell-value {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 10.5pt;
+    color: var(--linen);
+    line-height: 1.35;
+  }
+
+  /* ─────────────────────────────────────────────
+     S5 — THE FEATURE / QUOTE
+     Terracotta panel. Warm and generous.
+  ───────────────────────────────────────────── */
+  .s5 {
+    background: var(--linen);
+    flex-direction: row;
+  }
+  .s5-left {
+    width: 36%;
+    background: var(--terracotta);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20mm 14mm 20mm 20mm;
+  }
+  .s5-feature-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: rgba(242, 237, 228, 0.65);
+    text-transform: uppercase;
+    margin-bottom: 5mm;
+  }
+  .s5-feature-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 32pt;
+    font-weight: 400;
+    color: var(--salt);
+    line-height: 1;
+    margin-bottom: 7mm;
+  }
+  .s5-feature-body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: rgba(250, 250, 246, 0.8);
+    line-height: 1.8;
+  }
+  .s5-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20mm 24mm 20mm 18mm;
+  }
+  .s5-quote-mark {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 56pt;
+    color: rgba(194, 97, 74, 0.2);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s5-quote {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16pt;
+    font-style: italic;
+    color: var(--adriatic);
+    line-height: 1.5;
+    margin-bottom: 8mm;
+  }
+  .s5-attribution {
+    font-family: 'Nunito', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(74, 48, 40, 0.65);
+    letter-spacing: 0.12em;
+    line-height: 1.65;
+  }
+
+  /* ─────────────────────────────────────────────
+     S6 — JUBILEE HILLS
+  ───────────────────────────────────────────── */
+  .s6 {
+    background: var(--adriatic);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 24mm 20mm;
+  }
+  .s6-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .s6-location-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--terracotta);
+    text-transform: uppercase;
+  }
+  .s6-headline {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 32pt;
+    font-weight: 400;
+    color: var(--linen);
+    line-height: 1.1;
+    max-width: 200mm;
+    margin-top: 6mm;
+  }
+  .s6-stats {
+    display: flex;
+    gap: 20mm;
+    padding-top: 10mm;
+    border-top: 0.3pt solid rgba(122, 152, 184, 0.2);
+  }
+  .s6-stat-value {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 26pt;
+    color: var(--terracotta);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s6-stat-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: var(--sky);
+    letter-spacing: 0.12em;
+    line-height: 1.55;
+  }
+  .s6-body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(122, 152, 184, 0.85);
+    line-height: 1.85;
+    max-width: 240mm;
+    column-count: 2;
+    column-gap: 12mm;
+    column-rule: 0.3pt solid rgba(122, 152, 184, 0.15);
+  }
+
+  /* ─────────────────────────────────────────────
+     S7 — DEVELOPER
+  ───────────────────────────────────────────── */
+  .s7 {
+    background: var(--linen);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s7-bar {
+    width: 8mm;
+    background: var(--terracotta);
+    flex-shrink: 0;
+  }
+  .s7-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 24mm 24mm 20mm;
+  }
+  .s7-dev-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--dusk);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+    opacity: 0.7;
+  }
+  .s7-dev-name {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 30pt;
+    color: var(--adriatic);
+    line-height: 1;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 9pt;
+    font-weight: 300;
+    color: var(--dusk);
+    line-height: 1.8;
+    max-width: 180mm;
+  }
+  .s7-right {
+    width: 120mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 24mm 24mm 16mm;
+    border-left: 0.3pt solid rgba(194, 97, 74, 0.2);
+  }
+  .s7-credential-item {
+    padding: 5mm 0;
+    border-bottom: 0.3pt solid rgba(194, 97, 74, 0.15);
+  }
+  .s7-credential-item:last-child { border-bottom: none; }
+  .s7-cred-number {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 18pt;
+    color: var(--terracotta);
+    line-height: 1;
+  }
+  .s7-cred-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: var(--dusk);
+    letter-spacing: 0.05em;
+  }
+
+  /* ─────────────────────────────────────────────
+     S8 — CLOSE
+  ───────────────────────────────────────────── */
+  .s8 {
+    background: var(--adriatic);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24mm 28mm;
+    position: relative;
+  }
+  .s8::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1mm;
+    background: linear-gradient(90deg, var(--terracotta), transparent 70%);
+  }
+  .s8-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s8-brand {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 92pt;
+    font-weight: 400;
+    color: var(--linen);
+    line-height: 0.87;
+    letter-spacing: -0.02em;
+    margin-bottom: 8mm;
+  }
+  .s8-tagline {
+    font-family: 'Nunito', sans-serif;
+    font-size: 10.5pt;
+    font-weight: 200;
+    color: var(--sky);
+    letter-spacing: 0.1em;
+    margin-bottom: 16mm;
+  }
+  .s8-rule {
+    width: 60mm;
+    height: 0.4pt;
+    background: var(--terracotta);
+    opacity: 0.55;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════════════ -->
+<div class="page s1">
+  <div class="s1-horizon-band"></div>
+  <div class="s1-sun-line"></div>
+  <div class="s1-grid">
+    <div class="s1-col-left"></div>
+    <div class="s1-data">
+      <div class="s1-data-item">Type<br><span class="s1-data-value">Gated Villa Estate</span></div>
+      <div class="s1-data-item">Count<br><span class="s1-data-value">XII</span></div>
+      <div class="s1-data-item">Location<br><span class="s1-data-value">Jubilee Hills, HYD</span></div>
+    </div>
+    <div class="s1-main">
+      <div class="s1-eyebrow">Twelve Private Villas · Jubilee Hills</div>
+      <div class="s1-brand">Verano</div>
+      <div class="s1-tagline">The unhurried life of the estate.</div>
+    </div>
+    <div class="s1-footer">
+      <div class="s1-footer-text">Brand Identity Presentation · Confidential</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 2 — THE REFERENCE
+══════════════════════════════════════════════════ -->
+<div class="page s2">
+  <div class="s2-left">
+    <div class="s2-year">1966</div>
+    <div class="s2-location-label">Leça da Palmeira · Portugal</div>
+    <div class="s2-headline">The architecture<br>of what was<br>not built.</div>
+    <div class="s2-body">In 1966, Álvaro Siza Vieira was asked to add a swimming pool to a rocky Atlantic coastline at Leça da Palmeira. Instead of building over the rock, he cut into it. The changing rooms are half-buried. The walls sit deliberately below the sightline so the ocean horizon is always visible. The floor is the same material as the rock platform it rests on. Nothing announces itself. The genius is in the restraint — the genius is in what was not built.<br><br>The pools have been in continuous use for sixty years. They require no explanation.</div>
+  </div>
+  <div class="s2-right">
+    <div class="s2-principle-label">The Translation</div>
+    <div class="s2-principle">"One&Only Resorts uses the same logic: each property is defined by what the site already had."</div>
+    <div class="s2-principle-body">The reef, the grove, the mountain — the architecture's job is to not compete with it. Verano in Jubilee Hills is briefed on this same discipline: the canopy is already there, the light already arrives at a particular angle in the morning, the topography already has an opinion. Every decision at Verano begins with the question: does this need to be here, or does the site already handle it?</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 3 — THE MATERIAL
+══════════════════════════════════════════════════ -->
+<div class="page s3">
+  <div class="s3-top">
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">01</div>
+      <div class="s3-mat-name">The terrace<br>at noon</div>
+      <div class="s3-mat-desc">Sun-warmed sandstone underfoot. The terrace does not end at a wall — it meets a low parapet, and beyond it, the tree canopy. You cannot see the street from here. You can only see the estate. The hour passes without requiring anything.</div>
+    </div>
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">02</div>
+      <div class="s3-mat-name">Still water,<br>stone edge</div>
+      <div class="s3-mat-desc">The pool is flush with the garden level — not elevated, not framed. The stone coping is the same material as the terrace. Water and ground occupy the same plane. This is not architecture announcing itself. This is architecture stepping aside.</div>
+    </div>
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">03</div>
+      <div class="s3-mat-name">The shade<br>tree</div>
+      <div class="s3-mat-desc">The canopy at Prashashan Nagar is decades old. Verano's footprint was designed around these trees, not despite them. The shade was already there. The villa was positioned to receive it. You do not plant a mature tree. You inherit one.</div>
+    </div>
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">04</div>
+      <div class="s3-mat-name">The unhurried<br>morning</div>
+      <div class="s3-mat-desc">East-facing courtyards. The morning light enters at the angle it chooses. No skylights engineered to compensate. The kitchen faces east because the day begins there. The living room faces the garden because the afternoon belongs there. The plan follows the sun.</div>
+    </div>
+  </div>
+  <div class="s3-bottom">
+    <div class="s3-principle-line">"The site already knew what it wanted to be."</div>
+    <div class="s3-footnote">Each material at Verano was chosen because the site suggested it — the terracotta in the soil, the warm stone of the plateau, the shade already given. Nothing was imported for effect. Everything has a reason that precedes the architecture.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 4 — THE VILLAS
+══════════════════════════════════════════════════ -->
+<div class="page s4">
+  <div class="s4-top">
+    <div class="s4-headline">Twelve residences.<br>One estate.<br>Nowhere else to be.</div>
+    <div class="s4-count">
+      Private villas
+      <strong>XII</strong>
+      Total, across the estate.
+    </div>
+  </div>
+  <div class="s4-grid">
+    <div class="s4-cell">
+      <div class="s4-cell-label">Configuration</div>
+      <div class="s4-cell-value">Single-storey · Private gate · Each on own plot</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Water</div>
+      <div class="s4-cell-value">Private pool, flush with garden · Not shared</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Orientation</div>
+      <div class="s4-cell-value">Each villa positioned around existing canopy</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Terrace</div>
+      <div class="s4-cell-value">Sun-warmed stone · Below the horizon line</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Price Range</div>
+      <div class="s4-cell-value">Rs 13 – 20 Crore · By private appointment</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Canopy</div>
+      <div class="s4-cell-value">Mature estate trees · Pre-existing, designed around</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 5 — THE FEATURE / QUOTE
+══════════════════════════════════════════════════ -->
+<div class="page s5">
+  <div class="s5-left">
+    <div class="s5-feature-label">The Design Logic</div>
+    <div class="s5-feature-title">The site<br>already<br>knew.</div>
+    <div class="s5-feature-body">Verano's villas step back to let the Jubilee Hills canopy and light take precedence. The architecture does not compete with what is already here. Walls are low where the view matters. The terrace is wide where the afternoon is long. The garden level is the pool level. Everything was placed to be lived in, not photographed.</div>
+  </div>
+  <div class="s5-right">
+    <div class="s5-quote-mark">"</div>
+    <div class="s5-quote">The site already knew what it wanted to be. We just cleared away what was in the way.</div>
+    <div class="s5-attribution">— The Verano brief · Jubilee Hills, 2025<br><span style="opacity:0.75; display:block; margin-top:5mm; font-style:italic;">Siza at Leça never added to the coastline. He subtracted from what did not belong. The pools are an argument that restraint is the highest form of generosity. Verano is briefed on the same argument: the canopy, the morning light, the still water — these were already here. The architecture's job was to not get in the way.</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 6 — JUBILEE HILLS
+══════════════════════════════════════════════════ -->
+<div class="page s6">
+  <div class="s6-top">
+    <div>
+      <div class="s6-location-label">Prashashan Nagar · Jubilee Hills · Hyderabad</div>
+      <div class="s6-headline">The canopy arrived<br>before anyone asked<br>for it.</div>
+    </div>
+  </div>
+  <div class="s6-stats">
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">10'</div>
+      <div class="s6-stat-label">From HITEC City<br>by car</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">0</div>
+      <div class="s6-stat-label">Through traffic.<br>The neighbourhood has none.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">35+</div>
+      <div class="s6-stat-label">Year old canopy.<br>Mature trees throughout.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">XII</div>
+      <div class="s6-stat-label">Villas behind<br>one gate. No more.</div>
+    </div>
+  </div>
+  <div class="s6-body">
+    Prashashan Nagar is what happens when a neighbourhood stops needing to prove anything. The trees grew in on their own timeline. The morning light falls at an angle that no landscape architect designed. There is no through traffic — which in Hyderabad in 2026 is not a planning feature but an inheritance. Verano does not try to add to this. It tries to belong to it. The walls are warm. The terraces are low. The hours are long.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 7 — DEVELOPER
+══════════════════════════════════════════════════ -->
+<div class="page s7">
+  <div class="s7-bar"></div>
+  <div class="s7-content">
+    <div class="s7-dev-label">The Developer</div>
+    <div class="s7-dev-name">SSquare<br>Est. 1991</div>
+    <div class="s7-dev-body">Thirty-five years building the commercial infrastructure of a city that never stopped growing. Over ten million square feet of premium commercial real estate in Hyderabad — privately held, privately financed, delivered without announcement. SSquare has never needed to advertise its standard. Its buildings have always been the argument.<br><br>Verano is their first and only residential project. The same material rigour and unhurried judgment that built their commercial portfolio — applied, for the first time, to the place where twelve families will actually live.</div>
+  </div>
+  <div class="s7-right">
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">35</div>
+      <div class="s7-cred-label">Years in Hyderabad commercial real estate</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">10M+</div>
+      <div class="s7-cred-label">Sq ft delivered. Premium commercial.</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">01</div>
+      <div class="s7-cred-label">Residential project. This is it. It will be their only one.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 8 — CLOSE
+══════════════════════════════════════════════════ -->
+<div class="page s8">
+  <div class="s8-label">Twelve Private Villas · Jubilee Hills · By SSquare</div>
+  <div class="s8-brand">Verano</div>
+  <div class="s8-tagline">The unhurried life of the estate.</div>
+  <div class="s8-rule"></div>
+</div>
+
+</body>
+</html>

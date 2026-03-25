@@ -1,0 +1,1303 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Svara — Brand Presentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ─── PAGE ─── */
+@page { size: A4 landscape; margin: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary:    #1C1A30;
+  --surface:    #10101E;
+  --accent:     #7848B8;
+  --light:      #E8E0F4;
+  --reserve:    #2A1A48;
+  --text-dark:  #10101E;
+  --text-light: #E8E4F0;
+  --serif:      'Josefin Sans', sans-serif;
+  --sans:       'Inter', sans-serif;
+  --mono:       'Courier New', monospace;
+}
+
+body {
+  font-family: var(--serif);
+  background: var(--surface);
+  color: var(--text-light);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ─── SLIDE BASE ─── */
+.slide {
+  width: 297mm;
+  height: 210mm;
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  page-break-inside: avoid;
+  display: flex;
+}
+.slide:last-child { page-break-after: auto; }
+
+/* ─── SHARED ─── */
+.lbl {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.lbl-dim {
+  font-family: var(--sans);
+  font-size: 6pt;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(138,138,138,0.6);
+}
+.rule-a {
+  width: 28px;
+  height: 0.5px;
+  background: var(--accent);
+  display: block;
+}
+.rule-dim {
+  height: 0.5px;
+  background: rgba(255,255,255,0.07);
+  display: block;
+}
+.slide-hdr {
+  flex-shrink: 0;
+  padding: 9mm 15mm 6mm;
+  border-bottom: 0.5px solid rgba(255,255,255,0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.slide-hdr-light {
+  flex-shrink: 0;
+  padding: 9mm 15mm 6mm;
+  border-bottom: 0.5px solid rgba(0,0,0,0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.slide-hdr-title {
+  font-size: 20pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--light);
+}
+.slide-hdr-title-dark {
+  font-size: 20pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-dark);
+}
+
+/* ═══════════════════════════════════════════
+   S01 — COVER
+═══════════════════════════════════════════ */
+#s01 { background: var(--surface); }
+
+#s01 .l {
+  width: 55%;
+  background: var(--primary);
+  padding: 16mm 14mm 13mm 16mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+#s01 .l::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 1px; height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+  opacity: 0.35;
+}
+#s01 .dev-mark {
+  font-family: var(--sans);
+  font-size: 9pt;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+#s01 .project-name {
+  font-size: 60pt;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  line-height: 0.88;
+  color: var(--light);
+}
+#s01 .tagline {
+  font-size: 13pt;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(245,240,232,0.75);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+#s01 .meta {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 300;
+  color: rgba(138,138,138,0.65);
+  letter-spacing: 0.1em;
+}
+#s01 .r {
+  flex: 1;
+  background: var(--surface);
+  padding: 16mm 14mm 13mm 14mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+#s01 .r-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7mm;
+}
+#s01 .pull-quote {
+  font-size: 11.5pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--light);
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+}
+#s01 .key-facts { display: flex; flex-direction: column; gap: 4mm; }
+#s01 .fact-row { display: flex; align-items: baseline; gap: 6px; }
+#s01 .fact-num {
+  font-size: 20pt;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1;
+  min-width: 14mm;
+}
+#s01 .fact-desc {
+  font-family: var(--sans);
+  font-size: 7pt;
+  font-weight: 300;
+  color: rgba(184,176,164,0.85);
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════
+   S02 — DEVELOPER
+═══════════════════════════════════════════ */
+#s02 { background: var(--light); color: var(--text-dark); }
+
+#s02 .l {
+  width: 40%;
+  background: var(--surface);
+  padding: 15mm 13mm 13mm 15mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+#s02 .ghost-initial {
+  font-size: 96pt;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.04);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  position: absolute;
+  bottom: 8mm;
+  left: 10mm;
+  pointer-events: none;
+}
+#s02 .dev-name-lg {
+  font-size: 36pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--light);
+  letter-spacing: 0.01em;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+#s02 .dev-sub {
+  font-size: 10pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--accent);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+#s02 .dev-record {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 300;
+  color: rgba(138,138,138,0.6);
+  letter-spacing: 0.12em;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+#s02 .r {
+  flex: 1;
+  padding: 15mm 15mm 13mm 16mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#s02 .story-head {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 5mm;
+}
+#s02 .story-body {
+  font-size: 10.5pt;
+  font-weight: 400;
+  line-height: 1.95;
+  color: var(--text-dark);
+  letter-spacing: 0.01em;
+}
+#s02 .pills { display: flex; flex-wrap: wrap; gap: 2.5mm; margin-top: 4mm; }
+#s02 .pill {
+  font-family: var(--sans);
+  font-size: 6pt;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  border: 0.5px solid rgba(0,0,0,0.18);
+  padding: 1.5mm 4mm;
+  border-radius: 1px;
+}
+
+/* ═══════════════════════════════════════════
+   S03 — THE CONCEPT
+═══════════════════════════════════════════ */
+#s03 { background: var(--primary); flex-direction: column; }
+
+#s03 .content {
+  flex: 1;
+  padding: 14mm 17mm 12mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+#s03 .bg-num {
+  font-size: 120pt;
+  font-weight: 300;
+  color: rgba(255,255,255,0.025);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  position: absolute;
+  right: 12mm;
+  top: 6mm;
+  font-style: italic;
+}
+#s03 .photo-overlay {
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 42%;
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 60%);
+  mask-image: linear-gradient(to right, transparent 0%, black 60%);
+}
+#s03 .concept-headline {
+  font-size: 17pt;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--light);
+  letter-spacing: 0.01em;
+  max-width: 195mm;
+  position: relative;
+  z-index: 1;
+}
+#s03 .concept-note {
+  font-family: var(--sans);
+  font-size: 7.5pt;
+  font-weight: 300;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  line-height: 1.65;
+  max-width: 110mm;
+  margin-top: 5mm;
+  opacity: 0.8;
+  position: relative;
+  z-index: 1;
+}
+#s03 .diffs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5mm;
+  position: relative;
+  z-index: 1;
+}
+#s03 .diff {
+  border-top: 0.5px solid rgba(201,169,110,0.25);
+  padding-top: 4mm;
+}
+#s03 .diff-title {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2mm;
+}
+#s03 .diff-copy {
+  font-family: var(--sans);
+  font-size: 7pt;
+  font-weight: 300;
+  color: rgba(184,176,164,0.8);
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════════
+   S04 — BRAND IDENTITY
+═══════════════════════════════════════════ */
+#s04 { background: var(--surface); flex-direction: column; }
+
+#s04 .slide-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#s04 .id-block {
+  padding: 7mm 10mm;
+  border-right: 0.5px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 6mm;
+}
+#s04 .id-block:last-child { border-right: none; }
+#s04 .id-label {
+  font-family: var(--sans);
+  font-size: 6pt;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+#s04 .logomark {
+  font-size: 52pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--light);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  border: 0.5px solid rgba(201,169,110,0.2);
+  width: 22mm;
+  height: 22mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#s04 .logo-rules { display: flex; flex-direction: column; gap: 3mm; }
+#s04 .logo-rule {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 300;
+  color: rgba(184,176,164,0.8);
+  letter-spacing: 0.03em;
+  line-height: 1.55;
+  padding-left: 3mm;
+  border-left: 1px solid rgba(201,169,110,0.25);
+}
+#s04 .voice-tone { display: flex; flex-direction: column; gap: 4mm; }
+#s04 .tone-item {
+  border-top: 0.5px solid rgba(255,255,255,0.06);
+  padding-top: 3mm;
+}
+#s04 .tone-word {
+  font-size: 15pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--light);
+  line-height: 1.1;
+}
+#s04 .tone-note {
+  font-family: var(--sans);
+  font-size: 6pt;
+  font-weight: 300;
+  color: rgba(184,176,164,0.6);
+  letter-spacing: 0.08em;
+  margin-top: 1mm;
+}
+#s04 .swatch-row { display: flex; gap: 2mm; }
+.swatch { flex: 1; height: 8mm; border-radius: 1px; }
+.swatch-name {
+  font-family: var(--sans);
+  font-size: 5pt;
+  font-weight: 300;
+  color: rgba(184,176,164,0.6);
+  margin-top: 1.5mm;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+#s04 .colorway-note {
+  font-size: 7.5pt;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+
+/* ═══════════════════════════════════════════
+   S05 — AMENITIES
+═══════════════════════════════════════════ */
+#s05 { background: var(--reserve); flex-direction: column; }
+
+#s05 .slide-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+#s05 .amenity-col {
+  padding: 7mm 9mm;
+  border-right: 0.5px solid rgba(255,255,255,0.09);
+  display: flex;
+  flex-direction: column;
+  gap: 4mm;
+}
+#s05 .amenity-col:last-child { border-right: none; }
+#s05 .amenity-num {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+}
+#s05 .amenity-name {
+  font-size: 18pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--light);
+  line-height: 1.05;
+}
+#s05 .amenity-desc {
+  font-family: var(--sans);
+  font-size: 7pt;
+  font-weight: 300;
+  color: rgba(245,240,232,0.7);
+  line-height: 1.65;
+  letter-spacing: 0.03em;
+}
+#s05 .amenity-ref {
+  font-family: var(--mono);
+  font-size: 5.5pt;
+  color: rgba(201,169,110,0.4);
+  letter-spacing: 0.06em;
+  margin-top: auto;
+}
+
+/* ═══════════════════════════════════════════
+   S06 — THE VILLAS
+═══════════════════════════════════════════ */
+#s06 { background: var(--light); color: var(--text-dark); flex-direction: column; }
+
+#s06 .slide-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+#s06 .villa-left {
+  background: var(--primary);
+  padding: 8mm 11mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7mm;
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+#s06 .stat { display: flex; flex-direction: column; gap: 1.5mm; }
+#s06 .stat-num {
+  font-size: 26pt;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1;
+}
+#s06 .stat-label {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 300;
+  color: rgba(245,240,232,0.6);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+#s06 .villa-right {
+  padding: 8mm 12mm;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6mm;
+}
+#s06 .vf {
+  border-top: 0.5px solid rgba(0,0,0,0.08);
+  padding-top: 4mm;
+  display: flex;
+  flex-direction: column;
+  gap: 2mm;
+}
+#s06 .vf-label {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+#s06 .vf-title {
+  font-size: 11pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.25;
+}
+#s06 .vf-copy {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 300;
+  color: #5A5550;
+  line-height: 1.62;
+  letter-spacing: 0.02em;
+}
+
+/* ═══════════════════════════════════════════
+   S07 — FIVE BRAND CLAIMS
+═══════════════════════════════════════════ */
+#s07 { background: var(--primary); flex-direction: column; }
+
+#s07 .slide-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+#s07 .claim-col {
+  padding: 7mm 7mm;
+  border-right: 0.5px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 3.5mm;
+}
+#s07 .claim-col:last-child { border-right: none; }
+#s07 .claim-num {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+#s07 .claim-topic {
+  font-family: var(--sans);
+  font-size: 7pt;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+#s07 .claim-headline {
+  font-size: 10pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--light);
+  line-height: 1.45;
+}
+#s07 .claim-body {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 300;
+  color: rgba(184,176,164,0.8);
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+}
+
+/* ═══════════════════════════════════════════
+   S08 — MOOD DIRECTIONS
+═══════════════════════════════════════════ */
+#s08 { background: var(--surface); flex-direction: column; }
+
+#s08 .slide-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#s08 .mood-col {
+  padding: 7mm 10mm;
+  border-right: 0.5px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 4mm;
+}
+#s08 .mood-col:last-child { border-right: none; }
+#s08 .mood-bar { height: 2px; background: var(--accent); border-radius: 1px; }
+#s08 .mood-num {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+}
+#s08 .mood-name {
+  font-size: 20pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--light);
+  line-height: 1;
+}
+#s08 .mood-desc {
+  font-size: 9pt;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(245,240,232,0.8);
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+#s08 .mood-palette { display: flex; gap: 1.5mm; margin-top: auto; }
+#s08 .ms { height: 4mm; flex: 1; border-radius: 1px; }
+
+/* ═══════════════════════════════════════════
+   S09 — THE LOCATION
+═══════════════════════════════════════════ */
+#s09 { background: var(--light); color: var(--text-dark); flex-direction: column; }
+
+#s09 .slide-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#s09 .loc-left {
+  background: var(--surface);
+  padding: 9mm 11mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+#s09 .loc-district {
+  font-family: var(--sans);
+  font-size: 7pt;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 3mm;
+  opacity: 0.85;
+}
+#s09 .loc-addr {
+  font-size: 18pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--light);
+  line-height: 1.3;
+}
+#s09 .loc-right {
+  padding: 9mm 13mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6mm;
+}
+#s09 .lc { display: flex; flex-direction: column; gap: 1.5mm; }
+#s09 .lc-label {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+#s09 .lc-val {
+  font-size: 11pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+#s09 .lc-desc {
+  font-family: var(--sans);
+  font-size: 6.5pt;
+  font-weight: 300;
+  color: #5A5550;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+/* ═══════════════════════════════════════════
+   S10 — BACK COVER
+═══════════════════════════════════════════ */
+#s10 {
+  background: var(--surface);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 6mm;
+  position: relative;
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+#s10::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(201,169,110,0.05) 0%, transparent 65%);
+}
+#s10 .back-ghost {
+  font-size: 130pt;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.025);
+  line-height: 1;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -54%);
+  letter-spacing: -0.02em;
+  pointer-events: none;
+}
+#s10 .back-name {
+  font-size: 40pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--light);
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+#s10 .back-tagline {
+  font-size: 12pt;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  position: relative;
+  z-index: 1;
+}
+#s10 .back-rule {
+  width: 36px;
+  height: 0.5px;
+  background: var(--accent);
+  opacity: 0.5;
+  position: relative;
+  z-index: 1;
+}
+#s10 .back-dev {
+  font-family: var(--sans);
+  font-size: 7pt;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(138,138,138,0.7);
+  position: relative;
+  z-index: 1;
+}
+#s10 .back-footer {
+  font-family: var(--sans);
+  font-size: 6pt;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: rgba(138,138,138,0.4);
+  position: relative;
+  z-index: 1;
+}
+#s10 .back-confidential {
+  position: absolute;
+  bottom: 7mm;
+  font-family: var(--sans);
+  font-size: 5.5pt;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(138,138,138,0.3);
+}
+
+@media print {
+  body { background: none; }
+  .slide { page-break-after: always; page-break-inside: avoid; }
+}
+
+</style>
+</head>
+<body>
+
+
+<!-- ════════════════════════════════════════
+     S01 — COVER
+════════════════════════════════════════ -->
+<section class="slide" id="s01">
+  <div class="l">
+    <div class="dev-mark">Resonance</div>
+    <div>
+      <div class="project-name">Svara</div>
+      <div style="height:5mm"></div>
+      <div class="tagline">"Life, Tuned to Perfection."</div>
+    </div>
+    <div class="meta">12 Private Villas &nbsp;·&nbsp; Rs 13–20 Cr &nbsp;·&nbsp; Brand Presentation &nbsp;·&nbsp; Hyderabad, 2026</div>
+  </div>
+  <div class="r">
+    <div class="lbl">Brand Overview</div>
+    <div class="r-inner">
+      <div class="pull-quote">Svara is a note held long enough
+to become a room —
+long enough to become a life.
+Twelve homes in Jubilee Hills
+where every proportion was tuned,
+every material chosen for its resonance,
+and nothing was added that did not belong.</div>
+      <div class="rule-dim" style="margin: 2mm 0"></div>
+      <div class="key-facts">
+        <div class="fact-row">
+          <div class="fact-num">12</div>
+          <div class="fact-desc">Exclusively private villas.<br>One community, permanently defined.</div>
+        </div>
+        <div class="fact-row">
+          <div class="fact-num">10</div>
+          <div class="fact-desc">Year retained estate management team,<br>contractually committed post-possession.</div>
+        </div>
+        <div class="fact-row">
+          <div class="fact-num">0</div>
+          <div class="fact-desc">Material substitutions permitted<br>after design approval. None. Ever.</div>
+        </div>
+      </div>
+    </div>
+    <div class="lbl-dim">Confidential — For Authorised Parties Only</div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     S02 — DEVELOPER
+════════════════════════════════════════ -->
+<section class="slide" id="s02">
+  <div class="l">
+    <div class="ghost-initial">S</div>
+    <div>
+      <div class="lbl" style="margin-bottom:5mm;">The Developer</div>
+      <div class="dev-name-lg">Resonance</div>
+    </div>
+    <div>
+      <div class="rule-a" style="margin-bottom:4mm;"></div>
+      <div class="dev-sub">"Every Structure Has a Frequency."</div>
+    </div>
+    <div class="dev-record">35 Years &nbsp;·&nbsp; Commercial Real Estate<br>10M+ Sq Ft Delivered &nbsp;·&nbsp; Residential Debut</div>
+  </div>
+  <div class="r">
+    <div>
+      <div class="story-head">About Resonance</div>
+      <div class="story-body">Resonance builds to last a century. Not because we predict the future, but because we have studied the past with an obsessive attention to what endures. Every structure we have created has increased in value in every year since completion. Svara is our most considered work — twelve villas in Jubilee Hills, tuned to the specific frequency of permanence.</div>
+    </div>
+    <div>
+      <div class="lbl" style="margin-bottom:3mm;">Brand Architecture</div>
+      <div class="pills">
+        <span class="pill">35 Years</span>
+        <span class="pill">10M+ Sq Ft</span>
+        <span class="pill">Commercial Track Record</span>
+        <span class="pill">Residential Debut</span>
+        <span class="pill">Jubilee Hills</span>
+        <span class="pill">12 Villas Only</span>
+        <span class="pill">No Phase Two</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     S03 — THE CONCEPT
+════════════════════════════════════════ -->
+<section class="slide" id="s03">
+  <div class="content">
+    <div class="bg-num">12</div>
+    <div class="photo-overlay"></div>
+    <div>
+      <div class="lbl" style="margin-bottom:5mm;">The Concept</div>
+      <div class="concept-headline">Life, Tuned to Perfection.</div>
+      <div class="concept-note">Deep indigo ground, pale cosmic light, violet as the single frequency accent. The palette of lapis lazuli, instrument strings in a silent room, and the sky 60 seconds before full dark.</div>
+    </div>
+    <div class="diffs">
+      <div class="diff">
+        <div class="diff-title">Scale</div>
+        <div class="diff-copy">Not selling units. Curating a community. Twelve villas. Not a phase one — the whole project, permanently complete.</div>
+      </div>
+      <div class="diff">
+        <div class="diff-title">Service</div>
+        <div class="diff-copy">Permanent estate team. Concierge per family. Contractual — ten years post-possession. The service is the product.</div>
+      </div>
+      <div class="diff">
+        <div class="diff-title">Permanence</div>
+        <div class="diff-copy">No phase two. No adjacent plot. The twelve-villa structure makes expansion architecturally impossible.</div>
+      </div>
+      <div class="diff">
+        <div class="diff-title">Materials</div>
+        <div class="diff-copy">No substitution after design approval. Designed to a standard — then built to it. What you see is what you receive.</div>
+      </div>
+      <div class="diff">
+        <div class="diff-title">Legacy</div>
+        <div class="diff-copy">The twelve founding families become the permanent character of this address. Governed and covenanted to last.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     S04 — BRAND IDENTITY
+════════════════════════════════════════ -->
+<section class="slide" id="s04">
+  <div style="display:flex; flex-direction:column; width:100%; height:100%;">
+    <div class="slide-hdr">
+      <div class="lbl">Brand Identity System</div>
+      <div style="font-family:var(--sans); font-size:7pt; font-weight:300; font-style:italic; color:var(--light); letter-spacing:0.06em;">Svara by Resonance</div>
+    </div>
+    <div class="slide-body">
+
+      <!-- Logomark + Rules -->
+      <div class="id-block">
+        <div>
+          <div class="id-label" style="margin-bottom:4mm;">Logomark</div>
+          <div class="logomark">S</div>
+          <div style="font-family:var(--sans); font-size:6pt; font-weight:300; color:rgba(184,176,164,0.6); letter-spacing:0.06em; line-height:1.6; margin-top:3mm;">
+            Initial mark — geometric, inscriptional, scale-invariant. Works embossed, engraved, or reversed on any surface.
+          </div>
+        </div>
+        <div>
+          <div class="id-label" style="margin-bottom:3mm;">Logo Rules</div>
+          <div class="logo-rules">
+            <div class="logo-rule">The mark resonates — it is never reduced to less than 18pt, where the proportions of the letterform can still be read as deliberate.</div>
+            <div class="logo-rule">The mark is always indigo or ivory — never on a ground that competes with its frequency.</div>
+            <div class="logo-rule">Never use the mark as a repeated pattern — resonance is a singular event, not a texture.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voice & Tone -->
+      <div class="id-block">
+        <div class="id-label">Voice &amp; Tone</div>
+        <div class="voice-tone">
+          <div class="tone-item">
+            <div class="tone-word">Resonance</div>
+            <div class="tone-note">Primary register — the first impression</div>
+          </div>
+          <div class="tone-item">
+            <div class="tone-word">Cosmos</div>
+            <div class="tone-note">Secondary register — the material world</div>
+          </div>
+          <div class="tone-item">
+            <div class="tone-word">Violet</div>
+            <div class="tone-note">Underlying register — what is never said aloud</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colour System -->
+      <div class="id-block">
+        <div>
+          <div class="id-label" style="margin-bottom:3mm;">Colour System</div>
+          <div class="swatch-row">
+            <div>
+              <div class="swatch" style="background:var(--primary);"></div>
+              <div class="swatch-name">Primary</div>
+            </div>
+            <div>
+              <div class="swatch" style="background:var(--surface);"></div>
+              <div class="swatch-name">Surface</div>
+            </div>
+            <div>
+              <div class="swatch" style="background:var(--accent);"></div>
+              <div class="swatch-name">Accent</div>
+            </div>
+            <div>
+              <div class="swatch" style="background:var(--light); border:0.5px solid rgba(255,255,255,0.1);"></div>
+              <div class="swatch-name">Light</div>
+            </div>
+            <div>
+              <div class="swatch" style="background:var(--reserve);"></div>
+              <div class="swatch-name">Reserve</div>
+            </div>
+          </div>
+        </div>
+        <div class="colorway-note">Deep indigo ground, pale cosmic light, violet as the single frequency accent. The palette of lapis lazuli, instrument strings in a silent room, and the sky 60 seconds before full dark.</div>
+        <div>
+          <div class="id-label" style="margin-bottom:3mm;">Typography</div>
+          <div style="font-size:13pt; font-weight:300; font-style:italic; color:var(--light); line-height:1.1; letter-spacing:0.02em; font-family:var(--serif);">Aa Bb Cc</div>
+          <div style="font-family:var(--sans); font-size:9pt; font-weight:300; color:rgba(184,176,164,0.7); margin-top:2mm; letter-spacing:0.06em;">Aa Bb Cc</div>
+          <div style="font-family:var(--mono); font-size:7pt; color:rgba(184,176,164,0.45); margin-top:2mm; letter-spacing:0.04em;">01 02 03</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     S05 — AMENITIES
+════════════════════════════════════════ -->
+<section class="slide" id="s05">
+  <div style="display:flex; flex-direction:column; width:100%; height:100%;">
+    <div class="slide-hdr" style="border-bottom-color:rgba(255,255,255,0.1);">
+      <div class="lbl" style="color:var(--accent);">Proprietary Amenities</div>
+      <div class="slide-hdr-title">Three Worlds Within One</div>
+    </div>
+    <div class="slide-body">
+      <div class="amenity-col">
+        <div class="amenity-num">01</div>
+        <div class="amenity-name">The Resonance Garden</div>
+        <div class="amenity-desc">A private garden designed around acoustic principles — specifically, the absorption and deflection of urban noise. Planted earthwork berms, water sound masking, and a central space where the ambient frequency of the garden is silence. Measured and maintained at less than 30dB.</div>
+        <div class="amenity-ref">01 / 03</div>
+      </div>
+      <div class="amenity-col">
+        <div class="amenity-num">02</div>
+        <div class="amenity-name">The Harmonic Pool</div>
+        <div class="amenity-desc">A pool of deep indigo-tiled stone — near-black when still, celestial blue in motion. Submerged lighting tuned to the warm spectrum. A water feature that produces a single continuous tone, set at 432Hz — the specific frequency of physical and acoustic resonance.</div>
+        <div class="amenity-ref">02 / 03</div>
+      </div>
+      <div class="amenity-col">
+        <div class="amenity-num">03</div>
+        <div class="amenity-name">The Cosmic Observatory</div>
+        <div class="amenity-desc">A third-floor rooftop terrace with observatory-grade dark-sky access and a resident astronomer available on community retainer. A 12-inch Dobsonian telescope. Monthly sky events. The city lights are below the parapet — designed to be invisible from the observation platform.</div>
+        <div class="amenity-ref">03 / 03</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     S06 — THE VILLAS
+════════════════════════════════════════ -->
+<section class="slide" id="s06">
+  <div style="display:flex; flex-direction:column; width:100%; height:100%;">
+    <div class="slide-hdr-light">
+      <div class="lbl">The Product</div>
+      <div class="slide-hdr-title-dark">The Villas — Svara</div>
+    </div>
+    <div class="slide-body">
+      <div class="villa-left">
+        <div class="stat">
+          <div class="stat-num">12</div>
+          <div class="stat-label">Private Villas</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Rs 13–20</div>
+          <div class="stat-label">Crore Range</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">G+2</div>
+          <div class="stat-label">Three-floor Configuration</div>
+        </div>
+      </div>
+      <div class="villa-right">
+        <div class="vf">
+          <div class="vf-label">Exclusivity</div>
+          <div class="vf-title">No shared walls. No shared lobbies. No shared anything.</div>
+          <div class="vf-copy">Every villa is a free-standing structure. Each owner's relationship with the community is voluntary, not architectural.</div>
+        </div>
+        <div class="vf">
+          <div class="vf-label">Interior</div>
+          <div class="vf-title">Materials specified. Materials delivered.</div>
+          <div class="vf-copy">Every surface, fixture, and fitting is named in the agreement. No substitutions, no compromises. What the drawing promised is what possession delivers.</div>
+        </div>
+        <div class="vf">
+          <div class="vf-label">Outdoors</div>
+          <div class="vf-title">A private garden. A private pool. A private sky.</div>
+          <div class="vf-copy">Each villa owns its outdoor space outright. Landscape design is bespoke — handled by the project's retained design team at the buyer's direction.</div>
+        </div>
+        <div class="vf">
+          <div class="vf-label">Permanence</div>
+          <div class="vf-title">The community is the twenty-fourth resident.</div>
+          <div class="vf-copy">12 owners define the community forever. The estate management team ensures it stays exactly as designed — from day one through decade three.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     S07 — FIVE BRAND CLAIMS
+════════════════════════════════════════ -->
+<section class="slide" id="s07">
+  <div style="display:flex; flex-direction:column; width:100%; height:100%;">
+    <div class="slide-hdr">
+      <div class="lbl">Five Brand Claims</div>
+      <div class="slide-hdr-title">What Svara Does Not Share With Anyone</div>
+    </div>
+    <div class="slide-body">
+      <div class="claim-col">
+        <div class="claim-num">01</div>
+        <div class="claim-topic">Scale</div>
+        <div class="claim-headline">"We are not in the business of selling units. We are curating a community."</div>
+        <div class="claim-body">Twelve villas. Not a phase one. The complete project. Where competitors count floors, Svara counts families.</div>
+      </div>
+      <div class="claim-col">
+        <div class="claim-num">02</div>
+        <div class="claim-topic">Service</div>
+        <div class="claim-headline">"We have retained an estate team, contractually, for ten years post-possession."</div>
+        <div class="claim-body">Not outsourced to whoever wins the next contract. Permanent. Named. Accountable to the twelve families — no one else.</div>
+      </div>
+      <div class="claim-col">
+        <div class="claim-num">03</div>
+        <div class="claim-topic">Permanence</div>
+        <div class="claim-headline">"There is no phase two. The structure makes expansion architecturally impossible."</div>
+        <div class="claim-body">Your investment cannot be diluted by a second phase. Your address cannot change by what gets built next door. Structurally protected.</div>
+      </div>
+      <div class="claim-col">
+        <div class="claim-num">04</div>
+        <div class="claim-topic">Materials</div>
+        <div class="claim-headline">"No material substitution is permitted after design approval."</div>
+        <div class="claim-body">What you see in the show apartment is what you receive on possession. Zero substitution. Contractual. Unconditional. Written in the sale deed.</div>
+      </div>
+      <div class="claim-col">
+        <div class="claim-num">05</div>
+        <div class="claim-topic">Legacy</div>
+        <div class="claim-headline">"The twelve families who take possession become the permanent character of this address."</div>
+        <div class="claim-body">The project is governed and covenanted to preserve that character across generations. Not a home. A founding position.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     S08 — MOOD DIRECTIONS
+════════════════════════════════════════ -->
+<section class="slide" id="s08">
+  <div style="display:flex; flex-direction:column; width:100%; height:100%;">
+    <div class="slide-hdr">
+      <div class="lbl">Visual Identity — Mood Directions</div>
+      <div class="slide-hdr-title">Three Creative Languages</div>
+    </div>
+    <div class="slide-body">
+      <div class="mood-col">
+        <div class="mood-bar"></div>
+        <div class="mood-num">01</div>
+        <div class="mood-name">Resonance</div>
+        <div class="mood-desc">The primary register. The first impression of Svara — immediate, unhurried, decided. Every visual choice earns this feeling without announcing it.</div>
+        <div class="mood-palette">
+          <div class="ms" style="background:var(--primary);"></div>
+          <div class="ms" style="background:var(--surface);"></div>
+          <div class="ms" style="background:var(--accent);"></div>
+          <div class="ms" style="background:var(--light);"></div>
+        </div>
+      </div>
+      <div class="mood-col">
+        <div class="mood-bar" style="background:var(--reserve);"></div>
+        <div class="mood-num">02</div>
+        <div class="mood-name">Cosmos</div>
+        <div class="mood-desc">The material mood. Grounded in place and stone and time. Svara does not abstract away from the physical world — it celebrates the finest version of it.</div>
+        <div class="mood-palette">
+          <div class="ms" style="background:var(--reserve);"></div>
+          <div class="ms" style="background:var(--primary);"></div>
+          <div class="ms" style="background:var(--accent);"></div>
+          <div class="ms" style="background:var(--light);"></div>
+        </div>
+      </div>
+      <div class="mood-col">
+        <div class="mood-bar" style="background:rgba(255,255,255,0.12);"></div>
+        <div class="mood-num">03</div>
+        <div class="mood-name">Gold vibration</div>
+        <div class="mood-desc">The underlying register. Svara does not say what it is — it is known to those who know. This mood is for the collector who needs no introduction.</div>
+        <div class="mood-palette">
+          <div class="ms" style="background:var(--accent);"></div>
+          <div class="ms" style="background:var(--reserve);"></div>
+          <div class="ms" style="background:var(--primary);"></div>
+          <div class="ms" style="background:var(--surface);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     S09 — THE LOCATION
+════════════════════════════════════════ -->
+<section class="slide" id="s09">
+  <div style="display:flex; flex-direction:column; width:100%; height:100%;">
+    <div class="slide-hdr-light">
+      <div class="lbl">The Address</div>
+      <div class="slide-hdr-title-dark">The Location — Svara</div>
+    </div>
+    <div class="slide-body">
+      <div class="loc-left">
+        <div>
+          <div class="loc-district">Hyderabad</div>
+          <div class="loc-addr">Prashashan Nagar<br>Jubilee Hills</div>
+        </div>
+        <div class="lbl-dim">The address that needs no introduction.</div>
+      </div>
+      <div class="loc-right">
+        <div class="lc">
+          <div class="lc-label">The Address</div>
+          <div class="lc-val">Jubilee Hills, Prashashan Nagar</div>
+          <div class="lc-desc">One of India's most established residential precincts. The density of wealth, taste, and institutional proximity here is unmatched in the city. The postcode is itself a credential.</div>
+        </div>
+        <div class="lc">
+          <div class="lc-label">The Context</div>
+          <div class="lc-val">Malibu of Hyderabad</div>
+          <div class="lc-desc">Not a comparison — a reference point. The privacy, the altitude, the views, and the neighbours define the Jubilee Hills premium. Svara is at its centre, not its edge.</div>
+        </div>
+        <div class="lc">
+          <div class="lc-label">Proximity</div>
+          <div class="lc-val">5 minutes from everything. 0 minutes from privacy.</div>
+          <div class="lc-desc">The finest schools, hospitals, clubs, and cultural institutions are within minutes. The outside world is available when wanted — never intrusive when not.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     S10 — BACK COVER
+════════════════════════════════════════ -->
+<section class="slide" id="s10">
+  <div class="back-ghost">S</div>
+  <div class="back-name">Svara</div>
+  <div class="back-rule"></div>
+  <div class="back-tagline">"Life, Tuned to Perfection."</div>
+  <div class="back-rule"></div>
+  <div class="back-dev">Resonance</div>
+  <div class="back-footer">Hyderabad &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; For Authorised Parties Only</div>
+  <div class="back-confidential">Confidential Brand Presentation</div>
+</section>
+
+
+</body>
+</html>
+

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oikos — The Whole World Within One Gate</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&family=Spectral:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --aegean:      #1B3354;
+    --cycladic:    #F6F2E8;
+    --olive:       #3A3F22;
+    --terracotta:  #A06848;
+    --limestone:   #D8CDB8;
+    --chalk:       #FAFAF5;
+    --deep-sea:    #0D1F34;
+    --gold-thread: #C4A06A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A3 landscape; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; }
+  }
+
+  body { font-family: 'Raleway', sans-serif; background: #c4bfb4; }
+
+  .page {
+    width: 420mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    page-break-after: always;
+  }
+
+  /* ─────────────────────────────────────────────
+     S1 — COVER
+     Split: deep Aegean left / chalk right.
+     The sea meets the island.
+  ───────────────────────────────────────────── */
+  .s1 {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s1-sea {
+    width: 58%;
+    background: var(--aegean);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20mm 24mm;
+    position: relative;
+  }
+  /* Greek key border — top strip */
+  .s1-sea::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3mm;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--gold-thread) 0, var(--gold-thread) 4mm,
+      transparent 4mm, transparent 8mm,
+      var(--gold-thread) 8mm, var(--gold-thread) 9mm,
+      transparent 9mm, transparent 13mm
+    );
+    opacity: 0.4;
+  }
+  .s1-oikos-bg {
+    position: absolute;
+    top: 10%;
+    left: -10mm;
+    font-family: 'Spectral', serif;
+    font-size: 200pt;
+    font-weight: 200;
+    font-style: italic;
+    color: rgba(196, 160, 106, 0.04);
+    line-height: 1;
+    pointer-events: none;
+    letter-spacing: -0.05em;
+  }
+  .s1-eyebrow {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--gold-thread);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+    opacity: 0.9;
+  }
+  .s1-brand {
+    font-family: 'Spectral', serif;
+    font-size: 100pt;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--chalk);
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    margin-bottom: 7mm;
+  }
+  .s1-greek {
+    font-family: 'Spectral', serif;
+    font-size: 16pt;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--gold-thread);
+    letter-spacing: 0.12em;
+    margin-bottom: 6mm;
+    opacity: 0.8;
+  }
+  .s1-tagline {
+    font-family: 'Raleway', sans-serif;
+    font-size: 9.5pt;
+    font-weight: 300;
+    color: rgba(214, 205, 184, 0.75);
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+  }
+  .s1-island {
+    width: 42%;
+    background: var(--cycladic);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18mm 20mm 20mm 16mm;
+    border-left: 0.4pt solid rgba(196, 160, 106, 0.3);
+  }
+  .s1-island-top {}
+  .s1-island-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    margin-bottom: 4mm;
+  }
+  .s1-island-stat {
+    font-family: 'Spectral', serif;
+    font-size: 13pt;
+    font-weight: 300;
+    color: var(--aegean);
+    line-height: 1.8;
+  }
+  .s1-island-bottom {
+    font-family: 'Raleway', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(58, 63, 34, 0.6);
+    letter-spacing: 0.15em;
+    line-height: 1.8;
+  }
+
+  /* ─────────────────────────────────────────────
+     S2 — THE WORD
+  ───────────────────────────────────────────── */
+  .s2 {
+    background: var(--deep-sea);
+    flex-direction: column;
+    justify-content: center;
+    padding: 20mm 28mm;
+    position: relative;
+  }
+  .s2::after {
+    content: 'οἶκος';
+    position: absolute;
+    right: -15mm;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Spectral', serif;
+    font-size: 220pt;
+    font-weight: 200;
+    font-style: italic;
+    color: rgba(196, 160, 106, 0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .s2-origin-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--gold-thread);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s2-word-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10mm;
+    margin-bottom: 8mm;
+  }
+  .s2-word-greek {
+    font-family: 'Spectral', serif;
+    font-size: 42pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cycladic);
+    line-height: 1;
+  }
+  .s2-word-roman {
+    font-family: 'Raleway', sans-serif;
+    font-size: 9pt;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: var(--gold-thread);
+    text-transform: uppercase;
+  }
+  .s2-definition {
+    font-family: 'Spectral', serif;
+    font-size: 16pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--limestone);
+    line-height: 1.5;
+    max-width: 200mm;
+    margin-bottom: 10mm;
+  }
+  .s2-body-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10mm;
+    border-top: 0.3pt solid rgba(196, 160, 106, 0.2);
+    padding-top: 8mm;
+  }
+  .s2-body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(214, 205, 184, 0.7);
+    line-height: 1.85;
+  }
+
+  /* ─────────────────────────────────────────────
+     S3 — CYCLADIC INTELLIGENCE
+  ───────────────────────────────────────────── */
+  .s3 {
+    background: var(--cycladic);
+    flex-direction: column;
+    padding: 0;
+  }
+  .s3-header {
+    background: var(--aegean);
+    padding: 10mm 24mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .s3-header-title {
+    font-family: 'Spectral', serif;
+    font-size: 20pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--chalk);
+    line-height: 1;
+  }
+  .s3-header-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--gold-thread);
+    text-transform: uppercase;
+  }
+  .s3-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex: 1;
+  }
+  .s3-cell {
+    padding: 14mm 14mm 14mm 18mm;
+    border-right: 0.3pt solid var(--limestone);
+    border-bottom: 0.3pt solid var(--limestone);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .s3-cell:nth-child(3n) { border-right: none; }
+  .s3-cell:nth-last-child(-n+3) { border-bottom: none; }
+  .s3-cell-greek {
+    font-family: 'Spectral', serif;
+    font-size: 22pt;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--aegean);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 3mm;
+  }
+  .s3-cell-title {
+    font-family: 'Spectral', serif;
+    font-size: 13pt;
+    font-weight: 400;
+    color: var(--aegean);
+    line-height: 1.2;
+    margin-bottom: 4mm;
+  }
+  .s3-cell-body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: var(--olive);
+    line-height: 1.75;
+  }
+
+  /* ─────────────────────────────────────────────
+     S4 — THE ESTATE
+  ───────────────────────────────────────────── */
+  .s4 {
+    background: var(--aegean);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s4-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 14mm 22mm 24mm;
+    border-right: 0.4pt solid rgba(196, 160, 106, 0.2);
+    position: relative;
+  }
+  .s4-num {
+    font-family: 'Spectral', serif;
+    font-size: 180pt;
+    font-weight: 200;
+    font-style: italic;
+    color: rgba(27, 51, 84, 0.8);
+    position: absolute;
+    right: -10mm;
+    bottom: 10mm;
+    line-height: 1;
+    pointer-events: none;
+    text-shadow: none;
+    -webkit-text-stroke: 0.3pt rgba(196, 160, 106, 0.15);
+  }
+  .s4-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--gold-thread);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s4-headline {
+    font-family: 'Spectral', serif;
+    font-size: 34pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--chalk);
+    line-height: 1.1;
+    margin-bottom: 8mm;
+  }
+  .s4-body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(214, 205, 184, 0.75);
+    line-height: 1.8;
+  }
+  .s4-right {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .s4-spec {
+    padding: 10mm 12mm;
+    border-right: 0.3pt solid rgba(196, 160, 106, 0.12);
+    border-bottom: 0.3pt solid rgba(196, 160, 106, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .s4-spec:nth-child(2n) { border-right: none; }
+  .s4-spec-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    color: var(--gold-thread);
+    text-transform: uppercase;
+    margin-bottom: 3mm;
+    opacity: 0.8;
+  }
+  .s4-spec-value {
+    font-family: 'Spectral', serif;
+    font-size: 11pt;
+    font-weight: 300;
+    color: var(--cycladic);
+    line-height: 1.4;
+  }
+
+  /* ─────────────────────────────────────────────
+     S5 — THE COURTYARD
+  ───────────────────────────────────────────── */
+  .s5 {
+    background: var(--chalk);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20mm 24mm 18mm;
+  }
+  .s5-top {
+    display: flex;
+    gap: 16mm;
+  }
+  .s5-headline-col {
+    flex: 1.2;
+  }
+  .s5-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s5-headline {
+    font-family: 'Spectral', serif;
+    font-size: 30pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--aegean);
+    line-height: 1.15;
+  }
+  .s5-body-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .s5-body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: var(--olive);
+    line-height: 1.85;
+  }
+  .s5-etymology {
+    padding: 8mm 0 0;
+    border-top: 0.3pt solid var(--limestone);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8mm;
+  }
+  .s5-ety-item {}
+  .s5-ety-word {
+    font-family: 'Spectral', serif;
+    font-size: 12pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--aegean);
+    margin-bottom: 2mm;
+  }
+  .s5-ety-root {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6.5pt;
+    font-weight: 300;
+    color: var(--terracotta);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+  }
+  .s5-ety-meaning {
+    font-family: 'Raleway', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(58, 63, 34, 0.7);
+    line-height: 1.5;
+  }
+
+  /* ─────────────────────────────────────────────
+     S6 — LOCATION
+  ───────────────────────────────────────────── */
+  .s6 {
+    background: var(--deep-sea);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s6-strip {
+    width: 6mm;
+    background: var(--terracotta);
+    flex-shrink: 0;
+  }
+  .s6-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 22mm 20mm 20mm;
+  }
+  .s6-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--gold-thread);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s6-headline {
+    font-family: 'Spectral', serif;
+    font-size: 32pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--chalk);
+    line-height: 1.1;
+    max-width: 220mm;
+  }
+  .s6-body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(214, 205, 184, 0.7);
+    line-height: 1.8;
+    max-width: 240mm;
+    column-count: 2;
+    column-gap: 12mm;
+    column-rule: 0.3pt solid rgba(196, 160, 106, 0.15);
+  }
+  .s6-aside {
+    width: 90mm;
+    border-left: 0.3pt solid rgba(196, 160, 106, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 20mm;
+    gap: 8mm;
+  }
+  .s6-fact {
+    padding-bottom: 6mm;
+    border-bottom: 0.3pt solid rgba(196, 160, 106, 0.15);
+  }
+  .s6-fact:last-child { border-bottom: none; }
+  .s6-fact-value {
+    font-family: 'Spectral', serif;
+    font-size: 24pt;
+    font-weight: 300;
+    color: var(--gold-thread);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s6-fact-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(214, 205, 184, 0.6);
+    line-height: 1.5;
+  }
+
+  /* ─────────────────────────────────────────────
+     S7 — DEVELOPER
+  ───────────────────────────────────────────── */
+  .s7 {
+    background: var(--cycladic);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 24mm 20mm;
+  }
+  .s7-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20mm;
+  }
+  .s7-dev-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    margin-bottom: 5mm;
+  }
+  .s7-dev-name {
+    font-family: 'Spectral', serif;
+    font-size: 38pt;
+    font-weight: 300;
+    color: var(--aegean);
+    line-height: 0.95;
+    margin-bottom: 7mm;
+  }
+  .s7-dev-tagline {
+    font-family: 'Spectral', serif;
+    font-size: 12pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--terracotta);
+    letter-spacing: 0.05em;
+    margin-bottom: 7mm;
+  }
+  .s7-dev-body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: var(--olive);
+    line-height: 1.8;
+    max-width: 160mm;
+  }
+  .s7-rule { width: 100%; height: 0.3pt; background: var(--limestone); }
+  .s7-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .s7-tagline-final {
+    font-family: 'Spectral', serif;
+    font-size: 14pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--aegean);
+    line-height: 1.3;
+  }
+  .s7-note {
+    font-family: 'Raleway', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(58, 63, 34, 0.5);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  /* ─────────────────────────────────────────────
+     S8 — CLOSE
+  ───────────────────────────────────────────── */
+  .s8 {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s8-left {
+    width: 55%;
+    background: var(--aegean);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 22mm 24mm;
+    position: relative;
+  }
+  .s8-left::before {
+    content: 'οἶκος';
+    position: absolute;
+    top: 15%;
+    left: 10mm;
+    font-family: 'Spectral', serif;
+    font-size: 140pt;
+    font-weight: 200;
+    font-style: italic;
+    color: rgba(196, 160, 106, 0.05);
+    line-height: 1;
+  }
+  .s8-close-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--gold-thread);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+    opacity: 0.8;
+  }
+  .s8-brand {
+    font-family: 'Spectral', serif;
+    font-size: 100pt;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--chalk);
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+  }
+  .s8-right {
+    width: 45%;
+    background: var(--deep-sea);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 24mm 24mm 20mm;
+    border-left: 0.4pt solid rgba(196, 160, 106, 0.25);
+  }
+  .s8-tagline {
+    font-family: 'Spectral', serif;
+    font-size: 16pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cycladic);
+    line-height: 1.45;
+    margin-bottom: 10mm;
+  }
+  .s8-details {
+    font-family: 'Raleway', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: rgba(196, 160, 106, 0.7);
+    letter-spacing: 0.15em;
+    line-height: 2;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════════════ -->
+<div class="page s1">
+  <div class="s1-sea">
+    <div class="s1-oikos-bg">Oikos</div>
+    <div class="s1-eyebrow">Twelve Private Villas · Jubilee Hills · Hyderabad</div>
+    <div class="s1-brand">Oikos</div>
+    <div class="s1-greek">οἶκος</div>
+    <div class="s1-tagline">The whole world, within one gate.</div>
+  </div>
+  <div class="s1-island">
+    <div class="s1-island-top">
+      <div class="s1-island-label">Project Facts</div>
+      <div class="s1-island-stat">
+        XII Villas<br>
+        Jubilee Hills<br>
+        Rs 13 – 20 Cr<br>
+        By SSquare
+      </div>
+    </div>
+    <div class="s1-island-bottom">
+      Brand Identity Presentation<br>
+      Confidential
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 2 — THE WORD
+══════════════════════════════════════════════════ -->
+<div class="page s2">
+  <div class="s2-origin-label">Origin · Ancient Greek · 8th century BC</div>
+  <div class="s2-word-row">
+    <div class="s2-word-greek">οἶκος</div>
+    <div class="s2-word-roman">oikos · oy-koss</div>
+  </div>
+  <div class="s2-definition">Not "house." Not "dwelling." The entire world contained within one household — the family, the land, the economy, the stored grain, the gods of the hearth.</div>
+  <div class="s2-body-cols">
+    <div class="s2-body">The word oikos gave us "economy" (oikonomia — the management of a household), "ecology" (oikologia — the study of the household of nature), and "ecumenical" (oikoumenikos — of the whole inhabited world). Before houses became asset classes, they were cosmologies. The oikos was the unit by which civilised life was organised — not the city, not the state, but the household.</div>
+    <div class="s2-body">Cycladic architecture — the whitewashed stone villages of the Aegean — is oikos made visible. The thick walls are not aesthetic; they hold a 10°C temperature differential. The roof terrace faces the sea for the prevailing wind. The blue dome confuses predatory birds. The whitewash is antibacterial lime. Everything beautiful at an oikos is also functional. This is the logic Oikos at Jubilee Hills inherits.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 3 — CYCLADIC INTELLIGENCE
+══════════════════════════════════════════════════ -->
+<div class="page s3">
+  <div class="s3-header">
+    <div class="s3-header-title">Vernacular Intelligence</div>
+    <div class="s3-header-label">How Cycladic architecture solves climate without technology</div>
+  </div>
+  <div class="s3-grid">
+    <div class="s3-cell">
+      <div class="s3-cell-greek">τεῖχος</div>
+      <div class="s3-cell-title">The thick wall</div>
+      <div class="s3-cell-body">Stone walls 60–80cm thick. Not for strength — for thermal mass. They absorb heat by day and release it by night. The interior stays 10°C cooler than outside without mechanical air. Oikos uses the same logic: wall thickness at Jubilee Hills is determined by solar gain, not aesthetics.</div>
+    </div>
+    <div class="s3-cell">
+      <div class="s3-cell-greek">αὐλή</div>
+      <div class="s3-cell-title">The courtyard</div>
+      <div class="s3-cell-body">The central courtyard (aule) is an air management system. It creates a pressure differential that draws hot air upward and pulls cooler air through the shaded arcades. Every Cycladic house has one. Every Oikos villa is designed around one.</div>
+    </div>
+    <div class="s3-cell">
+      <div class="s3-cell-greek">στοά</div>
+      <div class="s3-cell-title">The arcade</div>
+      <div class="s3-cell-body">The shaded walkway between interior and exterior. Not a threshold — a zone. A place of transition where temperature, light, and activity blend. The stoa was where Greek public life happened. In the Oikos villa, it is where private life happens — the liminal space between inside and garden.</div>
+    </div>
+    <div class="s3-cell">
+      <div class="s3-cell-greek">ἄσβεστος</div>
+      <div class="s3-cell-title">The whitewash</div>
+      <div class="s3-cell-body">Asbestos — Greek for "inextinguishable." Lime whitewash, reapplied each spring, reflects 80% of solar radiation and is powerfully antibacterial. The white of Cycladic villages is not a colour choice. It is a maintenance system. Oikos renders in lime stucco for the same reasons.</div>
+    </div>
+    <div class="s3-cell">
+      <div class="s3-cell-greek">κῆπος</div>
+      <div class="s3-cell-title">The kitchen garden</div>
+      <div class="s3-cell-body">The kepos (garden) at an oikos was productive, not decorative. Herbs, olive trees, the vine. Every cultivated plant earned its space. Oikos at Jubilee Hills landscapes with species native to the Deccan plateau — not imported ornamental plants, but trees and ground cover that belong to this particular soil.</div>
+    </div>
+    <div class="s3-cell">
+      <div class="s3-cell-greek">κολυμβήθρα</div>
+      <div class="s3-cell-title">The pool</div>
+      <div class="s3-cell-body">Every Oikos villa has its private pool — set within the courtyard, not adjacent to it. Water at the center of the household. In the ancient oikos, the cistern was the most important element of the plot. It held what the sky gave you. The Oikos pool inherits this position and this logic.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 4 — THE ESTATE
+══════════════════════════════════════════════════ -->
+<div class="page s4">
+  <div class="s4-left">
+    <div class="s4-num">XII</div>
+    <div class="s4-label">The Estate · Oikos</div>
+    <div class="s4-headline">Twelve households.<br>One world.<br>Behind one gate.</div>
+    <div class="s4-body">The ancient oikos was complete in itself — it did not need the city to be whole. Twelve households at Oikos have the same relationship. The estate is not a complex; it is a community with the right number of families. Twelve is the number at which you know everyone without managing anyone.</div>
+  </div>
+  <div class="s4-right">
+    <div class="s4-spec">
+      <div class="s4-spec-label">Villas</div>
+      <div class="s4-spec-value">XII total. Each on its own plot. No shared walls.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Storey</div>
+      <div class="s4-spec-value">Single. The horizon is always present.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Water</div>
+      <div class="s4-spec-value">Private pool within courtyard. Not shared.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Canopy</div>
+      <div class="s4-spec-value">Mature trees. Pre-existing. Designed around.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Gate</div>
+      <div class="s4-spec-value">One entrance. One community. No through traffic.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Price</div>
+      <div class="s4-spec-value">Rs 13 – 20 Crore. By appointment.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 5 — THE COURTYARD LIFE
+══════════════════════════════════════════════════ -->
+<div class="page s5">
+  <div class="s5-top">
+    <div class="s5-headline-col">
+      <div class="s5-label">The Courtyard · The Oikos Principle</div>
+      <div class="s5-headline">Architecture that<br>manages climate<br>without mechanics.</div>
+    </div>
+    <div class="s5-body-col">
+      <div class="s5-body">Every Oikos villa is designed around a central courtyard — not as a decorative element but as an environmental system. The courtyard creates shade at every hour of the day through its proportions. It draws air through the residence without requiring a single mechanical unit. The pool at its center is not decoration — it cools the air by four degrees through evaporation. This is not innovation; it is 3,000-year-old knowledge applied without apology.</div>
+    </div>
+  </div>
+  <div class="s5-etymology">
+    <div class="s5-ety-item">
+      <div class="s5-ety-word">οἰκονομία</div>
+      <div class="s5-ety-root">→ Economy</div>
+      <div class="s5-ety-meaning">The management of a household. The original economics.</div>
+    </div>
+    <div class="s5-ety-item">
+      <div class="s5-ety-word">οἰκολογία</div>
+      <div class="s5-ety-root">→ Ecology</div>
+      <div class="s5-ety-meaning">The study of the household of nature. Oikos as ecosystem.</div>
+    </div>
+    <div class="s5-ety-item">
+      <div class="s5-ety-word">οἰκουμένη</div>
+      <div class="s5-ety-root">→ Ecumene</div>
+      <div class="s5-ety-meaning">The inhabited world. One household, expanded to earth.</div>
+    </div>
+    <div class="s5-ety-item">
+      <div class="s5-ety-word">παροικία</div>
+      <div class="s5-ety-root">→ Parish</div>
+      <div class="s5-ety-meaning">The community beside the household. Twelve families.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 6 — JUBILEE HILLS
+══════════════════════════════════════════════════ -->
+<div class="page s6">
+  <div class="s6-strip"></div>
+  <div class="s6-main">
+    <div>
+      <div class="s6-label">Prashashan Nagar · Jubilee Hills · Hyderabad</div>
+      <div class="s6-headline">The neighbourhood that kept its character by never trying to announce it.</div>
+    </div>
+    <div class="s6-body">
+      Jubilee Hills has always been a different conversation — not of height or density, but of depth and canopy. Prashashan Nagar, the section some people call "Malibu," is the part of Jubilee Hills that most resembles a Cycladic village in its essential logic: it does not connect to anything through itself. There is no through traffic. The roads exist to serve the people who live on them, not the city beyond. The trees grew in over decades without instruction — the same indifferent, unplanned maturity that makes a place feel earned rather than designed. Ten minutes from HITEC City. A world apart in register.
+    </div>
+  </div>
+  <div class="s6-aside">
+    <div class="s6-fact">
+      <div class="s6-fact-value">10'</div>
+      <div class="s6-fact-label">From HITEC City<br>by car</div>
+    </div>
+    <div class="s6-fact">
+      <div class="s6-fact-value">0</div>
+      <div class="s6-fact-label">Through traffic<br>in Prashashan Nagar</div>
+    </div>
+    <div class="s6-fact">
+      <div class="s6-fact-value">35yr</div>
+      <div class="s6-fact-label">Mature canopy.<br>Undisturbed.</div>
+    </div>
+    <div class="s6-fact">
+      <div class="s6-fact-value">XII</div>
+      <div class="s6-fact-label">Villas behind<br>one gate.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 7 — DEVELOPER
+══════════════════════════════════════════════════ -->
+<div class="page s7">
+  <div class="s7-top">
+    <div>
+      <div class="s7-dev-label">The Developer</div>
+      <div class="s7-dev-name">SSquare</div>
+      <div class="s7-dev-tagline">"The Standard, Privately Held."</div>
+      <div class="s7-dev-body">Established in 1991, SSquare has built over ten million square feet of Hyderabad's commercial infrastructure — privately held, privately financed, without external capital or public listing. Thirty-five years building the environments in which this city conducts its most consequential work.<br><br>Oikos is their first and only residential project. The oikos of a family building for themselves, after a lifetime building for others. The same discipline. The same material standard. Applied, for the first time, to a place where twelve families will actually live.</div>
+    </div>
+  </div>
+  <div class="s7-rule"></div>
+  <div class="s7-bottom">
+    <div class="s7-tagline-final">The whole world,<br>within one gate.</div>
+    <div class="s7-note">Private viewings by appointment<br>Jubilee Hills · Hyderabad</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 8 — CLOSE
+══════════════════════════════════════════════════ -->
+<div class="page s8">
+  <div class="s8-left">
+    <div class="s8-close-label">Twelve Private Villas · Jubilee Hills · By SSquare</div>
+    <div class="s8-brand">Oikos</div>
+  </div>
+  <div class="s8-right">
+    <div class="s8-tagline">The whole world,<br>within one gate.</div>
+    <div class="s8-details">
+      XII Private Villas<br>
+      Prashashan Nagar · Jubilee Hills<br>
+      Rs 13 – 20 Crore<br>
+      Viewings by appointment only
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurum — The art of the junction.</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:        #1C1510;
+    --gold:       #C9A84C;
+    --travertine: #E8E0D0;
+    --walnut:     #4A3A2A;
+    --brass:      #8B7355;
+    --parchment:  #F5F0E8;
+    --deep-gold:  #967A30;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A3 landscape; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; }
+  }
+
+  body { font-family: 'Cormorant', serif; background: #c4bfb6; }
+
+  .page {
+    width: 420mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    page-break-after: always;
+  }
+
+  /* ─────────────────────────────────────────────
+     S1 — COVER
+     Jewellery-catalogue precision. Warm candlelight.
+  ───────────────────────────────────────────── */
+  .s1 {
+    background: var(--ink);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s1-left-bar {
+    width: 20mm;
+    background: var(--ink);
+    border-right: 0.3pt solid rgba(201, 168, 76, 0.15);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 18mm 0;
+  }
+  .s1-bar-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: 'Space Mono', monospace;
+    font-size: 5.5pt;
+    letter-spacing: 0.3em;
+    color: rgba(201, 168, 76, 0.35);
+    text-transform: uppercase;
+    padding-left: 7mm;
+  }
+  .s1-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 24mm 24mm 22mm;
+    position: relative;
+  }
+  .s1-gold-hairline {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100mm;
+    height: 0.3pt;
+    background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+    opacity: 0.6;
+  }
+  .s1-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 6pt;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10mm;
+  }
+  .s1-brand {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 106pt;
+    font-weight: 300;
+    color: var(--parchment);
+    line-height: 0.86;
+    letter-spacing: -0.02em;
+    margin-bottom: 10mm;
+  }
+  .s1-tagline {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 13pt;
+    font-weight: 300;
+    color: var(--brass);
+    letter-spacing: 0.05em;
+    line-height: 1.55;
+  }
+  .s1-right-column {
+    width: 70mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24mm 20mm 24mm 0;
+    border-left: 0.3pt solid rgba(201, 168, 76, 0.12);
+  }
+  .s1-data-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6mm;
+  }
+  .s1-data-item {
+    font-family: 'Space Mono', monospace;
+    font-size: 6pt;
+    color: rgba(201, 168, 76, 0.5);
+    letter-spacing: 0.08em;
+    line-height: 1.9;
+  }
+  .s1-data-value {
+    color: var(--gold);
+    display: block;
+  }
+  .s1-footer-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 5.5pt;
+    color: rgba(201, 168, 76, 0.28);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /* ─────────────────────────────────────────────
+     S2 — THE REFERENCE
+     Carlo Scarpa, Castelvecchio, 1964.
+  ───────────────────────────────────────────── */
+  .s2 {
+    background: var(--travertine);
+    flex-direction: row;
+  }
+  .s2-left {
+    width: 46%;
+    background: var(--ink);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 18mm 24mm 24mm;
+    position: relative;
+  }
+  .s2-left::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 0.3pt;
+    background: linear-gradient(180deg, transparent, var(--gold) 35%, var(--gold) 65%, transparent);
+    opacity: 0.3;
+  }
+  .s2-year {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 70pt;
+    font-weight: 300;
+    color: rgba(201, 168, 76, 0.09);
+    line-height: 1;
+    position: absolute;
+    bottom: 20mm;
+    right: 18mm;
+    letter-spacing: -0.04em;
+  }
+  .s2-location-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 5.5pt;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s2-headline {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 27pt;
+    font-weight: 300;
+    color: var(--parchment);
+    line-height: 1.18;
+    margin-bottom: 9mm;
+  }
+  .s2-body {
+    font-family: 'Cormorant', serif;
+    font-size: 9.5pt;
+    font-weight: 300;
+    color: var(--brass);
+    line-height: 1.8;
+  }
+  .s2-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 26mm 24mm 20mm;
+  }
+  .s2-principle-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 5.5pt;
+    letter-spacing: 0.28em;
+    color: var(--brass);
+    text-transform: uppercase;
+    margin-bottom: 9mm;
+  }
+  .s2-principle {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 18pt;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.4;
+    margin-bottom: 9mm;
+  }
+  .s2-principle-body {
+    font-family: 'Cormorant', serif;
+    font-size: 9.5pt;
+    font-weight: 300;
+    color: var(--walnut);
+    line-height: 1.85;
+    border-left: 0.3pt solid var(--gold);
+    padding-left: 6mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S3 — THE ELEMENTS / MATERIALS
+  ───────────────────────────────────────────── */
+  .s3 {
+    background: var(--parchment);
+    flex-direction: column;
+    padding: 0;
+  }
+  .s3-top {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 0.3pt solid var(--travertine);
+  }
+  .s3-material-cell {
+    padding: 18mm 11mm 11mm 14mm;
+    border-right: 0.3pt solid var(--travertine);
+  }
+  .s3-material-cell:last-child { border-right: none; }
+  .s3-mat-number {
+    font-family: 'Space Mono', monospace;
+    font-size: 8pt;
+    color: var(--gold);
+    margin-bottom: 5mm;
+    letter-spacing: 0.06em;
+  }
+  .s3-mat-name {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 17pt;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.12;
+    margin-bottom: 5mm;
+  }
+  .s3-mat-desc {
+    font-family: 'Cormorant', serif;
+    font-size: 9pt;
+    font-weight: 300;
+    color: var(--walnut);
+    line-height: 1.7;
+  }
+  .s3-bottom {
+    padding: 8mm 24mm;
+    display: flex;
+    align-items: center;
+    gap: 16mm;
+  }
+  .s3-principle-line {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 14pt;
+    font-weight: 300;
+    color: var(--ink);
+    flex: 1;
+    line-height: 1.42;
+  }
+  .s3-footnote {
+    font-family: 'Space Mono', monospace;
+    font-size: 6.5pt;
+    color: var(--brass);
+    width: 82mm;
+    line-height: 1.65;
+  }
+
+  /* ─────────────────────────────────────────────
+     S4 — THE VILLAS
+  ───────────────────────────────────────────── */
+  .s4 {
+    background: var(--walnut);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 26mm;
+    position: relative;
+  }
+  .s4::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0.3pt;
+    background: var(--gold);
+    opacity: 0.45;
+  }
+  .s4-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .s4-headline {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 42pt;
+    font-weight: 300;
+    color: var(--parchment);
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    max-width: 158mm;
+  }
+  .s4-count {
+    font-family: 'Space Mono', monospace;
+    font-size: 6.5pt;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .s4-count strong {
+    display: block;
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 44pt;
+    font-weight: 300;
+    color: var(--parchment);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-top: 2mm;
+  }
+  .s4-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 0.3pt solid rgba(201, 168, 76, 0.2);
+    border-left: 0.3pt solid rgba(201, 168, 76, 0.2);
+  }
+  .s4-cell {
+    padding: 7mm 9mm;
+    border-right: 0.3pt solid rgba(201, 168, 76, 0.2);
+    border-bottom: 0.3pt solid rgba(201, 168, 76, 0.2);
+  }
+  .s4-cell-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 6pt;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 2.5mm;
+  }
+  .s4-cell-value {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 11pt;
+    font-weight: 300;
+    color: var(--parchment);
+    line-height: 1.38;
+  }
+
+  /* ─────────────────────────────────────────────
+     S5 — FEATURE / QUOTE
+  ───────────────────────────────────────────── */
+  .s5 {
+    background: var(--travertine);
+    flex-direction: row;
+  }
+  .s5-left {
+    width: 36%;
+    background: var(--gold);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22mm 16mm 22mm 22mm;
+  }
+  .s5-feature-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 6pt;
+    letter-spacing: 0.25em;
+    color: rgba(28, 21, 16, 0.65);
+    text-transform: uppercase;
+    margin-bottom: 5mm;
+  }
+  .s5-feature-title {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 36pt;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 0.96;
+    margin-bottom: 7mm;
+  }
+  .s5-feature-body {
+    font-family: 'Cormorant', serif;
+    font-size: 9.5pt;
+    font-weight: 300;
+    color: rgba(28, 21, 16, 0.72);
+    line-height: 1.75;
+  }
+  .s5-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 28mm 22mm 22mm;
+  }
+  .s5-quote-mark {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 66pt;
+    color: var(--brass);
+    line-height: 1;
+    margin-bottom: 2mm;
+    opacity: 0.55;
+  }
+  .s5-quote {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 19pt;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.48;
+    margin-bottom: 9mm;
+  }
+  .s5-attribution {
+    font-family: 'Space Mono', monospace;
+    font-size: 6.5pt;
+    color: var(--brass);
+    letter-spacing: 0.08em;
+    line-height: 1.7;
+  }
+
+  /* ─────────────────────────────────────────────
+     S6 — JUBILEE HILLS
+  ───────────────────────────────────────────── */
+  .s6 {
+    background: var(--ink);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24mm 26mm 22mm;
+  }
+  .s6-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .s6-location-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 6pt;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .s6-headline {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 34pt;
+    font-weight: 300;
+    color: var(--parchment);
+    line-height: 1.08;
+    max-width: 200mm;
+    margin-top: 7mm;
+  }
+  .s6-stats {
+    display: flex;
+    gap: 22mm;
+    padding-top: 10mm;
+    border-top: 0.3pt solid rgba(201, 168, 76, 0.18);
+  }
+  .s6-stat-value {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 28pt;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s6-stat-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 6.5pt;
+    color: var(--brass);
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+  .s6-body {
+    font-family: 'Cormorant', serif;
+    font-size: 10pt;
+    font-weight: 300;
+    color: var(--brass);
+    line-height: 1.82;
+    max-width: 248mm;
+    column-count: 2;
+    column-gap: 14mm;
+    column-rule: 0.3pt solid rgba(201, 168, 76, 0.12);
+  }
+
+  /* ─────────────────────────────────────────────
+     S7 — DEVELOPER
+  ───────────────────────────────────────────── */
+  .s7 {
+    background: var(--travertine);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s7-bar {
+    width: 8mm;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .s7-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 26mm 26mm 26mm 22mm;
+  }
+  .s7-dev-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 6pt;
+    letter-spacing: 0.25em;
+    color: var(--brass);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s7-dev-name {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 34pt;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 7mm;
+  }
+  .s7-dev-body {
+    font-family: 'Cormorant', serif;
+    font-size: 10.5pt;
+    font-weight: 300;
+    color: var(--walnut);
+    line-height: 1.78;
+    max-width: 178mm;
+  }
+  .s7-right {
+    width: 122mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 26mm 26mm 26mm 18mm;
+    border-left: 0.3pt solid #d4c8b8;
+  }
+  .s7-credential-item {
+    padding: 5mm 0;
+    border-bottom: 0.3pt solid #d4c8b8;
+  }
+  .s7-credential-item:last-child { border-bottom: none; }
+  .s7-cred-number {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 20pt;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .s7-cred-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 6.5pt;
+    color: var(--walnut);
+    letter-spacing: 0.04em;
+    line-height: 1.55;
+  }
+
+  /* ─────────────────────────────────────────────
+     S8 — CLOSE
+  ───────────────────────────────────────────── */
+  .s8 {
+    background: var(--ink);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 26mm 30mm;
+    position: relative;
+  }
+  .s8::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 0.3pt;
+    background: linear-gradient(90deg, var(--gold), transparent 65%);
+    opacity: 0.55;
+  }
+  .s8-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 6pt;
+    letter-spacing: 0.32em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10mm;
+  }
+  .s8-brand {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 104pt;
+    font-weight: 300;
+    color: var(--parchment);
+    line-height: 0.86;
+    letter-spacing: -0.02em;
+    margin-bottom: 10mm;
+  }
+  .s8-tagline {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 14pt;
+    font-weight: 300;
+    color: var(--brass);
+    letter-spacing: 0.05em;
+    margin-bottom: 18mm;
+  }
+  .s8-rule {
+    width: 55mm;
+    height: 0.3pt;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════════════ -->
+<div class="page s1">
+  <div class="s1-left-bar">
+    <div class="s1-bar-text">Brand Identity Presentation</div>
+  </div>
+  <div class="s1-main">
+    <div class="s1-gold-hairline"></div>
+    <div class="s1-eyebrow">Twelve Private Villas · Jubilee Hills</div>
+    <div class="s1-brand">Aurum</div>
+    <div class="s1-tagline">The art of the junction.</div>
+  </div>
+  <div class="s1-right-column">
+    <div class="s1-data-block">
+      <div class="s1-data-item">Type<br><span class="s1-data-value">Gated Villa Estate</span></div>
+      <div class="s1-data-item">Count<br><span class="s1-data-value">XII</span></div>
+      <div class="s1-data-item">Location<br><span class="s1-data-value">Jubilee Hills, HYD</span></div>
+    </div>
+    <div class="s1-footer-text">Confidential</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 2 — THE REFERENCE
+══════════════════════════════════════════════════ -->
+<div class="page s2">
+  <div class="s2-left">
+    <div class="s2-year">1964</div>
+    <div class="s2-location-label">Castelvecchio, Verona, Italy</div>
+    <div class="s2-headline">Twenty years on one<br>building. Every joint<br>drawn by hand.</div>
+    <div class="s2-body">Carlo Scarpa spent two decades renovating Castelvecchio — a medieval fortress on the Adige — into one of the most precisely detailed buildings in the world. His obsession was the junction: the precise moment where old stone met new concrete, where bronze met travertine, where a medieval fresco was separated from a modern slab by a thin line of light. He was the son of a goldsmith. He drew every join individually. Nothing was specified once and repeated. The work was not about restoration. It was about revelation — making visible what had always been there but never been seen.</div>
+  </div>
+  <div class="s2-right">
+    <div class="s2-principle-label">The Translation</div>
+    <div class="s2-principle">"The junction is not the problem to be solved. It is the moment to be celebrated."</div>
+    <div class="s2-principle-body">Aurum does not copy Castelvecchio's medieval programme or its Venetian material palette. It inherits Scarpa's method: that the meeting point between materials is not a problem to be concealed but a moment to be designed, individually, with the care of a goldsmith. Every threshold, every material transition, every edge at Aurum has been resolved as a detail — not a general rule applied everywhere, but a specific answer to a specific question at a specific place.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 3 — THE ELEMENTS
+══════════════════════════════════════════════════ -->
+<div class="page s3">
+  <div class="s3-top">
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">01</div>
+      <div class="s3-mat-name">The<br>junction</div>
+      <div class="s3-mat-desc">Where two materials meet at Aurum, the meeting is shown — not concealed. A hairline shadow gap, a bronze reveal, a step in plane. Each junction is individually designed. None is a standard detail applied twice. The building's intelligence is concentrated at every edge.</div>
+    </div>
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">02</div>
+      <div class="s3-mat-name">Travertine<br>skin</div>
+      <div class="s3-mat-desc">The primary exterior material is Roman travertine — quarried stone with a warmth that changes across the day. At dawn it is amber. At midday it is cream. At dusk it returns to its geological register: ochre, warm, mineral. It is not a finish. It is the structure's outer layer.</div>
+    </div>
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">03</div>
+      <div class="s3-mat-name">Bronze<br>reveal</div>
+      <div class="s3-mat-desc">Window frames, door reveals, and pool edges in cast bronze — finished dark, not polished. Bronze ages in place: it deepens over years, not by neglect but by the specific chemistry of Hyderabad's air. In twenty years the patina will be irreproducible. This is a feature, not a failure.</div>
+    </div>
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">04</div>
+      <div class="s3-mat-name">Carved<br>threshold</div>
+      <div class="s3-mat-desc">The entry threshold at each villa is cut from a single piece of stone — not assembled. The floor plane meets the door plane meets the wall plane in a carved monolithic element. There is no grout line. No exposed fixing. The entry is the building's statement of intent, resolved before anything else.</div>
+    </div>
+  </div>
+  <div class="s3-bottom">
+    <div class="s3-principle-line">"Every material earns its position by how it meets the one beside it."</div>
+    <div class="s3-footnote">Aurum's material logic follows Scarpa's: no surface is specified before its junction has been designed. The result is an architecture where looking closely is rewarded — where the more carefully you examine a detail, the more deliberate it reveals itself to be.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 4 — THE VILLAS
+══════════════════════════════════════════════════ -->
+<div class="page s4">
+  <div class="s4-top">
+    <div class="s4-headline">Twelve residences.<br>One estate.<br>Every detail singular.</div>
+    <div class="s4-count">
+      Private villas
+      <strong>XII</strong>
+      Total, across the estate.
+    </div>
+  </div>
+  <div class="s4-grid">
+    <div class="s4-cell">
+      <div class="s4-cell-label">Configuration</div>
+      <div class="s4-cell-value">Independent villa · Private motor court · Own walled boundary</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Skin</div>
+      <div class="s4-cell-value">Travertine exterior · Bronze reveals · No painted surfaces</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Entry</div>
+      <div class="s4-cell-value">Monolithic carved threshold · Single material · No grout</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Water</div>
+      <div class="s4-cell-value">Bronze-edged pool · Private · Dark floor finish</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Price Range</div>
+      <div class="s4-cell-value">Rs 13 – 20 Crore · By private appointment</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Detailing</div>
+      <div class="s4-cell-value">Every junction individually designed · No standard repeats</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 5 — FEATURE / QUOTE
+══════════════════════════════════════════════════ -->
+<div class="page s5">
+  <div class="s5-left">
+    <div class="s5-feature-label">The Scarpa Standard</div>
+    <div class="s5-feature-title">To see<br>the joint<br>is to see<br>the truth.</div>
+    <div class="s5-feature-body">Scarpa's father was a goldsmith. He grew up in a workshop where the quality of a piece was legible in the precision of where two metals met. He carried this into architecture: the question is never how to hide the join, it is how to make the join the finest thing in the room. Aurum is briefed on this principle entirely. Concealment is not a design decision — it is a failure of confidence. What Aurum shows, it shows completely.</div>
+  </div>
+  <div class="s5-right">
+    <div class="s5-quote-mark">"</div>
+    <div class="s5-quote">I want to see the beauty of the joint.</div>
+    <div class="s5-attribution">— Carlo Scarpa, architect · Castelvecchio, Verona · 1964<br><span style="opacity:0.65; display:block; margin-top:4mm;">Aurum is designed from this sentence outward. The junction is not the problem to be solved. It is the building's most precise statement.</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 6 — JUBILEE HILLS
+══════════════════════════════════════════════════ -->
+<div class="page s6">
+  <div class="s6-top">
+    <div>
+      <div class="s6-location-label">Prashashan Nagar · Jubilee Hills · Hyderabad</div>
+      <div class="s6-headline">An address that has<br>already done its<br>work for you.</div>
+    </div>
+  </div>
+  <div class="s6-stats">
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">10'</div>
+      <div class="s6-stat-label">From HITEC City<br>by car</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">0</div>
+      <div class="s6-stat-label">Through traffic.<br>The neighbourhood has none.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">35+</div>
+      <div class="s6-stat-label">Year old canopy.<br>Grown without instruction.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">XII</div>
+      <div class="s6-stat-label">Homes behind<br>one gate. No more.</div>
+    </div>
+  </div>
+  <div class="s6-body">
+    Jubilee Hills accumulated its reputation the way travertine accumulates its patina — slowly, without announcement, through the simple passage of time and use. Prashashan Nagar is a particular pocket of it: old money, old canopy, no through traffic, no new construction that could threaten it. The families here stopped discussing the address because they have been here long enough that the address is simply true. Aurum is designed to belong to this register — the same inherited quiet, expressed through materials precise enough to be examined at close range.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 7 — DEVELOPER
+══════════════════════════════════════════════════ -->
+<div class="page s7">
+  <div class="s7-bar"></div>
+  <div class="s7-content">
+    <div class="s7-dev-label">The Developer</div>
+    <div class="s7-dev-name">SSquare<br>Est. 1991</div>
+    <div class="s7-dev-body">Thirty-five years building the commercial infrastructure of a city that never stopped growing. Over ten million square feet of premium commercial real estate in Hyderabad — privately held, privately financed, delivered without press releases. SSquare has never needed to market its standard. The buildings are the argument, and those who know Hyderabad know the argument well.<br><br>Aurum is their first and only residential project. The same precision that governs how a SSquare commercial building is delivered — every surface justified, every material decision traceable — applied, for the first time, to the question of where twelve families will actually live. This is not a pivot. It is a single, measured extension of thirty-five years of craft.</div>
+  </div>
+  <div class="s7-right">
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">35</div>
+      <div class="s7-cred-label">Years in Hyderabad commercial real estate</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">10M+</div>
+      <div class="s7-cred-label">Sq ft delivered. Premium commercial.</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">01</div>
+      <div class="s7-cred-label">Residential project. This is it. Their only one.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 8 — CLOSE
+══════════════════════════════════════════════════ -->
+<div class="page s8">
+  <div class="s8-label">Twelve Private Villas · Jubilee Hills · By SSquare</div>
+  <div class="s8-brand">Aurum</div>
+  <div class="s8-tagline">The art of the junction.</div>
+  <div class="s8-rule"></div>
+</div>
+
+</body>
+</html>

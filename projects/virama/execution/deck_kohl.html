@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kohl — Drawn from This Ground</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --antimony:    #161412;
+    --sultan-jade: #264A3A;
+    --golconda:    #C49220;
+    --desert:      #D4C8A8;
+    --dusk-red:    #6A2E20;
+    --parchment:   #EDE5D0;
+    --warm-dark:   #1E1814;
+    --copper-dust: #9A7848;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A3 landscape; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; }
+  }
+
+  body { font-family: 'Lato', sans-serif; background: #b8b2a4; }
+
+  .page {
+    width: 420mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    page-break-after: always;
+  }
+
+  /* ─────────────────────────────────────────────
+     S1 — COVER
+     Central axis. Geometric arabesque (CSS).
+     Jewel-dark. The Golconda mine at night.
+  ───────────────────────────────────────────── */
+  .s1 {
+    background: var(--antimony);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    position: relative;
+  }
+  /* Arabesque lattice — pure CSS geometric */
+  .s1-lattice {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .s1-lattice::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160mm; height: 160mm;
+    border: 0.3pt solid rgba(196, 146, 32, 0.06);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .s1-lattice::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 120mm; height: 120mm;
+    border: 0.3pt solid rgba(196, 146, 32, 0.04);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .s1-lattice-inner {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 80mm; height: 80mm;
+    border: 0.3pt solid rgba(196, 146, 32, 0.05);
+    transform: translate(-50%, -50%);
+  }
+  .s1-lattice-inner2 {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 80mm; height: 80mm;
+    border: 0.3pt solid rgba(196, 146, 32, 0.03);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  /* Golconda gold line — horizontal median */
+  .s1-median {
+    position: absolute;
+    top: 50%; left: 30mm; right: 30mm;
+    height: 0.3pt;
+    background: linear-gradient(90deg, transparent, var(--golconda) 20%, var(--golconda) 80%, transparent);
+    opacity: 0.2;
+    transform: translateY(-50%);
+  }
+  .s1-header {
+    padding: 16mm 28mm 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+  }
+  .s1-eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--golconda);
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+  .s1-header-right {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    color: rgba(196, 146, 32, 0.4);
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 2;
+  }
+  .s1-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .s1-urdu-ghost {
+    font-family: 'EB Garamond', serif;
+    font-size: 48pt;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(196, 146, 32, 0.07);
+    line-height: 1;
+    margin-bottom: 2mm;
+    letter-spacing: 0.1em;
+    direction: rtl;
+  }
+  .s1-brand {
+    font-family: 'EB Garamond', serif;
+    font-size: 106pt;
+    font-weight: 500;
+    color: var(--parchment);
+    line-height: 0.82;
+    letter-spacing: 0.04em;
+    margin-bottom: 5mm;
+  }
+  .s1-arabic {
+    font-family: 'EB Garamond', serif;
+    font-size: 20pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--golconda);
+    letter-spacing: 0.15em;
+    opacity: 0.8;
+    margin-bottom: 5mm;
+    direction: rtl;
+  }
+  .s1-tagline {
+    font-family: 'Lato', sans-serif;
+    font-size: 9pt;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    color: rgba(212, 200, 168, 0.6);
+    line-height: 1.7;
+  }
+  .s1-footer {
+    padding: 0 28mm 16mm;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  .s1-footer-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    color: rgba(196, 146, 32, 0.3);
+    text-transform: uppercase;
+  }
+
+  /* ─────────────────────────────────────────────
+     S2 — THE WORD
+  ───────────────────────────────────────────── */
+  .s2 {
+    background: var(--parchment);
+    flex-direction: row;
+  }
+  .s2-left {
+    width: 48%;
+    background: var(--warm-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20mm 14mm 20mm 24mm;
+    position: relative;
+  }
+  /* Golconda vertical rule */
+  .s2-left::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 16mm; bottom: 16mm;
+    width: 0.4pt;
+    background: linear-gradient(180deg, transparent, var(--golconda) 30%, var(--golconda) 70%, transparent);
+    opacity: 0.3;
+  }
+  .s2-origin-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--golconda);
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+  .s2-etymology {
+    display: flex;
+    flex-direction: column;
+    gap: 5mm;
+  }
+  .s2-ety-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6mm;
+  }
+  .s2-ety-word {
+    font-family: 'EB Garamond', serif;
+    font-size: 18pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--parchment);
+    line-height: 1;
+  }
+  .s2-ety-lang {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    color: var(--golconda);
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+  .s2-ety-arrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: rgba(196, 146, 32, 0.3);
+    margin-left: 4mm;
+  }
+  .s2-headline {
+    font-family: 'EB Garamond', serif;
+    font-size: 22pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--parchment);
+    line-height: 1.3;
+  }
+  .s2-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20mm 22mm 20mm 18mm;
+  }
+  .s2-r-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--sultan-jade);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s2-r-headline {
+    font-family: 'EB Garamond', serif;
+    font-size: 21pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--warm-dark);
+    line-height: 1.3;
+    margin-bottom: 8mm;
+  }
+  .s2-r-body {
+    font-family: 'Lato', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: var(--copper-dust);
+    line-height: 1.85;
+  }
+
+  /* ─────────────────────────────────────────────
+     S3 — THE DECCAN LINEAGE
+  ───────────────────────────────────────────── */
+  .s3 {
+    background: var(--antimony);
+    flex-direction: column;
+    padding: 0;
+  }
+  .s3-header {
+    padding: 10mm 24mm 9mm;
+    border-bottom: 0.3pt solid rgba(196, 146, 32, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .s3-header-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 20pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--parchment);
+  }
+  .s3-header-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--golconda);
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+  .s3-timeline {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .s3-era {
+    padding: 12mm 10mm 12mm 14mm;
+    border-right: 0.3pt solid rgba(196, 146, 32, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .s3-era:last-child { border-right: none; }
+  .s3-era-date {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    color: var(--golconda);
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 6mm;
+  }
+  .s3-era-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 14pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--parchment);
+    line-height: 1.2;
+    margin-bottom: 5mm;
+  }
+  .s3-era-body {
+    font-family: 'Lato', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: rgba(196, 146, 32, 0.55);
+    line-height: 1.75;
+  }
+  .s3-era-building {
+    font-family: 'EB Garamond', serif;
+    font-size: 9pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--desert);
+    opacity: 0.5;
+    margin-top: 5mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S4 — THE COURTYARD HOUSE
+  ───────────────────────────────────────────── */
+  .s4 {
+    background: var(--parchment);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s4-left {
+    width: 44%;
+    background: var(--sultan-jade);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 14mm 22mm 22mm;
+  }
+  .s4-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--golconda);
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 7mm;
+  }
+  .s4-headline {
+    font-family: 'EB Garamond', serif;
+    font-size: 30pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--parchment);
+    line-height: 1.15;
+  }
+  .s4-body {
+    font-family: 'Lato', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: rgba(212, 200, 168, 0.7);
+    line-height: 1.85;
+  }
+  .s4-right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .s4-spec {
+    padding: 10mm 12mm;
+    border-right: 0.3pt solid rgba(38, 74, 58, 0.15);
+    border-bottom: 0.3pt solid rgba(38, 74, 58, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .s4-spec:nth-child(2n) { border-right: none; }
+  .s4-spec:nth-last-child(-n+2) { border-bottom: none; }
+  .s4-spec-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    color: var(--sultan-jade);
+    text-transform: uppercase;
+    margin-bottom: 3mm;
+  }
+  .s4-spec-value {
+    font-family: 'EB Garamond', serif;
+    font-size: 11pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--warm-dark);
+    line-height: 1.4;
+  }
+
+  /* ─────────────────────────────────────────────
+     S5 — THE MATERIAL LANGUAGE
+  ───────────────────────────────────────────── */
+  .s5 {
+    background: var(--warm-dark);
+    flex-direction: column;
+    padding: 0;
+  }
+  .s5-top {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 0.3pt solid rgba(196, 146, 32, 0.15);
+  }
+  .s5-mat-cell {
+    padding: 14mm 10mm 10mm 14mm;
+    border-right: 0.3pt solid rgba(196, 146, 32, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .s5-mat-cell:last-child { border-right: none; }
+  .s5-mat-arabic {
+    font-family: 'EB Garamond', serif;
+    font-size: 24pt;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(196, 146, 32, 0.2);
+    line-height: 1;
+    margin-bottom: 5mm;
+    direction: rtl;
+  }
+  .s5-mat-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 14pt;
+    font-weight: 400;
+    color: var(--parchment);
+    line-height: 1.2;
+    margin-bottom: 4mm;
+  }
+  .s5-mat-body {
+    font-family: 'Lato', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: rgba(196, 146, 32, 0.5);
+    line-height: 1.75;
+  }
+  .s5-bottom {
+    padding: 7mm 22mm;
+    display: flex;
+    align-items: center;
+    gap: 14mm;
+  }
+  .s5-bottom-quote {
+    font-family: 'EB Garamond', serif;
+    font-size: 12pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--parchment);
+    flex: 1;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+  .s5-bottom-note {
+    font-family: 'Lato', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(196, 146, 32, 0.45);
+    width: 90mm;
+    line-height: 1.65;
+  }
+
+  /* ─────────────────────────────────────────────
+     S6 — JUBILEE HILLS
+  ───────────────────────────────────────────── */
+  .s6 {
+    background: var(--sultan-jade);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 28mm 20mm;
+  }
+  .s6-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--golconda);
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 6mm;
+  }
+  .s6-headline {
+    font-family: 'EB Garamond', serif;
+    font-size: 32pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--parchment);
+    line-height: 1.1;
+    max-width: 260mm;
+  }
+  .s6-body {
+    font-family: 'Lato', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(212, 200, 168, 0.7);
+    line-height: 1.85;
+    max-width: 280mm;
+    column-count: 2;
+    column-gap: 14mm;
+    column-rule: 0.3pt solid rgba(196, 146, 32, 0.2);
+  }
+  .s6-facts {
+    display: flex;
+    gap: 16mm;
+    border-top: 0.3pt solid rgba(196, 146, 32, 0.2);
+    padding-top: 8mm;
+  }
+  .s6-fact-value {
+    font-family: 'EB Garamond', serif;
+    font-size: 24pt;
+    font-weight: 400;
+    color: var(--golconda);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s6-fact-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(212, 200, 168, 0.6);
+    line-height: 1.5;
+  }
+
+  /* ─────────────────────────────────────────────
+     S7 — DEVELOPER
+  ───────────────────────────────────────────── */
+  .s7 {
+    background: var(--parchment);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s7-accent {
+    width: 8mm;
+    background: var(--golconda);
+    flex-shrink: 0;
+  }
+  .s7-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 18mm 22mm 20mm;
+    border-right: 0.3pt solid rgba(38, 74, 58, 0.2);
+  }
+  .s7-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--sultan-jade);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 40pt;
+    font-weight: 500;
+    color: var(--warm-dark);
+    line-height: 0.9;
+    margin-bottom: 7mm;
+  }
+  .s7-dev-body {
+    font-family: 'Lato', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: var(--copper-dust);
+    line-height: 1.85;
+    max-width: 190mm;
+  }
+  .s7-dev-tagline {
+    font-family: 'EB Garamond', serif;
+    font-size: 12pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--sultan-jade);
+    opacity: 0.9;
+  }
+  .s7-side {
+    width: 90mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 20mm;
+    gap: 8mm;
+  }
+  .s7-cred {
+    padding-bottom: 7mm;
+    border-bottom: 0.3pt solid rgba(38, 74, 58, 0.2);
+  }
+  .s7-cred:last-child { border-bottom: none; }
+  .s7-cred-num {
+    font-family: 'EB Garamond', serif;
+    font-size: 26pt;
+    font-weight: 400;
+    color: var(--golconda);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s7-cred-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: var(--copper-dust);
+    line-height: 1.5;
+  }
+
+  /* ─────────────────────────────────────────────
+     S8 — CLOSE
+  ───────────────────────────────────────────── */
+  .s8 {
+    background: var(--antimony);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 28mm;
+    position: relative;
+  }
+  /* Arabesque ghost elements on close */
+  .s8::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 180mm; height: 180mm;
+    border: 0.3pt solid rgba(196, 146, 32, 0.04);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .s8::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 180mm; height: 180mm;
+    border: 0.3pt solid rgba(196, 146, 32, 0.03);
+    transform: translate(-50%, -50%);
+  }
+  .s8-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--golconda);
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 7mm;
+    position: relative;
+    z-index: 1;
+  }
+  .s8-brand {
+    font-family: 'EB Garamond', serif;
+    font-size: 106pt;
+    font-weight: 500;
+    color: var(--parchment);
+    line-height: 0.82;
+    letter-spacing: 0.04em;
+    margin-bottom: 6mm;
+    position: relative;
+    z-index: 1;
+  }
+  .s8-arabic {
+    font-family: 'EB Garamond', serif;
+    font-size: 18pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--golconda);
+    letter-spacing: 0.15em;
+    opacity: 0.7;
+    margin-bottom: 6mm;
+    direction: rtl;
+    position: relative;
+    z-index: 1;
+  }
+  .s8-tagline {
+    font-family: 'Lato', sans-serif;
+    font-size: 9pt;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    color: rgba(212, 200, 168, 0.5);
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════════════ -->
+<div class="page s1">
+  <div class="s1-lattice">
+    <div class="s1-lattice-inner"></div>
+    <div class="s1-lattice-inner2"></div>
+  </div>
+  <div class="s1-median"></div>
+  <div class="s1-header">
+    <div class="s1-eyebrow">Twelve Private Villas · Jubilee Hills · Hyderabad</div>
+    <div class="s1-header-right">By SSquare<br>Est. 1991</div>
+  </div>
+  <div class="s1-center">
+    <div class="s1-urdu-ghost">كُحْل</div>
+    <div class="s1-brand">Kohl</div>
+    <div class="s1-arabic">كُحْل</div>
+    <div class="s1-tagline">Drawn from this ground.</div>
+  </div>
+  <div class="s1-footer">
+    <div class="s1-footer-text">Brand Identity Presentation · Confidential</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 2 — THE WORD
+══════════════════════════════════════════════════ -->
+<div class="page s2">
+  <div class="s2-left">
+    <div class="s2-origin-label">Etymology · 4,000 years of one material</div>
+    <div class="s2-etymology">
+      <div class="s2-ety-row">
+        <div class="s2-ety-word">kajal</div>
+        <div class="s2-ety-lang">Sanskrit · kajjala</div>
+        <div class="s2-ety-arrow">→</div>
+      </div>
+      <div class="s2-ety-row">
+        <div class="s2-ety-word">kuḥl · كُحْل</div>
+        <div class="s2-ety-lang">Arabic · antimony</div>
+        <div class="s2-ety-arrow">→</div>
+      </div>
+      <div class="s2-ety-row">
+        <div class="s2-ety-word">al-kuhl</div>
+        <div class="s2-ety-lang">Arabic → Spanish → English</div>
+        <div class="s2-ety-arrow">→</div>
+      </div>
+      <div class="s2-ety-row">
+        <div class="s2-ety-word">alcohol</div>
+        <div class="s2-ety-lang">English · the fine powder</div>
+      </div>
+    </div>
+    <div class="s2-headline">A material that has been on this continent for four thousand years. The word that gave us alcohol, via the alchemists.</div>
+  </div>
+  <div class="s2-right">
+    <div class="s2-r-label">The Argument</div>
+    <div class="s2-r-headline">Kohl does not colour. It draws the outline that makes everything else visible.</div>
+    <div class="s2-r-body">Ground antimony sulphide mixed with oil, applied with a fine stick to the inner rim of the eye. Not pigment — definition. The darkest possible line against the lightest possible context. Kohl has been used in the Deccan plateau since before the cities that surround it were built. It predates the Kakatiya dynasty, the Bahmani Sultanate, the Qutb Shahis, and the Asaf Jahis. It predates Hyderabad by two thousand years.<br><br>The name was chosen for its properties, not its aesthetics: the ability to define presence without excess. The twelve villas at Kohl operate on the same principle. The architecture draws a line between private and public, between inside and outside, between the city's noise and a particular quality of quiet. It does not colour the landscape. It defines it.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 3 — THE DECCAN LINEAGE
+══════════════════════════════════════════════════ -->
+<div class="page s3">
+  <div class="s3-header">
+    <div class="s3-header-title">The Deccan Synthesis</div>
+    <div class="s3-header-sub">Hyderabad's architectural lineage · Before the glass towers arrived</div>
+  </div>
+  <div class="s3-timeline">
+    <div class="s3-era">
+      <div class="s3-era-date">1347 – 1518</div>
+      <div class="s3-era-title">The Bahmani Sultanate</div>
+      <div class="s3-era-body">The first great synthesis on the Deccan Plateau — Persian administrative culture, Turkic military architecture, and local Dravidian craft traditions fused into a building language that belongs to nowhere else on earth. Wide courtyards, deep eaves for the plateau heat, water channels running through the centre of every major room.</div>
+      <div class="s3-era-building">Bidar, Gulbarga, Bijapur</div>
+    </div>
+    <div class="s3-era">
+      <div class="s3-era-date">1518 – 1687</div>
+      <div class="s3-era-title">The Qutb Shahis of Golconda</div>
+      <div class="s3-era-body">Founded Hyderabad in 1591. Built the Charminar, the Golconda Fort, the Mecca Masjid. Their architecture absorbs Indo-Persian influence and makes it coastal, humid, and pragmatic — arcaded walkways for shade, deep verandas, plaster ornamentation of extraordinary delicacy. The Golconda diamond mines funded half of the world's crowns.</div>
+      <div class="s3-era-building">Golconda Fort · Charminar · Mecca Masjid</div>
+    </div>
+    <div class="s3-era">
+      <div class="s3-era-date">1724 – 1948</div>
+      <div class="s3-era-title">The Asaf Jahi Nizams</div>
+      <div class="s3-era-body">The Nizams built on the synthesis — adding British colonial elements, Rajput courtly forms, and European engineering into an architecture that was cosmopolitan before cosmopolitan was a marketing term. The Falaknuma Palace (1884) combines Palladian façade with Deccan interior planning. The Purani Haveli's interior is six-hundred feet of private passage.</div>
+      <div class="s3-era-building">Falaknuma · Purani Haveli · Chowmahalla</div>
+    </div>
+    <div class="s3-era">
+      <div class="s3-era-date">Present</div>
+      <div class="s3-era-title">Kohl at Jubilee Hills</div>
+      <div class="s3-era-body">Not pastiche — argument. The Deccan courtyard house typology offers a vernacular solution to Hyderabad's climate, social structure, and landscape. Wide overhangs. Central water. Inward-facing rooms around a protected core. Kohl does not quote these buildings. It inherits their logic and applies it to twelve contemporary households in the neighbourhood that most resembles their intent.</div>
+      <div class="s3-era-building">Prashashan Nagar · Jubilee Hills</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 4 — THE COURTYARD HOUSE
+══════════════════════════════════════════════════ -->
+<div class="page s4">
+  <div class="s4-left">
+    <div class="s4-label">The Deccan Courtyard House · Applied</div>
+    <div class="s4-headline">The courtyard is not a feature. It is the plan.</div>
+    <div class="s4-body">In every Deccan haveli, the courtyard was not an amenity — it was the organising logic. Every room faced it. The water element cooled the air by evaporation. The deep arcade shaded the glazing at the critical hours of the afternoon. The well or fountain was at the centre, not the corner. Kohl applies this to twelve contemporary households: the pool occupies the courtyard position, the arcade is the transitional zone, the rooms face inward.</div>
+  </div>
+  <div class="s4-right">
+    <div class="s4-spec">
+      <div class="s4-spec-label">Plan type</div>
+      <div class="s4-spec-value">Courtyard house. All primary rooms face the central water.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Water</div>
+      <div class="s4-spec-value">Private pool at courtyard centre. Cooling logic, not just leisure.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Structure</div>
+      <div class="s4-spec-value">Single-storey. Deep overhangs. Basalt and limestone.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Entry</div>
+      <div class="s4-spec-value">Single gate. Compressed approach. Teak pivot door.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Villas</div>
+      <div class="s4-spec-value">XII. Each on own plot. No shared walls or views.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Price</div>
+      <div class="s4-spec-value">Rs 13 – 20 Crore. Private appointment only.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 5 — THE MATERIAL
+══════════════════════════════════════════════════ -->
+<div class="page s5">
+  <div class="s5-top">
+    <div class="s5-mat-cell">
+      <div class="s5-mat-arabic">حجر</div>
+      <div class="s5-mat-name">Basalt &amp;<br>limestone</div>
+      <div class="s5-mat-body">The Deccan Plateau is basalt — the same volcanic rock that forms the land beneath Jubilee Hills. Kohl's ground floor reads as this same material, honed dark. Limestone render above it. The building is made of what the site is made of.</div>
+    </div>
+    <div class="s5-mat-cell">
+      <div class="s5-mat-arabic">خشب</div>
+      <div class="s5-mat-name">Teak<br>joinery</div>
+      <div class="s5-mat-body">The haveli tradition of the Deccan used teak for all principal joinery — doors, screens, brackets. It ages. It oils. It develops a surface that no new material has. The pivot entry door at Kohl is solid teak, in this tradition — functional, heavy, permanent.</div>
+    </div>
+    <div class="s5-mat-cell">
+      <div class="s5-mat-arabic">ماء</div>
+      <div class="s5-mat-name">Water<br>at centre</div>
+      <div class="s5-mat-body">The zardozi fountain, the step-well, the courtyard channel: every major Deccan building had water at its centre for functional reasons. At Kohl, the private pool occupies the courtyard centre — evaporative cooling at the axis of the plan, not at the perimeter as decoration.</div>
+    </div>
+    <div class="s5-mat-cell">
+      <div class="s5-mat-arabic">ظل</div>
+      <div class="s5-mat-name">Deep<br>overhangs</div>
+      <div class="s5-mat-body">Hyderabad receives 1,400 hours of direct sun per year. The Deccan builders understood this: deep overhangs at 1.2–1.5m keep all glazing in shade from 10am–4pm in summer. Not a detail decision. A climate decision that also produces a specific aesthetic — the building hides from the afternoon sun, and looks better for it.</div>
+    </div>
+  </div>
+  <div class="s5-bottom">
+    <div class="s5-bottom-quote">"The most distinctive buildings are those that were built for specific reasons, and those reasons show."</div>
+    <div class="s5-bottom-note">Every material at Kohl was chosen because it belongs to the Deccan Plateau. Not because it is expensive — because it is correct. The result is an architecture that does not need to explain its references. They are already under your feet.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 6 — JUBILEE HILLS
+══════════════════════════════════════════════════ -->
+<div class="page s6">
+  <div>
+    <div class="s6-label">Prashashan Nagar · Jubilee Hills · Hyderabad</div>
+    <div class="s6-headline">The neighbourhood that held its character while the city built itself around it.</div>
+  </div>
+  <div class="s6-body">
+    Prashashan Nagar is the Jubilee Hills that existed before the tech corridor arrived. No through traffic, no commercial density, no incentive to change. The canopy of neem, peepal, and tamarind that covers the streets grew in during the 1970s and 1980s and has been left alone since — the same trees that would have shaded a Deccan haveli courtyard three centuries ago. Kohl occupies a specific piece of this ground, behind one gate, at a scale the neighbourhood can absorb without changing. Ten minutes from HITEC City. A different register entirely.
+  </div>
+  <div class="s6-facts">
+    <div>
+      <div class="s6-fact-value">10'</div>
+      <div class="s6-fact-label">From HITEC City<br>by car</div>
+    </div>
+    <div>
+      <div class="s6-fact-value">0</div>
+      <div class="s6-fact-label">Through traffic<br>in the street</div>
+    </div>
+    <div>
+      <div class="s6-fact-value">40yr</div>
+      <div class="s6-fact-label">Established canopy.<br>Native species.</div>
+    </div>
+    <div>
+      <div class="s6-fact-value">XII</div>
+      <div class="s6-fact-label">Villas behind<br>one gate.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 7 — DEVELOPER
+══════════════════════════════════════════════════ -->
+<div class="page s7">
+  <div class="s7-accent"></div>
+  <div class="s7-main">
+    <div>
+      <div class="s7-label">The Developer</div>
+      <div class="s7-dev-name">SSquare<br>Est. 1991</div>
+      <div class="s7-dev-body">Thirty-five years building Hyderabad's commercial infrastructure — over ten million square feet, privately held, privately financed. SSquare did not need to enter the residential market. They entered it once because this particular piece of land in this particular neighbourhood demanded to be built correctly — and they were the right people to do it.<br><br>Kohl is their first and only residential project. Three decades of material knowledge and construction rigour, applied to a building type they had never attempted before. The same discipline. The same standard. Applied to the place where twelve families will actually live.</div>
+    </div>
+    <div class="s7-dev-tagline">"The Standard, Privately Held."</div>
+  </div>
+  <div class="s7-side">
+    <div class="s7-cred">
+      <div class="s7-cred-num">35</div>
+      <div class="s7-cred-label">Years in commercial real estate</div>
+    </div>
+    <div class="s7-cred">
+      <div class="s7-cred-num">10M+</div>
+      <div class="s7-cred-label">Square feet delivered</div>
+    </div>
+    <div class="s7-cred">
+      <div class="s7-cred-num">01</div>
+      <div class="s7-cred-label">Residential project. This is it.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 8 — CLOSE
+══════════════════════════════════════════════════ -->
+<div class="page s8">
+  <div class="s8-label">Twelve Private Villas · Jubilee Hills · By SSquare</div>
+  <div class="s8-brand">Kohl</div>
+  <div class="s8-arabic">كُحْل</div>
+  <div class="s8-tagline">Drawn from this ground.</div>
+</div>
+
+</body>
+</html>

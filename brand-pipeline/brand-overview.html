@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Overview — Visual Options</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0A0A0A;
+  color: #D8D2C8;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  padding: 48px 40px 80px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 56px;
+  padding-bottom: 24px;
+  border-bottom: 0.5px solid rgba(255,255,255,0.08);
+}
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(200,180,130,0.6);
+}
+.page-sub {
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(180,170,155,0.35);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+}
+
+.brand-card {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.brand-card:hover { transform: translateY(-3px); }
+
+/* SWATCH BLOCK */
+.swatch-block {
+  height: 220px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 18px;
+  overflow: hidden;
+}
+.swatch-bg {
+  position: absolute;
+  inset: 0;
+}
+.swatch-strip {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  display: flex;
+}
+.swatch-strip span {
+  flex: 1;
+}
+.swatch-name {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 4px;
+}
+.swatch-name .brand {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+.swatch-name .dev {
+  display: block;
+  font-size: 7.5px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-top: 5px;
+  opacity: 0.55;
+}
+
+/* INFO BLOCK */
+.info-block {
+  background: #111110;
+  padding: 18px 18px 20px;
+  border: 0.5px solid rgba(255,255,255,0.05);
+}
+.tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.45;
+  color: rgba(225,215,195,0.85);
+  margin-bottom: 14px;
+  min-height: 38px;
+  display: flex;
+  align-items: flex-start;
+}
+.tones {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+.tone-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.tone-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.tone-label {
+  font-size: 7.5px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(180,170,155,0.5);
+}
+
+/* PALETTE ROW */
+.palette-row {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+.pal-chip {
+  flex: 1;
+  height: 22px;
+  border-radius: 2px;
+  position: relative;
+}
+.pal-chip-label {
+  font-size: 6px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-top: 3px;
+  opacity: 0.35;
+  text-transform: uppercase;
+}
+
+/* TYPE SAMPLE */
+.type-sample {
+  border-top: 0.5px solid rgba(255,255,255,0.05);
+  padding-top: 12px;
+}
+.type-specimen {
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: rgba(210,200,180,0.6);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.type-name {
+  font-size: 6.5px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(150,140,125,0.35);
+  margin-top: 4px;
+}
+
+/* BOTTOM ROW — second 5 */
+.grid-row2 {
+  margin-top: 2px;
+}
+
+/* FULL WIDTH COMPARISON */
+.comparison {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 0.5px solid rgba(255,255,255,0.06);
+}
+.comparison-title {
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(180,160,110,0.5);
+  margin-bottom: 20px;
+}
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.comparison-table th {
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(150,140,120,0.4);
+  text-align: left;
+  padding: 6px 12px;
+  border-bottom: 0.5px solid rgba(255,255,255,0.05);
+}
+.comparison-table td {
+  font-size: 10px;
+  font-weight: 300;
+  padding: 10px 12px;
+  border-bottom: 0.5px solid rgba(255,255,255,0.03);
+  vertical-align: middle;
+  color: rgba(200,192,178,0.75);
+}
+.comparison-table tr:hover td {
+  background: rgba(255,255,255,0.015);
+}
+.ct-brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: rgba(225,215,195,0.9);
+}
+.ct-dev {
+  display: block;
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(150,140,120,0.4);
+  margin-top: 1px;
+  font-family: 'Inter', sans-serif;
+}
+.ct-swatch {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.ct-chip {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+.ct-accent-chip {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+}
+.ct-tone {
+  font-size: 9px;
+  color: rgba(190,180,160,0.6);
+  letter-spacing: 0.06em;
+}
+.ct-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 11px;
+  color: rgba(210,200,178,0.7);
+  letter-spacing: 0.03em;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="page-title">Brand Portfolio — Visual Options</div>
+  <div class="page-sub">10 Luxury Villa Brands · Jubilee Hills, Hyderabad · 2026</div>
+</div>
+
+<!-- GRID ROW 1 -->
+<div class="grid">
+
+  <!-- ĀVĀSA -->
+  <div class="brand-card">
+    <div class="swatch-block">
+      <div class="swatch-bg" style="background:linear-gradient(160deg,#1C1A16 0%,#0D0C0A 100%);"></div>
+      <div class="swatch-strip">
+        <span style="background:#1C1A16;"></span>
+        <span style="background:#0D0C0A;"></span>
+        <span style="background:#B8866A;"></span>
+        <span style="background:#EDE7DC;"></span>
+        <span style="background:#2A3828;"></span>
+      </div>
+      <div class="swatch-name" style="color:#EDE7DC;">
+        <span class="brand">Āvāsa</span>
+        <span class="dev" style="color:#B8866A;">Stratum</span>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="tagline" style="font-family:'Cormorant Garamond',serif;">"Come Home to Nothing Else."</div>
+      <div class="tones">
+        <div class="tone-row"><div class="tone-dot" style="background:#1C1A16;border:1px solid rgba(255,255,255,0.1);"></div><div class="tone-label">Void</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#2A3828;"></div><div class="tone-label">Permanence</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#B8866A;"></div><div class="tone-label">Copper warmth</div></div>
+      </div>
+      <div class="palette-row">
+        <div><div class="pal-chip" style="background:#1C1A16;"></div><div class="pal-chip-label" style="color:#888;">Primary</div></div>
+        <div><div class="pal-chip" style="background:#0D0C0A;"></div><div class="pal-chip-label" style="color:#888;">Surface</div></div>
+        <div><div class="pal-chip" style="background:#B8866A;"></div><div class="pal-chip-label" style="color:#B8866A;">Accent</div></div>
+        <div><div class="pal-chip" style="background:#EDE7DC;border:1px solid rgba(255,255,255,0.07);"></div><div class="pal-chip-label" style="color:#888;">Light</div></div>
+      </div>
+      <div class="type-sample">
+        <div class="type-specimen" style="font-family:'Cormorant Garamond',serif;color:#EDE7DC;">The Standard, Permanently Set.</div>
+        <div class="type-name">Cormorant Garamond</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NIDRA -->
+  <div class="brand-card">
+    <div class="swatch-block">
+      <div class="swatch-bg" style="background:linear-gradient(160deg,#1E1E22 0%,#121214 100%);"></div>
+      <div class="swatch-strip">
+        <span style="background:#1E1E22;"></span>
+        <span style="background:#121214;"></span>
+        <span style="background:#A8A4A0;"></span>
+        <span style="background:#F2EDE4;"></span>
+        <span style="background:#2D3D35;"></span>
+      </div>
+      <div class="swatch-name" style="color:#F2EDE4;">
+        <span class="brand">Nidra</span>
+        <span class="dev" style="color:#A8A4A0;">Kāla</span>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="tagline" style="font-family:'Playfair Display',serif;">"Where Rest Has Its Own Address."</div>
+      <div class="tones">
+        <div class="tone-row"><div class="tone-dot" style="background:#1E1E22;border:1px solid rgba(255,255,255,0.1);"></div><div class="tone-label">Dream</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#2D3D35;"></div><div class="tone-label">Hush</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#A8A4A0;"></div><div class="tone-label">Silver light</div></div>
+      </div>
+      <div class="palette-row">
+        <div><div class="pal-chip" style="background:#1E1E22;"></div><div class="pal-chip-label" style="color:#888;">Primary</div></div>
+        <div><div class="pal-chip" style="background:#121214;"></div><div class="pal-chip-label" style="color:#888;">Surface</div></div>
+        <div><div class="pal-chip" style="background:#A8A4A0;"></div><div class="pal-chip-label" style="color:#A8A4A0;">Accent</div></div>
+        <div><div class="pal-chip" style="background:#F2EDE4;border:1px solid rgba(255,255,255,0.07);"></div><div class="pal-chip-label" style="color:#888;">Light</div></div>
+      </div>
+      <div class="type-sample">
+        <div class="type-specimen" style="font-family:'Playfair Display',serif;color:#F2EDE4;">Time Is the Only Luxury.</div>
+        <div class="type-name">Playfair Display</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ŚĀNTI -->
+  <div class="brand-card">
+    <div class="swatch-block">
+      <div class="swatch-bg" style="background:linear-gradient(160deg,#2A3A28 0%,#1A2418 100%);"></div>
+      <div class="swatch-strip">
+        <span style="background:#2A3A28;"></span>
+        <span style="background:#1A2418;"></span>
+        <span style="background:#C4A35A;"></span>
+        <span style="background:#EAE0CC;"></span>
+        <span style="background:#4A6A48;"></span>
+      </div>
+      <div class="swatch-name" style="color:#EAE0CC;">
+        <span class="brand">Śānti</span>
+        <span class="dev" style="color:#C4A35A;">Vela</span>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="tagline" style="font-family:'Cormorant Garamond',serif;">"The End of All Noise."</div>
+      <div class="tones">
+        <div class="tone-row"><div class="tone-dot" style="background:#2A3A28;border:1px solid rgba(255,255,255,0.1);"></div><div class="tone-label">Stillness</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#4A6A48;"></div><div class="tone-label">Verdure</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#C4A35A;"></div><div class="tone-label">Ritual gold</div></div>
+      </div>
+      <div class="palette-row">
+        <div><div class="pal-chip" style="background:#2A3A28;"></div><div class="pal-chip-label" style="color:#888;">Primary</div></div>
+        <div><div class="pal-chip" style="background:#1A2418;"></div><div class="pal-chip-label" style="color:#888;">Surface</div></div>
+        <div><div class="pal-chip" style="background:#C4A35A;"></div><div class="pal-chip-label" style="color:#C4A35A;">Accent</div></div>
+        <div><div class="pal-chip" style="background:#EAE0CC;border:1px solid rgba(255,255,255,0.07);"></div><div class="pal-chip-label" style="color:#888;">Light</div></div>
+      </div>
+      <div class="type-sample">
+        <div class="type-specimen" style="font-family:'Cormorant Garamond',serif;color:#EAE0CC;">The Standard, Without Announcement.</div>
+        <div class="type-name">Cormorant Garamond</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRĀNA -->
+  <div class="brand-card">
+    <div class="swatch-block">
+      <div class="swatch-bg" style="background:linear-gradient(160deg,#1E3020 0%,#131E14 100%);"></div>
+      <div class="swatch-strip">
+        <span style="background:#1E3020;"></span>
+        <span style="background:#131E14;"></span>
+        <span style="background:#D4954A;"></span>
+        <span style="background:#F6F0E2;"></span>
+        <span style="background:#4A6A48;"></span>
+      </div>
+      <div class="swatch-name" style="color:#F6F0E2;">
+        <span class="brand">Prāna</span>
+        <span class="dev" style="color:#D4954A;">Grove</span>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="tagline" style="font-family:'Cormorant Garamond',serif;">"Breathe. Own. Belong."</div>
+      <div class="tones">
+        <div class="tone-row"><div class="tone-dot" style="background:#1E3020;border:1px solid rgba(255,255,255,0.1);"></div><div class="tone-label">Breath</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#4A6A48;"></div><div class="tone-label">Growth</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#D4954A;"></div><div class="tone-label">Amber warmth</div></div>
+      </div>
+      <div class="palette-row">
+        <div><div class="pal-chip" style="background:#1E3020;"></div><div class="pal-chip-label" style="color:#888;">Primary</div></div>
+        <div><div class="pal-chip" style="background:#131E14;"></div><div class="pal-chip-label" style="color:#888;">Surface</div></div>
+        <div><div class="pal-chip" style="background:#D4954A;"></div><div class="pal-chip-label" style="color:#D4954A;">Accent</div></div>
+        <div><div class="pal-chip" style="background:#F6F0E2;border:1px solid rgba(255,255,255,0.07);"></div><div class="pal-chip-label" style="color:#888;">Light</div></div>
+      </div>
+      <div class="type-sample">
+        <div class="type-specimen" style="font-family:'Cormorant Garamond',serif;color:#F6F0E2;">Nature Engineered to Perfection.</div>
+        <div class="type-name">Cormorant Garamond</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ĀKĀŚA -->
+  <div class="brand-card">
+    <div class="swatch-block">
+      <div class="swatch-bg" style="background:linear-gradient(160deg,#16203A 0%,#0E1424 100%);"></div>
+      <div class="swatch-strip">
+        <span style="background:#16203A;"></span>
+        <span style="background:#0E1424;"></span>
+        <span style="background:#B8A46E;"></span>
+        <span style="background:#E8EAF0;"></span>
+        <span style="background:#1E2840;"></span>
+      </div>
+      <div class="swatch-name" style="color:#E8EAF0;">
+        <span class="brand">Ākāśa</span>
+        <span class="dev" style="color:#B8A46E;">Zenith</span>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="tagline" style="font-family:'Cormorant Garamond',serif;">"Above. Always."</div>
+      <div class="tones">
+        <div class="tone-row"><div class="tone-dot" style="background:#16203A;border:1px solid rgba(255,255,255,0.1);"></div><div class="tone-label">Altitude</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#E8EAF0;border:1px solid rgba(255,255,255,0.07);"></div><div class="tone-label">Clarity</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#B8A46E;"></div><div class="tone-label">Celestial gold</div></div>
+      </div>
+      <div class="palette-row">
+        <div><div class="pal-chip" style="background:#16203A;"></div><div class="pal-chip-label" style="color:#888;">Primary</div></div>
+        <div><div class="pal-chip" style="background:#0E1424;"></div><div class="pal-chip-label" style="color:#888;">Surface</div></div>
+        <div><div class="pal-chip" style="background:#B8A46E;"></div><div class="pal-chip-label" style="color:#B8A46E;">Accent</div></div>
+        <div><div class="pal-chip" style="background:#E8EAF0;border:1px solid rgba(255,255,255,0.07);"></div><div class="pal-chip-label" style="color:#888;">Light</div></div>
+      </div>
+      <div class="type-sample">
+        <div class="type-specimen" style="font-family:'Cormorant Garamond',serif;color:#E8EAF0;">We Build at the Top.</div>
+        <div class="type-name">Cormorant Garamond</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- GRID ROW 2 -->
+<div class="grid grid-row2">
+
+  <!-- AMBARA -->
+  <div class="brand-card">
+    <div class="swatch-block">
+      <div class="swatch-bg" style="background:linear-gradient(160deg,#2C1E12 0%,#1A120A 100%);"></div>
+      <div class="swatch-strip">
+        <span style="background:#2C1E12;"></span>
+        <span style="background:#1A120A;"></span>
+        <span style="background:#C8924A;"></span>
+        <span style="background:#F0E6D4;"></span>
+        <span style="background:#3C2818;"></span>
+      </div>
+      <div class="swatch-name" style="color:#F0E6D4;">
+        <span class="brand">Ambara</span>
+        <span class="dev" style="color:#C8924A;">Sōl</span>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="tagline" style="font-family:'Playfair Display',serif;">"The Day Ends Here."</div>
+      <div class="tones">
+        <div class="tone-row"><div class="tone-dot" style="background:#2C1E12;border:1px solid rgba(255,255,255,0.1);"></div><div class="tone-label">Dusk</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#3C2818;"></div><div class="tone-label">Warmth</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#C8924A;"></div><div class="tone-label">Amber ritual</div></div>
+      </div>
+      <div class="palette-row">
+        <div><div class="pal-chip" style="background:#2C1E12;"></div><div class="pal-chip-label" style="color:#888;">Primary</div></div>
+        <div><div class="pal-chip" style="background:#1A120A;"></div><div class="pal-chip-label" style="color:#888;">Surface</div></div>
+        <div><div class="pal-chip" style="background:#C8924A;"></div><div class="pal-chip-label" style="color:#C8924A;">Accent</div></div>
+        <div><div class="pal-chip" style="background:#F0E6D4;border:1px solid rgba(255,255,255,0.07);"></div><div class="pal-chip-label" style="color:#888;">Light</div></div>
+      </div>
+      <div class="type-sample">
+        <div class="type-specimen" style="font-family:'Playfair Display',serif;color:#F0E6D4;">The Sun Never Sets on Our Standards.</div>
+        <div class="type-name">Playfair Display</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STHĀNA -->
+  <div class="brand-card">
+    <div class="swatch-block">
+      <div class="swatch-bg" style="background:linear-gradient(160deg,#111111 0%,#080808 100%);"></div>
+      <div class="swatch-strip">
+        <span style="background:#111111;"></span>
+        <span style="background:#080808;"></span>
+        <span style="background:#C0C0BE;"></span>
+        <span style="background:#F8F8F6;"></span>
+        <span style="background:#1C1C1C;"></span>
+      </div>
+      <div class="swatch-name" style="color:#F8F8F6;">
+        <span class="brand">Sthāna</span>
+        <span class="dev" style="color:#C0C0BE;">Mark</span>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="tagline" style="font-family:'DM Serif Display',serif;">"Position Is Everything."</div>
+      <div class="tones">
+        <div class="tone-row"><div class="tone-dot" style="background:#111111;border:1px solid rgba(255,255,255,0.1);"></div><div class="tone-label">Status</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#1C1C1C;border:1px solid rgba(255,255,255,0.05);"></div><div class="tone-label">Precision</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#C0C0BE;"></div><div class="tone-label">Platinum cold</div></div>
+      </div>
+      <div class="palette-row">
+        <div><div class="pal-chip" style="background:#111111;border:1px solid rgba(255,255,255,0.06);"></div><div class="pal-chip-label" style="color:#888;">Primary</div></div>
+        <div><div class="pal-chip" style="background:#080808;border:1px solid rgba(255,255,255,0.04);"></div><div class="pal-chip-label" style="color:#888;">Surface</div></div>
+        <div><div class="pal-chip" style="background:#C0C0BE;"></div><div class="pal-chip-label" style="color:#C0C0BE;">Accent</div></div>
+        <div><div class="pal-chip" style="background:#F8F8F6;border:1px solid rgba(255,255,255,0.07);"></div><div class="pal-chip-label" style="color:#888;">Light</div></div>
+      </div>
+      <div class="type-sample">
+        <div class="type-specimen" style="font-family:'DM Serif Display',serif;color:#F8F8F6;">Precision. Position. Permanence.</div>
+        <div class="type-name">DM Serif Display</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIHĀRA -->
+  <div class="brand-card">
+    <div class="swatch-block">
+      <div class="swatch-bg" style="background:linear-gradient(160deg,#3D2218 0%,#261510 100%);"></div>
+      <div class="swatch-strip">
+        <span style="background:#3D2218;"></span>
+        <span style="background:#261510;"></span>
+        <span style="background:#A0703A;"></span>
+        <span style="background:#F2E8D8;"></span>
+        <span style="background:#4A3828;"></span>
+      </div>
+      <div class="swatch-name" style="color:#F2E8D8;">
+        <span class="brand">Vihāra</span>
+        <span class="dev" style="color:#A0703A;">Terra</span>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="tagline" style="font-family:'Cormorant Garamond',serif;">"Retreat Into Permanence."</div>
+      <div class="tones">
+        <div class="tone-row"><div class="tone-dot" style="background:#3D2218;border:1px solid rgba(255,255,255,0.1);"></div><div class="tone-label">Heritage</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#4A3828;"></div><div class="tone-label">Earth</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#A0703A;"></div><div class="tone-label">Bronze warmth</div></div>
+      </div>
+      <div class="palette-row">
+        <div><div class="pal-chip" style="background:#3D2218;"></div><div class="pal-chip-label" style="color:#888;">Primary</div></div>
+        <div><div class="pal-chip" style="background:#261510;"></div><div class="pal-chip-label" style="color:#888;">Surface</div></div>
+        <div><div class="pal-chip" style="background:#A0703A;"></div><div class="pal-chip-label" style="color:#A0703A;">Accent</div></div>
+        <div><div class="pal-chip" style="background:#F2E8D8;border:1px solid rgba(255,255,255,0.07);"></div><div class="pal-chip-label" style="color:#888;">Light</div></div>
+      </div>
+      <div class="type-sample">
+        <div class="type-specimen" style="font-family:'Cormorant Garamond',serif;color:#F2E8D8;">Built From the Earth Up.</div>
+        <div class="type-name">Cormorant Garamond</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MANDAPA -->
+  <div class="brand-card">
+    <div class="swatch-block">
+      <div class="swatch-bg" style="background:linear-gradient(160deg,#282E33 0%,#181C20 100%);"></div>
+      <div class="swatch-strip">
+        <span style="background:#282E33;"></span>
+        <span style="background:#181C20;"></span>
+        <span style="background:#9A6840;"></span>
+        <span style="background:#E8E2D8;"></span>
+        <span style="background:#3A4830;"></span>
+      </div>
+      <div class="swatch-name" style="color:#E8E2D8;">
+        <span class="brand">Mandapa</span>
+        <span class="dev" style="color:#9A6840;">Arch</span>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="tagline" style="font-family:'Cormorant Garamond',serif;">"Architecture Made Intimate."</div>
+      <div class="tones">
+        <div class="tone-row"><div class="tone-dot" style="background:#282E33;border:1px solid rgba(255,255,255,0.1);"></div><div class="tone-label">Structure</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#3A4830;"></div><div class="tone-label">Craft</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#9A6840;"></div><div class="tone-label">Copper patina</div></div>
+      </div>
+      <div class="palette-row">
+        <div><div class="pal-chip" style="background:#282E33;"></div><div class="pal-chip-label" style="color:#888;">Primary</div></div>
+        <div><div class="pal-chip" style="background:#181C20;"></div><div class="pal-chip-label" style="color:#888;">Surface</div></div>
+        <div><div class="pal-chip" style="background:#9A6840;"></div><div class="pal-chip-label" style="color:#9A6840;">Accent</div></div>
+        <div><div class="pal-chip" style="background:#E8E2D8;border:1px solid rgba(255,255,255,0.07);"></div><div class="pal-chip-label" style="color:#888;">Light</div></div>
+      </div>
+      <div class="type-sample">
+        <div class="type-specimen" style="font-family:'Cormorant Garamond',serif;color:#E8E2D8;">Architecture Is a Statement, Not a Service.</div>
+        <div class="type-name">Cormorant Garamond</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SVARA -->
+  <div class="brand-card">
+    <div class="swatch-block">
+      <div class="swatch-bg" style="background:linear-gradient(160deg,#1C1A30 0%,#10101E 100%);"></div>
+      <div class="swatch-strip">
+        <span style="background:#1C1A30;"></span>
+        <span style="background:#10101E;"></span>
+        <span style="background:#C4AA6A;"></span>
+        <span style="background:#E8E4F0;"></span>
+        <span style="background:#2A3050;"></span>
+      </div>
+      <div class="swatch-name" style="color:#E8E4F0;">
+        <span class="brand">Svara</span>
+        <span class="dev" style="color:#C4AA6A;">Resonance</span>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="tagline" style="font-family:'Cormorant Garamond',serif;">"Life, Tuned to Perfection."</div>
+      <div class="tones">
+        <div class="tone-row"><div class="tone-dot" style="background:#1C1A30;border:1px solid rgba(255,255,255,0.1);"></div><div class="tone-label">Resonance</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#2A3050;"></div><div class="tone-label">Cosmos</div></div>
+        <div class="tone-row"><div class="tone-dot" style="background:#C4AA6A;"></div><div class="tone-label">Gold vibration</div></div>
+      </div>
+      <div class="palette-row">
+        <div><div class="pal-chip" style="background:#1C1A30;"></div><div class="pal-chip-label" style="color:#888;">Primary</div></div>
+        <div><div class="pal-chip" style="background:#10101E;"></div><div class="pal-chip-label" style="color:#888;">Surface</div></div>
+        <div><div class="pal-chip" style="background:#C4AA6A;"></div><div class="pal-chip-label" style="color:#C4AA6A;">Accent</div></div>
+        <div><div class="pal-chip" style="background:#E8E4F0;border:1px solid rgba(255,255,255,0.07);"></div><div class="pal-chip-label" style="color:#888;">Light</div></div>
+      </div>
+      <div class="type-sample">
+        <div class="type-specimen" style="font-family:'Cormorant Garamond',serif;color:#E8E4F0;">Every Structure Has a Frequency.</div>
+        <div class="type-name">Cormorant Garamond</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- COMPARISON TABLE -->
+<div class="comparison">
+  <div class="comparison-title">Visual Identity Summary</div>
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Palette</th>
+        <th>Accent Register</th>
+        <th>Tonal Axis</th>
+        <th>Typeface</th>
+        <th>Tagline</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="ct-brand-name">Āvāsa</span><span class="ct-dev">Stratum</span></td>
+        <td><div class="ct-swatch"><div class="ct-chip" style="background:#0D0C0A;"></div><div class="ct-chip" style="background:#1C1A16;"></div><div class="ct-accent-chip" style="background:#B8866A;"></div><div class="ct-chip" style="background:#EDE7DC;border:1px solid rgba(255,255,255,0.06);"></div></div></td>
+        <td><span class="ct-tone" style="color:#B8866A;">Copper warm</span></td>
+        <td><span class="ct-tone">Void · Permanence</span></td>
+        <td><span class="ct-tone">Cormorant Garamond</span></td>
+        <td><span class="ct-tag">Come Home to Nothing Else.</span></td>
+      </tr>
+      <tr>
+        <td><span class="ct-brand-name">Nidra</span><span class="ct-dev">Kāla</span></td>
+        <td><div class="ct-swatch"><div class="ct-chip" style="background:#121214;"></div><div class="ct-chip" style="background:#1E1E22;"></div><div class="ct-accent-chip" style="background:#A8A4A0;"></div><div class="ct-chip" style="background:#F2EDE4;border:1px solid rgba(255,255,255,0.06);"></div></div></td>
+        <td><span class="ct-tone" style="color:#A8A4A0;">Moonlit silver</span></td>
+        <td><span class="ct-tone">Dream · Hush</span></td>
+        <td><span class="ct-tone">Playfair Display</span></td>
+        <td><span class="ct-tag">Where Rest Has Its Own Address.</span></td>
+      </tr>
+      <tr>
+        <td><span class="ct-brand-name">Śānti</span><span class="ct-dev">Vela</span></td>
+        <td><div class="ct-swatch"><div class="ct-chip" style="background:#1A2418;"></div><div class="ct-chip" style="background:#2A3A28;"></div><div class="ct-accent-chip" style="background:#C4A35A;"></div><div class="ct-chip" style="background:#EAE0CC;border:1px solid rgba(255,255,255,0.06);"></div></div></td>
+        <td><span class="ct-tone" style="color:#C4A35A;">Ritual gold</span></td>
+        <td><span class="ct-tone">Stillness · Verdure</span></td>
+        <td><span class="ct-tone">Cormorant Garamond</span></td>
+        <td><span class="ct-tag">The End of All Noise.</span></td>
+      </tr>
+      <tr>
+        <td><span class="ct-brand-name">Prāna</span><span class="ct-dev">Grove</span></td>
+        <td><div class="ct-swatch"><div class="ct-chip" style="background:#131E14;"></div><div class="ct-chip" style="background:#1E3020;"></div><div class="ct-accent-chip" style="background:#D4954A;"></div><div class="ct-chip" style="background:#F6F0E2;border:1px solid rgba(255,255,255,0.06);"></div></div></td>
+        <td><span class="ct-tone" style="color:#D4954A;">Amber warm</span></td>
+        <td><span class="ct-tone">Breath · Growth</span></td>
+        <td><span class="ct-tone">Cormorant Garamond</span></td>
+        <td><span class="ct-tag">Breathe. Own. Belong.</span></td>
+      </tr>
+      <tr>
+        <td><span class="ct-brand-name">Ākāśa</span><span class="ct-dev">Zenith</span></td>
+        <td><div class="ct-swatch"><div class="ct-chip" style="background:#0E1424;"></div><div class="ct-chip" style="background:#16203A;"></div><div class="ct-accent-chip" style="background:#B8A46E;"></div><div class="ct-chip" style="background:#E8EAF0;border:1px solid rgba(255,255,255,0.06);"></div></div></td>
+        <td><span class="ct-tone" style="color:#B8A46E;">Celestial gold</span></td>
+        <td><span class="ct-tone">Altitude · Clarity</span></td>
+        <td><span class="ct-tone">Cormorant Garamond</span></td>
+        <td><span class="ct-tag">Above. Always.</span></td>
+      </tr>
+      <tr>
+        <td><span class="ct-brand-name">Ambara</span><span class="ct-dev">Sōl</span></td>
+        <td><div class="ct-swatch"><div class="ct-chip" style="background:#1A120A;"></div><div class="ct-chip" style="background:#2C1E12;"></div><div class="ct-accent-chip" style="background:#C8924A;"></div><div class="ct-chip" style="background:#F0E6D4;border:1px solid rgba(255,255,255,0.06);"></div></div></td>
+        <td><span class="ct-tone" style="color:#C8924A;">Amber ritual</span></td>
+        <td><span class="ct-tone">Dusk · Warmth</span></td>
+        <td><span class="ct-tone">Playfair Display</span></td>
+        <td><span class="ct-tag">The Day Ends Here.</span></td>
+      </tr>
+      <tr>
+        <td><span class="ct-brand-name">Sthāna</span><span class="ct-dev">Mark</span></td>
+        <td><div class="ct-swatch"><div class="ct-chip" style="background:#080808;border:1px solid rgba(255,255,255,0.04);"></div><div class="ct-chip" style="background:#111111;border:1px solid rgba(255,255,255,0.05);"></div><div class="ct-accent-chip" style="background:#C0C0BE;"></div><div class="ct-chip" style="background:#F8F8F6;border:1px solid rgba(255,255,255,0.06);"></div></div></td>
+        <td><span class="ct-tone" style="color:#C0C0BE;">Platinum cold</span></td>
+        <td><span class="ct-tone">Status · Precision</span></td>
+        <td><span class="ct-tone">DM Serif Display</span></td>
+        <td><span class="ct-tag">Position Is Everything.</span></td>
+      </tr>
+      <tr>
+        <td><span class="ct-brand-name">Vihāra</span><span class="ct-dev">Terra</span></td>
+        <td><div class="ct-swatch"><div class="ct-chip" style="background:#261510;"></div><div class="ct-chip" style="background:#3D2218;"></div><div class="ct-accent-chip" style="background:#A0703A;"></div><div class="ct-chip" style="background:#F2E8D8;border:1px solid rgba(255,255,255,0.06);"></div></div></td>
+        <td><span class="ct-tone" style="color:#A0703A;">Bronze warm</span></td>
+        <td><span class="ct-tone">Heritage · Earth</span></td>
+        <td><span class="ct-tone">Cormorant Garamond</span></td>
+        <td><span class="ct-tag">Retreat Into Permanence.</span></td>
+      </tr>
+      <tr>
+        <td><span class="ct-brand-name">Mandapa</span><span class="ct-dev">Arch</span></td>
+        <td><div class="ct-swatch"><div class="ct-chip" style="background:#181C20;"></div><div class="ct-chip" style="background:#282E33;"></div><div class="ct-accent-chip" style="background:#9A6840;"></div><div class="ct-chip" style="background:#E8E2D8;border:1px solid rgba(255,255,255,0.06);"></div></div></td>
+        <td><span class="ct-tone" style="color:#9A6840;">Copper patina</span></td>
+        <td><span class="ct-tone">Structure · Craft</span></td>
+        <td><span class="ct-tone">Cormorant Garamond</span></td>
+        <td><span class="ct-tag">Architecture Made Intimate.</span></td>
+      </tr>
+      <tr>
+        <td><span class="ct-brand-name">Svara</span><span class="ct-dev">Resonance</span></td>
+        <td><div class="ct-swatch"><div class="ct-chip" style="background:#10101E;"></div><div class="ct-chip" style="background:#1C1A30;"></div><div class="ct-accent-chip" style="background:#C4AA6A;"></div><div class="ct-chip" style="background:#E8E4F0;border:1px solid rgba(255,255,255,0.06);"></div></div></td>
+        <td><span class="ct-tone" style="color:#C4AA6A;">Gold vibration</span></td>
+        <td><span class="ct-tone">Resonance · Cosmos</span></td>
+        <td><span class="ct-tone">Cormorant Garamond</span></td>
+        <td><span class="ct-tag">Life, Tuned to Perfection.</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

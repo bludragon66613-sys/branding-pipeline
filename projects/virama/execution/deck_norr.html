@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Norr — The body knows what the mind forgets.</title>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Source+Sans+3:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --spruce:  #2C3430;
+    --moss:    #6B8C74;
+    --birch:   #E8ECEA;
+    --pine:    #4A6054;
+    --frost:   #C4D0C8;
+    --snow:    #F4F6F4;
+    --amber:   #C8904A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A3 landscape; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; }
+  }
+
+  body { font-family: 'Source Sans 3', sans-serif; background: #c8ccca; }
+
+  .page {
+    width: 420mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    page-break-after: always;
+  }
+
+  /* ─────────────────────────────────────────────
+     S1 — COVER
+     Nordic whitespace. Moss accent. Alegreya italic.
+  ───────────────────────────────────────────── */
+  .s1 {
+    background: var(--snow);
+    flex-direction: row;
+  }
+  .s1-left {
+    width: 52%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22mm 18mm 22mm 26mm;
+    position: relative;
+  }
+  .s1-moss-rule {
+    position: absolute;
+    top: 0; left: 26mm;
+    width: 0.4pt;
+    bottom: 22mm;
+    background: linear-gradient(180deg, transparent, var(--moss) 30%, var(--moss) 80%, transparent);
+    opacity: 0.25;
+  }
+  .s1-ghost-word {
+    position: absolute;
+    top: 14mm;
+    left: 22mm;
+    font-family: 'Alegreya', serif;
+    font-size: 100pt;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(196,208,200,0.35);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    pointer-events: none;
+  }
+  .s1-eyebrow {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.44em;
+    color: var(--moss);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s1-brand {
+    font-family: 'Alegreya', serif;
+    font-size: 108pt;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--spruce);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    margin-bottom: 8mm;
+  }
+  .s1-tagline {
+    font-family: 'Alegreya', serif;
+    font-size: 11pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--pine);
+    letter-spacing: 0.01em;
+    line-height: 1.55;
+  }
+  .s1-right {
+    flex: 1;
+    background: var(--birch);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 22mm 22mm 16mm;
+    border-left: 0.4pt solid var(--frost);
+  }
+  .s1-data-block {
+    display: flex;
+    flex-direction: column;
+    gap: 5mm;
+  }
+  .s1-data-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(74,96,84,0.6);
+    letter-spacing: 0.22em;
+    line-height: 2;
+    text-transform: uppercase;
+  }
+  .s1-data-value {
+    font-size: 7pt;
+    color: var(--spruce);
+    font-weight: 400;
+    display: block;
+  }
+  .s1-concept-note {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: rgba(44,52,48,0.5);
+    line-height: 1.85;
+    max-width: 90mm;
+    border-left: 0.4pt solid rgba(107,140,116,0.4);
+    padding-left: 5mm;
+  }
+  .s1-footer {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 11mm;
+    border-top: 0.3pt solid rgba(107,140,116,0.15);
+    display: flex;
+    align-items: center;
+    padding: 0 26mm;
+    background: var(--snow);
+  }
+  .s1-footer-text {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(107,140,116,0.5);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  /* ─────────────────────────────────────────────
+     S2 — THE REFERENCE / STORY
+     Snøhetta, Norwegian Scenic Routes, friluftsliv
+  ───────────────────────────────────────────── */
+  .s2 {
+    background: var(--snow);
+    flex-direction: row;
+  }
+  .s2-left {
+    width: 44%;
+    background: var(--spruce);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 16mm 22mm 22mm;
+    position: relative;
+  }
+  .s2-left::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 1mm;
+    background: linear-gradient(180deg, transparent, var(--moss) 35%, var(--moss) 65%, transparent);
+    opacity: 0.5;
+  }
+  .s2-year {
+    font-family: 'Alegreya', serif;
+    font-size: 60pt;
+    font-weight: 400;
+    color: rgba(107,140,116,0.1);
+    line-height: 1;
+    position: absolute;
+    bottom: 18mm;
+    right: 14mm;
+    letter-spacing: -0.04em;
+  }
+  .s2-location-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.42em;
+    color: var(--moss);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s2-headline {
+    font-family: 'Alegreya', serif;
+    font-size: 28pt;
+    font-weight: 500;
+    color: var(--snow);
+    line-height: 1.1;
+    margin-bottom: 8mm;
+  }
+  .s2-body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: var(--frost);
+    line-height: 1.85;
+  }
+  .s2-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 24mm 22mm 20mm;
+  }
+  .s2-principle-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.42em;
+    color: var(--pine);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s2-principle {
+    font-family: 'Alegreya', serif;
+    font-size: 18pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--spruce);
+    line-height: 1.38;
+    margin-bottom: 8mm;
+  }
+  .s2-principle-body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: var(--pine);
+    line-height: 1.85;
+    border-left: 0.3pt solid var(--moss);
+    padding-left: 6mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S3 — ELEMENTS / WELLNESS PROTOCOLS
+     Clean, Nordic, precise. Birch background.
+  ───────────────────────────────────────────── */
+  .s3 {
+    background: var(--birch);
+    flex-direction: column;
+    padding: 0;
+  }
+  .s3-top {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 0.3pt solid var(--frost);
+  }
+  .s3-material-cell {
+    padding: 16mm 10mm 10mm 12mm;
+    border-right: 0.3pt solid var(--frost);
+  }
+  .s3-material-cell:last-child { border-right: none; }
+  .s3-mat-number {
+    font-family: 'Alegreya', serif;
+    font-size: 10pt;
+    color: var(--moss);
+    margin-bottom: 5mm;
+    font-weight: 400;
+  }
+  .s3-mat-name {
+    font-family: 'Alegreya', serif;
+    font-size: 15pt;
+    font-weight: 500;
+    color: var(--spruce);
+    line-height: 1.12;
+    margin-bottom: 4mm;
+  }
+  .s3-mat-desc {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: var(--pine);
+    line-height: 1.75;
+  }
+  .s3-bottom {
+    padding: 8mm 22mm;
+    background: var(--snow);
+    display: flex;
+    align-items: center;
+    gap: 14mm;
+    border-top: 0.3pt solid var(--frost);
+  }
+  .s3-principle-line {
+    font-family: 'Alegreya', serif;
+    font-size: 12pt;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--spruce);
+    flex: 1;
+    line-height: 1.45;
+  }
+  .s3-footnote {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: var(--pine);
+    width: 80mm;
+    line-height: 1.65;
+    opacity: 0.75;
+  }
+
+  /* ─────────────────────────────────────────────
+     S4 — THE VILLAS
+  ───────────────────────────────────────────── */
+  .s4 {
+    background: var(--spruce);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20mm 24mm;
+    position: relative;
+  }
+  .s4::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0.4pt;
+    background: var(--moss);
+    opacity: 0.6;
+  }
+  .s4-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .s4-headline {
+    font-family: 'Alegreya', serif;
+    font-size: 40pt;
+    font-weight: 500;
+    color: var(--snow);
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    max-width: 160mm;
+  }
+  .s4-count {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    letter-spacing: 0.32em;
+    color: var(--moss);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .s4-count strong {
+    display: block;
+    font-family: 'Alegreya', serif;
+    font-size: 40pt;
+    font-weight: 400;
+    color: var(--snow);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-top: 2mm;
+  }
+  .s4-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 0.3pt solid rgba(107,140,116,0.22);
+    border-left: 0.3pt solid rgba(107,140,116,0.22);
+  }
+  .s4-cell {
+    padding: 6mm 8mm;
+    border-right: 0.3pt solid rgba(107,140,116,0.22);
+    border-bottom: 0.3pt solid rgba(107,140,116,0.22);
+  }
+  .s4-cell-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.32em;
+    color: var(--moss);
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+  }
+  .s4-cell-value {
+    font-family: 'Alegreya', serif;
+    font-size: 10.5pt;
+    color: var(--birch);
+    line-height: 1.35;
+  }
+
+  /* ─────────────────────────────────────────────
+     S5 — FEATURE / QUOTE
+     Moss panel. Six Senses quote. Wellness philosophy.
+  ───────────────────────────────────────────── */
+  .s5 {
+    background: var(--snow);
+    flex-direction: row;
+  }
+  .s5-left {
+    width: 38%;
+    background: var(--moss);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20mm 14mm 20mm 22mm;
+    position: relative;
+  }
+  .s5-left::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 1mm;
+    background: linear-gradient(180deg, transparent, rgba(244,246,244,0.2) 40%, rgba(244,246,244,0.2) 60%, transparent);
+  }
+  .s5-wellness-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.44em;
+    color: rgba(244,246,244,0.55);
+    text-transform: uppercase;
+    margin-bottom: 5mm;
+  }
+  .s5-wellness-title {
+    font-family: 'Alegreya', serif;
+    font-size: 28pt;
+    font-weight: 500;
+    color: var(--snow);
+    line-height: 1;
+    margin-bottom: 6mm;
+  }
+  .s5-wellness-body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: rgba(244,246,244,0.72);
+    line-height: 1.82;
+  }
+  .s5-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 26mm 22mm 20mm;
+  }
+  .s5-quote-mark {
+    font-family: 'Alegreya', serif;
+    font-size: 60pt;
+    color: var(--frost);
+    line-height: 0.8;
+    margin-bottom: 2mm;
+  }
+  .s5-quote {
+    font-family: 'Alegreya', serif;
+    font-size: 17pt;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--spruce);
+    line-height: 1.48;
+    margin-bottom: 8mm;
+  }
+  .s5-attribution {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: var(--pine);
+    letter-spacing: 0.12em;
+    margin-bottom: 8mm;
+  }
+  .s5-application {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: var(--pine);
+    line-height: 1.82;
+    border-left: 0.3pt solid var(--moss);
+    padding-left: 5mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S6 — LOCATION
+     Friluftsliv in Jubilee Hills. Tree canopy.
+  ───────────────────────────────────────────── */
+  .s6 {
+    background: var(--spruce);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 24mm 20mm;
+  }
+  .s6-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .s6-location-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.42em;
+    color: var(--moss);
+    text-transform: uppercase;
+  }
+  .s6-headline {
+    font-family: 'Alegreya', serif;
+    font-size: 32pt;
+    font-weight: 500;
+    color: var(--snow);
+    line-height: 1.05;
+    max-width: 200mm;
+    margin-top: 6mm;
+  }
+  .s6-stats {
+    display: flex;
+    gap: 20mm;
+    padding-top: 10mm;
+    border-top: 0.3pt solid rgba(107,140,116,0.22);
+  }
+  .s6-stat-value {
+    font-family: 'Alegreya', serif;
+    font-size: 26pt;
+    color: var(--moss);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s6-stat-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: var(--frost);
+    letter-spacing: 0.12em;
+    line-height: 1.55;
+  }
+  .s6-body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: var(--frost);
+    line-height: 1.82;
+    max-width: 240mm;
+    column-count: 2;
+    column-gap: 12mm;
+    column-rule: 0.3pt solid rgba(107,140,116,0.18);
+    opacity: 0.82;
+  }
+
+  /* ─────────────────────────────────────────────
+     S7 — DEVELOPER
+  ───────────────────────────────────────────── */
+  .s7 {
+    background: var(--birch);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s7-bar {
+    width: 8mm;
+    background: var(--moss);
+    flex-shrink: 0;
+  }
+  .s7-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 24mm 24mm 20mm;
+  }
+  .s7-dev-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.42em;
+    color: var(--pine);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-name {
+    font-family: 'Alegreya', serif;
+    font-size: 30pt;
+    color: var(--spruce);
+    line-height: 1;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 9pt;
+    font-weight: 300;
+    color: var(--pine);
+    line-height: 1.78;
+    max-width: 180mm;
+  }
+  .s7-right {
+    width: 120mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 24mm 24mm 16mm;
+    border-left: 0.3pt solid var(--frost);
+  }
+  .s7-credential-item {
+    padding: 5mm 0;
+    border-bottom: 0.3pt solid var(--frost);
+  }
+  .s7-credential-item:last-child { border-bottom: none; }
+  .s7-cred-number {
+    font-family: 'Alegreya', serif;
+    font-size: 18pt;
+    color: var(--moss);
+    line-height: 1;
+  }
+  .s7-cred-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: var(--pine);
+    letter-spacing: 0.05em;
+  }
+
+  /* ─────────────────────────────────────────────
+     S8 — CLOSE
+  ───────────────────────────────────────────── */
+  .s8 {
+    background: var(--snow);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 26mm 30mm;
+    position: relative;
+  }
+  .s8::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0.4pt;
+    background: linear-gradient(90deg, var(--moss), transparent 60%);
+  }
+  .s8::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 0.4pt;
+    background: linear-gradient(90deg, var(--moss), transparent 60%);
+  }
+  .s8-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--moss);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s8-brand {
+    font-family: 'Alegreya', serif;
+    font-size: 96pt;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--spruce);
+    line-height: 0.87;
+    letter-spacing: -0.04em;
+    margin-bottom: 8mm;
+  }
+  .s8-tagline {
+    font-family: 'Alegreya', serif;
+    font-size: 11pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--pine);
+    letter-spacing: 0.02em;
+    margin-bottom: 16mm;
+  }
+  .s8-rule {
+    width: 60mm;
+    height: 0.4pt;
+    background: var(--moss);
+    opacity: 0.5;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════════════ -->
+<div class="page s1">
+  <div class="s1-left">
+    <div class="s1-moss-rule"></div>
+    <div class="s1-ghost-word">Norr</div>
+    <div class="s1-eyebrow">Twelve Private Villas · Jubilee Hills</div>
+    <div class="s1-brand">Norr</div>
+    <div class="s1-tagline">The body knows what the mind forgets.</div>
+  </div>
+  <div class="s1-right">
+    <div class="s1-data-block">
+      <div class="s1-data-item">Type<br><span class="s1-data-value">Gated Villa Estate</span></div>
+      <div class="s1-data-item">Count<br><span class="s1-data-value">XII</span></div>
+      <div class="s1-data-item">Location<br><span class="s1-data-value">Jubilee Hills, HYD</span></div>
+    </div>
+    <div class="s1-concept-note">After Snøhetta and Six Senses: a residence oriented to the body's rhythms — light, air, cold water, morning sun — not to the image of wellness, but to its practice.</div>
+    <div class="s1-footer">
+      <div class="s1-footer-text">Brand Identity Presentation · Confidential</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 2 — THE REFERENCE / STORY
+══════════════════════════════════════════════════ -->
+<div class="page s2">
+  <div class="s2-left">
+    <div class="s2-year">2012</div>
+    <div class="s2-location-label">Norway · Scenic Routes · Six Senses</div>
+    <div class="s2-headline">Structures that point<br>toward the landscape,<br>never at themselves.</div>
+    <div class="s2-body">Between 2005 and 2015, Snøhetta built a series of small public pavilions along Norway's scenic coastal roads — rest stops, viewpoints, shelters. Each one is exactly as heavy as it needs to be. The wood is local. The concrete is raw. Every sightline is to the landscape, never back at the building itself. The Akkarvikodden rest stop (2012) has no signature gesture, no photogenic cantilever. It simply creates a condition for the body to stop, breathe, and notice where it is. Friluftsliv — the Norwegian concept of open-air life — holds that time in nature is not recreation. It is a biological necessity. These buildings are built on that belief.</div>
+  </div>
+  <div class="s2-right">
+    <div class="s2-principle-label">The Translation</div>
+    <div class="s2-principle">"Wellness is not an amenity. It is the architecture itself — the building's relationship to light, air, water, and the body's rhythms."</div>
+    <div class="s2-principle-body">Norr in Jubilee Hills does not replicate the Norwegian landscape. It takes Snøhetta's discipline — build only what is necessary, point every sightline outward, let the body orient itself — and applies it to a Hyderabad site with its own canopy, its own morning light, its own thermal logic. Six Senses adds the philosophy: that the wellness of a villa is determined entirely by how its spaces relate to the body across a full day, not by which amenities it lists.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 3 — ELEMENTS / WELLNESS PROTOCOLS
+══════════════════════════════════════════════════ -->
+<div class="page s3">
+  <div class="s3-top">
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">01</div>
+      <div class="s3-mat-name">The morning<br>light protocol</div>
+      <div class="s3-mat-desc">Each villa is oriented to receive direct morning light in the primary living space and pool deck. The glazing is studied per plot. The first hour after sunrise is the architecture's primary concern — not the façade as seen from the street, but the quality of light at 6:30am inside.</div>
+    </div>
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">02</div>
+      <div class="s3-mat-name">Raw concrete<br>and timber</div>
+      <div class="s3-mat-desc">Structural walls in off-form concrete — unhidden, uncoated. Horizontal surfaces in untreated timber. These are not materials chosen for luxury. They are chosen because the body responds to them differently than to polished stone or lacquered panels. They age. They warm. They are honest.</div>
+    </div>
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">03</div>
+      <div class="s3-mat-name">The cold<br>plunge</div>
+      <div class="s3-mat-desc">Each villa includes a cold plunge pool positioned adjacent to the main pool — fed from an independent chiller. The cold-to-warm sequence (plunge, rest, warm pool) is the physiological core of the Six Senses method. This is not a spa feature. It is the architecture's primary wellness argument.</div>
+    </div>
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">04</div>
+      <div class="s3-mat-name">Friluftsliv<br>threshold</div>
+      <div class="s3-mat-desc">The boundary between interior and garden is treated as a transition zone, not a door. A covered outdoor room — neither fully inside nor outside — runs the length of the living space. In Norwegian practice, this is where the body acclimatises. At Norr, it is where the day begins and ends.</div>
+    </div>
+  </div>
+  <div class="s3-bottom">
+    <div class="s3-principle-line">"The body already knows how to live well. The architecture's task is not to instruct — it is not to obstruct."</div>
+    <div class="s3-footnote">Every decision at Norr is tested against a single question: does this support the body's relationship to light, air, and water across a full day? If not, it is removed.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 4 — THE VILLAS
+══════════════════════════════════════════════════ -->
+<div class="page s4">
+  <div class="s4-top">
+    <div class="s4-headline">Twelve residences.<br>One estate.<br>No repetition.</div>
+    <div class="s4-count">
+      Private villas
+      <strong>XII</strong>
+      Total, across the estate.
+    </div>
+  </div>
+  <div class="s4-grid">
+    <div class="s4-cell">
+      <div class="s4-cell-label">Configuration</div>
+      <div class="s4-cell-value">Single-storey · Private gate · Each on own plot</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Water</div>
+      <div class="s4-cell-value">Warm pool + cold plunge per villa · Not shared</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Structure</div>
+      <div class="s4-cell-value">Off-form concrete · Untreated timber · No lacquer</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Orientation</div>
+      <div class="s4-cell-value">Morning sun in primary spaces. Studied per plot.</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Price Range</div>
+      <div class="s4-cell-value">Rs 13 – 20 Crore · By private appointment</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">The Threshold</div>
+      <div class="s4-cell-value">Covered friluftsliv terrace · Full-length · Faces canopy</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 5 — FEATURE / QUOTE
+══════════════════════════════════════════════════ -->
+<div class="page s5">
+  <div class="s5-left">
+    <div class="s5-wellness-label">The Philosophy</div>
+    <div class="s5-wellness-title">Six<br>Senses</div>
+    <div class="s5-wellness-body">Founded by Sonu Shivdasani on a single conviction: that genuine wellness cannot be added to a building after the fact. It must be the building's first principle. Norr is designed on this conviction — not as a resort, but as a private residence where the architecture itself does the work.</div>
+  </div>
+  <div class="s5-right">
+    <div class="s5-quote-mark">"</div>
+    <div class="s5-quote">Wellness is not an amenity. It is the architecture itself.</div>
+    <div class="s5-attribution">— Sonu Shivdasani, Founder, Six Senses Resorts</div>
+    <div class="s5-application">Norr's villas are oriented to the morning sun — primary living spaces face east, pool deck positioned to catch the first light. The pool sequence moves from cold plunge to warm main pool, following the body's thermal logic. The friluftsliv threshold is neither inside nor outside — the body decides, as it always has. There is no wellness programme at Norr. There is only architecture that gets out of the body's way.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 6 — LOCATION
+══════════════════════════════════════════════════ -->
+<div class="page s6">
+  <div class="s6-top">
+    <div>
+      <div class="s6-location-label">Prashashan Nagar · Jubilee Hills · Hyderabad</div>
+      <div class="s6-headline">Friluftsliv in an<br>Indian city. The canopy<br>grew in without instruction.</div>
+    </div>
+  </div>
+  <div class="s6-stats">
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">10'</div>
+      <div class="s6-stat-label">From HITEC City<br>by car</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">0</div>
+      <div class="s6-stat-label">Through traffic.<br>An act of environmental design.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">35+</div>
+      <div class="s6-stat-label">Year old canopy.<br>Pre-existing. Designed around.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">XII</div>
+      <div class="s6-stat-label">Villas behind<br>one gate. No more.</div>
+    </div>
+  </div>
+  <div class="s6-body">
+    Friluftsliv does not require Norway. It requires a canopy, the absence of through traffic, and enough quiet that the body can regulate itself without effort. Prashashan Nagar has all three. The trees here are thirty-five years old — they were not planted as a feature, they simply grew in over time. The street has no through traffic — in Hyderabad in 2026, this is not convenience, it is a kind of silence that cannot be manufactured. Norr is built inside that silence. The architecture treats the canopy as the primary amenity.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 7 — DEVELOPER
+══════════════════════════════════════════════════ -->
+<div class="page s7">
+  <div class="s7-bar"></div>
+  <div class="s7-content">
+    <div class="s7-dev-label">The Developer</div>
+    <div class="s7-dev-name">SSquare<br>Est. 1991</div>
+    <div class="s7-dev-body">Thirty-five years building the commercial infrastructure of a city that never stopped growing. Over ten million square feet of premium commercial real estate in Hyderabad — privately held, privately financed, delivered without announcement. SSquare has never needed to advertise its standard. Its buildings have always been the argument.<br><br>Norr is their first and only residential project. The same discipline that kept their commercial portfolio private and precise — no shortcuts, no catalogue decisions, every material chosen for a reason — applied, for the first time, to the place where twelve families will actually live.</div>
+  </div>
+  <div class="s7-right">
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">35</div>
+      <div class="s7-cred-label">Years in Hyderabad commercial real estate</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">10M+</div>
+      <div class="s7-cred-label">Sq ft delivered. Premium commercial.</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">01</div>
+      <div class="s7-cred-label">Residential project. This is it. It will be their only one.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 8 — CLOSE
+══════════════════════════════════════════════════ -->
+<div class="page s8">
+  <div class="s8-label">Twelve Private Villas · Jubilee Hills · By SSquare</div>
+  <div class="s8-brand">Norr</div>
+  <div class="s8-tagline">The body knows what the mind forgets.</div>
+  <div class="s8-rule"></div>
+</div>
+
+</body>
+</html>

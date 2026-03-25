@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zénith — The Pinnacle Is Not a Place. It Is a Practice.</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;0,6..96,500;1,6..96,300;1,6..96,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #0A0F2C;
+    --champagne:  #C8A96E;
+    --ivory:      #F0ECE4;
+    --deep-navy:  #1C2244;
+    --periwinkle: #9DA4C8;
+    --blanc:      #FAFAF8;
+    --gilt:       #A88940;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A3 landscape; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; }
+  }
+
+  body { font-family: 'Jost', sans-serif; background: #b8b4ae; }
+
+  .page {
+    width: 420mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    page-break-after: always;
+  }
+
+  /* ─────────────────────────────────────────────
+     S1 — COVER
+     Beaux-Arts. Formal. Symmetric. Ceremonial.
+  ───────────────────────────────────────────── */
+  .s1 {
+    background: var(--navy);
+    flex-direction: column;
+  }
+  .s1-grid {
+    display: grid;
+    grid-template-columns: 20mm 1fr 1fr 1fr 20mm;
+    grid-template-rows: 20mm 1fr 1fr 20mm;
+    width: 100%;
+    height: 100%;
+  }
+  /* Left margin column accent */
+  .s1-margin-left {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    border-right: 0.3pt solid rgba(200, 169, 110, 0.18);
+  }
+  /* Right margin column accent */
+  .s1-margin-right {
+    grid-column: 5;
+    grid-row: 1 / -1;
+    border-left: 0.3pt solid rgba(200, 169, 110, 0.18);
+  }
+  /* Data panel — left side */
+  .s1-data {
+    grid-column: 2;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 8mm 20mm 16mm;
+    border-right: 0.3pt solid rgba(200, 169, 110, 0.14);
+  }
+  .s1-data-item {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(200, 169, 110, 0.55);
+    letter-spacing: 0.14em;
+    line-height: 2;
+  }
+  .s1-data-value {
+    font-size: 7pt;
+    color: var(--champagne);
+    font-weight: 400;
+  }
+  /* Main hero — centre-right */
+  .s1-main {
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20mm 16mm 12mm;
+    position: relative;
+  }
+  /* Horizontal hairline rule above brand */
+  .s1-rule-top {
+    width: 100%;
+    height: 0.4pt;
+    background: linear-gradient(90deg, var(--champagne) 0%, rgba(200, 169, 110, 0.08) 100%);
+    margin-bottom: 10mm;
+  }
+  .s1-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--champagne);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s1-brand {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 104pt;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--blanc);
+    line-height: 0.85;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 9mm;
+  }
+  /* Horizontal hairline rule below brand */
+  .s1-rule-bottom {
+    width: 100%;
+    height: 0.4pt;
+    background: linear-gradient(90deg, var(--champagne) 0%, rgba(200, 169, 110, 0.08) 100%);
+    margin-bottom: 9mm;
+  }
+  .s1-tagline {
+    font-family: 'Jost', sans-serif;
+    font-size: 10pt;
+    font-weight: 200;
+    color: rgba(157, 164, 200, 0.75);
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+  }
+  /* Top header band */
+  .s1-header {
+    grid-column: 2 / 5;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 16mm;
+    border-bottom: 0.3pt solid rgba(200, 169, 110, 0.1);
+  }
+  .s1-header-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(200, 169, 110, 0.4);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+  }
+  /* Footer band */
+  .s1-footer {
+    grid-column: 2 / 5;
+    grid-row: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16mm;
+    border-top: 0.3pt solid rgba(200, 169, 110, 0.1);
+  }
+  .s1-footer-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(157, 164, 200, 0.45);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+  .s1-footer-mark {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 9pt;
+    font-weight: 300;
+    color: rgba(200, 169, 110, 0.3);
+    letter-spacing: 0.3em;
+  }
+
+  /* ─────────────────────────────────────────────
+     S2 — THE REFERENCE
+     The St. Regis New York, 1904
+  ───────────────────────────────────────────── */
+  .s2 {
+    background: var(--ivory);
+    flex-direction: row;
+  }
+  .s2-left {
+    width: 46%;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 18mm 24mm 24mm;
+    position: relative;
+  }
+  /* Champagne gradient border on right edge */
+  .s2-left::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 0.8pt;
+    background: linear-gradient(180deg, transparent, var(--champagne) 35%, var(--champagne) 65%, transparent);
+    opacity: 0.5;
+  }
+  .s2-year {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 72pt;
+    font-weight: 300;
+    color: rgba(200, 169, 110, 0.08);
+    line-height: 1;
+    position: absolute;
+    bottom: 20mm;
+    right: 18mm;
+    letter-spacing: 0.04em;
+  }
+  .s2-location-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--champagne);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s2-headline {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 28pt;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--blanc);
+    line-height: 1.15;
+    margin-bottom: 9mm;
+  }
+  .s2-body {
+    font-family: 'Jost', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: rgba(157, 164, 200, 0.8);
+    line-height: 1.85;
+  }
+  .s2-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 26mm 24mm 22mm;
+  }
+  .s2-principle-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: rgba(168, 137, 64, 0.7);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s2-principle {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 18pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.4;
+    margin-bottom: 9mm;
+  }
+  .s2-principle-body {
+    font-family: 'Jost', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: #3A3D5A;
+    line-height: 1.9;
+    border-left: 0.4pt solid var(--champagne);
+    padding-left: 6mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S3 — THE ELEMENTS
+     Formal menu with roman numerals
+  ───────────────────────────────────────────── */
+  .s3 {
+    background: var(--blanc);
+    flex-direction: column;
+    padding: 0;
+  }
+  /* Thin champagne rule at very top */
+  .s3-top-rule {
+    width: 100%;
+    height: 0.5pt;
+    background: linear-gradient(90deg, transparent 0%, var(--champagne) 20%, var(--champagne) 80%, transparent 100%);
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+  .s3-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8mm 24mm 7mm;
+    border-bottom: 0.3pt solid rgba(10, 15, 44, 0.1);
+    flex-shrink: 0;
+  }
+  .s3-header-title {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 11pt;
+    font-weight: 400;
+    color: var(--navy);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .s3-header-sub {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(200, 169, 110, 0.8);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+  }
+  .s3-menu {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 0.3pt solid rgba(10, 15, 44, 0.1);
+  }
+  .s3-menu-cell {
+    padding: 14mm 12mm 10mm 14mm;
+    border-right: 0.3pt solid rgba(10, 15, 44, 0.08);
+    position: relative;
+  }
+  .s3-menu-cell:last-child { border-right: none; }
+  /* Hairline accent at top of each cell */
+  .s3-menu-cell::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 14mm; right: 12mm;
+    height: 0.3pt;
+    background: var(--champagne);
+    opacity: 0.35;
+  }
+  .s3-numeral {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 9pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--champagne);
+    margin-bottom: 6mm;
+    letter-spacing: 0.1em;
+  }
+  .s3-element-name {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 15pt;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 5mm;
+  }
+  .s3-element-desc {
+    font-family: 'Jost', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: #3A3D5A;
+    line-height: 1.75;
+  }
+  .s3-footer {
+    padding: 7mm 24mm;
+    display: flex;
+    align-items: center;
+    gap: 16mm;
+    flex-shrink: 0;
+  }
+  .s3-footer-rule {
+    width: 24mm;
+    height: 0.4pt;
+    background: var(--champagne);
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+  .s3-footer-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(10, 15, 44, 0.55);
+    flex: 1;
+    line-height: 1.5;
+  }
+
+  /* ─────────────────────────────────────────────
+     S4 — THE VILLAS
+  ───────────────────────────────────────────── */
+  .s4 {
+    background: var(--deep-navy);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 26mm;
+    position: relative;
+  }
+  /* Top champagne hairline */
+  .s4::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0.5pt;
+    background: var(--champagne);
+    opacity: 0.55;
+  }
+  /* Bottom champagne hairline */
+  .s4::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 0.5pt;
+    background: var(--champagne);
+    opacity: 0.25;
+  }
+  .s4-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .s4-headline {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 40pt;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--blanc);
+    line-height: 0.92;
+    letter-spacing: 0.01em;
+    max-width: 170mm;
+  }
+  .s4-count {
+    font-family: 'Jost', sans-serif;
+    font-size: 6.5pt;
+    font-weight: 300;
+    letter-spacing: 0.32em;
+    color: var(--champagne);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .s4-count strong {
+    display: block;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 42pt;
+    font-weight: 400;
+    color: var(--blanc);
+    letter-spacing: 0.04em;
+    line-height: 1;
+    margin-top: 2mm;
+  }
+  .s4-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 0.3pt solid rgba(200, 169, 110, 0.22);
+    border-left: 0.3pt solid rgba(200, 169, 110, 0.22);
+  }
+  .s4-cell {
+    padding: 6mm 9mm;
+    border-right: 0.3pt solid rgba(200, 169, 110, 0.22);
+    border-bottom: 0.3pt solid rgba(200, 169, 110, 0.22);
+  }
+  .s4-cell-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.32em;
+    color: var(--champagne);
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+  }
+  .s4-cell-value {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 11pt;
+    font-weight: 400;
+    color: var(--blanc);
+    line-height: 1.3;
+  }
+
+  /* ─────────────────────────────────────────────
+     S5 — THE STANDARD
+     Navy accent panel + quote
+  ───────────────────────────────────────────── */
+  .s5 {
+    background: var(--ivory);
+    flex-direction: row;
+  }
+  .s5-left {
+    width: 36%;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22mm 16mm 22mm 22mm;
+    position: relative;
+  }
+  /* Champagne vertical accent */
+  .s5-left::before {
+    content: '';
+    position: absolute;
+    top: 22mm; bottom: 22mm; right: 0;
+    width: 0.5pt;
+    background: linear-gradient(180deg, transparent, var(--champagne) 30%, var(--champagne) 70%, transparent);
+    opacity: 0.55;
+  }
+  .s5-panel-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: rgba(200, 169, 110, 0.6);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s5-panel-title {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 30pt;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--blanc);
+    line-height: 1.0;
+    margin-bottom: 8mm;
+  }
+  .s5-panel-rule {
+    width: 20mm;
+    height: 0.4pt;
+    background: var(--champagne);
+    opacity: 0.6;
+    margin-bottom: 7mm;
+  }
+  .s5-panel-body {
+    font-family: 'Jost', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: rgba(157, 164, 200, 0.75);
+    line-height: 1.85;
+  }
+  .s5-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 26mm 22mm 20mm;
+  }
+  .s5-quote-mark {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 56pt;
+    color: rgba(200, 169, 110, 0.22);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s5-quote {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 16pt;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.5;
+    margin-bottom: 9mm;
+  }
+  .s5-attribution {
+    font-family: 'Jost', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(168, 137, 64, 0.8);
+    letter-spacing: 0.12em;
+    line-height: 1.7;
+  }
+  .s5-sub-body {
+    font-family: 'Jost', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: #3A3D5A;
+    line-height: 1.85;
+    margin-top: 8mm;
+    border-top: 0.3pt solid rgba(200, 169, 110, 0.3);
+    padding-top: 7mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S6 — JUBILEE HILLS
+     Fifth Avenue of Hyderabad
+  ───────────────────────────────────────────── */
+  .s6 {
+    background: var(--navy);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24mm 26mm 22mm;
+  }
+  .s6-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .s6-location-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--champagne);
+    text-transform: uppercase;
+  }
+  .s6-headline {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 33pt;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--blanc);
+    line-height: 1.08;
+    max-width: 200mm;
+    margin-top: 7mm;
+  }
+  .s6-stats {
+    display: flex;
+    gap: 22mm;
+    padding-top: 10mm;
+    border-top: 0.3pt solid rgba(200, 169, 110, 0.2);
+  }
+  .s6-stat-value {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 26pt;
+    font-weight: 400;
+    color: var(--champagne);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s6-stat-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(157, 164, 200, 0.65);
+    letter-spacing: 0.12em;
+    line-height: 1.55;
+  }
+  .s6-body {
+    font-family: 'Jost', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(157, 164, 200, 0.75);
+    line-height: 1.85;
+    max-width: 240mm;
+    column-count: 2;
+    column-gap: 14mm;
+    column-rule: 0.3pt solid rgba(200, 169, 110, 0.14);
+  }
+
+  /* ─────────────────────────────────────────────
+     S7 — DEVELOPER
+  ───────────────────────────────────────────── */
+  .s7 {
+    background: var(--ivory);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s7-bar {
+    width: 10mm;
+    background: var(--champagne);
+    flex-shrink: 0;
+    position: relative;
+  }
+  /* Gilt shade on the bar */
+  .s7-bar::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 1.5mm;
+    background: linear-gradient(90deg, transparent, var(--gilt));
+    opacity: 0.4;
+  }
+  .s7-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 26mm 24mm 26mm 22mm;
+  }
+  .s7-dev-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: rgba(168, 137, 64, 0.7);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-name {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 30pt;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.05;
+    margin-bottom: 7mm;
+  }
+  .s7-dev-rule {
+    width: 28mm;
+    height: 0.4pt;
+    background: var(--champagne);
+    margin-bottom: 7mm;
+  }
+  .s7-dev-body {
+    font-family: 'Jost', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: #3A3D5A;
+    line-height: 1.8;
+    max-width: 185mm;
+  }
+  .s7-right {
+    width: 115mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 26mm 24mm 26mm 18mm;
+    border-left: 0.3pt solid rgba(200, 169, 110, 0.3);
+  }
+  .s7-credential-item {
+    padding: 5mm 0;
+    border-bottom: 0.3pt solid rgba(200, 169, 110, 0.22);
+  }
+  .s7-credential-item:last-child { border-bottom: none; }
+  .s7-cred-number {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 19pt;
+    font-weight: 400;
+    color: var(--champagne);
+    line-height: 1;
+  }
+  .s7-cred-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: #3A3D5A;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+
+  /* ─────────────────────────────────────────────
+     S8 — CLOSE
+  ───────────────────────────────────────────── */
+  .s8 {
+    background: var(--navy);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 26mm 30mm;
+    position: relative;
+  }
+  /* Hairline rule at very top */
+  .s8::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0.5pt;
+    background: linear-gradient(90deg, var(--champagne) 0%, transparent 70%);
+    opacity: 0.6;
+  }
+  /* Hairline rule at bottom */
+  .s8::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1mm;
+    background: linear-gradient(90deg, var(--champagne) 0%, transparent 65%);
+    opacity: 0.4;
+  }
+  .s8-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--champagne);
+    text-transform: uppercase;
+    margin-bottom: 9mm;
+  }
+  .s8-brand {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 96pt;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--blanc);
+    line-height: 0.85;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 9mm;
+  }
+  .s8-rule {
+    width: 70mm;
+    height: 0.4pt;
+    background: var(--champagne);
+    opacity: 0.55;
+    margin-bottom: 9mm;
+  }
+  .s8-tagline {
+    font-family: 'Jost', sans-serif;
+    font-size: 11pt;
+    font-weight: 200;
+    color: rgba(157, 164, 200, 0.7);
+    letter-spacing: 0.1em;
+    margin-bottom: 18mm;
+  }
+  .s8-footer {
+    font-family: 'Jost', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(200, 169, 110, 0.35);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════════════ -->
+<div class="page s1">
+  <div class="s1-grid">
+    <div class="s1-margin-left"></div>
+    <div class="s1-header">
+      <div class="s1-header-text">Brand Identity Presentation · Virāma by SSquare · Confidential</div>
+    </div>
+    <div class="s1-data">
+      <div class="s1-data-item">Type<br><span class="s1-data-value">Gated Villa Estate</span></div>
+      <div class="s1-data-item">Count<br><span class="s1-data-value">XII</span></div>
+      <div class="s1-data-item">Location<br><span class="s1-data-value">Jubilee Hills, HYD</span></div>
+      <div class="s1-data-item">Price<br><span class="s1-data-value">₹ 13 – 20 Cr</span></div>
+    </div>
+    <div class="s1-main">
+      <div class="s1-rule-top"></div>
+      <div class="s1-eyebrow">Twelve Private Villas · Jubilee Hills</div>
+      <div class="s1-brand">Zénith</div>
+      <div class="s1-rule-bottom"></div>
+      <div class="s1-tagline">The pinnacle is not a place. It is a practice.</div>
+    </div>
+    <div class="s1-footer">
+      <div class="s1-footer-text">By SSquare · Est. 1991</div>
+      <div class="s1-footer-mark">✦</div>
+    </div>
+    <div class="s1-margin-right"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 2 — THE REFERENCE
+══════════════════════════════════════════════════ -->
+<div class="page s2">
+  <div class="s2-left">
+    <div class="s2-year">1904</div>
+    <div class="s2-location-label">Fifth Avenue · New York City</div>
+    <div class="s2-headline">The hotel that became<br>a standard.</div>
+    <div class="s2-body">In 1904, John Jacob Astor IV — the wealthiest man aboard the Titanic — commissioned Trowbridge &amp; Livingston to build the tallest, most luxurious hotel in the world on Fifth Avenue. He introduced afternoon tea, the in-room telephone, and the personal hotel butler. When he died in 1912, the hotel did not change. It simply continued — because he had built it to outlast him.<br><br>The St. Regis champagne sabering began at 11am on opening day in 1904 and has occurred every single day in every property worldwide since. Not as a marketing gesture. As a rite. The Beaux-Arts facade does not seek attention. It simply exists, formally, at the address that no longer needs to explain itself.</div>
+  </div>
+  <div class="s2-right">
+    <div class="s2-principle-label">The Translation</div>
+    <div class="s2-principle">"Luxury is not what is provided. It is what is assumed — without asking."</div>
+    <div class="s2-principle-body">Zénith in Jubilee Hills does not reproduce the St. Regis. It applies its founding logic to residential architecture: that the highest standard is one built without expiry date. The butler standard exists because J.J. Astor believed the guest should never need to think about what they need. Zénith's resident should never need to think about where they live. The address answers that question permanently.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 3 — THE ELEMENTS
+══════════════════════════════════════════════════ -->
+<div class="page s3">
+  <div class="s3-top-rule"></div>
+  <div class="s3-header">
+    <div class="s3-header-title">The Zénith Standard</div>
+    <div class="s3-header-sub">Four Defining Elements</div>
+  </div>
+  <div class="s3-menu">
+    <div class="s3-menu-cell">
+      <div class="s3-numeral">I.</div>
+      <div class="s3-element-name">The Butler<br>Standard</div>
+      <div class="s3-element-desc">Astor introduced the hotel butler because he believed every guest deserved someone who anticipated needs before they were spoken. Zénith carries this into private residency: concierge-grade estate management, invisible until required. The household does not interrupt you to ask if you need it. It simply functions.</div>
+    </div>
+    <div class="s3-menu-cell">
+      <div class="s3-numeral">II.</div>
+      <div class="s3-element-name">Champagne<br>Dawn</div>
+      <div class="s3-element-desc">Every morning at the St. Regis, the champagne is sabered at 11am. The ritual is not about the champagne. It is about the rite — the daily reaffirmation that the standard holds. Zénith's architecture is designed for mornings: east-facing primary volumes, a threshold sequence that begins the day with ceremony, light entering the foyer on axis.</div>
+    </div>
+    <div class="s3-menu-cell">
+      <div class="s3-numeral">III.</div>
+      <div class="s3-element-name">Beaux-Arts<br>Threshold</div>
+      <div class="s3-element-desc">The Beaux-Arts entrance is not decorated. It is proportioned. The column, the arch, the plinth — each element in a calculated ratio to the human body entering it. Zénith's arrival sequence borrows this grammar: the gate, the motor court, the entry facade — a formal procession that makes the act of arriving a considered event, not a side effect of parking.</div>
+    </div>
+    <div class="s3-menu-cell">
+      <div class="s3-numeral">IV.</div>
+      <div class="s3-element-name">The Permanent<br>Guest</div>
+      <div class="s3-element-desc">The St. Regis was built for a resident class, not a transient one. The permanent suite concept — where a family's tastes, habits, and preferences were maintained across decades — was Astor's residential ideal expressed in hospitality form. Zénith inverts this: it is the residence that maintains the permanent-guest quality. The villa adapts. The standard does not.</div>
+    </div>
+  </div>
+  <div class="s3-footer">
+    <div class="s3-footer-rule"></div>
+    <div class="s3-footer-text">Each element of the Zénith identity is drawn from the St. Regis founding charter — not its aesthetics, but its operational and architectural philosophy. A building should take its resident seriously.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 4 — THE VILLAS
+══════════════════════════════════════════════════ -->
+<div class="page s4">
+  <div class="s4-top">
+    <div class="s4-headline">Twelve residences.<br>One estate.<br>One standard.</div>
+    <div class="s4-count">
+      Private Villas
+      <strong>XII</strong>
+      By private appointment.
+    </div>
+  </div>
+  <div class="s4-grid">
+    <div class="s4-cell">
+      <div class="s4-cell-label">Configuration</div>
+      <div class="s4-cell-value">Single-storey · Individual gate · Own plot</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Private Pool</div>
+      <div class="s4-cell-value">Each villa · Not shared · Full privacy</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Architecture</div>
+      <div class="s4-cell-value">Formal arrival sequence · Beaux-Arts proportion</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Estate</div>
+      <div class="s4-cell-value">Gated compound · 12 villas, single enclosure</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Price Range</div>
+      <div class="s4-cell-value">Rs 13 – 20 Crore · By appointment only</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Estate Management</div>
+      <div class="s4-cell-value">Concierge-standard operations · Permanent staff</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 5 — THE STANDARD
+══════════════════════════════════════════════════ -->
+<div class="page s5">
+  <div class="s5-left">
+    <div class="s5-panel-label">The Permanence of Intent</div>
+    <div class="s5-panel-title">Built to<br>outlast<br>its builder.</div>
+    <div class="s5-panel-rule"></div>
+    <div class="s5-panel-body">Astor commissioned his hotel knowing he would not live to see it reach its full measure. He built it anyway — to the fullest standard, with no concession for what was fashionable, only for what was correct. Zénith carries this intent into residential architecture: every detail is placed for the next thirty years, not the next photograph.</div>
+  </div>
+  <div class="s5-right">
+    <div class="s5-quote-mark">"</div>
+    <div class="s5-quote">Mr. Astor did not build a hotel.<br>He built a standard.</div>
+    <div class="s5-attribution">— On the founding of The St. Regis, Fifth Avenue, 1904</div>
+    <div class="s5-sub-body">Zénith applies the same permanence of intent to residential architecture in Jubilee Hills. The Beaux-Arts tradition was not a style — it was a commitment to proportion, symmetry, and the weight of materials chosen to last. Where other luxury developments in Hyderabad are built for the market cycle, Zénith is built for the generation that will occupy it. The twelve residences are not units. They are declarations. The estate does not grow old. It settles in.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 6 — JUBILEE HILLS
+══════════════════════════════════════════════════ -->
+<div class="page s6">
+  <div class="s6-top">
+    <div>
+      <div class="s6-location-label">Prashashan Nagar · Jubilee Hills · Hyderabad</div>
+      <div class="s6-headline">The address that no longer<br>needs to explain itself.</div>
+    </div>
+  </div>
+  <div class="s6-stats">
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">10'</div>
+      <div class="s6-stat-label">From HITEC City<br>by car</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">0</div>
+      <div class="s6-stat-label">Through traffic.<br>The neighbourhood permits none.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">35+</div>
+      <div class="s6-stat-label">Year old canopy.<br>Cannot be purchased or recreated.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">XII</div>
+      <div class="s6-stat-label">Residences.<br>No further development planned.</div>
+    </div>
+  </div>
+  <div class="s6-body">
+    Jubilee Hills and Fifth Avenue are separated by culture, climate, and a century — but they share the same quality: people stopped explaining them. Prashashan Nagar is what Jubilee Hills became when enough decades had passed that the address required no qualifier. The canopy arrived on its own schedule. The families who have lived here since the 1970s and 80s stopped announcing the postcode years ago.<br><br>Zénith is not placed here for its proximity to HITEC City, though that proximity is real and useful. It is placed here because Prashashan Nagar is the only part of Hyderabad that has what Fifth Avenue had in 1904: an address that answers the question before it is asked. The twelve families who will live at Zénith will live at the only address in the city that does not need to try.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 7 — DEVELOPER
+══════════════════════════════════════════════════ -->
+<div class="page s7">
+  <div class="s7-bar"></div>
+  <div class="s7-content">
+    <div class="s7-dev-label">The Developer</div>
+    <div class="s7-dev-name">SSquare<br>Est. 1991</div>
+    <div class="s7-dev-rule"></div>
+    <div class="s7-dev-body">Thirty-five years building the commercial infrastructure of a city that never stopped growing. Over ten million square feet of premium commercial real estate in Hyderabad — privately held, privately financed, delivered without announcement. SSquare has never needed to advertise its standard. Its buildings have always been the argument.<br><br>Zénith is their first and only residential project. The same discipline that built a commercial portfolio worth ten million square feet — applied, for the first time, to twelve private homes. This is not a developer entering the residential market. This is a developer making a single, considered statement. The twelve families who will live at Zénith will live in a building that SSquare built for keeps.</div>
+  </div>
+  <div class="s7-right">
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">35</div>
+      <div class="s7-cred-label">Years in Hyderabad commercial real estate</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">10M+</div>
+      <div class="s7-cred-label">Sq ft delivered. Premium commercial.</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">01</div>
+      <div class="s7-cred-label">Residential project. This is it. The only one.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 8 — CLOSE
+══════════════════════════════════════════════════ -->
+<div class="page s8">
+  <div class="s8-label">Twelve Private Villas · Jubilee Hills · By SSquare</div>
+  <div class="s8-brand">Zénith</div>
+  <div class="s8-rule"></div>
+  <div class="s8-tagline">The pinnacle is not a place. It is a practice.</div>
+  <div class="s8-footer">Brand Identity Presentation · Virāma by SSquare · Confidential</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palomar — Colour is the first architecture.</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cabin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --magenta:   #C5355A;
+    --volcanic:  #1A1A1A;
+    --adobe:     #F0E8D8;
+    --rose:      #8C2040;
+    --gold:      #E0C08A;
+    --plaster:   #FAF8F4;
+    --earth:     #5A3A20;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A3 landscape; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; }
+  }
+
+  body { font-family: 'Cabin', sans-serif; background: #2a1a20; }
+
+  .page {
+    width: 420mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    page-break-after: always;
+  }
+
+  /* ─────────────────────────────────────────────
+     S1 — COVER
+     Half magenta / half volcanic. Barragán colour block.
+  ───────────────────────────────────────────── */
+  .s1 {
+    flex-direction: row;
+  }
+  .s1-magenta-half {
+    width: 52%;
+    background: var(--magenta);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22mm 18mm 22mm 22mm;
+    position: relative;
+  }
+  .s1-magenta-half::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 1mm;
+    background: linear-gradient(180deg, transparent, rgba(250,248,244,0.18) 40%, rgba(250,248,244,0.18) 60%, transparent);
+  }
+  .s1-ghost-year {
+    position: absolute;
+    top: 16mm;
+    left: 22mm;
+    font-family: 'Lora', serif;
+    font-size: 120pt;
+    font-weight: 400;
+    color: rgba(139,32,64,0.25);
+    line-height: 1;
+    letter-spacing: -0.06em;
+    pointer-events: none;
+  }
+  .s1-eyebrow {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 500;
+    letter-spacing: 0.42em;
+    color: rgba(250,248,244,0.65);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s1-brand {
+    font-family: 'Lora', serif;
+    font-size: 100pt;
+    font-weight: 500;
+    color: var(--plaster);
+    line-height: 0.88;
+    letter-spacing: -0.04em;
+    margin-bottom: 8mm;
+  }
+  .s1-tagline {
+    font-family: 'Lora', serif;
+    font-size: 11pt;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(250,248,244,0.75);
+    letter-spacing: 0.02em;
+    line-height: 1.55;
+  }
+  .s1-dark-half {
+    flex: 1;
+    background: var(--volcanic);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 22mm 22mm 18mm;
+  }
+  .s1-data-block {
+    display: flex;
+    flex-direction: column;
+    gap: 5mm;
+  }
+  .s1-data-item {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    color: rgba(224,192,138,0.55);
+    letter-spacing: 0.2em;
+    line-height: 2;
+    text-transform: uppercase;
+  }
+  .s1-data-value {
+    font-size: 7pt;
+    color: var(--gold);
+    font-weight: 500;
+    display: block;
+  }
+  .s1-manifesto {
+    font-family: 'Lora', serif;
+    font-size: 9pt;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(240,232,216,0.45);
+    line-height: 1.9;
+    max-width: 100mm;
+    border-left: 0.5pt solid rgba(197,53,90,0.4);
+    padding-left: 5mm;
+  }
+  .s1-footer {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 11mm;
+    border-top: 0.3pt solid rgba(197,53,90,0.2);
+    display: flex;
+    align-items: center;
+    padding: 0 22mm;
+    background: var(--volcanic);
+  }
+  .s1-footer-text {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    color: rgba(142,140,134,0.5);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  /* ─────────────────────────────────────────────
+     S2 — THE REFERENCE / STORY
+     Barragán: Casa Barragán + Gilardi House
+  ───────────────────────────────────────────── */
+  .s2 {
+    background: var(--adobe);
+    flex-direction: row;
+  }
+  .s2-left {
+    width: 44%;
+    background: var(--volcanic);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 16mm 22mm 22mm;
+    position: relative;
+  }
+  .s2-left::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 1mm;
+    background: linear-gradient(180deg, transparent, var(--magenta) 35%, var(--magenta) 65%, transparent);
+    opacity: 0.45;
+  }
+  .s2-year {
+    font-family: 'Lora', serif;
+    font-size: 60pt;
+    font-weight: 400;
+    color: rgba(197,53,90,0.12);
+    line-height: 1;
+    position: absolute;
+    bottom: 18mm;
+    right: 14mm;
+    letter-spacing: -0.04em;
+  }
+  .s2-location-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    color: var(--magenta);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s2-headline {
+    font-family: 'Lora', serif;
+    font-size: 28pt;
+    font-weight: 500;
+    color: var(--plaster);
+    line-height: 1.12;
+    margin-bottom: 8mm;
+  }
+  .s2-body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 400;
+    color: rgba(240,232,216,0.65);
+    line-height: 1.85;
+  }
+  .s2-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 24mm 22mm 20mm;
+  }
+  .s2-principle-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    color: var(--earth);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s2-principle {
+    font-family: 'Lora', serif;
+    font-size: 18pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--volcanic);
+    line-height: 1.38;
+    margin-bottom: 8mm;
+  }
+  .s2-principle-body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 400;
+    color: var(--earth);
+    line-height: 1.85;
+    border-left: 0.3pt solid var(--magenta);
+    padding-left: 6mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S3 — ELEMENTS / MATERIALS
+     Each cell its own background colour. Barragán palette.
+  ───────────────────────────────────────────── */
+  .s3 {
+    flex-direction: column;
+    padding: 0;
+  }
+  .s3-top {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: none;
+  }
+  .s3-material-cell {
+    padding: 16mm 10mm 10mm 12mm;
+    position: relative;
+  }
+  .s3-cell-1 { background: var(--magenta); }
+  .s3-cell-2 { background: var(--volcanic); }
+  .s3-cell-3 { background: #0E0E0E; }
+  .s3-cell-4 { background: var(--earth); }
+
+  .s3-mat-number {
+    font-family: 'Lora', serif;
+    font-size: 11pt;
+    margin-bottom: 5mm;
+    line-height: 1;
+  }
+  .s3-cell-1 .s3-mat-number { color: rgba(250,248,244,0.5); }
+  .s3-cell-2 .s3-mat-number { color: rgba(197,53,90,0.6); }
+  .s3-cell-3 .s3-mat-number { color: rgba(224,192,138,0.5); }
+  .s3-cell-4 .s3-mat-number { color: rgba(250,248,244,0.4); }
+
+  .s3-mat-name {
+    font-family: 'Lora', serif;
+    font-size: 15pt;
+    font-weight: 500;
+    line-height: 1.12;
+    margin-bottom: 4mm;
+  }
+  .s3-cell-1 .s3-mat-name { color: var(--plaster); }
+  .s3-cell-2 .s3-mat-name { color: var(--gold); }
+  .s3-cell-3 .s3-mat-name { color: var(--plaster); }
+  .s3-cell-4 .s3-mat-name { color: var(--adobe); }
+
+  .s3-mat-desc {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 400;
+    line-height: 1.72;
+  }
+  .s3-cell-1 .s3-mat-desc { color: rgba(250,248,244,0.72); }
+  .s3-cell-2 .s3-mat-desc { color: rgba(224,192,138,0.65); }
+  .s3-cell-3 .s3-mat-desc { color: rgba(240,232,216,0.6); }
+  .s3-cell-4 .s3-mat-desc { color: rgba(240,232,216,0.68); }
+
+  .s3-bottom {
+    padding: 7mm 22mm;
+    background: var(--plaster);
+    display: flex;
+    align-items: center;
+    gap: 14mm;
+    border-top: 0.3pt solid rgba(197,53,90,0.18);
+  }
+  .s3-principle-line {
+    font-family: 'Lora', serif;
+    font-size: 12pt;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--volcanic);
+    flex: 1;
+    line-height: 1.45;
+  }
+  .s3-footnote {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7pt;
+    font-weight: 400;
+    color: rgba(90,58,32,0.65);
+    width: 80mm;
+    line-height: 1.65;
+  }
+
+  /* ─────────────────────────────────────────────
+     S4 — THE VILLAS
+  ───────────────────────────────────────────── */
+  .s4 {
+    background: var(--volcanic);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20mm 24mm;
+    position: relative;
+  }
+  .s4::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0.5pt;
+    background: var(--magenta);
+    opacity: 0.7;
+  }
+  .s4-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .s4-headline {
+    font-family: 'Lora', serif;
+    font-size: 40pt;
+    font-weight: 500;
+    color: var(--plaster);
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    max-width: 160mm;
+  }
+  .s4-count {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7pt;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: var(--magenta);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .s4-count strong {
+    display: block;
+    font-family: 'Lora', serif;
+    font-size: 40pt;
+    font-weight: 400;
+    color: var(--plaster);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-top: 2mm;
+  }
+  .s4-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 0.3pt solid rgba(197,53,90,0.25);
+    border-left: 0.3pt solid rgba(197,53,90,0.25);
+  }
+  .s4-cell {
+    padding: 6mm 8mm;
+    border-right: 0.3pt solid rgba(197,53,90,0.25);
+    border-bottom: 0.3pt solid rgba(197,53,90,0.25);
+  }
+  .s4-cell-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    color: var(--magenta);
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+  }
+  .s4-cell-value {
+    font-family: 'Lora', serif;
+    font-size: 10.5pt;
+    color: var(--adobe);
+    line-height: 1.35;
+  }
+
+  /* ─────────────────────────────────────────────
+     S5 — FEATURE / QUOTE
+     Full magenta background. Mysticism. Manifesto.
+  ───────────────────────────────────────────── */
+  .s5 {
+    background: var(--magenta);
+    flex-direction: row;
+  }
+  .s5-left {
+    width: 38%;
+    background: var(--rose);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20mm 14mm 20mm 22mm;
+    position: relative;
+  }
+  .s5-left::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 1mm;
+    background: linear-gradient(180deg, transparent, rgba(250,248,244,0.22) 40%, rgba(250,248,244,0.22) 60%, transparent);
+  }
+  .s5-arch-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 500;
+    letter-spacing: 0.44em;
+    color: rgba(250,248,244,0.55);
+    text-transform: uppercase;
+    margin-bottom: 5mm;
+  }
+  .s5-arch-name {
+    font-family: 'Lora', serif;
+    font-size: 28pt;
+    font-weight: 500;
+    color: var(--plaster);
+    line-height: 1;
+    margin-bottom: 6mm;
+  }
+  .s5-arch-body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 8pt;
+    font-weight: 400;
+    color: rgba(250,248,244,0.7);
+    line-height: 1.82;
+  }
+  .s5-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 26mm 22mm 20mm;
+  }
+  .s5-quote-mark {
+    font-family: 'Lora', serif;
+    font-size: 72pt;
+    color: rgba(139,32,64,0.5);
+    line-height: 1;
+    margin-bottom: 0;
+    line-height: 0.8;
+  }
+  .s5-quote {
+    font-family: 'Lora', serif;
+    font-size: 18pt;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--plaster);
+    line-height: 1.48;
+    margin-bottom: 8mm;
+  }
+  .s5-attribution {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7pt;
+    font-weight: 400;
+    color: rgba(250,248,244,0.6);
+    letter-spacing: 0.12em;
+    margin-bottom: 8mm;
+  }
+  .s5-application {
+    font-family: 'Cabin', sans-serif;
+    font-size: 8pt;
+    font-weight: 400;
+    color: rgba(250,248,244,0.8);
+    line-height: 1.8;
+    border-left: 0.5pt solid rgba(250,248,244,0.3);
+    padding-left: 5mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S6 — LOCATION
+     Prashashan Nagar, Jubilee Hills. Solitude.
+  ───────────────────────────────────────────── */
+  .s6 {
+    background: var(--volcanic);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 24mm 20mm;
+  }
+  .s6-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .s6-location-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    color: var(--magenta);
+    text-transform: uppercase;
+  }
+  .s6-headline {
+    font-family: 'Lora', serif;
+    font-size: 32pt;
+    font-weight: 500;
+    color: var(--plaster);
+    line-height: 1.05;
+    max-width: 200mm;
+    margin-top: 6mm;
+  }
+  .s6-stats {
+    display: flex;
+    gap: 20mm;
+    padding-top: 10mm;
+    border-top: 0.3pt solid rgba(197,53,90,0.22);
+  }
+  .s6-stat-value {
+    font-family: 'Lora', serif;
+    font-size: 26pt;
+    color: var(--magenta);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s6-stat-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7pt;
+    font-weight: 400;
+    color: rgba(224,192,138,0.65);
+    letter-spacing: 0.12em;
+    line-height: 1.55;
+  }
+  .s6-body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 400;
+    color: rgba(240,232,216,0.6);
+    line-height: 1.82;
+    max-width: 240mm;
+    column-count: 2;
+    column-gap: 12mm;
+    column-rule: 0.3pt solid rgba(197,53,90,0.15);
+  }
+
+  /* ─────────────────────────────────────────────
+     S7 — DEVELOPER
+  ───────────────────────────────────────────── */
+  .s7 {
+    background: var(--adobe);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s7-bar {
+    width: 8mm;
+    background: var(--magenta);
+    flex-shrink: 0;
+  }
+  .s7-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 24mm 24mm 20mm;
+  }
+  .s7-dev-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    color: var(--earth);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-name {
+    font-family: 'Lora', serif;
+    font-size: 30pt;
+    color: var(--volcanic);
+    line-height: 1;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 9pt;
+    font-weight: 400;
+    color: var(--earth);
+    line-height: 1.78;
+    max-width: 180mm;
+  }
+  .s7-right {
+    width: 120mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 24mm 24mm 16mm;
+    border-left: 0.3pt solid rgba(90,58,32,0.2);
+  }
+  .s7-credential-item {
+    padding: 5mm 0;
+    border-bottom: 0.3pt solid rgba(90,58,32,0.18);
+  }
+  .s7-credential-item:last-child { border-bottom: none; }
+  .s7-cred-number {
+    font-family: 'Lora', serif;
+    font-size: 18pt;
+    color: var(--magenta);
+    line-height: 1;
+  }
+  .s7-cred-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 400;
+    color: var(--earth);
+    letter-spacing: 0.05em;
+  }
+
+  /* ─────────────────────────────────────────────
+     S8 — CLOSE
+  ───────────────────────────────────────────── */
+  .s8 {
+    background: var(--volcanic);
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+  }
+  .s8::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1.2mm;
+    background: linear-gradient(90deg, var(--magenta), transparent 70%);
+  }
+  .s8-magenta-column {
+    width: 50%;
+    background: var(--magenta);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 20mm 24mm 28mm;
+    position: relative;
+  }
+  .s8-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 500;
+    letter-spacing: 0.5em;
+    color: rgba(250,248,244,0.6);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s8-brand {
+    font-family: 'Lora', serif;
+    font-size: 90pt;
+    font-weight: 500;
+    color: var(--plaster);
+    line-height: 0.87;
+    letter-spacing: -0.04em;
+    margin-bottom: 8mm;
+  }
+  .s8-tagline {
+    font-family: 'Lora', serif;
+    font-size: 11pt;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(250,248,244,0.7);
+    letter-spacing: 0.04em;
+    margin-bottom: 14mm;
+  }
+  .s8-rule {
+    width: 50mm;
+    height: 0.4pt;
+    background: rgba(250,248,244,0.4);
+  }
+  .s8-dark-column {
+    flex: 1;
+    background: var(--volcanic);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 28mm 24mm 20mm;
+  }
+  .s8-closing-note {
+    font-family: 'Lora', serif;
+    font-size: 13pt;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(240,232,216,0.35);
+    line-height: 1.6;
+    margin-bottom: 10mm;
+  }
+  .s8-contact-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 500;
+    letter-spacing: 0.38em;
+    color: var(--magenta);
+    text-transform: uppercase;
+    margin-bottom: 3mm;
+  }
+  .s8-contact {
+    font-family: 'Cabin', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 400;
+    color: rgba(240,232,216,0.5);
+    line-height: 1.75;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════════════ -->
+<div class="page s1">
+  <div class="s1-magenta-half">
+    <div class="s1-ghost-year">1980</div>
+    <div class="s1-eyebrow">Twelve Private Villas · Jubilee Hills</div>
+    <div class="s1-brand">Palomar</div>
+    <div class="s1-tagline">Colour is the first architecture.</div>
+  </div>
+  <div class="s1-dark-half">
+    <div class="s1-data-block">
+      <div class="s1-data-item">Type<br><span class="s1-data-value">Gated Villa Estate</span></div>
+      <div class="s1-data-item">Count<br><span class="s1-data-value">XII</span></div>
+      <div class="s1-data-item">Location<br><span class="s1-data-value">Jubilee Hills, HYD</span></div>
+    </div>
+    <div class="s1-manifesto">After Barragán: a house that uses colour the way structure uses weight — as the primary fact of the space.</div>
+    <div class="s1-footer">
+      <div class="s1-footer-text">Brand Identity Presentation · Confidential</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 2 — THE REFERENCE / STORY
+══════════════════════════════════════════════════ -->
+<div class="page s2">
+  <div class="s2-left">
+    <div class="s2-year">1948</div>
+    <div class="s2-location-label">Mexico City · Casa Barragán · Gilardi House</div>
+    <div class="s2-headline">The architect who<br>built with colour.</div>
+    <div class="s2-body">Luis Barragán won the Pritzker Prize in 1980 — architecture's highest honour — for buildings that cannot be fully understood in photographs. In his Casa Barragán (1948) and the Gilardi House (1977), colour is not applied to the walls. It is the walls. A four-metre magenta plane reaching the ceiling is not decoration — it IS the room. A pool of black water reflecting a yellow wall IS the garden. He was a devout mystic who believed that silence, solitude, and serenity were the three spiritual needs a home must answer. He called it "an emotional architecture." His buildings must be stood inside to be understood.</div>
+  </div>
+  <div class="s2-right">
+    <div class="s2-principle-label">The Translation</div>
+    <div class="s2-principle">"I believe in an emotional architecture. It is very important for humankind that architecture should move by its beauty."</div>
+    <div class="s2-principle-body">Palomar in Jubilee Hills does not copy Barragán's Mexico — the climate, the materials, and the street are entirely different. It takes his method: that a single plane of colour, held correctly, can be the architecture itself. That a house which provides silence, solitude, and serenity is more valuable than any house assembled from premium catalogues. The magenta wall in your villa is not painted. It is structural, in the deepest sense.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 3 — ELEMENTS / MATERIALS
+══════════════════════════════════════════════════ -->
+<div class="page s3">
+  <div class="s3-top">
+    <div class="s3-material-cell s3-cell-1">
+      <div class="s3-mat-number">01</div>
+      <div class="s3-mat-name">The magenta<br>wall</div>
+      <div class="s3-mat-desc">Each villa contains one plane of Barragán magenta — four metres of pure chromatic mass. It does not frame a view. It does not receive art. It is the architecture. The room exists in relation to it, not the other way around.</div>
+    </div>
+    <div class="s3-material-cell s3-cell-2">
+      <div class="s3-mat-number">02</div>
+      <div class="s3-mat-name">Volcanic stone<br>plinth</div>
+      <div class="s3-mat-desc">The ground floor is set on a honed volcanic basalt plinth — the same geological family as the lava stone of Jalisco, where Barragán grew up. It absorbs light instead of reflecting it. The colour reads differently on it than on any other surface.</div>
+    </div>
+    <div class="s3-material-cell s3-cell-3">
+      <div class="s3-mat-number">03</div>
+      <div class="s3-mat-name">Black still<br>water</div>
+      <div class="s3-mat-desc">Each villa's private pool is finished in dark aggregate — visually black at rest. In it: the sky, the light, and the coloured walls above are reflected in slow motion. Barragán used this device at Las Arboledas. It is not a feature. It is a second room.</div>
+    </div>
+    <div class="s3-material-cell s3-cell-4">
+      <div class="s3-mat-number">04</div>
+      <div class="s3-mat-name">The solitary<br>fig tree</div>
+      <div class="s3-mat-desc">Every hacienda at El Palomar had one — the fig tree in the courtyard, older than the building, unmoveable. At each Palomar villa, the mature estate tree is not removed and replaced. It is designed around. The garden is secondary to it.</div>
+    </div>
+  </div>
+  <div class="s3-bottom">
+    <div class="s3-principle-line">"Colour is not applied to the architecture. Colour is the architecture."</div>
+    <div class="s3-footnote">Every material decision at Palomar begins with how it interacts with colour and light. Stone that absorbs. Water that reflects. Plaster that holds shadow. Nothing here was chosen from a catalogue.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 4 — THE VILLAS
+══════════════════════════════════════════════════ -->
+<div class="page s4">
+  <div class="s4-top">
+    <div class="s4-headline">Twelve residences.<br>One estate.<br>No repetition.</div>
+    <div class="s4-count">
+      Private villas
+      <strong>XII</strong>
+      Total, across the estate.
+    </div>
+  </div>
+  <div class="s4-grid">
+    <div class="s4-cell">
+      <div class="s4-cell-label">Configuration</div>
+      <div class="s4-cell-value">Single-storey · Private gate · Each on own plot</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Chromatic Identity</div>
+      <div class="s4-cell-value">Each villa carries one signature colour plane. No two are alike.</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Water</div>
+      <div class="s4-cell-value">Private dark-finish pool · Flush with courtyard · Not shared</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Orientation</div>
+      <div class="s4-cell-value">Each villa faces a distinct sightline. Light studied per plot.</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Price Range</div>
+      <div class="s4-cell-value">Rs 13 – 20 Crore · By private appointment</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">The Courtyard</div>
+      <div class="s4-cell-value">Central hacienda court · Mature tree retained · Volcanic paving</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 5 — FEATURE / QUOTE
+══════════════════════════════════════════════════ -->
+<div class="page s5">
+  <div class="s5-left">
+    <div class="s5-arch-label">The Reference</div>
+    <div class="s5-arch-name">Luis<br>Barragán</div>
+    <div class="s5-arch-body">Pritzker Prize, 1980. Casa Barragán, Mexico City, 1948. Gilardi House, Mexico City, 1977. A devout Catholic mystic who believed that beauty was the resonance between matter and spirit — and that a house which provides silence, solitude, and serenity has fulfilled its highest obligation.</div>
+  </div>
+  <div class="s5-right">
+    <div class="s5-quote-mark">"</div>
+    <div class="s5-quote">Beauty is the resonance between matter and spirit.</div>
+    <div class="s5-attribution">— Luis Barragán · Pritzker Prize Acceptance Speech · 1980</div>
+    <div class="s5-application">Palomar uses colour the way Barragán used it: not as decoration applied after the architecture is decided, but as the primary structural decision. The magenta wall in your villa is not painted — it IS the architecture. Its mass, its height, its relationship to the light entering from the west — these are the building. Everything else is secondary. Barragán also said that silence, solitude, and serenity were the three spiritual needs a home must provide. These three things are what Palomar is built to deliver.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 6 — LOCATION
+══════════════════════════════════════════════════ -->
+<div class="page s6">
+  <div class="s6-top">
+    <div>
+      <div class="s6-location-label">Prashashan Nagar · Jubilee Hills · Hyderabad</div>
+      <div class="s6-headline">The solitude Barragán<br>sought. Here, already<br>grown in.</div>
+    </div>
+  </div>
+  <div class="s6-stats">
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">10'</div>
+      <div class="s6-stat-label">From HITEC City<br>by car</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">0</div>
+      <div class="s6-stat-label">Through traffic.<br>The street has none.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">35+</div>
+      <div class="s6-stat-label">Year old canopy.<br>Mature trees throughout.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">XII</div>
+      <div class="s6-stat-label">Villas behind<br>one gate. No more.</div>
+    </div>
+  </div>
+  <div class="s6-body">
+    Barragán designed for silence and separation from the city's noise. He found it in the hacienda tradition — the high wall, the inward courtyard, the shade of the single old tree. Prashashan Nagar is what Jubilee Hills becomes when it stops trying to be noticed. The canopy closed over years ago. The families here stopped explaining the address decades back. There is no through traffic — in Hyderabad in 2026, that is not a convenience, it is an inheritance. Palomar is built inside that inheritance.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 7 — DEVELOPER
+══════════════════════════════════════════════════ -->
+<div class="page s7">
+  <div class="s7-bar"></div>
+  <div class="s7-content">
+    <div class="s7-dev-label">The Developer</div>
+    <div class="s7-dev-name">SSquare<br>Est. 1991</div>
+    <div class="s7-dev-body">Thirty-five years building the commercial infrastructure of a city that never stopped growing. Over ten million square feet of premium commercial real estate in Hyderabad — privately held, privately financed, delivered without announcement. SSquare has never needed to advertise its standard. Its buildings have always been the argument.<br><br>Palomar is their first and only residential project. The same material rigour that built their commercial portfolio, now applied — for the first time — to a place where twelve families will actually live. They are not entering residential because the market is ready. They are entering because this site, on this street, asked for it.</div>
+  </div>
+  <div class="s7-right">
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">35</div>
+      <div class="s7-cred-label">Years in Hyderabad commercial real estate</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">10M+</div>
+      <div class="s7-cred-label">Sq ft delivered. Premium commercial.</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">01</div>
+      <div class="s7-cred-label">Residential project. This is it. It will be their only one.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 8 — CLOSE
+══════════════════════════════════════════════════ -->
+<div class="page s8">
+  <div class="s8-magenta-column">
+    <div class="s8-label">Twelve Private Villas · Jubilee Hills · By SSquare</div>
+    <div class="s8-brand">Palomar</div>
+    <div class="s8-tagline">Colour is the first architecture.</div>
+    <div class="s8-rule"></div>
+  </div>
+  <div class="s8-dark-column">
+    <div class="s8-closing-note">"I believe in an emotional architecture. It is very important for humankind that architecture should move by its beauty."<br>— Luis Barragán, 1980</div>
+    <div class="s8-contact-label">Private Appointments</div>
+    <div class="s8-contact">SSquare Developments<br>Jubilee Hills, Hyderabad<br>By invitation and appointment only</div>
+  </div>
+</div>
+
+</body>
+</html>

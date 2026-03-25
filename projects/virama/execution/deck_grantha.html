@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grantha — Every room is a chapter. Every chapter, a room.</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,200;0,8..60,300;0,8..60,400;1,8..60,200;1,8..60,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --mahogany:  #1C1008;
+    --teak:      #6B4A20;
+    --parchment: #F0E8D4;
+    --rosewood:  #3A2010;
+    --brass:     #B87840;
+    --cream:     #FAF5EC;
+    --ink:       #2A1808;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A3 landscape; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; }
+  }
+
+  body { font-family: 'Source Serif 4', serif; background: #c8bfad; }
+
+  .page {
+    width: 420mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    page-break-after: always;
+  }
+
+  /* ─────────────────────────────────────────────
+     S1 — COVER
+     Dark mahogany, colonial register, aged paper.
+  ───────────────────────────────────────────── */
+  .s1 {
+    background: var(--mahogany);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .s1-grid {
+    display: grid;
+    grid-template-columns: 18mm 1fr 1fr 1fr 18mm;
+    grid-template-rows: 18mm 1fr 1fr 18mm;
+    width: 100%;
+    height: 100%;
+  }
+  .s1-col-accent {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    border-right: 0.4pt solid rgba(184, 120, 64, 0.18);
+  }
+  .s1-main {
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 18mm 18mm 10mm;
+    position: relative;
+  }
+  .s1-brass-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1.2mm;
+    background: linear-gradient(90deg, transparent, var(--brass) 30%, transparent 100%);
+  }
+  .s1-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--brass);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s1-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 108pt;
+    font-weight: 400;
+    color: var(--parchment);
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    margin-bottom: 8mm;
+  }
+  .s1-tagline {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11pt;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(240, 232, 212, 0.65);
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+  .s1-data {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 6mm 6mm 18mm;
+    border-bottom: 0.3pt solid rgba(184, 120, 64, 0.12);
+  }
+  .s1-data-item {
+    font-family: 'Source Serif 4', serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(184, 120, 64, 0.55);
+    letter-spacing: 0.12em;
+    line-height: 2;
+  }
+  .s1-data-value {
+    font-size: 7pt;
+    color: var(--brass);
+    font-weight: 400;
+  }
+  .s1-footer {
+    grid-column: 2 / 5;
+    grid-row: 4;
+    display: flex;
+    align-items: center;
+    padding: 0 18mm 0 18mm;
+    border-top: 0.3pt solid rgba(184, 120, 64, 0.1);
+  }
+  .s1-footer-text {
+    font-family: 'Source Serif 4', serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(184, 120, 64, 0.45);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* ─────────────────────────────────────────────
+     S2 — THE REFERENCE
+     Two references: Raffles + Grantha script
+  ───────────────────────────────────────────── */
+  .s2 {
+    background: var(--parchment);
+    flex-direction: row;
+  }
+  .s2-left {
+    width: 44%;
+    background: var(--rosewood);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 16mm 22mm 22mm;
+    position: relative;
+  }
+  .s2-left::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 1mm;
+    background: linear-gradient(180deg, transparent, var(--brass) 40%, var(--brass) 60%, transparent);
+    opacity: 0.35;
+  }
+  .s2-year {
+    font-family: 'Playfair Display', serif;
+    font-size: 64pt;
+    font-weight: 400;
+    color: rgba(184, 120, 64, 0.1);
+    line-height: 1;
+    position: absolute;
+    bottom: 18mm;
+    right: 16mm;
+    letter-spacing: -0.04em;
+  }
+  .s2-location-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--brass);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s2-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 28pt;
+    font-weight: 400;
+    color: var(--parchment);
+    line-height: 1.15;
+    margin-bottom: 8mm;
+  }
+  .s2-body {
+    font-family: 'Source Serif 4', serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(240, 232, 212, 0.7);
+    line-height: 1.85;
+  }
+  .s2-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 24mm 22mm 20mm;
+  }
+  .s2-principle-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--teak);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s2-principle {
+    font-family: 'Playfair Display', serif;
+    font-size: 19pt;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.35;
+    margin-bottom: 8mm;
+  }
+  .s2-principle-body {
+    font-family: 'Source Serif 4', serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: var(--teak);
+    line-height: 1.85;
+    border-left: 0.4pt solid var(--brass);
+    padding-left: 6mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S3 — THE ELEMENTS
+     Four rooms of the Raffles — warm parchment
+  ───────────────────────────────────────────── */
+  .s3 {
+    background: var(--cream);
+    flex-direction: column;
+    padding: 0;
+  }
+  .s3-top {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 0.3pt solid rgba(107, 74, 32, 0.2);
+  }
+  .s3-material-cell {
+    padding: 16mm 10mm 10mm 12mm;
+    border-right: 0.3pt solid rgba(107, 74, 32, 0.15);
+  }
+  .s3-material-cell:last-child { border-right: none; }
+  .s3-mat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 11pt;
+    color: var(--brass);
+    margin-bottom: 5mm;
+  }
+  .s3-mat-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 16pt;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 4mm;
+  }
+  .s3-mat-desc {
+    font-family: 'Source Serif 4', serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: var(--teak);
+    line-height: 1.75;
+  }
+  .s3-bottom {
+    padding: 8mm 22mm;
+    display: flex;
+    align-items: center;
+    gap: 14mm;
+  }
+  .s3-principle-line {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    font-style: italic;
+    color: var(--ink);
+    flex: 1;
+    line-height: 1.4;
+  }
+  .s3-footnote {
+    font-family: 'Source Serif 4', serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: var(--teak);
+    width: 80mm;
+    line-height: 1.65;
+  }
+
+  /* ─────────────────────────────────────────────
+     S4 — THE VILLAS
+  ───────────────────────────────────────────── */
+  .s4 {
+    background: var(--mahogany);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20mm 24mm;
+    position: relative;
+  }
+  .s4::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0.4pt;
+    background: var(--brass);
+    opacity: 0.5;
+  }
+  .s4-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .s4-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 42pt;
+    font-weight: 400;
+    color: var(--parchment);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    max-width: 160mm;
+  }
+  .s4-count {
+    font-family: 'Source Serif 4', serif;
+    font-size: 7pt;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: var(--brass);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .s4-count strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 40pt;
+    font-weight: 400;
+    color: var(--parchment);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-top: 2mm;
+  }
+  .s4-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 0.3pt solid rgba(184, 120, 64, 0.18);
+    border-left: 0.3pt solid rgba(184, 120, 64, 0.18);
+  }
+  .s4-cell {
+    padding: 6mm 8mm;
+    border-right: 0.3pt solid rgba(184, 120, 64, 0.18);
+    border-bottom: 0.3pt solid rgba(184, 120, 64, 0.18);
+  }
+  .s4-cell-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: var(--brass);
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+  }
+  .s4-cell-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 11pt;
+    color: var(--parchment);
+    line-height: 1.3;
+  }
+
+  /* ─────────────────────────────────────────────
+     S5 — THE FEATURE / QUOTE
+     Teak accent panel, Maugham quote
+  ───────────────────────────────────────────── */
+  .s5 {
+    background: var(--parchment);
+    flex-direction: row;
+  }
+  .s5-left {
+    width: 35%;
+    background: var(--teak);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20mm 14mm 20mm 20mm;
+  }
+  .s5-feature-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: rgba(250, 245, 236, 0.6);
+    text-transform: uppercase;
+    margin-bottom: 5mm;
+  }
+  .s5-feature-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.0;
+    margin-bottom: 7mm;
+  }
+  .s5-feature-body {
+    font-family: 'Source Serif 4', serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: rgba(250, 245, 236, 0.72);
+    line-height: 1.8;
+  }
+  .s5-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20mm 24mm 20mm 18mm;
+  }
+  .s5-quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 60pt;
+    color: rgba(107, 74, 32, 0.2);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s5-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 17pt;
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 8mm;
+  }
+  .s5-attribution {
+    font-family: 'Source Serif 4', serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: var(--teak);
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+  }
+
+  /* ─────────────────────────────────────────────
+     S6 — JUBILEE HILLS / LOCATION
+  ───────────────────────────────────────────── */
+  .s6 {
+    background: var(--rosewood);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 24mm 20mm;
+  }
+  .s6-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .s6-location-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--brass);
+    text-transform: uppercase;
+  }
+  .s6-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 34pt;
+    font-weight: 400;
+    color: var(--parchment);
+    line-height: 1.05;
+    max-width: 200mm;
+    margin-top: 6mm;
+  }
+  .s6-stats {
+    display: flex;
+    gap: 20mm;
+    padding-top: 10mm;
+    border-top: 0.3pt solid rgba(184, 120, 64, 0.2);
+  }
+  .s6-stat-item {}
+  .s6-stat-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 26pt;
+    color: var(--brass);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s6-stat-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(240, 232, 212, 0.65);
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+  }
+  .s6-body {
+    font-family: 'Source Serif 4', serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(240, 232, 212, 0.72);
+    line-height: 1.85;
+    max-width: 240mm;
+    column-count: 2;
+    column-gap: 12mm;
+    column-rule: 0.3pt solid rgba(184, 120, 64, 0.15);
+  }
+
+  /* ─────────────────────────────────────────────
+     S7 — DEVELOPER
+  ───────────────────────────────────────────── */
+  .s7 {
+    background: var(--parchment);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s7-bar {
+    width: 8mm;
+    background: var(--brass);
+    flex-shrink: 0;
+  }
+  .s7-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 24mm 24mm 20mm;
+  }
+  .s7-dev-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--teak);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 32pt;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-body {
+    font-family: 'Source Serif 4', serif;
+    font-size: 9pt;
+    font-weight: 300;
+    color: var(--teak);
+    line-height: 1.8;
+    max-width: 180mm;
+  }
+  .s7-right {
+    width: 120mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 24mm 24mm 16mm;
+    border-left: 0.3pt solid rgba(107, 74, 32, 0.25);
+  }
+  .s7-credential-item {
+    padding: 5mm 0;
+    border-bottom: 0.3pt solid rgba(107, 74, 32, 0.2);
+  }
+  .s7-credential-item:last-child { border-bottom: none; }
+  .s7-cred-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 18pt;
+    color: var(--brass);
+    line-height: 1;
+  }
+  .s7-cred-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: var(--teak);
+    letter-spacing: 0.05em;
+  }
+
+  /* ─────────────────────────────────────────────
+     S8 — CLOSE
+  ───────────────────────────────────────────── */
+  .s8 {
+    background: var(--mahogany);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24mm 28mm;
+    position: relative;
+  }
+  .s8::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1mm;
+    background: linear-gradient(90deg, var(--brass), transparent 70%);
+  }
+  .s8-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--brass);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s8-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 96pt;
+    font-weight: 400;
+    color: var(--parchment);
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    margin-bottom: 8mm;
+  }
+  .s8-tagline {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11pt;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(240, 232, 212, 0.6);
+    letter-spacing: 0.06em;
+    margin-bottom: 16mm;
+  }
+  .s8-rule {
+    width: 60mm;
+    height: 0.4pt;
+    background: var(--brass);
+    opacity: 0.6;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════════════ -->
+<div class="page s1">
+  <div class="s1-grid">
+    <div class="s1-col-accent"></div>
+    <div class="s1-data">
+      <div class="s1-data-item">Type<br><span class="s1-data-value">Gated Villa Estate</span></div>
+      <div class="s1-data-item">Count<br><span class="s1-data-value">XII</span></div>
+      <div class="s1-data-item">Location<br><span class="s1-data-value">Jubilee Hills, HYD</span></div>
+    </div>
+    <div class="s1-main">
+      <div class="s1-brass-bar"></div>
+      <div class="s1-eyebrow">Twelve Private Villas · Jubilee Hills</div>
+      <div class="s1-brand">Grantha</div>
+      <div class="s1-tagline">Every room is a chapter. Every chapter, a room.</div>
+    </div>
+    <div class="s1-footer">
+      <div class="s1-footer-text">Brand Identity Presentation · Confidential</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 2 — THE REFERENCE / STORY
+══════════════════════════════════════════════════ -->
+<div class="page s2">
+  <div class="s2-left">
+    <div class="s2-year">1887</div>
+    <div class="s2-location-label">Beach Road · Singapore · Est. 1887</div>
+    <div class="s2-headline">The hotel that<br>became a library.</div>
+    <div class="s2-body">In 1887, Regent Alfred John Bidwell designed Raffles Hotel Singapore in the colonial Palladian style. Within its rooms the Long Bar, the Tiffin Room, the Writers Bar — Somerset Maugham drank there. So did Rudyard Kipling. Joseph Conrad. The building became a cultural institution not through spectacle but through seriousness: it took the idea that a great hotel is also a great library, and it built for that idea.<br><br>Parallel to this: Grantha script. An ancient Brahmic script used across South India from the 6th to 19th century to write Sanskrit manuscripts. Still used today for ceremony. Grantha — ग्रन्थ — means manuscript. Means text. Means book.</div>
+  </div>
+  <div class="s2-right">
+    <div class="s2-principle-label">The Translation</div>
+    <div class="s2-principle">"The library as home. The manuscript as address. A building that holds the memory of what happened inside it."</div>
+    <div class="s2-principle-body">Grantha takes both references at once. From Raffles: the colonial library as container for knowledge, for conversation, for the slow accumulation of a life's reading. From the Grantha script: the South Indian manuscript tradition as its indigenous counterpart — a civilisation that treated the written page as architecture. A home where every room is already a chapter, waiting to be written.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 3 — THE ELEMENTS / MATERIALS
+══════════════════════════════════════════════════ -->
+<div class="page s3">
+  <div class="s3-top">
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">01</div>
+      <div class="s3-mat-name">The teak<br>verandah</div>
+      <div class="s3-mat-desc">Solid Burmese teak, oiled finish — the verandah that faces inward, not outward. Every Raffles room had one. At Grantha, the verandah faces the private garden: a room between the house and the world, used for reading, for thinking, for the hours that belong to no appointment.</div>
+    </div>
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">02</div>
+      <div class="s3-mat-name">Manuscript<br>vault</div>
+      <div class="s3-mat-desc">The private library room — a dedicated volume, not a shelf on a landing. Lined in teak, with brass fittings and parchment-tone walls. Designed to hold several hundred volumes. The room that most houses do not have, and that Grantha considers essential to the brief.</div>
+    </div>
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">03</div>
+      <div class="s3-mat-name">The writers'<br>study</div>
+      <div class="s3-mat-desc">A north-facing room with a single large window and no distractions. Dark walls — rosewood render — because a writing room should feel like the inside of a thought. The desk is positioned so that the writer faces the garden, and the door is behind them. A room that closes properly.</div>
+    </div>
+    <div class="s3-material-cell">
+      <div class="s3-mat-number">04</div>
+      <div class="s3-mat-name">Colonial<br>brass fitting</div>
+      <div class="s3-mat-desc">Every switch plate, door handle, and light fitting in solid brass — not plated, not lacquered, left to develop a patina. In twenty years the brass will be darker and more beautiful than it is today. This is a material that records the passing of time, the way a good library does.</div>
+    </div>
+  </div>
+  <div class="s3-bottom">
+    <div class="s3-principle-line">"A house should have enough room in it for a life's worth of reading."</div>
+    <div class="s3-footnote">The Grantha brief began with this observation: that most luxury homes are designed for entertaining, not thinking. Grantha reverses the priority. The private rooms are larger. The library is load-bearing. The verandah is for sitting alone.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 4 — THE VILLAS
+══════════════════════════════════════════════════ -->
+<div class="page s4">
+  <div class="s4-top">
+    <div class="s4-headline">Twelve chapters.<br>One estate.<br>No two alike.</div>
+    <div class="s4-count">
+      Private villas
+      <strong>XII</strong>
+      Total, across the estate.
+    </div>
+  </div>
+  <div class="s4-grid">
+    <div class="s4-cell">
+      <div class="s4-cell-label">Configuration</div>
+      <div class="s4-cell-value">Single-storey · Private gate · Each on own plot</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Private Library</div>
+      <div class="s4-cell-value">Dedicated manuscript room in every villa</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Structure</div>
+      <div class="s4-cell-value">Teak verandah · Rosewood render · Brass fittings</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Study</div>
+      <div class="s4-cell-value">North-facing writers' room in each residence</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Price Range</div>
+      <div class="s4-cell-value">Rs 13 – 20 Crore · By private appointment</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Garden</div>
+      <div class="s4-cell-value">Private enclosed garden · Verandah access · Quiet</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 5 — THE FEATURE / QUOTE
+══════════════════════════════════════════════════ -->
+<div class="page s5">
+  <div class="s5-left">
+    <div class="s5-feature-label">The Library Home</div>
+    <div class="s5-feature-title">A house<br>that holds<br>a life.</div>
+    <div class="s5-feature-body">Grantha is built on the premise that a home should have enough room in it for a life's worth of reading. The library is not an amenity. The study is not a flex room. The verandah is not a transition space. These are the rooms the house is organised around — and everything else follows from them.</div>
+  </div>
+  <div class="s5-right">
+    <div class="s5-quote-mark">"</div>
+    <div class="s5-quote">To travel is to discover that everyone is wrong about other countries.</div>
+    <div class="s5-attribution">— W. Somerset Maugham, writer of the Long Bar, Raffles Hotel Singapore<br><span style="opacity:0.65; font-style:italic;">Maugham spent years at Raffles because it gave him what a great house gives: a room of his own, a city outside it, and enough quiet to think. Grantha is built for that same proposition. Not the city at a remove — the city on your own terms, from a room that is entirely yours.</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 6 — JUBILEE HILLS / LOCATION
+══════════════════════════════════════════════════ -->
+<div class="page s6">
+  <div class="s6-top">
+    <div>
+      <div class="s6-location-label">Prashashan Nagar · Jubilee Hills · Hyderabad</div>
+      <div class="s6-headline">The address that has<br>seen enough of the city<br>to have its own history.</div>
+    </div>
+  </div>
+  <div class="s6-stats">
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">10'</div>
+      <div class="s6-stat-label">From HITEC City<br>by car</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">0</div>
+      <div class="s6-stat-label">Through traffic.<br>The neighbourhood has none.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">35+</div>
+      <div class="s6-stat-label">Year old canopy.<br>Mature trees throughout.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">XII</div>
+      <div class="s6-stat-label">Villas behind<br>one gate. No more.</div>
+    </div>
+  </div>
+  <div class="s6-body">
+    Prashashan Nagar is what parts of Jubilee Hills became when enough time had passed that the address stopped needing to announce itself. It is Hyderabad's equivalent of the Raffles neighbourhood — the part of the city that has already made its history, and now simply lives inside it. The canopy grew in without instruction. The families who live here stopped talking about the address decades ago. Grantha belongs to this quarter precisely because it is not trying to make a new statement. It is trying to belong to an old one.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 7 — DEVELOPER
+══════════════════════════════════════════════════ -->
+<div class="page s7">
+  <div class="s7-bar"></div>
+  <div class="s7-content">
+    <div class="s7-dev-label">The Developer</div>
+    <div class="s7-dev-name">SSquare<br>Est. 1991</div>
+    <div class="s7-dev-body">Thirty-five years building the commercial infrastructure of a city that never stopped growing. Over ten million square feet of premium commercial real estate in Hyderabad — privately held, privately financed, delivered without announcement. SSquare has never needed to advertise its standard. Its buildings have always been the argument.<br><br>Grantha is their first and only residential project. The same material rigour that built their commercial portfolio, applied — for the first time — to twelve homes where families will actually read, think, and live.</div>
+  </div>
+  <div class="s7-right">
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">35</div>
+      <div class="s7-cred-label">Years in Hyderabad commercial real estate</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">10M+</div>
+      <div class="s7-cred-label">Sq ft delivered. Premium commercial.</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">01</div>
+      <div class="s7-cred-label">Residential project. This is it. It will be their only one.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 8 — CLOSE
+══════════════════════════════════════════════════ -->
+<div class="page s8">
+  <div class="s8-label">Twelve Private Villas · Jubilee Hills · By SSquare</div>
+  <div class="s8-brand">Grantha</div>
+  <div class="s8-tagline">Every room is a chapter. Every chapter, a room.</div>
+  <div class="s8-rule"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Croft — Private Land. Personal Standard.</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cabin:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --chalk:       #F0EDE6;
+    --flint:       #6E6A62;
+    --weld:        #2A3420;
+    --brick:       #8A4632;
+    --parchment:   #E8E2D6;
+    --dark-earth:  #1E1C18;
+    --lichen:      #4A5438;
+    --cream:       #F8F5EE;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A3 landscape; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; }
+  }
+
+  body { font-family: 'Cabin', sans-serif; background: #c4c0b8; }
+
+  .page {
+    width: 420mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    page-break-after: always;
+  }
+
+  /* ─────────────────────────────────────────────
+     S1 — COVER
+     Full-bleed dark earth. Text lower-left.
+     Brick-red left edge — the croft boundary.
+     Arts & Crafts: visible craft, no pretension.
+  ───────────────────────────────────────────── */
+  .s1 {
+    background: var(--dark-earth);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s1-edge {
+    width: 10mm;
+    background: var(--brick);
+    flex-shrink: 0;
+    position: relative;
+  }
+  .s1-edge::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 1mm;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgba(240, 237, 230, 0.15) 50%, transparent);
+  }
+  .s1-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18mm 20mm 20mm 18mm;
+    position: relative;
+  }
+  /* Subtle field lines — like ruled manuscript paper */
+  .s1-main::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      180deg,
+      transparent 0,
+      transparent 14mm,
+      rgba(240, 237, 230, 0.02) 14mm,
+      rgba(240, 237, 230, 0.02) 14.2mm
+    );
+    pointer-events: none;
+  }
+  .s1-top {}
+  .s1-eyebrow {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    color: var(--brick);
+    text-transform: uppercase;
+    margin-bottom: 5mm;
+  }
+  .s1-eyebrow-sub {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    color: rgba(240, 237, 230, 0.35);
+    text-transform: uppercase;
+  }
+  .s1-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .s1-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 106pt;
+    font-weight: 700;
+    color: var(--chalk);
+    line-height: 0.82;
+    letter-spacing: -0.02em;
+    margin-bottom: 7mm;
+  }
+  .s1-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--flint);
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .s1-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 0.3pt solid rgba(240, 237, 230, 0.1);
+    padding-top: 5mm;
+  }
+  .s1-footer-l {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6.5pt;
+    font-weight: 300;
+    color: rgba(240, 237, 230, 0.35);
+    letter-spacing: 0.18em;
+    line-height: 1.7;
+  }
+  .s1-footer-r {
+    font-family: 'Playfair Display', serif;
+    font-size: 48pt;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(138, 70, 50, 0.12);
+    line-height: 1;
+    text-align: right;
+  }
+
+  /* ─────────────────────────────────────────────
+     S2 — THE CROFT
+  ───────────────────────────────────────────── */
+  .s2 {
+    background: var(--parchment);
+    flex-direction: column;
+    padding: 0;
+  }
+  .s2-top-strip {
+    height: 8mm;
+    background: var(--weld);
+    display: flex;
+    align-items: center;
+    padding: 0 24mm;
+  }
+  .s2-strip-text {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    letter-spacing: 0.45em;
+    color: rgba(240, 237, 230, 0.6);
+    text-transform: uppercase;
+  }
+  .s2-content {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+  }
+  .s2-left {
+    width: 50%;
+    padding: 16mm 14mm 16mm 24mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 0.3pt solid rgba(110, 106, 98, 0.2);
+  }
+  .s2-origin-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    letter-spacing: 0.45em;
+    color: var(--brick);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s2-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 28pt;
+    font-weight: 600;
+    color: var(--dark-earth);
+    line-height: 1.1;
+    margin-bottom: 7mm;
+  }
+  .s2-body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: var(--flint);
+    line-height: 1.85;
+  }
+  .s2-right {
+    flex: 1;
+    padding: 16mm 22mm 16mm 16mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .s2-r-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    letter-spacing: 0.45em;
+    color: var(--lichen);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s2-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 15pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--dark-earth);
+    line-height: 1.5;
+    margin-bottom: 7mm;
+  }
+  .s2-attribution {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: var(--brick);
+    letter-spacing: 0.12em;
+    margin-bottom: 8mm;
+  }
+  .s2-r-body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: var(--flint);
+    line-height: 1.8;
+  }
+
+  /* ─────────────────────────────────────────────
+     S3 — THE ARTS & CRAFTS ARGUMENT
+  ───────────────────────────────────────────── */
+  .s3 {
+    background: var(--dark-earth);
+    flex-direction: column;
+    padding: 0;
+  }
+  .s3-header {
+    padding: 10mm 24mm 9mm;
+    border-bottom: 0.3pt solid rgba(138, 70, 50, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .s3-header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20pt;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--chalk);
+    line-height: 1;
+  }
+  .s3-header-sub {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: var(--flint);
+    text-transform: uppercase;
+  }
+  .s3-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .s3-cell {
+    padding: 14mm 12mm 12mm 16mm;
+    border-right: 0.3pt solid rgba(138, 70, 50, 0.15);
+    border-bottom: 0.3pt solid rgba(138, 70, 50, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .s3-cell:nth-child(3n) { border-right: none; }
+  .s3-cell:nth-last-child(-n+3) { border-bottom: none; }
+  .s3-cell-person {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: var(--brick);
+    text-transform: uppercase;
+    margin-bottom: 5mm;
+    opacity: 0.9;
+  }
+  .s3-cell-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--chalk);
+    line-height: 1.2;
+    margin-bottom: 5mm;
+  }
+  .s3-cell-body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: rgba(110, 106, 98, 0.85);
+    line-height: 1.75;
+  }
+
+  /* ─────────────────────────────────────────────
+     S4 — THE ESTATE
+  ───────────────────────────────────────────── */
+  .s4 {
+    background: var(--cream);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20mm 24mm 18mm;
+  }
+  .s4-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20mm;
+  }
+  .s4-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    letter-spacing: 0.45em;
+    color: var(--brick);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s4-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 36pt;
+    font-weight: 600;
+    color: var(--dark-earth);
+    line-height: 1.05;
+  }
+  .s4-right {}
+  .s4-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 80pt;
+    font-weight: 700;
+    color: var(--dark-earth);
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    -webkit-text-stroke: 0.5pt var(--flint);
+    color: transparent;
+    text-align: right;
+  }
+  .s4-num-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    color: var(--flint);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .s4-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 0.3pt solid rgba(110, 106, 98, 0.3);
+    padding-top: 8mm;
+  }
+  .s4-spec {
+    padding-right: 10mm;
+    border-right: 0.3pt solid rgba(110, 106, 98, 0.2);
+  }
+  .s4-spec:last-child { border-right: none; padding-right: 0; }
+  .s4-spec:not(:first-child) { padding-left: 10mm; }
+  .s4-spec-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    color: var(--flint);
+    text-transform: uppercase;
+    margin-bottom: 3mm;
+  }
+  .s4-spec-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 10pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--dark-earth);
+    line-height: 1.4;
+  }
+
+  /* ─────────────────────────────────────────────
+     S5 — WHAT WILLIAM MORRIS MEANT
+  ───────────────────────────────────────────── */
+  .s5 {
+    background: var(--weld);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s5-left {
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 14mm 22mm 22mm;
+    border-right: 0.3pt solid rgba(240, 237, 230, 0.1);
+  }
+  .s5-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    letter-spacing: 0.45em;
+    color: rgba(138, 70, 50, 0.9);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s5-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 18pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--chalk);
+    line-height: 1.45;
+    margin-bottom: 7mm;
+  }
+  .s5-attr {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: rgba(110, 106, 98, 0.8);
+  }
+  .s5-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 22mm 22mm 16mm;
+    gap: 8mm;
+  }
+  .s5-item {
+    padding-bottom: 7mm;
+    border-bottom: 0.3pt solid rgba(240, 237, 230, 0.08);
+  }
+  .s5-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .s5-item-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 11pt;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--parchment);
+    margin-bottom: 3mm;
+  }
+  .s5-item-body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: rgba(110, 106, 98, 0.8);
+    line-height: 1.75;
+  }
+
+  /* ─────────────────────────────────────────────
+     S6 — JUBILEE HILLS
+  ───────────────────────────────────────────── */
+  .s6 {
+    background: var(--parchment);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20mm 24mm 18mm;
+  }
+  .s6-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    letter-spacing: 0.45em;
+    color: var(--brick);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s6-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 30pt;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--dark-earth);
+    line-height: 1.15;
+    max-width: 260mm;
+  }
+  .s6-body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: var(--flint);
+    line-height: 1.85;
+    max-width: 280mm;
+    column-count: 2;
+    column-gap: 14mm;
+    column-rule: 0.3pt solid rgba(110, 106, 98, 0.2);
+  }
+  .s6-facts {
+    display: flex;
+    gap: 16mm;
+    border-top: 0.3pt solid rgba(110, 106, 98, 0.25);
+    padding-top: 8mm;
+  }
+  .s6-fact-item {}
+  .s6-fact-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 24pt;
+    font-weight: 600;
+    color: var(--brick);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s6-fact-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: var(--flint);
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+  }
+
+  /* ─────────────────────────────────────────────
+     S7 — DEVELOPER
+  ───────────────────────────────────────────── */
+  .s7 {
+    background: var(--dark-earth);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s7-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 18mm 22mm 24mm;
+    border-right: 0.3pt solid rgba(138, 70, 50, 0.2);
+  }
+  .s7-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    letter-spacing: 0.45em;
+    color: var(--brick);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 40pt;
+    font-weight: 700;
+    color: var(--chalk);
+    line-height: 0.9;
+    margin-bottom: 7mm;
+  }
+  .s7-dev-body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(110, 106, 98, 0.85);
+    line-height: 1.85;
+    max-width: 200mm;
+  }
+  .s7-dev-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 12pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--brick);
+    opacity: 0.9;
+  }
+  .s7-side {
+    width: 90mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 20mm;
+    gap: 8mm;
+  }
+  .s7-cred {
+    padding-bottom: 7mm;
+    border-bottom: 0.3pt solid rgba(138, 70, 50, 0.15);
+  }
+  .s7-cred:last-child { border-bottom: none; }
+  .s7-cred-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 26pt;
+    font-weight: 600;
+    color: var(--brick);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s7-cred-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: rgba(110, 106, 98, 0.8);
+    line-height: 1.5;
+  }
+
+  /* ─────────────────────────────────────────────
+     S8 — CLOSE
+  ───────────────────────────────────────────── */
+  .s8 {
+    background: var(--dark-earth);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s8-edge {
+    width: 10mm;
+    background: var(--brick);
+  }
+  .s8-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 24mm 22mm 20mm;
+  }
+  .s8-label {
+    font-family: 'Cabin', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    letter-spacing: 0.45em;
+    color: var(--brick);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s8-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 106pt;
+    font-weight: 700;
+    color: var(--chalk);
+    line-height: 0.82;
+    letter-spacing: -0.02em;
+    margin-bottom: 7mm;
+  }
+  .s8-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--flint);
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════════════ -->
+<div class="page s1">
+  <div class="s1-edge"></div>
+  <div class="s1-main">
+    <div class="s1-top">
+      <div class="s1-eyebrow">Twelve Private Villas · Jubilee Hills</div>
+      <div class="s1-eyebrow-sub">By SSquare · Hyderabad</div>
+    </div>
+    <div class="s1-center">
+      <div class="s1-brand">Croft</div>
+      <div class="s1-tagline">Private land. Personal standard.</div>
+    </div>
+    <div class="s1-bottom">
+      <div class="s1-footer-l">
+        Brand Identity Presentation<br>
+        Confidential
+      </div>
+      <div class="s1-footer-r">XII</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 2 — THE CROFT
+══════════════════════════════════════════════════ -->
+<div class="page s2">
+  <div class="s2-top-strip">
+    <div class="s2-strip-text">Origin · Old English · croft — a small, privately held plot. Inalienable. Permanent.</div>
+  </div>
+  <div class="s2-content">
+    <div class="s2-left">
+      <div>
+        <div class="s2-origin-label">The Word</div>
+        <div class="s2-headline">The smallest legally recognised unit of private land in Britain.</div>
+      </div>
+      <div class="s2-body">In Scotland, a croft is not owned — it is held. The crofter occupies by right, by inheritance, by continuity. The land cannot be seized, cannot be reassigned, cannot be developed without the crofter's consent. Crofting legislation (1886) was the first time in British history that the state acknowledged that a family's relationship to a specific piece of land had a value beyond its market price.<br><br>The word itself is Old English: croft, from Proto-Germanic kruftan — an enclosed field, a private holding. It gives us "crypt" (enclosed, protected space) and "grotto" (the same root, via Latin). A croft is not a house. It is the land that makes the house permanent.</div>
+    </div>
+    <div class="s2-right">
+      <div>
+        <div class="s2-r-label">The Translation</div>
+        <div class="s2-quote">"Have nothing in your house that you do not know to be useful, or believe to be beautiful."</div>
+        <div class="s2-attribution">— William Morris, 1880. The founding principle of the Arts & Crafts Movement.</div>
+      </div>
+      <div class="s2-r-body">Croft applies this test to everything: the materials, the plan, the landscape, the detail. Not in the Victorian sense of decorative craft — in the Jubilee Hills sense. What is useful here, in this climate, on this specific piece of land, for this particular way of living? What is beautiful in the sense of belonging — not in the sense of looking expensive?<br><br>The twelve villas at Croft are designed as if each one will be occupied for three generations. Not as an aspiration — as a material constraint. Every decision was made with the question: will this still be right in 40 years?</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 3 — THE ARTS & CRAFTS ARGUMENT
+══════════════════════════════════════════════════ -->
+<div class="page s3">
+  <div class="s3-header">
+    <div class="s3-header-title">The Arts &amp; Crafts Lineage</div>
+    <div class="s3-header-sub">1880 – present · Three people, one argument</div>
+  </div>
+  <div class="s3-grid">
+    <div class="s3-cell">
+      <div class="s3-cell-person">William Morris · 1834–1896</div>
+      <div class="s3-cell-title">The joy of labour made visible in the object</div>
+      <div class="s3-cell-body">Morris argued that industrial production destroyed the worker and debased the object simultaneously. Against the factory, he proposed the workshop — a place where the person who made a thing was also the person who understood it. At Croft: every surface has a reason. The visible joinery is visible because it should be. The material is named because it matters.</div>
+    </div>
+    <div class="s3-cell">
+      <div class="s3-cell-person">Edwin Lutyens · 1869–1944</div>
+      <div class="s3-cell-title">A building that looks as if it was always there</div>
+      <div class="s3-cell-body">Lutyens built country houses that appeared organic to their sites — low, generous in eave, thick-walled, rooted in the soil. He used local stone where possible and designed gardens (with Gertrude Jekyll) that looked as if nature had done it. His buildings did not announce themselves. They settled. Croft inherits his approach to site: the land tells the building where to be.</div>
+    </div>
+    <div class="s3-cell">
+      <div class="s3-cell-person">Gertrude Jekyll · 1843–1932</div>
+      <div class="s3-cell-title">The garden as an argument against symmetry</div>
+      <div class="s3-cell-body">Jekyll's gardens were anti-formal — not in the sense of being casual, but in the sense of being responsive. She planted by colour, season, and behaviour, not by geometric plan. The border grew in a drift, not a line. Croft landscapes with species native to the Deccan plateau — not imported ornamentals, but plants that have been growing in this soil without maintenance for decades.</div>
+    </div>
+    <div class="s3-cell">
+      <div class="s3-cell-person">The Country House Hotel · 1970s–present</div>
+      <div class="s3-cell-title">Private estate logic, made liveable for strangers</div>
+      <div class="s3-cell-body">Babington House. Soho Farmhouse. Calcot Manor. These hotels work because they operate on croft logic — a specific piece of land, made by people who understood it, managed as if the next generation will inherit it. They feel lived-in because they are. Croft applies the same logic to permanent residence: not a hotel that feels like home, but a home that has a hotel's material rigour.</div>
+    </div>
+    <div class="s3-cell">
+      <div class="s3-cell-person">Paul Smith · 1946–present</div>
+      <div class="s3-cell-title">The intelligent layering of things collected over time</div>
+      <div class="s3-cell-body">Paul Smith's shops — and his house — are the product of forty years of collecting: the unexpected next to the expected, the vintage next to the new, every object with a story. Croft does not furnish — it creates the conditions for furnishing. The architecture is open enough for a family to make it theirs, specific enough to set the register.</div>
+    </div>
+    <div class="s3-cell">
+      <div class="s3-cell-person">National Trust · 1895–present</div>
+      <div class="s3-cell-title">The principle that some land is too important to be privately optimised</div>
+      <div class="s3-cell-body">The National Trust holds land not as investment but as custodianship. Croft is not a public trust — it is a private holding of twelve families. But it applies the same principle: the land at Prashashan Nagar is too good, too particular, to be built to a market brief. The twelve villas are not the maximum that could have been built here. They are the right number.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 4 — THE ESTATE
+══════════════════════════════════════════════════ -->
+<div class="page s4">
+  <div class="s4-top">
+    <div class="s4-headline-col">
+      <div class="s4-label">The Estate · Croft · Jubilee Hills</div>
+      <div class="s4-headline">Twelve holdings.<br>Each one its own<br>private standard.</div>
+    </div>
+    <div class="s4-right">
+      <div class="s4-num">XII</div>
+      <div class="s4-num-label">Private Villas</div>
+    </div>
+  </div>
+  <div class="s4-specs">
+    <div class="s4-spec">
+      <div class="s4-spec-label">Land</div>
+      <div class="s4-spec-value">Each villa on its own enclosed plot. No shared walls, no shared views.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Structure</div>
+      <div class="s4-spec-value">Single-storey. Low eave. The building does not try to be tall.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Water</div>
+      <div class="s4-spec-value">Private pool within each plot. Set in garden, not above it.</div>
+    </div>
+    <div class="s4-spec">
+      <div class="s4-spec-label">Price</div>
+      <div class="s4-spec-value">Rs 13 – 20 Crore. By private appointment.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 5 — MATERIAL THINKING
+══════════════════════════════════════════════════ -->
+<div class="page s5">
+  <div class="s5-left">
+    <div class="s5-label">The Morris Test</div>
+    <div class="s5-quote">"Have nothing in your house that you do not know to be useful, or believe to be beautiful."</div>
+    <div class="s5-attr">— William Morris · 1880</div>
+  </div>
+  <div class="s5-right">
+    <div class="s5-item">
+      <div class="s5-item-title">The teak door is solid because it should be solid</div>
+      <div class="s5-item-body">Not because solid teak announces a price point. Because a door that is opened and closed several thousand times over thirty years needs to be made of something that can absorb that use without deteriorating. The oil finish deepens. The grain develops. This is not maintenance — this is the material becoming itself.</div>
+    </div>
+    <div class="s5-item">
+      <div class="s5-item-title">The limestone walls are thick because walls should be thick</div>
+      <div class="s5-item-body">In Hyderabad's climate — 40°C in April, 28°C in December — wall thickness is not a luxury, it is a thermal decision. Thick walls in honed limestone maintain a temperature differential of 8°C between inside and outside without mechanical intervention. Morris would have understood this. The material justifies itself.</div>
+    </div>
+    <div class="s5-item">
+      <div class="s5-item-title">The garden is productive before it is ornamental</div>
+      <div class="s5-item-body">Lutyens planted with Jekyll — always. The garden at Croft uses native Deccan species: neem for shade, sacred fig for scale, Indian coral for colour, curry leaf for use. Nothing planted for a site visit. Everything planted to grow for decades, with or without instruction.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 6 — JUBILEE HILLS
+══════════════════════════════════════════════════ -->
+<div class="page s6">
+  <div>
+    <div class="s6-label">Prashashan Nagar · Jubilee Hills · Hyderabad</div>
+    <div class="s6-headline">The neighbourhood that has never been a postcode. It has always been a piece of ground.</div>
+  </div>
+  <div class="s6-body">
+    Prashashan Nagar is Jubilee Hills at its most essential. No through traffic, no commercial strip, no shortcut to anywhere. The canopy grew in over four decades without a landscape architect — which is exactly why it looks the way it does. The families who have been here longest stopped thinking about the address in the 1990s. It is the part of the city that had no reason to change and so simply didn't. Croft occupies a specific piece of this ground: twelve plots, surrounded by the same mature trees that were here before the tech city was built. Ten minutes from HITEC City in distance. A different chapter of the city's character entirely.
+  </div>
+  <div class="s6-facts">
+    <div class="s6-fact-item">
+      <div class="s6-fact-value">10'</div>
+      <div class="s6-fact-label">From HITEC City<br>by car</div>
+    </div>
+    <div class="s6-fact-item">
+      <div class="s6-fact-value">0</div>
+      <div class="s6-fact-label">Through traffic<br>in the street</div>
+    </div>
+    <div class="s6-fact-item">
+      <div class="s6-fact-value">40yr</div>
+      <div class="s6-fact-label">Established canopy.<br>Undisturbed.</div>
+    </div>
+    <div class="s6-fact-item">
+      <div class="s6-fact-value">XII</div>
+      <div class="s6-fact-label">Holdings behind<br>one gate.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 7 — DEVELOPER
+══════════════════════════════════════════════════ -->
+<div class="page s7">
+  <div class="s7-main">
+    <div>
+      <div class="s7-label">The Developer</div>
+      <div class="s7-dev-name">SSquare<br>Est. 1991</div>
+      <div class="s7-dev-body">Thirty-five years in Hyderabad commercial real estate. Over ten million square feet — privately held, privately financed. SSquare has never entered the residential market and never intended to. Croft is the exception: a decision made not from strategy but from the conviction that this particular piece of land, in this particular neighbourhood, deserved to be built with the same rigour SSquare has applied to three decades of commercial projects.<br><br>Twelve villas. The right number. Not the maximum the land could support — the right number for a community that will actually know each other.</div>
+    </div>
+    <div class="s7-dev-tagline">"The Standard, Privately Held."</div>
+  </div>
+  <div class="s7-side">
+    <div class="s7-cred">
+      <div class="s7-cred-num">35</div>
+      <div class="s7-cred-label">Years building Hyderabad's commercial infrastructure</div>
+    </div>
+    <div class="s7-cred">
+      <div class="s7-cred-num">10M+</div>
+      <div class="s7-cred-label">Square feet of premium commercial real estate</div>
+    </div>
+    <div class="s7-cred">
+      <div class="s7-cred-num">01</div>
+      <div class="s7-cred-label">Residential project. This is their only one.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 8 — CLOSE
+══════════════════════════════════════════════════ -->
+<div class="page s8">
+  <div class="s8-edge"></div>
+  <div class="s8-content">
+    <div class="s8-label">Twelve Private Villas · Jubilee Hills · By SSquare</div>
+    <div class="s8-brand">Croft</div>
+    <div class="s8-tagline">Private land. Personal standard.</div>
+  </div>
+</div>
+
+</body>
+</html>

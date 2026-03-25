@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revel — Architecture as Spectacle. Residency as Arrival.</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --obsidian:  #080808;
+    --bronze:    #B8965A;
+    --crystal:   #E8E0D4;
+    --graphite:  #252525;
+    --gold:      #D4A85A;
+    --white:     #F8F6F2;
+    --edge:      #7A6040;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A3 landscape; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; }
+  }
+
+  body { font-family: 'Inter', sans-serif; background: #111; }
+
+  .page {
+    width: 420mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    page-break-after: always;
+  }
+
+  /* ─────────────────────────────────────────────
+     S1 — COVER
+     Bold. Geometric. Kinetic. Diamond-cut.
+  ───────────────────────────────────────────── */
+  .s1 {
+    background: var(--obsidian);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  /* Left bronze slash panel */
+  .s1-slash {
+    width: 52mm;
+    background: var(--bronze);
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Diagonal cut — parallelogram effect */
+  .s1-slash::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -18mm;
+    width: 28mm;
+    height: 100%;
+    background: var(--obsidian);
+    transform: skewX(-6deg);
+    transform-origin: top right;
+  }
+  .s1-slash-inner {
+    position: absolute;
+    bottom: 22mm;
+    left: 14mm;
+    z-index: 1;
+  }
+  .s1-slash-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: rgba(8, 8, 8, 0.65);
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+  /* Main content */
+  .s1-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 26mm 22mm 14mm;
+    position: relative;
+  }
+  /* Diagonal accent line */
+  .s1-main::before {
+    content: '';
+    position: absolute;
+    top: 22mm;
+    right: 38mm;
+    width: 0.5pt;
+    height: 60mm;
+    background: linear-gradient(180deg, transparent, var(--bronze) 40%, var(--bronze) 70%, transparent);
+    transform: skewX(-12deg);
+    opacity: 0.55;
+  }
+  .s1-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--bronze);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s1-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 110pt;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 0.82;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10mm;
+    position: relative;
+  }
+  /* Gold undercut stroke on brand */
+  .s1-brand-accent {
+    display: block;
+    width: 80mm;
+    height: 1.5mm;
+    background: linear-gradient(90deg, var(--gold), transparent 80%);
+    margin-top: 5mm;
+    margin-bottom: 5mm;
+  }
+  .s1-tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5pt;
+    font-weight: 200;
+    color: rgba(232, 224, 212, 0.6);
+    letter-spacing: 0.06em;
+    line-height: 1.65;
+    max-width: 200mm;
+  }
+  /* Data column right */
+  .s1-data {
+    width: 45mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 18mm 22mm 0;
+    border-left: 0.5pt solid rgba(184, 150, 90, 0.18);
+    padding-left: 12mm;
+  }
+  .s1-data-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(184, 150, 90, 0.5);
+    letter-spacing: 0.14em;
+    line-height: 2;
+  }
+  .s1-data-value {
+    font-size: 7pt;
+    color: var(--bronze);
+    font-weight: 400;
+  }
+  /* Top bar */
+  .s1-topbar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0.6pt;
+    background: linear-gradient(90deg, var(--bronze) 0%, transparent 70%);
+    opacity: 0.7;
+  }
+
+  /* ─────────────────────────────────────────────
+     S2 — THE REFERENCE
+     Binghatti Phantom, Dubai, 2024
+  ───────────────────────────────────────────── */
+  .s2 {
+    background: var(--graphite);
+    flex-direction: row;
+  }
+  .s2-left {
+    width: 46%;
+    background: var(--obsidian);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 18mm 24mm 24mm;
+    position: relative;
+  }
+  /* Bronze edge accent */
+  .s2-left::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 1pt;
+    background: linear-gradient(180deg, transparent, var(--bronze) 30%, var(--gold) 70%, transparent);
+    opacity: 0.55;
+  }
+  .s2-year {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 72pt;
+    font-weight: 700;
+    color: rgba(184, 150, 90, 0.06);
+    line-height: 1;
+    position: absolute;
+    bottom: 18mm;
+    right: 16mm;
+    letter-spacing: -0.04em;
+  }
+  .s2-location-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--bronze);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s2-headline {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26pt;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 9mm;
+    letter-spacing: -0.02em;
+  }
+  .s2-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: rgba(232, 224, 212, 0.55);
+    line-height: 1.85;
+  }
+  .s2-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 26mm 24mm 22mm;
+  }
+  .s2-principle-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--edge);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s2-principle {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17pt;
+    font-weight: 500;
+    color: var(--crystal);
+    line-height: 1.35;
+    margin-bottom: 9mm;
+    letter-spacing: -0.01em;
+  }
+  .s2-principle-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: rgba(232, 224, 212, 0.65);
+    line-height: 1.9;
+    border-left: 1pt solid var(--bronze);
+    padding-left: 7mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S3 — THE ELEMENTS
+     Hard-border geometric panels
+  ───────────────────────────────────────────── */
+  .s3 {
+    background: var(--obsidian);
+    flex-direction: column;
+    padding: 0;
+  }
+  .s3-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9mm 26mm 8mm;
+    border-bottom: 1pt solid var(--bronze);
+    flex-shrink: 0;
+    position: relative;
+  }
+  /* Diagonal accent in header */
+  .s3-header::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 18mm;
+    width: 3mm;
+    background: var(--bronze);
+    transform: skewX(-6deg);
+  }
+  .s3-header-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-left: 8mm;
+  }
+  .s3-header-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(184, 150, 90, 0.65);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+  }
+  .s3-panels {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .s3-panel {
+    padding: 13mm 12mm 10mm 14mm;
+    border-right: 1pt solid rgba(184, 150, 90, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  .s3-panel:last-child { border-right: none; }
+  /* Diagonal geometric accent top-right of each panel */
+  .s3-panel::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 12mm;
+    height: 6mm;
+    background: var(--bronze);
+    opacity: 0.12;
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+  .s3-panel-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--bronze);
+    letter-spacing: 0.08em;
+    margin-bottom: 6mm;
+  }
+  .s3-panel-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14pt;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 6mm;
+  }
+  .s3-panel-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: rgba(232, 224, 212, 0.55);
+    line-height: 1.8;
+  }
+  .s3-footer {
+    padding: 7mm 26mm;
+    display: flex;
+    align-items: center;
+    gap: 14mm;
+    border-top: 1pt solid rgba(184, 150, 90, 0.2);
+    flex-shrink: 0;
+  }
+  .s3-footer-bar {
+    width: 20mm;
+    height: 2pt;
+    background: var(--bronze);
+    flex-shrink: 0;
+    transform: skewX(-12deg);
+  }
+  .s3-footer-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: rgba(232, 224, 212, 0.4);
+    flex: 1;
+    line-height: 1.55;
+  }
+
+  /* ─────────────────────────────────────────────
+     S4 — THE VILLAS
+  ───────────────────────────────────────────── */
+  .s4 {
+    background: var(--graphite);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 26mm;
+    position: relative;
+  }
+  /* Bronze top rule */
+  .s4::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1pt;
+    background: var(--bronze);
+    opacity: 0.7;
+  }
+  .s4-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .s4-headline {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 38pt;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    max-width: 170mm;
+  }
+  .s4-count {
+    font-family: 'Inter', sans-serif;
+    font-size: 6.5pt;
+    font-weight: 300;
+    letter-spacing: 0.32em;
+    color: var(--bronze);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .s4-count strong {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 44pt;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-top: 2mm;
+  }
+  .s4-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1pt solid rgba(184, 150, 90, 0.3);
+    border-left: 1pt solid rgba(184, 150, 90, 0.3);
+  }
+  .s4-cell {
+    padding: 6mm 9mm;
+    border-right: 1pt solid rgba(184, 150, 90, 0.3);
+    border-bottom: 1pt solid rgba(184, 150, 90, 0.3);
+  }
+  .s4-cell-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.32em;
+    color: var(--bronze);
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+  }
+  .s4-cell-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11pt;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.3;
+  }
+
+  /* ─────────────────────────────────────────────
+     S5 — THE FEATURE
+     Full warm bronze panel — light as instrument
+  ───────────────────────────────────────────── */
+  .s5 {
+    background: var(--crystal);
+    flex-direction: row;
+  }
+  .s5-left {
+    width: 38%;
+    background: var(--bronze);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22mm 16mm 22mm 22mm;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Geometric diamond-cut overlay — refractive texture */
+  .s5-left::before {
+    content: '';
+    position: absolute;
+    top: -20mm; left: -10mm;
+    width: 80mm;
+    height: 80mm;
+    background: rgba(8, 8, 8, 0.08);
+    transform: rotate(45deg);
+  }
+  .s5-left::after {
+    content: '';
+    position: absolute;
+    bottom: 10mm; right: -15mm;
+    width: 50mm;
+    height: 50mm;
+    background: rgba(8, 8, 8, 0.06);
+    transform: rotate(30deg);
+  }
+  .s5-panel-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: rgba(8, 8, 8, 0.55);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+    position: relative;
+    z-index: 1;
+  }
+  .s5-panel-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28pt;
+    font-weight: 700;
+    color: var(--obsidian);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+    position: relative;
+    z-index: 1;
+  }
+  .s5-panel-rule {
+    width: 18mm;
+    height: 1.5pt;
+    background: rgba(8, 8, 8, 0.35);
+    margin-bottom: 7mm;
+    position: relative;
+    z-index: 1;
+    transform: skewX(-12deg);
+  }
+  .s5-panel-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: rgba(8, 8, 8, 0.65);
+    line-height: 1.85;
+    position: relative;
+    z-index: 1;
+  }
+  .s5-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 28mm 22mm 20mm;
+  }
+  .s5-section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--edge);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s5-quote {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17pt;
+    font-weight: 500;
+    color: var(--obsidian);
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    margin-bottom: 9mm;
+  }
+  .s5-quote-accent {
+    display: inline-block;
+    color: var(--bronze);
+  }
+  .s5-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: rgba(8, 8, 8, 0.6);
+    line-height: 1.9;
+    border-left: 1.5pt solid var(--bronze);
+    padding-left: 7mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S6 — JUBILEE HILLS
+     The address as new statement
+  ───────────────────────────────────────────── */
+  .s6 {
+    background: var(--obsidian);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24mm 26mm 22mm;
+    position: relative;
+  }
+  /* Bronze top accent bar */
+  .s6::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 90mm;
+    height: 1pt;
+    background: var(--bronze);
+    opacity: 0.8;
+  }
+  .s6-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .s6-location-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--bronze);
+    text-transform: uppercase;
+  }
+  .s6-headline {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32pt;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    max-width: 200mm;
+    margin-top: 7mm;
+    text-transform: uppercase;
+  }
+  .s6-headline span {
+    color: var(--bronze);
+  }
+  .s6-stats {
+    display: flex;
+    gap: 22mm;
+    padding-top: 10mm;
+    border-top: 1pt solid rgba(184, 150, 90, 0.25);
+  }
+  .s6-stat-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26pt;
+    font-weight: 700;
+    color: var(--bronze);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 2mm;
+  }
+  .s6-stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(232, 224, 212, 0.5);
+    letter-spacing: 0.1em;
+    line-height: 1.55;
+  }
+  .s6-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(232, 224, 212, 0.55);
+    line-height: 1.85;
+    max-width: 240mm;
+    column-count: 2;
+    column-gap: 14mm;
+    column-rule: 1pt solid rgba(184, 150, 90, 0.15);
+  }
+
+  /* ─────────────────────────────────────────────
+     S7 — DEVELOPER
+  ───────────────────────────────────────────── */
+  .s7 {
+    background: var(--crystal);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s7-bar {
+    width: 10mm;
+    background: var(--bronze);
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Geometric cut on the bar */
+  .s7-bar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 30mm;
+    background: var(--gold);
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+  }
+  .s7-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 26mm 24mm 26mm 22mm;
+  }
+  .s7-dev-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.45em;
+    color: var(--edge);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 30pt;
+    font-weight: 700;
+    color: var(--obsidian);
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s7-dev-rule {
+    width: 24mm;
+    height: 1.5pt;
+    background: var(--bronze);
+    margin-bottom: 7mm;
+    transform: skewX(-12deg);
+  }
+  .s7-dev-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(8, 8, 8, 0.65);
+    line-height: 1.8;
+    max-width: 185mm;
+  }
+  .s7-right {
+    width: 115mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 26mm 24mm 26mm 18mm;
+    border-left: 1pt solid rgba(184, 150, 90, 0.3);
+  }
+  .s7-credential-item {
+    padding: 5mm 0;
+    border-bottom: 1pt solid rgba(184, 150, 90, 0.2);
+  }
+  .s7-credential-item:last-child { border-bottom: none; }
+  .s7-cred-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20pt;
+    font-weight: 700;
+    color: var(--bronze);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .s7-cred-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: rgba(8, 8, 8, 0.6);
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+
+  /* ─────────────────────────────────────────────
+     S8 — CLOSE
+  ───────────────────────────────────────────── */
+  .s8 {
+    background: var(--obsidian);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 26mm 30mm;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Diagonal geometric accent — large diamond cut */
+  .s8::before {
+    content: '';
+    position: absolute;
+    top: -40mm; right: -20mm;
+    width: 120mm;
+    height: 120mm;
+    border: 0.5pt solid rgba(184, 150, 90, 0.12);
+    transform: rotate(15deg);
+  }
+  .s8::after {
+    content: '';
+    position: absolute;
+    bottom: -50mm; right: 10mm;
+    width: 90mm;
+    height: 90mm;
+    border: 0.5pt solid rgba(184, 150, 90, 0.08);
+    transform: rotate(30deg);
+  }
+  /* Top bronze bar */
+  .s8-top-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 110mm;
+    height: 1pt;
+    background: var(--bronze);
+    opacity: 0.7;
+  }
+  .s8-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--bronze);
+    text-transform: uppercase;
+    margin-bottom: 9mm;
+    position: relative;
+    z-index: 1;
+  }
+  .s8-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 100pt;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 0.82;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+    position: relative;
+    z-index: 1;
+  }
+  .s8-brand-rule {
+    display: block;
+    width: 75mm;
+    height: 1.5pt;
+    background: linear-gradient(90deg, var(--bronze), transparent 80%);
+    margin-top: 6mm;
+    margin-bottom: 8mm;
+    transform: skewX(-12deg);
+  }
+  .s8-tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 11pt;
+    font-weight: 200;
+    color: rgba(232, 224, 212, 0.55);
+    letter-spacing: 0.08em;
+    margin-bottom: 18mm;
+    position: relative;
+    z-index: 1;
+  }
+  .s8-footer {
+    font-family: 'Inter', sans-serif;
+    font-size: 6pt;
+    font-weight: 300;
+    color: rgba(184, 150, 90, 0.35);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════════════ -->
+<div class="page s1">
+  <div class="s1-topbar"></div>
+  <div class="s1-slash">
+    <div class="s1-slash-inner">
+      <div class="s1-slash-label">Virāma · By SSquare</div>
+    </div>
+  </div>
+  <div class="s1-main">
+    <div class="s1-eyebrow">Twelve Private Villas · Jubilee Hills, Hyderabad</div>
+    <div class="s1-brand">
+      REVEL
+      <span class="s1-brand-accent"></span>
+    </div>
+    <div class="s1-tagline">Architecture as spectacle. Residency as arrival.</div>
+  </div>
+  <div class="s1-data">
+    <div class="s1-data-item">Type<br><span class="s1-data-value">Gated Villa Estate</span></div>
+    <div class="s1-data-item">Count<br><span class="s1-data-value">XII</span></div>
+    <div class="s1-data-item">Location<br><span class="s1-data-value">Jubilee Hills, HYD</span></div>
+    <div class="s1-data-item">Price<br><span class="s1-data-value">₹ 13 – 20 Cr</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 2 — THE REFERENCE
+══════════════════════════════════════════════════ -->
+<div class="page s2">
+  <div class="s2-left">
+    <div class="s2-year">2024</div>
+    <div class="s2-location-label">Dubai Marina · UAE</div>
+    <div class="s2-headline">The building that refracts<br>light as intention.</div>
+    <div class="s2-body">In 2024, Binghatti Developers and Jacob &amp; Co produced the Binghatti Phantom — a 104-storey tower whose facade is modelled after a diamond crystal structure. Every face cut at a precise angle so the building refracts light differently at dawn, noon, dusk, and night. Jacob &amp; Co's DNA is the movement-as-artwork: the tourbillon visible through the dial, mechanics displayed as beauty. Binghatti's DNA is kinetic geometry: bold, angular, buildings that announce themselves before you arrive.<br><br>The Phantom is not subtle. It was never trying to be. It was trying to be the most extraordinary object in the world's most extraordinary city — and it succeeded because every design decision began with that intention.</div>
+  </div>
+  <div class="s2-right">
+    <div class="s2-principle-label">The Translation</div>
+    <div class="s2-principle">"A building should announce your arrival before you open the door."</div>
+    <div class="s2-principle-body">Revel in Jubilee Hills does not reproduce the Phantom's scale or its Dubai context. It takes its founding instinct: that architecture should be an event. That arriving home should feel like arriving somewhere. That a building which knows what it is communicates that immediately — in its facade geometry, its entrance sequence, its relationship to light. Revel is the only address in Hyderabad where the act of arriving is itself designed.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 3 — THE ELEMENTS
+══════════════════════════════════════════════════ -->
+<div class="page s3">
+  <div class="s3-header">
+    <div class="s3-header-title">The Revel System</div>
+    <div class="s3-header-sub">Four Defining Elements</div>
+  </div>
+  <div class="s3-panels">
+    <div class="s3-panel">
+      <div class="s3-panel-number">01</div>
+      <div class="s3-panel-name">The Cut<br>Facade</div>
+      <div class="s3-panel-desc">Every plane of the villa's exterior facade is angled. Not for decoration — for light capture. The geometry is calculated so that no two moments of day produce the same visual surface. At 7am the east face is pure illumination. By noon the upper planes divide into shadow and reflection. At dusk the bronze-toned cladding catches the hour like a dial registers a complication.</div>
+    </div>
+    <div class="s3-panel">
+      <div class="s3-panel-number">02</div>
+      <div class="s3-panel-name">Refractive<br>Glass</div>
+      <div class="s3-panel-desc">Glazing specified not for transparency alone but for its angular response to direct light. The Hyderabad sun is strong and specific — arriving early, departing late, at a low angle most of the year. Revel's glazing system responds to this: the glass moves the light around the interior rather than admitting it bluntly. The effect is a room that changes colour on its own schedule.</div>
+    </div>
+    <div class="s3-panel">
+      <div class="s3-panel-number">03</div>
+      <div class="s3-panel-name">Bronze<br>Reveal</div>
+      <div class="s3-panel-desc">Every window, every door frame, every architectural joint is finished in a warm bronze reveal — a fine line of metal that catches direct light and throws it back with a different temperature. The bronze does not dominate. It articulates. The building reads as monolithic at distance; at proximity it reveals the precision of its detailing. This is how Jacob &amp; Co builds a watch. This is how Revel builds a wall.</div>
+    </div>
+    <div class="s3-panel">
+      <div class="s3-panel-number">04</div>
+      <div class="s3-panel-name">The Arrival<br>Axis</div>
+      <div class="s3-panel-desc">The motor court is not a driveway. It is a choreographed approach sequence: gate, forecourt, the building reveals itself at a calculated angle — never full-face until you are within it. You see the facade in stages, each a different cut of light. The path from gate to front door is a designed experience. Arrival here is not the beginning of being home. It is itself the event.</div>
+    </div>
+  </div>
+  <div class="s3-footer">
+    <div class="s3-footer-bar"></div>
+    <div class="s3-footer-text">Each element of the Revel design system originates in the same logic as the Binghatti Phantom: that bold geometric intention, precisely executed, produces architecture that cannot be unseen — and therefore cannot be forgotten.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 4 — THE VILLAS
+══════════════════════════════════════════════════ -->
+<div class="page s4">
+  <div class="s4-top">
+    <div class="s4-headline">Twelve villas.<br>One arrival<br>each.</div>
+    <div class="s4-count">
+      Private Villas
+      <strong>XII</strong>
+      By appointment only.
+    </div>
+  </div>
+  <div class="s4-grid">
+    <div class="s4-cell">
+      <div class="s4-cell-label">Configuration</div>
+      <div class="s4-cell-value">Single-storey · Individual gate · Own plot</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Private Pool</div>
+      <div class="s4-cell-value">Each villa · Not shared · Landscaped surround</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Architecture</div>
+      <div class="s4-cell-value">Angular facade · Bronze reveals · Cut glazing</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Arrival</div>
+      <div class="s4-cell-value">Designed approach axis · Motor court · Staged reveal</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Price Range</div>
+      <div class="s4-cell-value">Rs 13 – 20 Crore · By appointment only</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Light System</div>
+      <div class="s4-cell-value">Facade geometry calculated for Hyderabad sun angles</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 5 — THE FEATURE
+══════════════════════════════════════════════════ -->
+<div class="page s5">
+  <div class="s5-left">
+    <div class="s5-panel-label">Light as Architecture</div>
+    <div class="s5-panel-title">The building<br>as instrument<br>of light.</div>
+    <div class="s5-panel-rule"></div>
+    <div class="s5-panel-body">Every angle of Revel's facade was calculated to respond to the Hyderabad morning light differently. The east-facing planes catch the early sun at a specific refraction angle. The bronze reveals redirect it. The cut glazing diffuses it. By 8am, the building is performing — and it does this every day, without instruction, because the geometry is fixed. This is not passive architecture. It is an instrument tuned to a specific sky.</div>
+  </div>
+  <div class="s5-right">
+    <div class="s5-section-label">The Design Principle</div>
+    <div class="s5-quote">Not where you <span class="s5-quote-accent">live quietly</span> — where you <span class="s5-quote-accent">arrive with intention.</span></div>
+    <div class="s5-body">Jacob &amp; Co makes watches where the movement is visible through the dial because they believe the mechanism is itself beautiful. Binghatti designed a tower where the facade geometry changes its appearance through the day because they believe a building should perform. Revel applies this to residential architecture in Jubilee Hills: the villa does not sit passively at its address. It responds to the sky above it, to the position of the sun, to the angle of approach. Every morning it is slightly different. Every morning it is yours. This is not a residence. It is an object of precision in which you happen to live — and you will never mistake it for anything else.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 6 — JUBILEE HILLS
+══════════════════════════════════════════════════ -->
+<div class="page s6">
+  <div class="s6-top">
+    <div>
+      <div class="s6-location-label">Prashashan Nagar · Jubilee Hills · Hyderabad</div>
+      <div class="s6-headline">Not the neighbourhood's<br>quiet inheritance —<br><span>its next chapter.</span></div>
+    </div>
+  </div>
+  <div class="s6-stats">
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">10'</div>
+      <div class="s6-stat-label">From HITEC City<br>by car</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">0</div>
+      <div class="s6-stat-label">Through traffic.<br>The neighbourhood has none.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">35+</div>
+      <div class="s6-stat-label">Year old canopy.<br>Unchanged, uncrowded.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">XII</div>
+      <div class="s6-stat-label">Villas behind<br>one gate. No more.</div>
+    </div>
+  </div>
+  <div class="s6-body">
+    Jubilee Hills built its reputation slowly, over decades, through the cumulative presence of families who did not need to be elsewhere. Prashashan Nagar is its most settled pocket — the tree canopy arrived without being planted, the streets acquired their quietness without being enforced. It is everything Dubai's Marina is not: unhurried, rooted, already complete.<br><br>Revel does not try to match that register. It introduces a different note into the neighbourhood — precision, geometry, the forward-facing energy of a building that knows exactly what it is. Jubilee Hills has been many things. It has been old money, new confidence, and quiet inheritance. Revel is its next statement: that the address accommodates ambition as easily as it accommodates history. The twelve families who arrive here will not blend into the neighbourhood. They will add to it.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 7 — DEVELOPER
+══════════════════════════════════════════════════ -->
+<div class="page s7">
+  <div class="s7-bar"></div>
+  <div class="s7-content">
+    <div class="s7-dev-label">The Developer</div>
+    <div class="s7-dev-name">SSquare<br>Est. 1991</div>
+    <div class="s7-dev-rule"></div>
+    <div class="s7-dev-body">Thirty-five years building the commercial infrastructure of a city that never stopped growing. Over ten million square feet of premium commercial real estate in Hyderabad — privately held, privately financed, delivered without announcement. SSquare has never needed to advertise its standard. Its buildings have always been the argument.<br><br>Revel is their first and only residential project. The same precision that built a commercial portfolio at scale applied, for the first time, to residential architecture of the highest order. SSquare did not enter the residential market to add units. They entered it to make one statement. The twelve families who live at Revel will live in a building that a 35-year institution built as its single residential act — and built, accordingly, to the fullest possible standard.</div>
+  </div>
+  <div class="s7-right">
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">35</div>
+      <div class="s7-cred-label">Years in Hyderabad commercial real estate</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">10M+</div>
+      <div class="s7-cred-label">Sq ft delivered. Premium commercial.</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">01</div>
+      <div class="s7-cred-label">Residential project. This is it. The only one.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 8 — CLOSE
+══════════════════════════════════════════════════ -->
+<div class="page s8">
+  <div class="s8-top-bar"></div>
+  <div class="s8-label">Twelve Private Villas · Jubilee Hills · By SSquare</div>
+  <div class="s8-brand">
+    REVEL
+    <span class="s8-brand-rule"></span>
+  </div>
+  <div class="s8-tagline">Architecture as spectacle. Residency as arrival.</div>
+  <div class="s8-footer">Brand Identity Presentation · Virāma by SSquare · Confidential</div>
+</div>
+
+</body>
+</html>

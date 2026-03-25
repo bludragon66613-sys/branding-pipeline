@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tessera — Each piece. The whole.</title>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,200;1,300&family=Spectral:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --byzantine:  #0D1A2A;
+    --gold:       #C4922A;
+    --ivory:      #E8D8C0;
+    --crimson:    #8B2020;
+    --lapis:      #4A6A9A;
+    --marble:     #F4F0E4;
+    --deep-gold:  #8A6418;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A3 landscape; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; }
+  }
+
+  body { font-family: 'Spectral', serif; background: #1a2332; }
+
+  .page {
+    width: 420mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    page-break-after: always;
+  }
+
+  /* ─────────────────────────────────────────────
+     S1 — COVER
+     Byzantine deep blue, gold tessera grid,
+     geometric Josefin Sans at hairline weight.
+  ───────────────────────────────────────────── */
+  .s1 {
+    background: var(--byzantine);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    overflow: hidden;
+  }
+  /* Tessera diamond grid background */
+  .s1-mosaic-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        rgba(196, 146, 42, 0.04) 0px,
+        rgba(196, 146, 42, 0.04) 1px,
+        transparent 1px,
+        transparent 14px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(196, 146, 42, 0.04) 0px,
+        rgba(196, 146, 42, 0.04) 1px,
+        transparent 1px,
+        transparent 14px
+      );
+  }
+  .s1-grid {
+    display: grid;
+    grid-template-columns: 18mm 1fr 1fr 1fr 18mm;
+    grid-template-rows: 18mm 1fr 1fr 18mm;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .s1-col-accent {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    border-right: 0.4pt solid rgba(196, 146, 42, 0.16);
+  }
+  .s1-main {
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 18mm 18mm 10mm;
+    position: relative;
+  }
+  .s1-gold-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1.2mm;
+    background: linear-gradient(90deg, transparent, var(--gold) 30%, transparent 100%);
+  }
+  .s1-eyebrow {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6pt;
+    font-weight: 200;
+    letter-spacing: 0.5em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s1-brand {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 100pt;
+    font-weight: 100;
+    color: var(--ivory);
+    line-height: 0.85;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s1-tagline {
+    font-family: 'Spectral', serif;
+    font-size: 11pt;
+    font-weight: 200;
+    font-style: italic;
+    color: rgba(232, 216, 192, 0.6);
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+  }
+  .s1-data {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 6mm 6mm 18mm;
+    border-bottom: 0.3pt solid rgba(196, 146, 42, 0.12);
+  }
+  .s1-data-item {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6pt;
+    font-weight: 200;
+    color: rgba(196, 146, 42, 0.5);
+    letter-spacing: 0.15em;
+    line-height: 2;
+    text-transform: uppercase;
+  }
+  .s1-data-value {
+    font-size: 7pt;
+    color: var(--gold);
+    font-weight: 300;
+  }
+  .s1-footer {
+    grid-column: 2 / 5;
+    grid-row: 4;
+    display: flex;
+    align-items: center;
+    padding: 0 18mm 0 18mm;
+    border-top: 0.3pt solid rgba(196, 146, 42, 0.1);
+  }
+  .s1-footer-text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6pt;
+    font-weight: 200;
+    color: rgba(196, 146, 42, 0.4);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  /* ─────────────────────────────────────────────
+     S2 — THE REFERENCE / STORY
+     Ravenna. 430 AD. Gold tesserae at angles.
+  ───────────────────────────────────────────── */
+  .s2 {
+    background: var(--ivory);
+    flex-direction: row;
+  }
+  .s2-left {
+    width: 44%;
+    background: var(--byzantine);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 16mm 22mm 22mm;
+    position: relative;
+  }
+  .s2-left::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 1mm;
+    background: linear-gradient(180deg, transparent, var(--gold) 40%, var(--gold) 60%, transparent);
+    opacity: 0.4;
+  }
+  .s2-year {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 64pt;
+    font-weight: 100;
+    color: rgba(196, 146, 42, 0.08);
+    line-height: 1;
+    position: absolute;
+    bottom: 18mm;
+    right: 16mm;
+    letter-spacing: 0.04em;
+  }
+  .s2-location-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6pt;
+    font-weight: 200;
+    letter-spacing: 0.45em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s2-headline {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 26pt;
+    font-weight: 200;
+    color: var(--ivory);
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s2-body {
+    font-family: 'Spectral', serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(232, 216, 192, 0.68);
+    line-height: 1.85;
+  }
+  .s2-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22mm 24mm 22mm 20mm;
+  }
+  .s2-principle-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6pt;
+    font-weight: 200;
+    letter-spacing: 0.45em;
+    color: var(--deep-gold);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+  }
+  .s2-principle {
+    font-family: 'Spectral', serif;
+    font-size: 19pt;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--byzantine);
+    line-height: 1.35;
+    margin-bottom: 8mm;
+  }
+  .s2-principle-body {
+    font-family: 'Spectral', serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: var(--deep-gold);
+    line-height: 1.85;
+    border-left: 0.4pt solid var(--gold);
+    padding-left: 6mm;
+  }
+
+  /* ─────────────────────────────────────────────
+     S3 — THE ELEMENTS / MATERIALS
+     Four panels, each a different mosaic colour
+  ───────────────────────────────────────────── */
+  .s3 {
+    background: var(--marble);
+    flex-direction: column;
+    padding: 0;
+  }
+  .s3-top {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 0.3pt solid rgba(138, 100, 24, 0.2);
+  }
+  /* Each cell gets its own tessera colour */
+  .s3-cell-gold   { background: var(--byzantine); }
+  .s3-cell-lapis  { background: var(--lapis); }
+  .s3-cell-crimson { background: var(--crimson); }
+  .s3-cell-ivory  { background: var(--deep-gold); }
+
+  .s3-material-cell {
+    padding: 16mm 10mm 10mm 12mm;
+    border-right: 0.3pt solid rgba(255,255,255,0.08);
+  }
+  .s3-material-cell:last-child { border-right: none; }
+  .s3-mat-number {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11pt;
+    font-weight: 200;
+    color: var(--gold);
+    margin-bottom: 5mm;
+    letter-spacing: 0.2em;
+  }
+  .s3-mat-name {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14pt;
+    font-weight: 200;
+    color: var(--ivory);
+    line-height: 1.15;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 4mm;
+  }
+  .s3-mat-desc {
+    font-family: 'Spectral', serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: rgba(232, 216, 192, 0.75);
+    line-height: 1.75;
+  }
+  .s3-bottom {
+    padding: 8mm 22mm;
+    display: flex;
+    align-items: center;
+    gap: 14mm;
+    background: var(--marble);
+  }
+  .s3-principle-line {
+    font-family: 'Spectral', serif;
+    font-size: 13pt;
+    font-style: italic;
+    color: var(--byzantine);
+    flex: 1;
+    line-height: 1.4;
+  }
+  .s3-footnote {
+    font-family: 'Spectral', serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: var(--deep-gold);
+    width: 80mm;
+    line-height: 1.65;
+  }
+
+  /* ─────────────────────────────────────────────
+     S4 — THE VILLAS
+  ───────────────────────────────────────────── */
+  .s4 {
+    background: var(--byzantine);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20mm 24mm;
+    position: relative;
+  }
+  .s4::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0.4pt;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+  /* Subtle mosaic grid overlay */
+  .s4::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        rgba(196, 146, 42, 0.025) 0px,
+        rgba(196, 146, 42, 0.025) 1px,
+        transparent 1px,
+        transparent 18px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(196, 146, 42, 0.025) 0px,
+        rgba(196, 146, 42, 0.025) 1px,
+        transparent 1px,
+        transparent 18px
+      );
+    pointer-events: none;
+  }
+  .s4-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+  }
+  .s4-headline {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 38pt;
+    font-weight: 100;
+    color: var(--ivory);
+    line-height: 0.95;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    max-width: 160mm;
+  }
+  .s4-count {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 7pt;
+    font-weight: 200;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .s4-count strong {
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40pt;
+    font-weight: 100;
+    color: var(--ivory);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    margin-top: 2mm;
+  }
+  .s4-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 0.3pt solid rgba(196, 146, 42, 0.2);
+    border-left: 0.3pt solid rgba(196, 146, 42, 0.2);
+    position: relative;
+    z-index: 1;
+  }
+  .s4-cell {
+    padding: 6mm 8mm;
+    border-right: 0.3pt solid rgba(196, 146, 42, 0.2);
+    border-bottom: 0.3pt solid rgba(196, 146, 42, 0.2);
+  }
+  .s4-cell-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6pt;
+    font-weight: 200;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 2mm;
+  }
+  .s4-cell-value {
+    font-family: 'Spectral', serif;
+    font-size: 11pt;
+    color: var(--ivory);
+    line-height: 1.3;
+  }
+
+  /* ─────────────────────────────────────────────
+     S5 — THE FEATURE / QUOTE
+     Crimson accent panel, Ravenna principle
+  ───────────────────────────────────────────── */
+  .s5 {
+    background: var(--ivory);
+    flex-direction: row;
+  }
+  .s5-left {
+    width: 35%;
+    background: var(--crimson);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20mm 14mm 20mm 20mm;
+  }
+  .s5-feature-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6pt;
+    font-weight: 200;
+    letter-spacing: 0.45em;
+    color: rgba(232, 216, 192, 0.55);
+    text-transform: uppercase;
+    margin-bottom: 5mm;
+  }
+  .s5-feature-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 26pt;
+    font-weight: 100;
+    color: var(--ivory);
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 7mm;
+  }
+  .s5-feature-body {
+    font-family: 'Spectral', serif;
+    font-size: 8pt;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(232, 216, 192, 0.72);
+    line-height: 1.85;
+  }
+  .s5-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20mm 24mm 20mm 18mm;
+  }
+  .s5-quote-mark {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 60pt;
+    font-weight: 100;
+    color: rgba(138, 100, 24, 0.18);
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+  .s5-quote {
+    font-family: 'Spectral', serif;
+    font-size: 9.5pt;
+    font-weight: 300;
+    color: var(--byzantine);
+    line-height: 1.85;
+    margin-bottom: 8mm;
+  }
+  .s5-attribution {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 7pt;
+    font-weight: 200;
+    color: var(--deep-gold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.7;
+  }
+
+  /* ─────────────────────────────────────────────
+     S6 — JUBILEE HILLS / LOCATION
+  ───────────────────────────────────────────── */
+  .s6 {
+    background: var(--byzantine);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm 24mm 20mm;
+  }
+  .s6-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .s6-location-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6pt;
+    font-weight: 200;
+    letter-spacing: 0.45em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .s6-headline {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 32pt;
+    font-weight: 100;
+    color: var(--ivory);
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    max-width: 210mm;
+    margin-top: 6mm;
+  }
+  .s6-stats {
+    display: flex;
+    gap: 20mm;
+    padding-top: 10mm;
+    border-top: 0.3pt solid rgba(196, 146, 42, 0.2);
+  }
+  .s6-stat-item {}
+  .s6-stat-value {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 26pt;
+    font-weight: 100;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 2mm;
+    letter-spacing: 0.05em;
+  }
+  .s6-stat-label {
+    font-family: 'Spectral', serif;
+    font-size: 7pt;
+    font-weight: 300;
+    color: rgba(232, 216, 192, 0.6);
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+  }
+  .s6-body {
+    font-family: 'Spectral', serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(232, 216, 192, 0.68);
+    line-height: 1.85;
+    max-width: 240mm;
+    column-count: 2;
+    column-gap: 12mm;
+    column-rule: 0.3pt solid rgba(196, 146, 42, 0.15);
+  }
+
+  /* ─────────────────────────────────────────────
+     S7 — DEVELOPER
+  ───────────────────────────────────────────── */
+  .s7 {
+    background: var(--ivory);
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .s7-bar {
+    width: 8mm;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .s7-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 24mm 24mm 20mm;
+  }
+  .s7-dev-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6pt;
+    font-weight: 200;
+    letter-spacing: 0.45em;
+    color: var(--deep-gold);
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-name {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 32pt;
+    font-weight: 200;
+    color: var(--byzantine);
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 6mm;
+  }
+  .s7-dev-body {
+    font-family: 'Spectral', serif;
+    font-size: 9pt;
+    font-weight: 300;
+    color: var(--deep-gold);
+    line-height: 1.8;
+    max-width: 180mm;
+  }
+  .s7-right {
+    width: 120mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24mm 24mm 24mm 16mm;
+    border-left: 0.3pt solid rgba(138, 100, 24, 0.2);
+  }
+  .s7-credential-item {
+    padding: 5mm 0;
+    border-bottom: 0.3pt solid rgba(138, 100, 24, 0.18);
+  }
+  .s7-credential-item:last-child { border-bottom: none; }
+  .s7-cred-number {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18pt;
+    font-weight: 200;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: 0.06em;
+  }
+  .s7-cred-label {
+    font-family: 'Spectral', serif;
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: var(--deep-gold);
+    letter-spacing: 0.04em;
+  }
+
+  /* ─────────────────────────────────────────────
+     S8 — CLOSE
+  ───────────────────────────────────────────── */
+  .s8 {
+    background: var(--byzantine);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24mm 28mm;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Mosaic grid on close slide */
+  .s8::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        rgba(196, 146, 42, 0.035) 0px,
+        rgba(196, 146, 42, 0.035) 1px,
+        transparent 1px,
+        transparent 14px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(196, 146, 42, 0.035) 0px,
+        rgba(196, 146, 42, 0.035) 1px,
+        transparent 1px,
+        transparent 14px
+      );
+    pointer-events: none;
+  }
+  .s8::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1mm;
+    background: linear-gradient(90deg, var(--gold), transparent 70%);
+    z-index: 2;
+  }
+  .s8-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6pt;
+    font-weight: 200;
+    letter-spacing: 0.5em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+    position: relative;
+    z-index: 1;
+  }
+  .s8-brand {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 96pt;
+    font-weight: 100;
+    color: var(--ivory);
+    line-height: 0.85;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 8mm;
+    position: relative;
+    z-index: 1;
+  }
+  .s8-tagline {
+    font-family: 'Spectral', serif;
+    font-size: 11pt;
+    font-weight: 200;
+    font-style: italic;
+    color: rgba(232, 216, 192, 0.55);
+    letter-spacing: 0.08em;
+    margin-bottom: 16mm;
+    position: relative;
+    z-index: 1;
+  }
+  .s8-rule {
+    width: 60mm;
+    height: 0.4pt;
+    background: var(--gold);
+    opacity: 0.6;
+    position: relative;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════════════ -->
+<div class="page s1">
+  <div class="s1-mosaic-bg"></div>
+  <div class="s1-grid">
+    <div class="s1-col-accent"></div>
+    <div class="s1-data">
+      <div class="s1-data-item">Type<br><span class="s1-data-value">Gated Villa Estate</span></div>
+      <div class="s1-data-item">Count<br><span class="s1-data-value">XII</span></div>
+      <div class="s1-data-item">Location<br><span class="s1-data-value">Jubilee Hills, HYD</span></div>
+    </div>
+    <div class="s1-main">
+      <div class="s1-gold-bar"></div>
+      <div class="s1-eyebrow">Twelve Private Villas · Jubilee Hills</div>
+      <div class="s1-brand">Tessera</div>
+      <div class="s1-tagline">Each piece. The whole.</div>
+    </div>
+    <div class="s1-footer">
+      <div class="s1-footer-text">Brand Identity Presentation · Confidential</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 2 — THE REFERENCE / STORY
+══════════════════════════════════════════════════ -->
+<div class="page s2">
+  <div class="s2-left">
+    <div class="s2-year">547</div>
+    <div class="s2-location-label">Ravenna, Italy · 430 – 547 AD</div>
+    <div class="s2-headline">The gold that<br>changes all day.</div>
+    <div class="s2-body">At Ravenna in the 5th and 6th centuries, Byzantine craftsmen built the greatest mosaics in the world. In the Mausoleum of Galla Placidia, 430 AD. In the Basilica of San Vitale, 547 AD. They used individual tesserae — small pieces of glass, stone, and gold leaf — to create images of impossible luminosity.<br><br>The gold tesserae were set at a slight angle, deliberately. Each tile faces a different direction, so that throughout the day — from dawn to noon to dusk — the same surface catches light differently. The mosaic at dawn is not the same mosaic at noon. It is the same twelve hundred tiles, reading differently in different light.</div>
+  </div>
+  <div class="s2-right">
+    <div class="s2-principle-label">The Translation</div>
+    <div class="s2-principle">"A great estate is not a single object. It is twelve individual residences that together compose something complete."</div>
+    <div class="s2-principle-body">Bvlgari's Serpenti jewellery uses the same logic at scale: individual scales forming a continuous sinuous line, each scale catching light at its own angle. The whole is only legible because each piece is distinct. Tessera is the same argument applied to residential architecture: twelve villas, each differently oriented, each catching its own light — and together, a complete world.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 3 — THE ELEMENTS / MATERIALS
+══════════════════════════════════════════════════ -->
+<div class="page s3">
+  <div class="s3-top">
+    <div class="s3-material-cell s3-cell-gold">
+      <div class="s3-mat-number">01</div>
+      <div class="s3-mat-name">Gold tessera<br>panel</div>
+      <div class="s3-mat-desc">The entrance hall in each villa features a mosaic wall panel — hand-set gold and amber tesserae, each tile individually angled. No two installations are identical. Like the Ravenna originals, the panel reads differently at different times of day. This is the first thing a guest sees.</div>
+    </div>
+    <div class="s3-material-cell s3-cell-lapis">
+      <div class="s3-mat-number">02</div>
+      <div class="s3-mat-name">Lapis<br>threshold</div>
+      <div class="s3-mat-desc">The entry threshold and primary floor panels in deep lapis-blue stone — the same mineral the Byzantine craftsmen ground to make ultramarine paint. At Tessera it is set in geometric patterns: a floor that declares its lineage without requiring explanation. Cold to the foot. Warm to the eye.</div>
+    </div>
+    <div class="s3-material-cell s3-cell-crimson">
+      <div class="s3-mat-number">03</div>
+      <div class="s3-mat-name">Byzantine<br>geometry</div>
+      <div class="s3-mat-desc">Every window opening, archway, and room transition is governed by Byzantine geometric proportions — the ratio systems developed in the 5th century to produce spaces that feel larger than their measurements. Not ornament. Structural logic that manifests as spatial generosity.</div>
+    </div>
+    <div class="s3-material-cell s3-cell-ivory">
+      <div class="s3-mat-number">04</div>
+      <div class="s3-mat-name">The mosaic<br>garden floor</div>
+      <div class="s3-mat-desc">The private garden of each villa is floored in small-format natural stone set in geometric patterns — a contemporary reinterpretation of the Roman garden floor tradition. The pattern is unique to each villa. No two gardens share a design. Each tessera of the estate is, in this way, irreducibly its own.</div>
+    </div>
+  </div>
+  <div class="s3-bottom">
+    <div class="s3-principle-line">"The estate is twelve pieces. The pieces are the estate."</div>
+    <div class="s3-footnote">Every material decision at Tessera follows the mosaic principle: individual elements, individually considered, that together produce something greater than any single component. The whole is only visible from a distance. Up close, each tile is complete in itself.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 4 — THE VILLAS
+══════════════════════════════════════════════════ -->
+<div class="page s4">
+  <div class="s4-top">
+    <div class="s4-headline">Twelve pieces.<br>One estate.<br>Each its own.</div>
+    <div class="s4-count">
+      Private villas
+      <strong>XII</strong>
+      Total, across the estate.
+    </div>
+  </div>
+  <div class="s4-grid">
+    <div class="s4-cell">
+      <div class="s4-cell-label">Configuration</div>
+      <div class="s4-cell-value">Single-storey · Private gate · Each on own plot</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Orientation</div>
+      <div class="s4-cell-value">Each villa faces a distinct sightline · No two alike</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Mosaic Feature</div>
+      <div class="s4-cell-value">Hand-set gold tessera panel · Unique to each villa</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Garden Floor</div>
+      <div class="s4-cell-value">Geometric stone mosaic · Individual pattern per villa</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Price Range</div>
+      <div class="s4-cell-value">Rs 13 – 20 Crore · By private appointment</div>
+    </div>
+    <div class="s4-cell">
+      <div class="s4-cell-label">Threshold</div>
+      <div class="s4-cell-value">Lapis blue stone entry · Byzantine proportions throughout</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 5 — THE FEATURE / QUOTE
+══════════════════════════════════════════════════ -->
+<div class="page s5">
+  <div class="s5-left">
+    <div class="s5-feature-label">The Ravenna Principle</div>
+    <div class="s5-feature-title">Each tile.<br>Its own<br>light.</div>
+    <div class="s5-feature-body">The craftsmen at Ravenna did not set the gold tesserae flat. They set each one at a slight angle — different from its neighbour — so that throughout the day, as the sun moved, the surface changed. The same mosaic at dawn was not the same mosaic at dusk. Each piece was complete. Together, they were extraordinary.</div>
+  </div>
+  <div class="s5-right">
+    <div class="s5-quote-mark">"</div>
+    <div class="s5-quote">At Ravenna, the gold tesserae were set at angles — each tile catching light from a different direction. The same mosaic reads differently at dawn, noon, and dusk. This is the principle of Tessera: the estate is twelve individual residences, each oriented differently, each catching its own light. Together they compose a complete world, the way a mosaic is only visible from a distance. Up close, each tile stands entirely alone.</div>
+    <div class="s5-attribution">Tessera · Design Brief · Jubilee Hills · 2026</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 6 — JUBILEE HILLS / LOCATION
+══════════════════════════════════════════════════ -->
+<div class="page s6">
+  <div class="s6-top">
+    <div>
+      <div class="s6-location-label">Prashashan Nagar · Jubilee Hills · Hyderabad</div>
+      <div class="s6-headline">Twelve villas.<br>One address.<br>A complete world.</div>
+    </div>
+  </div>
+  <div class="s6-stats">
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">10'</div>
+      <div class="s6-stat-label">From HITEC City<br>by car</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">0</div>
+      <div class="s6-stat-label">Through traffic.<br>The neighbourhood has none.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">35+</div>
+      <div class="s6-stat-label">Year old canopy.<br>Mature trees throughout.</div>
+    </div>
+    <div class="s6-stat-item">
+      <div class="s6-stat-value">XII</div>
+      <div class="s6-stat-label">Villas behind<br>one gate. No more.</div>
+    </div>
+  </div>
+  <div class="s6-body">
+    Prashashan Nagar in Jubilee Hills is the address that a mosaic is made of: twelve individual villas, each differently positioned on the estate, each oriented to its own sightline. Viewed from above, they compose a complete neighbourhood. Lived in from within, each one is entirely its own. This is not a cluster of identical units. It is twelve distinct pieces of ground in a place that stopped needing to explain itself decades ago — and together, they make something whole.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 7 — DEVELOPER
+══════════════════════════════════════════════════ -->
+<div class="page s7">
+  <div class="s7-bar"></div>
+  <div class="s7-content">
+    <div class="s7-dev-label">The Developer</div>
+    <div class="s7-dev-name">SSquare<br>Est. 1991</div>
+    <div class="s7-dev-body">Thirty-five years building the commercial infrastructure of a city that never stopped growing. Over ten million square feet of premium commercial real estate in Hyderabad — privately held, privately financed, delivered without announcement. SSquare has never needed to advertise its standard. Its buildings have always been the argument.<br><br>Tessera is their first and only residential project. The same precision that assembled their commercial portfolio, applied for the first time to twelve residences — each piece individual, each contributing to something that is only complete when all twelve are placed.</div>
+  </div>
+  <div class="s7-right">
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">35</div>
+      <div class="s7-cred-label">Years in Hyderabad commercial real estate</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">10M+</div>
+      <div class="s7-cred-label">Sq ft delivered. Premium commercial.</div>
+    </div>
+    <div class="s7-credential-item">
+      <div class="s7-cred-number">01</div>
+      <div class="s7-cred-label">Residential project. This is it. It will be their only one.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 8 — CLOSE
+══════════════════════════════════════════════════ -->
+<div class="page s8">
+  <div class="s8-label">Twelve Private Villas · Jubilee Hills · By SSquare</div>
+  <div class="s8-brand">Tessera</div>
+  <div class="s8-tagline">Each piece. The whole.</div>
+  <div class="s8-rule"></div>
+</div>
+
+</body>
+</html>

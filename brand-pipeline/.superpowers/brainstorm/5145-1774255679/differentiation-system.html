@@ -1,0 +1,218 @@
+<h2>10-Brand Differentiation System</h2>
+<p class="subtitle">Based on St. Regis, Aman, Bvlgari, Binghatti references. Each brand now occupies a unique archetype, typeface, and color territory.</p>
+
+<style>
+.brand-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+.brand-card { border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 16px; background: rgba(255,255,255,0.03); }
+.brand-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.accent-dot { width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0; }
+.brand-name { font-size: 15px; font-weight: 600; }
+.brand-dev { font-size: 11px; opacity: .5; text-transform: uppercase; letter-spacing: .08em; }
+.brand-archetype { font-size: 12px; color: #22cc66; margin-bottom: 6px; font-weight: 500; }
+.brand-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: rgba(255,255,255,0.07); opacity: .8; }
+.tag.changed { background: rgba(255,200,50,0.15); color: #ffc832; }
+.collision-bar { background: rgba(255,80,80,0.12); border-left: 3px solid #ff5050; padding: 10px 14px; border-radius: 4px; font-size: 12px; margin-bottom: 16px; }
+.resolution-bar { background: rgba(34,200,100,0.1); border-left: 3px solid #22cc66; padding: 10px 14px; border-radius: 4px; font-size: 12px; margin-top: 16px; }
+.ref-strip { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin: 16px 0 24px; }
+.ref-card { padding: 10px 12px; border-radius: 8px; font-size: 11px; border: 1px solid rgba(255,255,255,.08); }
+.ref-title { font-weight: 600; font-size: 12px; margin-bottom: 4px; }
+</style>
+
+<div class="collision-bar">
+  ⚠ <strong>Before:</strong> 7 brands shared Cormorant Garamond · 8 brands used warm gold/amber accents · All 10 used Inter for sans
+</div>
+
+<div class="label" style="margin-bottom:8px">Reference Brand Lessons</div>
+<div class="ref-strip">
+  <div class="ref-card" style="border-color:rgba(180,180,180,.25)">
+    <div class="ref-title">St. Regis</div>
+    Cool grey + black · Custom serif (Roos) · Heritage crest authority
+  </div>
+  <div class="ref-card" style="border-color:rgba(180,160,120,.25)">
+    <div class="ref-title">Aman</div>
+    Earth/sand tones · Custom mark-making type · Anti-signaling minimalism
+  </div>
+  <div class="ref-card" style="border-color:rgba(150,150,200,.25)">
+    <div class="ref-title">Bvlgari</div>
+    Black + white only · Roman U→V serif · Jeweler's precision
+  </div>
+  <div class="ref-card" style="border-color:rgba(220,140,50,.25)">
+    <div class="ref-title">Binghatti</div>
+    Orange + gold · Bold geometric · Architecture IS the brand mark
+  </div>
+</div>
+
+<div class="label" style="margin-bottom:12px">Proposed 10-Brand System — Each Brand Now Unique</div>
+<div class="brand-grid">
+
+  <div class="brand-card">
+    <div class="brand-header">
+      <div class="accent-dot" style="background:#8C4B2A"></div>
+      <div><div class="brand-name">Āvāsa <span style="opacity:.4">/ Stratum</span></div><div class="brand-dev">#8C4B2A cognac sienna</div></div>
+    </div>
+    <div class="brand-archetype">The Vault — financial permanence, inherited authority</div>
+    <div class="brand-row">
+      <span class="tag changed">Freight Display ← was Cormorant</span>
+      <span class="tag changed">Cognac accent ← was copper</span>
+      <span class="tag">Void black bg</span>
+      <span class="tag">Cross-hatch motif</span>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="brand-header">
+      <div class="accent-dot" style="background:#7A9AAA"></div>
+      <div><div class="brand-name">Nidra <span style="opacity:.4">/ Kāla</span></div><div class="brand-dev">#7A9AAA moonstone</div></div>
+    </div>
+    <div class="brand-archetype">The Nocturne — lunar intimacy, curated silence</div>
+    <div class="brand-row">
+      <span class="tag">Playfair Display ✓ keep</span>
+      <span class="tag changed">Moonstone blue-grey ← was warm silver</span>
+      <span class="tag">Near-black bg</span>
+      <span class="tag">Moon phase motif</span>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="brand-header">
+      <div class="accent-dot" style="background:#5A8870"></div>
+      <div><div class="brand-name">Śānti <span style="opacity:.4">/ Vela</span></div><div class="brand-dev">#5A8870 sage teal</div></div>
+    </div>
+    <div class="brand-archetype">The Garden — living botanical, green sanctuary</div>
+    <div class="brand-row">
+      <span class="tag changed">EB Garamond ← was Cormorant</span>
+      <span class="tag changed">Sage teal ← was ritual gold</span>
+      <span class="tag">Deep forest bg</span>
+      <span class="tag">Botanical vine rule</span>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="brand-header">
+      <div class="accent-dot" style="background:#8A7A3A"></div>
+      <div><div class="brand-name">Prāna <span style="opacity:.4">/ Grove</span></div><div class="brand-dev">#8A7A3A lichen moss</div></div>
+    </div>
+    <div class="brand-archetype">The Forest — ancient roots, 40yr canopy, living material</div>
+    <div class="brand-row">
+      <span class="tag">Cormorant Garamond ✓ (only one now)</span>
+      <span class="tag changed">Lichen moss ← was amber honey</span>
+      <span class="tag">Forest black bg</span>
+      <span class="tag">Root growth mark</span>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="brand-header">
+      <div class="accent-dot" style="background:#2A6AAA"></div>
+      <div><div class="brand-name">Ākāśa <span style="opacity:.4">/ Zenith</span></div><div class="brand-dev">#2A6AAA cerulean</div></div>
+    </div>
+    <div class="brand-archetype">The Apex — stratospheric position, altitude as identity</div>
+    <div class="brand-row">
+      <span class="tag changed">Montserrat ← was Cormorant</span>
+      <span class="tag changed">Cerulean blue ← was celestial gold</span>
+      <span class="tag">Night navy bg</span>
+      <span class="tag">Horizon grid</span>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="brand-header">
+      <div class="accent-dot" style="background:#C85A28"></div>
+      <div><div class="brand-name">Ambara <span style="opacity:.4">/ Sōl</span></div><div class="brand-dev">#C85A28 terracotta sunset</div></div>
+    </div>
+    <div class="brand-archetype">The Golden Hour — solar ritual, dusk as daily ceremony</div>
+    <div class="brand-row">
+      <span class="tag changed">Abril Fatface ← was Playfair</span>
+      <span class="tag changed">Terracotta sunset ← was amber</span>
+      <span class="tag">Dusk umber bg</span>
+      <span class="tag">Sun circle</span>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="brand-header">
+      <div class="accent-dot" style="background:#A8A8A6; border:1px solid rgba(255,255,255,.2)"></div>
+      <div><div class="brand-name">Sthāna <span style="opacity:.4">/ Mark</span></div><div class="brand-dev">#A8A8A6 platinum</div></div>
+    </div>
+    <div class="brand-archetype">The Black Card — cold precision, zero warmth, pure status</div>
+    <div class="brand-row">
+      <span class="tag">DM Serif Display ✓ keep</span>
+      <span class="tag">Platinum ✓ keep</span>
+      <span class="tag">Pure black bg</span>
+      <span class="tag">Fine rule geometry</span>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="brand-header">
+      <div class="accent-dot" style="background:#9A3A28"></div>
+      <div><div class="brand-name">Vihāra <span style="opacity:.4">/ Terra</span></div><div class="brand-dev">#9A3A28 burnt Deccan red</div></div>
+    </div>
+    <div class="brand-archetype">The Haveli — Deccan heritage, local material culture</div>
+    <div class="brand-row">
+      <span class="tag changed">Lora ← was Cormorant</span>
+      <span class="tag changed">Burnt Deccan red ← was bronze</span>
+      <span class="tag">Terracotta earth bg</span>
+      <span class="tag">Kolam tile motif</span>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="brand-header">
+      <div class="accent-dot" style="background:#3A7A9A"></div>
+      <div><div class="brand-name">Mandapa <span style="opacity:.4">/ Arch</span></div><div class="brand-dev">#3A7A9A steel teal</div></div>
+    </div>
+    <div class="brand-archetype">The Blueprint — structure as luxury, craft at column-scale</div>
+    <div class="brand-row">
+      <span class="tag changed">Raleway ← was Cormorant</span>
+      <span class="tag changed">Steel teal ← was copper patina</span>
+      <span class="tag">Slate bg</span>
+      <span class="tag">Column grid mark</span>
+    </div>
+  </div>
+
+  <div class="brand-card">
+    <div class="brand-header">
+      <div class="accent-dot" style="background:#7848B8"></div>
+      <div><div class="brand-name">Svara <span style="opacity:.4">/ Resonance</span></div><div class="brand-dev">#7848B8 violet indigo</div></div>
+    </div>
+    <div class="brand-archetype">The Frequency — cosmic vibration, 432Hz silence architecture</div>
+    <div class="brand-row">
+      <span class="tag changed">Josefin Sans ← was Cormorant</span>
+      <span class="tag changed">Violet indigo ← was gold</span>
+      <span class="tag">Deep indigo bg</span>
+      <span class="tag">Sine wave motif</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="resolution-bar">
+  ✓ <strong>After:</strong> 10 unique serif/display typefaces · 10 distinct accent hue families spanning full color wheel · 2 brands kept (Sthāna, Nidra) as already strong
+</div>
+
+<h3 style="margin-top:24px">Does this system look right?</h3>
+<div class="options">
+  <div class="option" data-choice="approve" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Approve — build all 10 HTML files now</h3>
+      <p>Apply these changes to brand-data.json and regenerate all 10 brand collateral HTML files</p>
+    </div>
+  </div>
+  <div class="option" data-choice="adjust" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Adjust specific brands first</h3>
+      <p>Some of these changes don't feel right — I want to tweak certain color or typeface assignments before building</p>
+    </div>
+  </div>
+  <div class="option" data-choice="preview" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Preview one brand first</h3>
+      <p>Rebuild one brand as a proof-of-concept before committing to all 10</p>
+    </div>
+  </div>
+</div>
